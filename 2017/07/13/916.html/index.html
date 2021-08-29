@@ -1,0 +1,319 @@
+<!doctype html><html>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="Ice-Hazymoon,冰凌胧月,Hazymoon,MikuTools,">
+<meta name=description content="Google Analytics 固然好用，但经常会出现被 Ad­block 此类的插件作为广告给拦截，有时候也会出现无法加载的情况，比如： 优化 Google Analytics 异步加载来提高你的网站速度">
+<meta itemprop=description content="Google Analytics 固然好用，但经常会出现被 Ad­block 此类的插件作为广告给拦截，有时候也会出现无法加载的情况，比如： 优化 Google Analytics 异步加载来提高你的网站速度">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta itemprop=name content="优化 Google Analytics 异步加载来提高你的网站速度">
+<link href=https://imiku.me/index.xml title="优化 Google Analytics 异步加载来提高你的网站速度" type=application/rss+xml rel=alternate>
+<title>优化 Google Analytics 异步加载来提高你的网站速度</title>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css>
+<meta property="og:site_name" content="优化 Google Analytics 异步加载来提高你的网站速度">
+<meta property="og:type" content="article">
+<meta property="og:title" content="优化 Google Analytics 异步加载来提高你的网站速度">
+<meta property="og:description" content="Google Analytics 固然好用，但经常会出现被 Ad­block 此类的插件作为广告给拦截，有时候也会出现无法加载的情况，比如： 优化 Google Analytics 异步加载来提高你的网站速度">
+<meta property="og:url" content="https://imiku.me/2017/07/13/916.html/">
+<meta property="og:image" content="https://imiku.me/2017/07/13/916.html/1630060151373669.png">
+<meta property="article:publisher" content="https://imiku.me/2017/07/13/916.html/">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:title content="优化 Google Analytics 异步加载来提高你的网站速度">
+<meta name=twitter:description content="Google Analytics 固然好用，但经常会出现被 Ad­block 此类的插件作为广告给拦截，有时候也会出现无法加载的情况，比如： 优化 Google Analytics 异步加载来提高你的网站速度">
+<meta name=twitter:url content="https://imiku.me/2017/07/13/916.html/">
+<meta name=twitter:image content="https://imiku.me/2017/07/13/916.html/1630060151373669.png">
+<meta name=twitter:site content="@Ice-Hazymoon">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1280">
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"优化 Google Analytics 异步加载来提高你的网站速度","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/07\/13\/916.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"Google Analytics, 网站优化","wordcount":1710,"url":"https:\/\/imiku.me\/2017\/07\/13\/916.html\/","datePublished":"2017-07-13T16:28:58\u002b00:00","dateModified":"2017-07-13T16:28:58\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
+</head><body>
+<div class="mx-auto relative shadow-lg">
+<div class="bg-white main md:max-w-4xl mx-auto relative xl:max-w-4xl">
+<header class="relative z-40">
+<nav class="bg bg-white border-b flex items-center md:px-10 navbar px-5 py-6 top-0 z-10">
+<div class="flex items-center justify-around route-items w-full">
+<div class="flex flex-col items-center">
+<a data-active-link=/ href=/ class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-home flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">首页</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/about href=/about class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-heart flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">关于我</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/links href=/links class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-people flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">朋友们</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/twitter href=/twitter class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-twitter flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">推特动态</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/timeline href=/timeline class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-bar-chart flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">时间轴</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/github href=/github class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-github flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">GitHub</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/search href=/search class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-search flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">搜索</span>
+</div>
+</div>
+</nav>
+</header><main class=relative id=swup>
+<div class="h-full nuxt-main relative">
+<div class="h-full relative">
+<div class="bg-white h-full overflow-auto page-view-article">
+<div class=relative>
+<div class="article-cover h-0 relative w-full">
+<img src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/13/916.html/1630060151373669.png srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/13/916.html/1630060151373669_hu73f5cea4cee7a0e581ca5b6dd9399e90_31630_800x0_resize_catmullrom_3.png 800w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/13/916.html/1630060151373669_hu73f5cea4cee7a0e581ca5b6dd9399e90_31630_1600x0_resize_catmullrom_3.png 1600w" alt="优化 Google Analytics 异步加载来提高你的网站速度" class="absolute h-full left-0 object-center object-cover top-0 w-full">
+</div>
+<h1 class="absolute article-title bottom-0 left-0 md:text-4xl pb-6 pt-20 px-6 text-3xl text-white w-full">
+优化 Google Analytics 异步加载来提高你的网站速度
+</h1>
+</div>
+<div class="article-info p-6 pb-2">
+<div class="bg-red-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-clock-outline mr-1"></i>
+<span>
+<time datetime=2017-07-13T16:28:58Z>July 13, 2017</time>
+</span>
+</div>
+<span class="bg-green-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-person-outline mr-1"></i>
+<span>Ice-Hazymoon</span>
+</span>
+<div class="bg-indigo-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-flag-outline mr-1"></i>
+<span>阅读约 4 分钟</span>
+</div>
+<div class="bg-blue-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-bar-chart-outline mr-1"></i>
+<span>1710 字</span>
+</div>
+</div>
+<div class="border-b border-gray-300 pb-6 px-6">
+<div class="flex items-center mb-2">
+<i class="eva eva-pricetags-outline mr-1"></i>
+<span class=mr-2>标签</span>
+<a href=/tags/google-analytics title="Google Analytics" class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-hash-outline"></i>
+<span>Google Analytics</span>
+</a>
+<a href=/tags/%E7%BD%91%E7%AB%99%E4%BC%98%E5%8C%96 title=网站优化 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-hash-outline"></i>
+<span>网站优化</span>
+</a>
+</div>
+<div class="flex items-center mb-2">
+<i class="eva eva-folder-outline mr-1"></i>
+<span class=mr-2>分类</span>
+<a href=/categories/%E4%BB%A3%E7%A0%81%E5%90%91 title=代码向 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-book-outline"></i>
+<span>代码向</span>
+</a>
+</div>
+</div>
+<section class="article-content px-10 py-5 typo"><p>Google Analytics 固然好用，但经常会出现被 Ad­block 此类的插件作为广告给拦截，有时候也会出现无法加载的情况，比如：</p>
+<p>
+<figure class=gallery-image style=flex-grow:745;flex-basis:1788px>
+<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/13/916.html/1630060151373743.png width=380 height=51 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/13/916.html/1630060151373743_huaae4bc16bedb4ef5c611282d27db0085_8167_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/13/916.html/1630060151373743_huaae4bc16bedb4ef5c611282d27db0085_8167_1080x0_resize_catmullrom_3.png 1080w" data-zoomable data-lazyload alt="优化 Google Analytics 异步加载来提高你的网站速度">
+<figcaption>优化 Google Analytics 异步加载来提高你的网站速度</figcaption>
+</figure><br>
+或者：<br>
+<figure class=gallery-image style=flex-grow:840;flex-basis:2018px>
+<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/13/916.html/1630060151373239.png width=740 height=88 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/13/916.html/1630060151373239_hu12c47e41e9c95a07806488333a902340_14704_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/13/916.html/1630060151373239_hu12c47e41e9c95a07806488333a902340_14704_1080x0_resize_catmullrom_3.png 1080w" data-zoomable data-lazyload alt="优化 Google Analytics 异步加载来提高你的网站速度">
+<figcaption>优化 Google Analytics 异步加载来提高你的网站速度</figcaption>
+</figure></p>
+<p>于是我终于受不鸟了，百度了下相关的优化方案，不过都是基于后端的。像我这种只用得起虚拟主机的人来说，和我根本无缘 😥 。不久后在 Neo 的博客看到了 <a href=https://blog.nfz.moe/archives/google-analytics-optimize.html>Google Analytics 异步优化方案</a> 这样一篇文章，有写关于php主机的优化教程，于是就顺便拿来用了，恩，完美解决了这个问题。</p>
+<hr>
+<h1 id=google-analytics-异步方案的必要性>Google Analytics 异步方案的必要性</h1>
+<p>虽然现在 Google Analytics 的 <code>www.google-analytics.com</code> 和 <code>ssl.google-analytics.com</code> 已经重新解析回谷歌在国内那 200 多台服务器了，所以 Google Analytics 已经不用再担心被墙而导致网站加载慢和无法采集到数据的问题了。</p>
+<p>然而，浏览器端经常有意无意的，包括常见的 Ad­block 扩展等自带的屏蔽列表，利用 user­script 等方式，屏蔽 Google An­a­lyt­ics。这导致了数据统计不准的问题。</p>
+<p>在 JerryQu 的 <a href=https://imququ.com/post/summary-of-my-blog-optimization.html>《本博客零散优化点汇总》</a> 一文中提到他是如何处理 Google Analytics 的：</p>
+<blockquote>
+<p>把统计逻辑挪到了服务端；自己生成用户唯一标识，获取访问页面的标题、URL、Referer，获取用户 IP 和浏览器 UA，随着每次访问发给 Google 的统计地址。服务端向 Google 发起的请求是异步的，用户端访问速度丝毫不受影响。</p>
+</blockquote>
+<p>Google Analytics 的 <a href=https://developers.google.com/analytics/devguides/collection/protocol/v1/reference>官方文档</a> 给出了相关介绍，Google 也提供了 <a href=https://developers.google.com/analytics/devguides/collection/protocol/v1/>Measurement Protocol</a>。</p>
+<h1 id=google-analytics-异步方案介绍>Google Analytics 异步方案介绍</h1>
+<p>目前常见的是这两种方法：完整的后端方案和前端和后端搭配的方案。</p>
+<blockquote>
+<p>前者通过配置 Nginx，使用 uid 模块和 proxy_pass 向后端转发请求；后者的方案则是通过 JS 发送请求给中转服务，再由中转服务器异步发送给 Google。对于前者的解决方案的实现可以阅读下述文章：</p>
+</blockquote>
+<ul>
+<li><a href=https://darknode.in/network/nginx-google-analytics/>《Ng­inx 内配置 Google An­a­lyt­ics 指南》</a></li>
+<li><a href=https://eason-yang.com/2016/11/04/google-analytics-via-nginx/>《使用 Nginx 将请求转发至 Google Analytics 实现后端统计》</a></li>
+</ul>
+<p>还有一种方案，就是在前端通过 JS 发起一个请求、生成用户端的信息带到请求的 URI 上，然后后端的有关程序监听这个请求，并异步发送给 Google。</p>
+<blockquote>
+<p>对于这种解决方案，有人写了一个 Node.js（基于 ThinkJS） 的程序实现：<a href=https://blog.alphatr.com/google-analytics-on-server.html>《服务端使用 Google Analytics》</a></p>
+</blockquote>
+<h1 id=php-的轮子-php--的轮子>PHP 的轮子 {#PHP- 的轮子}</h1>
+<p>我想，没有 Node.js 支持的虚拟主机，又不是所有人都有独立的 VPS 的，也不是所有人都使用 Node.js 的。所以我根据这种思路，找到了个 PHP 版的。</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#ff79c6>&lt;?</span>php
+<span style=color:#6272a4>// ********************
+</span><span style=color:#6272a4>// * Author: stneng
+</span><span style=color:#6272a4>// * Date: 2016.12.11
+</span><span style=color:#6272a4>// * Introduction: https://u.nu/ytq
+</span><span style=color:#6272a4>// *********************
+</span><span style=color:#6272a4></span>    header(<span style=color:#f1fa8c>&#34;status: 204&#34;</span>);
+    header(<span style=color:#f1fa8c>&#34;Cache-Control: no-cache, max-age=0&#34;</span>);
+    header(<span style=color:#f1fa8c>&#34;Pragma: no-cache&#34;</span>);
+
+    <span style=color:#8be9fd;font-style:italic>$tid</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;&#39;</span>;  <span style=color:#6272a4>// 在这里写 Google Analytics 给的 tid，形如：UA-XXXX-Y
+</span><span style=color:#6272a4></span>
+    <span style=color:#ff79c6>function</span> <span style=color:#50fa7b>create_uuid</span>(){<span style=color:#8be9fd;font-style:italic>$str</span> <span style=color:#ff79c6>=</span> md5(uniqid(mt_rand(), <span style=color:#ff79c6>true</span>));
+        <span style=color:#8be9fd;font-style:italic>$uuid</span> <span style=color:#ff79c6>=</span> substr(<span style=color:#8be9fd;font-style:italic>$str</span>,<span style=color:#bd93f9>0</span>,<span style=color:#bd93f9>8</span>) <span style=color:#ff79c6>.</span> <span style=color:#f1fa8c>&#39;-&#39;</span>;
+        <span style=color:#8be9fd;font-style:italic>$uuid</span> <span style=color:#ff79c6>.=</span> substr(<span style=color:#8be9fd;font-style:italic>$str</span>,<span style=color:#bd93f9>8</span>,<span style=color:#bd93f9>4</span>) <span style=color:#ff79c6>.</span> <span style=color:#f1fa8c>&#39;-&#39;</span>;
+        <span style=color:#8be9fd;font-style:italic>$uuid</span> <span style=color:#ff79c6>.=</span> substr(<span style=color:#8be9fd;font-style:italic>$str</span>,<span style=color:#bd93f9>12</span>,<span style=color:#bd93f9>4</span>) <span style=color:#ff79c6>.</span> <span style=color:#f1fa8c>&#39;-&#39;</span>;
+        <span style=color:#8be9fd;font-style:italic>$uuid</span> <span style=color:#ff79c6>.=</span> substr(<span style=color:#8be9fd;font-style:italic>$str</span>,<span style=color:#bd93f9>16</span>,<span style=color:#bd93f9>4</span>) <span style=color:#ff79c6>.</span> <span style=color:#f1fa8c>&#39;-&#39;</span>;
+        <span style=color:#8be9fd;font-style:italic>$uuid</span> <span style=color:#ff79c6>.=</span> substr(<span style=color:#8be9fd;font-style:italic>$str</span>,<span style=color:#bd93f9>20</span>,<span style=color:#bd93f9>12</span>);
+        <span style=color:#ff79c6>return</span> <span style=color:#8be9fd;font-style:italic>$uuid</span>;
+    }
+
+    <span style=color:#ff79c6>if</span> (<span style=color:#ff79c6>!</span>isset(<span style=color:#8be9fd;font-style:italic>$_COOKIE</span>[<span style=color:#f1fa8c>&#34;uuid&#34;</span>])) {<span style=color:#8be9fd;font-style:italic>$uuid</span><span style=color:#ff79c6>=</span>create_uuid();
+        setcookie(<span style=color:#f1fa8c>&#34;uuid&#34;</span>, <span style=color:#8be9fd;font-style:italic>$uuid</span> , time()<span style=color:#ff79c6>+</span><span style=color:#bd93f9>368400000</span>);
+    }<span style=color:#ff79c6>else</span>{<span style=color:#8be9fd;font-style:italic>$uuid</span><span style=color:#ff79c6>=</span><span style=color:#8be9fd;font-style:italic>$_COOKIE</span>[<span style=color:#f1fa8c>&#34;uuid&#34;</span>];
+    }
+
+    <span style=color:#ff79c6>if</span> (function_exists(<span style=color:#f1fa8c>&#34;fastcgi_finish_request&#34;</span>)) {fastcgi_finish_request(); <span style=color:#6272a4>// 对于 fastcgi 会提前返回请求结果，提高响应速度。
+</span><span style=color:#6272a4></span>    }
+
+    <span style=color:#8be9fd;font-style:italic>$url</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;v=1&amp;t=pageview&amp;&#39;</span>;
+    <span style=color:#8be9fd;font-style:italic>$url</span><span style=color:#ff79c6>.=</span><span style=color:#f1fa8c>&#39;tid=&#39;</span><span style=color:#ff79c6>.</span><span style=color:#8be9fd;font-style:italic>$tid</span><span style=color:#ff79c6>.</span><span style=color:#f1fa8c>&#39;&amp;&#39;</span>;
+    <span style=color:#8be9fd;font-style:italic>$url</span><span style=color:#ff79c6>.=</span><span style=color:#f1fa8c>&#39;cid=&#39;</span><span style=color:#ff79c6>.</span><span style=color:#8be9fd;font-style:italic>$uuid</span><span style=color:#ff79c6>.</span><span style=color:#f1fa8c>&#39;&amp;&#39;</span>;
+    <span style=color:#8be9fd;font-style:italic>$url</span><span style=color:#ff79c6>.=</span><span style=color:#f1fa8c>&#39;dl=&#39;</span><span style=color:#ff79c6>.</span>rawurlencode(rawurldecode(<span style=color:#8be9fd;font-style:italic>$_SERVER</span>[<span style=color:#f1fa8c>&#39;HTTP_REFERER&#39;</span>]))<span style=color:#ff79c6>.</span><span style=color:#f1fa8c>&#39;&amp;&#39;</span>;
+    <span style=color:#8be9fd;font-style:italic>$url</span><span style=color:#ff79c6>.=</span><span style=color:#f1fa8c>&#39;uip=&#39;</span><span style=color:#ff79c6>.</span>rawurlencode(rawurldecode(<span style=color:#8be9fd;font-style:italic>$_SERVER</span>[<span style=color:#f1fa8c>&#39;REMOTE_ADDR&#39;</span>]))<span style=color:#ff79c6>.</span><span style=color:#f1fa8c>&#39;&amp;&#39;</span>;
+    <span style=color:#8be9fd;font-style:italic>$url</span><span style=color:#ff79c6>.=</span><span style=color:#f1fa8c>&#39;ua=&#39;</span><span style=color:#ff79c6>.</span>rawurlencode(rawurldecode(<span style=color:#8be9fd;font-style:italic>$_SERVER</span>[<span style=color:#f1fa8c>&#39;HTTP_USER_AGENT&#39;</span>]))<span style=color:#ff79c6>.</span><span style=color:#f1fa8c>&#39;&amp;&#39;</span>;
+    <span style=color:#8be9fd;font-style:italic>$url</span><span style=color:#ff79c6>.=</span><span style=color:#f1fa8c>&#39;dt=&#39;</span><span style=color:#ff79c6>.</span>rawurlencode(rawurldecode(<span style=color:#8be9fd;font-style:italic>$_GET</span>[<span style=color:#f1fa8c>&#39;dt&#39;</span>]))<span style=color:#ff79c6>.</span><span style=color:#f1fa8c>&#39;&amp;&#39;</span>;
+    <span style=color:#8be9fd;font-style:italic>$url</span><span style=color:#ff79c6>.=</span><span style=color:#f1fa8c>&#39;dr=&#39;</span><span style=color:#ff79c6>.</span>rawurlencode(rawurldecode(<span style=color:#8be9fd;font-style:italic>$_GET</span>[<span style=color:#f1fa8c>&#39;dr&#39;</span>]))<span style=color:#ff79c6>.</span><span style=color:#f1fa8c>&#39;&amp;&#39;</span>;
+    <span style=color:#8be9fd;font-style:italic>$url</span><span style=color:#ff79c6>.=</span><span style=color:#f1fa8c>&#39;ul=&#39;</span><span style=color:#ff79c6>.</span>rawurlencode(rawurldecode(<span style=color:#8be9fd;font-style:italic>$_GET</span>[<span style=color:#f1fa8c>&#39;ul&#39;</span>]))<span style=color:#ff79c6>.</span><span style=color:#f1fa8c>&#39;&amp;&#39;</span>;
+    <span style=color:#8be9fd;font-style:italic>$url</span><span style=color:#ff79c6>.=</span><span style=color:#f1fa8c>&#39;sd=&#39;</span><span style=color:#ff79c6>.</span>rawurlencode(rawurldecode(<span style=color:#8be9fd;font-style:italic>$_GET</span>[<span style=color:#f1fa8c>&#39;sd&#39;</span>]))<span style=color:#ff79c6>.</span><span style=color:#f1fa8c>&#39;&amp;&#39;</span>;
+    <span style=color:#8be9fd;font-style:italic>$url</span><span style=color:#ff79c6>.=</span><span style=color:#f1fa8c>&#39;sr=&#39;</span><span style=color:#ff79c6>.</span>rawurlencode(rawurldecode(<span style=color:#8be9fd;font-style:italic>$_GET</span>[<span style=color:#f1fa8c>&#39;sr&#39;</span>]))<span style=color:#ff79c6>.</span><span style=color:#f1fa8c>&#39;&amp;&#39;</span>;
+    <span style=color:#8be9fd;font-style:italic>$url</span><span style=color:#ff79c6>.=</span><span style=color:#f1fa8c>&#39;vp=&#39;</span><span style=color:#ff79c6>.</span>rawurlencode(rawurldecode(<span style=color:#8be9fd;font-style:italic>$_GET</span>[<span style=color:#f1fa8c>&#39;vp&#39;</span>]))<span style=color:#ff79c6>.</span><span style=color:#f1fa8c>&#39;&amp;&#39;</span>;
+    <span style=color:#8be9fd;font-style:italic>$url</span><span style=color:#ff79c6>.=</span><span style=color:#f1fa8c>&#39;z=&#39;</span><span style=color:#ff79c6>.</span><span style=color:#8be9fd;font-style:italic>$_GET</span>[<span style=color:#f1fa8c>&#39;z&#39;</span>];
+    <span style=color:#8be9fd;font-style:italic>$url</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;https://www.google-analytics.com/collect?&#39;</span><span style=color:#ff79c6>.</span><span style=color:#8be9fd;font-style:italic>$url</span>;
+    <span style=color:#8be9fd;font-style:italic>$ch</span><span style=color:#ff79c6>=</span>curl_init();
+      curl_setopt(<span style=color:#8be9fd;font-style:italic>$ch</span>, CURLOPT_URL, <span style=color:#8be9fd;font-style:italic>$url</span>);
+      curl_setopt(<span style=color:#8be9fd;font-style:italic>$ch</span>, CURLOPT_RETURNTRANSFER, <span style=color:#ff79c6>true</span>);
+      curl_exec(<span style=color:#8be9fd;font-style:italic>$ch</span>);
+      curl_close(<span style=color:#8be9fd;font-style:italic>$ch</span>);
+
+<span style=color:#ff79c6>?&gt;</span>
+</code></pre></div><p>将上述代码保存为 <code>ga.php</code>，放在网站根目录。</p>
+<blockquote>
+<p>当然你也可以命名为其它的，不过你需要修改下述提到的 script。</p>
+</blockquote>
+<p>在页面中插入下述代码：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#ff79c6>script</span>&gt;<span style=color:#ff79c6>!</span><span style=color:#8be9fd;font-style:italic>function</span>(e,n,o){<span style=color:#8be9fd;font-style:italic>var</span> t<span style=color:#ff79c6>=</span>e.screen,a<span style=color:#ff79c6>=</span><span style=color:#8be9fd;font-style:italic>encodeURIComponent</span>,r<span style=color:#ff79c6>=</span>[<span style=color:#f1fa8c>&#34;dt=&#34;</span><span style=color:#ff79c6>+</span>a(n.title),<span style=color:#f1fa8c>&#34;dr=&#34;</span><span style=color:#ff79c6>+</span>a(n.referrer),<span style=color:#f1fa8c>&#34;ul=&#34;</span><span style=color:#ff79c6>+</span>(o.language<span style=color:#ff79c6>||</span>o.browserLanguage),<span style=color:#f1fa8c>&#34;sd=&#34;</span><span style=color:#ff79c6>+</span>t.colorDepth<span style=color:#ff79c6>+</span><span style=color:#f1fa8c>&#34;-bit&#34;</span>,<span style=color:#f1fa8c>&#34;sr=&#34;</span><span style=color:#ff79c6>+</span>t.width<span style=color:#ff79c6>+</span><span style=color:#f1fa8c>&#34;x&#34;</span><span style=color:#ff79c6>+</span>t.height,<span style=color:#f1fa8c>&#34;vp=&#34;</span><span style=color:#ff79c6>+</span>e.innerWidth<span style=color:#ff79c6>+</span><span style=color:#f1fa8c>&#34;x&#34;</span><span style=color:#ff79c6>+</span>e.innerHeight,<span style=color:#f1fa8c>&#34;z=&#34;</span><span style=color:#ff79c6>+</span> <span style=color:#ff79c6>+</span><span style=color:#ff79c6>new</span> <span style=color:#8be9fd;font-style:italic>Date</span>],i<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;?&#34;</span><span style=color:#ff79c6>+</span>r.join(<span style=color:#f1fa8c>&#34;&amp;&#34;</span>);e.<span style=color:#bd93f9>__</span>beacon_img<span style=color:#ff79c6>=</span><span style=color:#ff79c6>new</span> Image,e.<span style=color:#bd93f9>__</span>beacon_img.src<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;/ga.php&#34;</span><span style=color:#ff79c6>+</span>i}(<span style=color:#8be9fd;font-style:italic>window</span>,<span style=color:#8be9fd;font-style:italic>document</span>,navigator,location);&lt;/<span style=color:#ff79c6>script</span>&gt;
+</code></pre></div><p>上面这段代码是直接修改自 imququ.com 的 <code>ana_js</code><br>
+屈哥在 Disqus 把他这部分 javascript 的源码给了我，如下：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js> (<span style=color:#8be9fd;font-style:italic>function</span>(<span style=color:#8be9fd;font-style:italic>window</span>, <span style=color:#8be9fd;font-style:italic>document</span>, navigator, location) {
+<span style=color:#8be9fd;font-style:italic>var</span> screen <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>window</span>.screen;
+<span style=color:#8be9fd;font-style:italic>var</span> encode <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>encodeURIComponent</span>;
+
+<span style=color:#8be9fd;font-style:italic>var</span> data <span style=color:#ff79c6>=</span> [<span style=color:#f1fa8c>&#39;dt=&#39;</span> <span style=color:#ff79c6>+</span> encode(<span style=color:#8be9fd;font-style:italic>document</span>.title),
+<span style=color:#f1fa8c>&#39;dr=&#39;</span> <span style=color:#ff79c6>+</span> encode(<span style=color:#8be9fd;font-style:italic>document</span>.referrer),
+<span style=color:#f1fa8c>&#39;ul=&#39;</span> <span style=color:#ff79c6>+</span> (navigator.language <span style=color:#ff79c6>||</span> navigator.browserLanguage),
+<span style=color:#f1fa8c>&#39;sd=&#39;</span> <span style=color:#ff79c6>+</span> screen.colorDepth <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#39;-bit&#39;</span>,
+<span style=color:#f1fa8c>&#39;sr=&#39;</span> <span style=color:#ff79c6>+</span> screen.width <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#39;x&#39;</span> <span style=color:#ff79c6>+</span> screen.height,
+<span style=color:#f1fa8c>&#39;_=&#39;</span> <span style=color:#ff79c6>+</span> (<span style=color:#ff79c6>+</span><span style=color:#ff79c6>new</span> <span style=color:#8be9fd;font-style:italic>Date</span>)
+];
+
+<span style=color:#8be9fd;font-style:italic>var</span> query <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;?&#39;</span> <span style=color:#ff79c6>+</span> data.join(<span style=color:#f1fa8c>&#39;&amp;&#39;</span>);
+
+<span style=color:#8be9fd;font-style:italic>window</span>.<span style=color:#bd93f9>__</span>beacon_img <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> Image();
+<span style=color:#8be9fd;font-style:italic>window</span>.<span style=color:#bd93f9>__</span>beacon_img.src <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;/ga.php&#39;</span> <span style=color:#ff79c6>+</span> query;
+})(<span style=color:#8be9fd;font-style:italic>window</span>, <span style=color:#8be9fd;font-style:italic>document</span>, navigator, location);
+</code></pre></div><p>这段 JS 代码完成了 URI 生成和发起请求两个操作。</p>
+<p>后端 PHP 程序包含了 uuid 生成、cookie 校验和转发请求三个部分。</p>
+<p>首先是用 md5 生成符合 Google Analytics 的唯一用户 uid，作为辨别不同用户的依据。<br>
+然后会从客户端的 cookie 来进行匹配，判断是否是回访的访客。如果客户端没有相关 cookie，这个请求就会把 uuid 写进用户端的 cookie 中。<br>
+然后就是解析 URI，通过请求采集请求的 URI 获取有关信息，然后组成 <code>www.google-analytics.com/collect</code> 适用的 URI。<br>
+最后就是服务端通过发起 cURL 请求 <code>www.google-analytics.com</code>，把统计的页面行为提交给 Google 即可。</p>
+<blockquote>
+<p>上述代码你可以在 <a href=https://gist.github.com/neoFelhz/4bc074783641b1ba9f4484cd232765e7>我的 gist</a> 中下载。</p>
+</blockquote>
+<h1 id=异步方案的性能分析>异步方案的性能分析</h1>
+<p>
+<figure class=gallery-image style=flex-grow:651;flex-basis:1563px>
+<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/13/916.html/1630060151373394.png width=847 height=130 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/13/916.html/1630060151373394_hu3e8c8d1985534be9f79f09ebd159ede9_6926_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/13/916.html/1630060151373394_hu3e8c8d1985534be9f79f09ebd159ede9_6926_1080x0_resize_catmullrom_3.png 1080w" data-zoomable data-lazyload alt="优化 Google Analytics 异步加载来提高你的网站速度">
+<figcaption>优化 Google Analytics 异步加载来提高你的网站速度</figcaption>
+</figure></p>
+<p>上图上半部分是使用 Google Analytics 的 Tracker Code 的前端响应速度，下半部分是我使用 PHP 程序异步的 Google Analytics 统计的性能表现。</p>
+<blockquote>
+<p>使用 <code>https://blog.viosey.com</code> 和 <code>https://blog.nfz.moe</code> 做的测试。</p>
+</blockquote>
+<p>使用 Google Analytics 的 Tracker Code 需要加载一个大小 30k 左右的脚本（可被缓存），整个统计需要花费 90ms 左右（还不包括中间异步等待时的时间）。使用我的异步统计方案大概需要 85ms – 100ms。虽然速度相差无几，但是异步方案无需加载 JS，而且如果主机性能能再好一些，后端 PHP 运行速度再快一些，完全可以将时间控制在 50ms 以内。</p>
+<hr>
+<p>转载自： <a href=https://blog.nfz.moe/archives/google-analytics-optimize.html>neoFelhz’s Blog—Google Analytics 异步优化方案</a></p>
+</section>
+<div class="border-b border-gray-300"></div>
+<div class="flex justify-between md:text-2xl p-4 text-xl">
+<a href=/2017/07/10/903.html/ title=" Respbian安装NodeJs并搭建Ghost " class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible" style=visibility:visible>
+<span class="flex items-center text-4xl">
+<i class="eva eva-arrow-left-outline"></i>
+</span>
+<span>上一篇</span>
+</a>
+<div class="hidden items-center text-sm xl:flex">
+除特殊声明外，本博客一律使用 「
+<a href=https://creativecommons.org/licenses/by-nc-nd/4.0 target=_blank rel="noopener noreferrer" class=text-theme>署名 - 非商业性使用 - 禁止演绎 4.0</a>
+」许可协议进行授权
+</div>
+<div class="flex items-center text-sm xl:hidden">
+<a href=https://creativecommons.org/licenses/by-nc-nd/4.0 target=_blank rel="noopener noreferrer" class=text-theme>
+<img src=/images/Cc-by-nc-nd.svg alt="署名-非商业性使用-禁止演绎 4.0 国际" title="署名-非商业性使用-禁止演绎 4.0 国际" class=w-24>
+</a>
+</div>
+<a href=/2017/12/11/993.html/ title=" 博客一周年达成~ " class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible" style=visibility:visible>
+<span>下一篇</span>
+<span class="text-4xl flex items-center">
+<i class="eva eva-arrow-right-outline text-4xl"></i>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer>
+<div class="com-footer line-height-1 py-4 px-6 text-sm flex flex-col md:flex-row md:justify-between items-center border-t text-gray-600">
+<div class="text-center mb-2 md:mb-0 flex">
+<span>Copyright © 2016 - 2077 Ice-Hazymoon |</span>
+<a href=/index.xml target=_blank class="hover:text-theme ml-2">RSS</a>
+<a href=/sitemap.xml target=_blank class="hover:text-theme ml-2">Sitemap</a>
+</div>
+<div id=run-time>本博客已低调存活：<b>0</b> 天 <b>0</b> 小时 <b>0</b> 分 <b>0</b> 秒</div>
+</div>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+<script src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js></script>
+</footer></div>
+</div>
+<div onclick=window.backTop() class="back-top cursor-pointer">
+<div class=lt>
+<span>
+<i class="eva eva-arrow-upward-outline"></i>
+</span>
+</div>
+</div>
+</body>
+</html>

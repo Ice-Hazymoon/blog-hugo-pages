@@ -1,0 +1,227 @@
+<!doctype html><html>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="Ice-Hazymoon,冰凌胧月,Hazymoon,MikuTools,">
+<meta name=description content="最近收拾东西的时候偶然间发现了去年买的树莓派3b+，当初是准备用来搭建博客用的，但是稳定性实在不咋地，天天崩。于是就一直放在哪了，今天刚好翻">
+<meta itemprop=description content="最近收拾东西的时候偶然间发现了去年买的树莓派3b+，当初是准备用来搭建博客用的，但是稳定性实在不咋地，天天崩。于是就一直放在哪了，今天刚好翻">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta itemprop=name content="用树莓派搭建私有云盘">
+<link href=https://imiku.me/index.xml title=用树莓派搭建私有云盘 type=application/rss+xml rel=alternate>
+<title>用树莓派搭建私有云盘</title>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css>
+<meta property="og:site_name" content="用树莓派搭建私有云盘">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用树莓派搭建私有云盘">
+<meta property="og:description" content="最近收拾东西的时候偶然间发现了去年买的树莓派3b+，当初是准备用来搭建博客用的，但是稳定性实在不咋地，天天崩。于是就一直放在哪了，今天刚好翻">
+<meta property="og:url" content="https://imiku.me/2017/02/15/273.html/">
+<meta property="og:image" content="https://imiku.me/2017/02/15/273.html/1630060151351635.jpg">
+<meta property="article:publisher" content="https://imiku.me/2017/02/15/273.html/">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:title content="用树莓派搭建私有云盘">
+<meta name=twitter:description content="最近收拾东西的时候偶然间发现了去年买的树莓派3b+，当初是准备用来搭建博客用的，但是稳定性实在不咋地，天天崩。于是就一直放在哪了，今天刚好翻">
+<meta name=twitter:url content="https://imiku.me/2017/02/15/273.html/">
+<meta name=twitter:image content="https://imiku.me/2017/02/15/273.html/1630060151351635.jpg">
+<meta name=twitter:site content="@Ice-Hazymoon">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1280">
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"用树莓派搭建私有云盘","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/02\/15\/273.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"云盘","wordcount":816,"url":"https:\/\/imiku.me\/2017\/02\/15\/273.html\/","datePublished":"2017-02-15T09:18:14\u002b00:00","dateModified":"2017-02-15T09:18:14\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
+</head><body>
+<div class="mx-auto relative shadow-lg">
+<div class="bg-white main md:max-w-4xl mx-auto relative xl:max-w-4xl">
+<header class="relative z-40">
+<nav class="bg bg-white border-b flex items-center md:px-10 navbar px-5 py-6 top-0 z-10">
+<div class="flex items-center justify-around route-items w-full">
+<div class="flex flex-col items-center">
+<a data-active-link=/ href=/ class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-home flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">首页</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/about href=/about class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-heart flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">关于我</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/links href=/links class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-people flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">朋友们</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/twitter href=/twitter class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-twitter flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">推特动态</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/timeline href=/timeline class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-bar-chart flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">时间轴</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/github href=/github class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-github flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">GitHub</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/search href=/search class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-search flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">搜索</span>
+</div>
+</div>
+</nav>
+</header><main class=relative id=swup>
+<div class="h-full nuxt-main relative">
+<div class="h-full relative">
+<div class="bg-white h-full overflow-auto page-view-article">
+<div class=relative>
+<div class="article-cover h-0 relative w-full">
+<img src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/15/273.html/1630060151351635.jpg srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/15/273.html/1630060151351635_hu06226c7f58723b0f450d6076bb8f6873_12168_800x0_resize_q100_catmullrom.jpg 800w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/15/273.html/1630060151351635_hu06226c7f58723b0f450d6076bb8f6873_12168_1600x0_resize_q100_catmullrom.jpg 1600w" alt=用树莓派搭建私有云盘 class="absolute h-full left-0 object-center object-cover top-0 w-full">
+</div>
+<h1 class="absolute article-title bottom-0 left-0 md:text-4xl pb-6 pt-20 px-6 text-3xl text-white w-full">
+用树莓派搭建私有云盘
+</h1>
+</div>
+<div class="article-info p-6 pb-2">
+<div class="bg-red-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-clock-outline mr-1"></i>
+<span>
+<time datetime=2017-02-15T09:18:14Z>February 15, 2017</time>
+</span>
+</div>
+<span class="bg-green-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-person-outline mr-1"></i>
+<span>Ice-Hazymoon</span>
+</span>
+<div class="bg-indigo-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-flag-outline mr-1"></i>
+<span>阅读约 2 分钟</span>
+</div>
+<div class="bg-blue-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-bar-chart-outline mr-1"></i>
+<span>816 字</span>
+</div>
+</div>
+<div class="border-b border-gray-300 pb-6 px-6">
+<div class="flex items-center mb-2">
+<i class="eva eva-pricetags-outline mr-1"></i>
+<span class=mr-2>标签</span>
+<a href=/tags/%E4%BA%91%E7%9B%98 title=云盘 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-hash-outline"></i>
+<span>云盘</span>
+</a>
+</div>
+<div class="flex items-center mb-2">
+<i class="eva eva-folder-outline mr-1"></i>
+<span class=mr-2>分类</span>
+<a href=/categories/%E4%BB%A3%E7%A0%81%E5%90%91 title=代码向 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-book-outline"></i>
+<span>代码向</span>
+</a>
+<a href=/categories/%E6%A0%91%E8%8E%93%E6%B4%BE title=树莓派 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-book-outline"></i>
+<span>树莓派</span>
+</a>
+</div>
+</div>
+<section class="article-content px-10 py-5 typo"><p>最近收拾东西的时候偶然间发现了去年买的树莓派3b+，当初是准备用来搭建博客用的，但是稳定性实在不咋地，天天崩。于是就一直放在哪了，今天刚好翻出来，准备用来搭建个私有云盘，彻底摆脱第三方云存储服务</p>
+<p>个人云盘的项目有很多，比如seafile、迷你云、ownCloud等等。大家可以参考<a href=https://www.zhihu.com/question/46318905>知乎</a>的这篇文章进行选择。我准备搭建的是seafile，因为他的中文论坛比较强大，很多问题都能在上面找到答案，官方文档说明也很详细，不需要太多的知识均能看懂，重要的是对树莓派的支持很好</p>
+<h2 id=准备工具>准备工具</h2>
+<blockquote>
+<p>树莓派*1</p>
+<p>公网ip*1</p>
+<p>内存卡or移动硬盘</p>
+</blockquote>
+<h2 id=开始搭建>开始搭建</h2>
+<ul>
+<li>下载seafile安装包：<a href=https://github.com/haiwen/seafile-rpi/releases>GitHub</a></li>
+<li>安装依赖包：<br>
+<code>sudo apt-get install python2.7 python-setuptools python-imaging python-ldap sqlite3 python-urllib3</code></li>
+<li>将安装包上传到pi中并解压缩<br>
+<code>tar -xvf seafile-server_6.0.7_stable_pi.tar.gz</code></li>
+<li>进入seafile文件夹<br>
+<code>cd seafile-server-6.0.7</code></li>
+<li>运行安装程序<br>
+<code>./setup-seafile.sh</code><br>
+这里根据提示依次输入服务器名字，服务器IP/域名，数据目录，端口号。</li>
+<li>回车后开始设置设置seahub，端口可以自己修改，默认8082<br>
+<code>./seafile.sh start</code></li>
+<li>启动seahub：<br>
+<code>./seahub.sh start 8000</code></li>
+<li>第一次启动会要求输入管理员账号密码和邮箱，输入完成后即可启动，打开<code>http://ip或者域名:8000</code>即可看到登陆页面</li>
+<li>至此-安装完成</li>
+</ul>
+<p>
+<figure class=gallery-image style=flex-grow:186;flex-basis:447px>
+<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/15/273.html/1630060151351002.png width=1440 height=772 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/15/273.html/1630060151351002_hud163dbcacfb09701593dd8ea9ccf7002_16020_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/15/273.html/1630060151351002_hud163dbcacfb09701593dd8ea9ccf7002_16020_1080x0_resize_catmullrom_3.png 1080w" data-zoomable data-lazyload alt=用树莓派搭建私有云盘>
+<figcaption>用树莓派搭建私有云盘</figcaption>
+</figure></p>
+<p>上传的速度还是不错的，可能是内网的缘故吧~</p>
+<p>
+<figure class=gallery-image style=flex-grow:185;flex-basis:444px>
+<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/15/273.html/1630060151351685.png width=1440 height=777 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/15/273.html/1630060151351685_hu2dea91b4bcbd810ada5687dbc0c3d0c8_68206_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/15/273.html/1630060151351685_hu2dea91b4bcbd810ada5687dbc0c3d0c8_68206_1080x0_resize_catmullrom_3.png 1080w" data-zoomable data-lazyload alt=用树莓派搭建私有云盘>
+<figcaption>用树莓派搭建私有云盘</figcaption>
+</figure></p>
+<p>家里的带宽是10m专线，阿里云测试三个节点下载速度均为1.5m/s左右，速度还不错，比某云的bt下载速度快多了，我这里是用的内存卡做测试，大家也可以挂载移动硬盘当存储设备哦~</p>
+<h2 id=使用体验>使用体验</h2>
+<p>使用了一天的seafile总体感觉很棒，速度达到了最高标准，支持外链分享，密码分享，创建群组，加密资料等，完全可以和某云有的一拼，不出意外的话数据应该不会丢失。并且seafile拥有各个平台的客户端，包括Linux和Mac等，随时随地备份你的资料，和家人一起共享照片等，非常不错，大家如果有树莓派之类的设备可以一试哦~vps的话不建议使用，虽然速度很快，但是存储空间小，如何文件多的话很快就占满了，不如自己用移动硬盘。</p>
+</section>
+<div class="border-b border-gray-300"></div>
+<div class="flex justify-between md:text-2xl p-4 text-xl">
+<a href=/2017/02/08/183.html/ title=" 神级桌面美化软件——SAO Utils " class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible" style=visibility:visible>
+<span class="flex items-center text-4xl">
+<i class="eva eva-arrow-left-outline"></i>
+</span>
+<span>上一篇</span>
+</a>
+<div class="hidden items-center text-sm xl:flex">
+除特殊声明外，本博客一律使用 「
+<a href=https://creativecommons.org/licenses/by-nc-nd/4.0 target=_blank rel="noopener noreferrer" class=text-theme>署名 - 非商业性使用 - 禁止演绎 4.0</a>
+」许可协议进行授权
+</div>
+<div class="flex items-center text-sm xl:hidden">
+<a href=https://creativecommons.org/licenses/by-nc-nd/4.0 target=_blank rel="noopener noreferrer" class=text-theme>
+<img src=/images/Cc-by-nc-nd.svg alt="署名-非商业性使用-禁止演绎 4.0 国际" title="署名-非商业性使用-禁止演绎 4.0 国际" class=w-24>
+</a>
+</div>
+<a href=/2017/02/16/279.html/ title=" 树莓派从零开始整理环境 " class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible" style=visibility:visible>
+<span>下一篇</span>
+<span class="text-4xl flex items-center">
+<i class="eva eva-arrow-right-outline text-4xl"></i>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer>
+<div class="com-footer line-height-1 py-4 px-6 text-sm flex flex-col md:flex-row md:justify-between items-center border-t text-gray-600">
+<div class="text-center mb-2 md:mb-0 flex">
+<span>Copyright © 2016 - 2077 Ice-Hazymoon |</span>
+<a href=/index.xml target=_blank class="hover:text-theme ml-2">RSS</a>
+<a href=/sitemap.xml target=_blank class="hover:text-theme ml-2">Sitemap</a>
+</div>
+<div id=run-time>本博客已低调存活：<b>0</b> 天 <b>0</b> 小时 <b>0</b> 分 <b>0</b> 秒</div>
+</div>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+<script src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js></script>
+</footer></div>
+</div>
+<div onclick=window.backTop() class="back-top cursor-pointer">
+<div class=lt>
+<span>
+<i class="eva eva-arrow-upward-outline"></i>
+</span>
+</div>
+</div>
+</body>
+</html>

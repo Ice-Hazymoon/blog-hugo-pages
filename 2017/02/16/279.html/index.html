@@ -1,0 +1,268 @@
+<!doctype html><html>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="Ice-Hazymoon,冰凌胧月,Hazymoon,MikuTools,">
+<meta name=description content="今天准备给我的小pi挂载下硬盘，重启，然后~然后就连不上了:cry:，折腾半天都没弄好。刚好显示器又不在身边，也没检查是否真的坏了，然后就爽">
+<meta itemprop=description content="今天准备给我的小pi挂载下硬盘，重启，然后~然后就连不上了:cry:，折腾半天都没弄好。刚好显示器又不在身边，也没检查是否真的坏了，然后就爽">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta itemprop=name content="树莓派从零开始整理环境">
+<link href=https://imiku.me/index.xml title=树莓派从零开始整理环境 type=application/rss+xml rel=alternate>
+<title>树莓派从零开始整理环境</title>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css>
+<meta property="og:site_name" content="树莓派从零开始整理环境">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树莓派从零开始整理环境">
+<meta property="og:description" content="今天准备给我的小pi挂载下硬盘，重启，然后~然后就连不上了:cry:，折腾半天都没弄好。刚好显示器又不在身边，也没检查是否真的坏了，然后就爽">
+<meta property="og:url" content="https://imiku.me/2017/02/16/279.html/">
+<meta property="og:image" content="https://imiku.me/2017/02/16/279.html/1630060151351502.jpg">
+<meta property="article:publisher" content="https://imiku.me/2017/02/16/279.html/">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:title content="树莓派从零开始整理环境">
+<meta name=twitter:description content="今天准备给我的小pi挂载下硬盘，重启，然后~然后就连不上了:cry:，折腾半天都没弄好。刚好显示器又不在身边，也没检查是否真的坏了，然后就爽">
+<meta name=twitter:url content="https://imiku.me/2017/02/16/279.html/">
+<meta name=twitter:image content="https://imiku.me/2017/02/16/279.html/1630060151351502.jpg">
+<meta name=twitter:site content="@Ice-Hazymoon">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1280">
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"树莓派从零开始整理环境","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/02\/16\/279.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"树莓派","wordcount":1382,"url":"https:\/\/imiku.me\/2017\/02\/16\/279.html\/","datePublished":"2017-02-16T11:47:31\u002b00:00","dateModified":"2017-02-16T11:47:31\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
+</head><body>
+<div class="mx-auto relative shadow-lg">
+<div class="bg-white main md:max-w-4xl mx-auto relative xl:max-w-4xl">
+<header class="relative z-40">
+<nav class="bg bg-white border-b flex items-center md:px-10 navbar px-5 py-6 top-0 z-10">
+<div class="flex items-center justify-around route-items w-full">
+<div class="flex flex-col items-center">
+<a data-active-link=/ href=/ class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-home flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">首页</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/about href=/about class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-heart flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">关于我</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/links href=/links class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-people flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">朋友们</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/twitter href=/twitter class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-twitter flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">推特动态</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/timeline href=/timeline class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-bar-chart flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">时间轴</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/github href=/github class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-github flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">GitHub</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/search href=/search class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-search flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">搜索</span>
+</div>
+</div>
+</nav>
+</header><main class=relative id=swup>
+<div class="h-full nuxt-main relative">
+<div class="h-full relative">
+<div class="bg-white h-full overflow-auto page-view-article">
+<div class=relative>
+<div class="article-cover h-0 relative w-full">
+<img src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/16/279.html/1630060151351502.jpg srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/16/279.html/1630060151351502_hu08abcc46750dabdc1a7adf4dc19019f0_28622_800x0_resize_q100_catmullrom.jpg 800w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/16/279.html/1630060151351502_hu08abcc46750dabdc1a7adf4dc19019f0_28622_1600x0_resize_q100_catmullrom.jpg 1600w" alt=树莓派从零开始整理环境 class="absolute h-full left-0 object-center object-cover top-0 w-full">
+</div>
+<h1 class="absolute article-title bottom-0 left-0 md:text-4xl pb-6 pt-20 px-6 text-3xl text-white w-full">
+树莓派从零开始整理环境
+</h1>
+</div>
+<div class="article-info p-6 pb-2">
+<div class="bg-red-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-clock-outline mr-1"></i>
+<span>
+<time datetime=2017-02-16T11:47:31Z>February 16, 2017</time>
+</span>
+</div>
+<span class="bg-green-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-person-outline mr-1"></i>
+<span>Ice-Hazymoon</span>
+</span>
+<div class="bg-indigo-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-flag-outline mr-1"></i>
+<span>阅读约 3 分钟</span>
+</div>
+<div class="bg-blue-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-bar-chart-outline mr-1"></i>
+<span>1382 字</span>
+</div>
+</div>
+<div class="border-b border-gray-300 pb-6 px-6">
+<div class="flex items-center mb-2">
+<i class="eva eva-pricetags-outline mr-1"></i>
+<span class=mr-2>标签</span>
+<a href=/tags/%E6%A0%91%E8%8E%93%E6%B4%BE title=树莓派 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-hash-outline"></i>
+<span>树莓派</span>
+</a>
+</div>
+<div class="flex items-center mb-2">
+<i class="eva eva-folder-outline mr-1"></i>
+<span class=mr-2>分类</span>
+<a href=/categories/%E4%BB%A3%E7%A0%81%E5%90%91 title=代码向 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-book-outline"></i>
+<span>代码向</span>
+</a>
+<a href=/categories/%E6%A0%91%E8%8E%93%E6%B4%BE title=树莓派 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-book-outline"></i>
+<span>树莓派</span>
+</a>
+</div>
+</div>
+<section class="article-content px-10 py-5 typo"><p>今天准备给我的小pi挂载下硬盘，重启，然后~然后就连不上了:cry:，折腾半天都没弄好。刚好显示器又不在身边，也没检查是否真的坏了，然后就爽快的格式化了sd卡，直接重装系统，玩了三个多月的数据全不在了，于是全部重新折腾了一遍，并记录下了这次过程~可能是最全的树莓派折腾过程吧~</p>
+<h2 id=系统安装>系统安装</h2>
+<p><strong>需要下载的东西</strong></p>
+<blockquote>
+<p>下载sd卡格式化工具：<a href=https://www.sdcard.org/chs/downloads/formatter_4/eula_windows/index.html>SDFormatter</a></p>
+<p>下载镜像写入工具：<a href=https://sourceforge.net/projects/win32diskimager/>Win32 DiskImager</a></p>
+<p>下载系统镜像（推荐使用Raspbian）：<a href=https://www.raspberrypi.org/downloads/>官方下载</a></p>
+</blockquote>
+<ol>
+<li>首先打开SDFormatter，开始格式化sd卡<br>
+将内存卡用读卡器连接电脑，运行sdformatter.在设置里，将调整逻辑大小选择为：ON</li>
+<li>打开Win32DiskImager，选择你下载的镜像（img格式的，官网下载的一定要解压！）<br>
+然后device那选择内存卡盘符，别选错了，点击write写入，等待写入完即可</li>
+</ol>
+<h2 id=安装更换软件源>安装更换软件源</h2>
+<p>由于树莓派默认的软件源在国外，所以安装软件的速度十分的慢，有时候安装个几m的东西要花上一天，所以我们把软件源更换为国内的可以大大提升速度，相关软件源可以参考<a href=http://shumeipai.nxez.com/2013/08/31/raspbian-chinese-software-source.html>树莓派实验室</a>的这篇文章。</p>
+<ol>
+<li>把内存卡插到pi里，此时ssh可能连不上，因为据说16年11月以后发布的系统默认关闭了ssh。先连接上显示器，等待系统完全启动，点击桌面左上角那个黑黑的东西，进入命令窗口</li>
+<li>编辑/etc/apt/sources.list 文件，参考如下命令：<br>
+<code>sudo nano /etc/apt/sources.list</code></li>
+<li>删除或注释原文件所有内容，用以下内容取代：<br>
+<code>deb http://mirror.sysu.edu.cn/raspbian/raspbian/ jessie main contrib non-free</code><br>
+<code>deb-src http://mirror.sysu.edu.cn/raspbian/raspbian/ jessie main contrib non-free</code></li>
+</ol>
+<p>除了Raspbian的软件源外，树莓派还有一份专门的软件源，配置文件位于/etc/apt/sources.list.d/raspi.list。这个软件源的镜像要少一些。</p>
+<ol>
+<li>直接编辑配置文件<br>
+<code>sudo nano /etc/apt/sources.list.d/raspi.list</code></li>
+<li>比如使用中国科技大学的软件源，就可以修改成：<br>
+<code>deb http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/ jessie main</code><br>
+<code>#deb-src http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/ jessie main&lt;br /> Ctrl + O 快捷键 保存&lt;br /> Ctrl + x 快捷键 退出 Nano 编辑器</code></li>
+<li>更新软件源列表，同时检查您的编辑是否正确。<br>
+<code>sudo apt-get update</code></li>
+</ol>
+<h2 id=安装中文语言包>安装中文语言包</h2>
+<p>因为我英语不是很好，每次看英语大脑总要延迟那么一两秒，所以还是老老实实选择中文吧</p>
+<ol>
+<li>安装文泉驿的开源中文字体<br>
+<code>sudo apt-get install ttf-wqy-zenhei</code></li>
+<li>如果你经常使用桌面环境的话可以安装中文输入法（Ctrl+空格切换）<br>
+<code>sudo apt-get install scim-pinyin</code></li>
+<li>接着运行：<br>
+<code>sudo raspi-config</code><br>
+然后选择Internationalisation Options change_locale，在Default locale for the system environment:中去掉en_GB.UTF-8 UTF-8，勾上：“en_US.UTF-8 UTF-8”、“zh_CN.UTF-8 UTF-8”、“zh_CN.GBK GBK” （操作提示：按空格键在前面打勾或去掉勾（星号=勾），PageUp PageDown快速翻页，Tab键跳到OK按钮上），下一屏幕默认语言选zh_CN.UTF-8。</li>
+<li>然后重启机器<br>
+<code>reboot</code></li>
+</ol>
+<h2 id=开启root账户并启用ssh登陆>开启root账户并启用ssh登陆</h2>
+<ol>
+<li>重新开启root账号（系统会提示输入两遍的root密码，输入你想设的密码即可）<br>
+<code>sudo passwd root</code></li>
+<li>修改ssh配置文件<br>
+<code>sudo nano /etc/ssh/sshd_config</code><br>
+Ctrl + W 快捷键 搜索 PermitRootLogin without-password<br>
+修改 PermitRootLogin without-password 为 PermitRootLogin yes<br>
+Ctrl + O 快捷键 保存<br>
+Ctrl + x 快捷键 退出 Nano 编辑器</li>
+<li>在/boot目录下新建一个ssh文件<br>
+<code>cd /boot</code><br>
+<code>sudo touch ssh</code><br>
+这样，树莓派开机时默认启动ssh。</li>
+<li>启用 root 账号登录<br>
+<code>sudo passwd --unlock root</code></li>
+<li>重启树莓派<br>
+<code>reboot</code></li>
+</ol>
+<h2 id=关闭图形界面>关闭图形界面</h2>
+<ol>
+<li>如果只是使用命令行操作的可以关闭图形界面，可以节省大量资源</li>
+<li><code>sudo raspi-config</code><br>
+依次选择<br>
+Boot Options<br>
+B1 Desktop / CLI<br>
+B1 Console<br>
+之后会让你输密码，确认后重启即可默认进入命令行界面</li>
+</ol>
+<h2 id=开启-wifi-连接>开启 WiFi 连接</h2>
+<ul>
+<li>nano /etc/wpa_supplicant/wpa_supplicant.conf</li>
+<li>添加 添加 <code>network={ssid="WIFINAME"psk="password"}</code></li>
+<li>保存后重启树莓派</li>
+</ul>
+</section>
+<div class="border-b border-gray-300"></div>
+<div class="flex justify-between md:text-2xl p-4 text-xl">
+<a href=/2017/02/15/273.html/ title=" 用树莓派搭建私有云盘 " class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible" style=visibility:visible>
+<span class="flex items-center text-4xl">
+<i class="eva eva-arrow-left-outline"></i>
+</span>
+<span>上一篇</span>
+</a>
+<div class="hidden items-center text-sm xl:flex">
+除特殊声明外，本博客一律使用 「
+<a href=https://creativecommons.org/licenses/by-nc-nd/4.0 target=_blank rel="noopener noreferrer" class=text-theme>署名 - 非商业性使用 - 禁止演绎 4.0</a>
+」许可协议进行授权
+</div>
+<div class="flex items-center text-sm xl:hidden">
+<a href=https://creativecommons.org/licenses/by-nc-nd/4.0 target=_blank rel="noopener noreferrer" class=text-theme>
+<img src=/images/Cc-by-nc-nd.svg alt="署名-非商业性使用-禁止演绎 4.0 国际" title="署名-非商业性使用-禁止演绎 4.0 国际" class=w-24>
+</a>
+</div>
+<a href=/2017/02/18/285.html/ title=" 利用树莓派搭建24h下载机 " class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible" style=visibility:visible>
+<span>下一篇</span>
+<span class="text-4xl flex items-center">
+<i class="eva eva-arrow-right-outline text-4xl"></i>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer>
+<div class="com-footer line-height-1 py-4 px-6 text-sm flex flex-col md:flex-row md:justify-between items-center border-t text-gray-600">
+<div class="text-center mb-2 md:mb-0 flex">
+<span>Copyright © 2016 - 2077 Ice-Hazymoon |</span>
+<a href=/index.xml target=_blank class="hover:text-theme ml-2">RSS</a>
+<a href=/sitemap.xml target=_blank class="hover:text-theme ml-2">Sitemap</a>
+</div>
+<div id=run-time>本博客已低调存活：<b>0</b> 天 <b>0</b> 小时 <b>0</b> 分 <b>0</b> 秒</div>
+</div>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+<script src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js></script>
+</footer></div>
+</div>
+<div onclick=window.backTop() class="back-top cursor-pointer">
+<div class=lt>
+<span>
+<i class="eva eva-arrow-upward-outline"></i>
+</span>
+</div>
+</div>
+</body>
+</html>

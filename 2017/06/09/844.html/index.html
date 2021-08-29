@@ -1,0 +1,249 @@
+<!doctype html><html>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="Ice-Hazymoon,冰凌胧月,Hazymoon,MikuTools,">
+<meta name=description content="QQ群机器人现在已经烂大街了，甚至腾讯都推出了自家的QQ机器人，相比之下，微信群聊就显得无聊许多，有时候几个星期都不一定有一个人冒泡，于是便">
+<meta itemprop=description content="QQ群机器人现在已经烂大街了，甚至腾讯都推出了自家的QQ机器人，相比之下，微信群聊就显得无聊许多，有时候几个星期都不一定有一个人冒泡，于是便">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta itemprop=name content="用 Python 简单构建微信群机器人">
+<link href=https://imiku.me/index.xml title="用 Python 简单构建微信群机器人" type=application/rss+xml rel=alternate>
+<title>用 Python 简单构建微信群机器人</title>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css>
+<meta property="og:site_name" content="用 Python 简单构建微信群机器人">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用 Python 简单构建微信群机器人">
+<meta property="og:description" content="QQ群机器人现在已经烂大街了，甚至腾讯都推出了自家的QQ机器人，相比之下，微信群聊就显得无聊许多，有时候几个星期都不一定有一个人冒泡，于是便">
+<meta property="og:url" content="https://imiku.me/2017/06/09/844.html/">
+<meta property="og:image" content="https://imiku.me/2017/06/09/844.html/1630060151369582.jpg">
+<meta property="article:publisher" content="https://imiku.me/2017/06/09/844.html/">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:title content="用 Python 简单构建微信群机器人">
+<meta name=twitter:description content="QQ群机器人现在已经烂大街了，甚至腾讯都推出了自家的QQ机器人，相比之下，微信群聊就显得无聊许多，有时候几个星期都不一定有一个人冒泡，于是便">
+<meta name=twitter:url content="https://imiku.me/2017/06/09/844.html/">
+<meta name=twitter:image content="https://imiku.me/2017/06/09/844.html/1630060151369582.jpg">
+<meta name=twitter:site content="@Ice-Hazymoon">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1280">
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"用 Python 简单构建微信群机器人","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/06\/09\/844.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"Python, 微信, 机器人","wordcount":589,"url":"https:\/\/imiku.me\/2017\/06\/09\/844.html\/","datePublished":"2017-06-09T03:03:01\u002b00:00","dateModified":"2017-06-09T03:03:01\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
+</head><body>
+<div class="mx-auto relative shadow-lg">
+<div class="bg-white main md:max-w-4xl mx-auto relative xl:max-w-4xl">
+<header class="relative z-40">
+<nav class="bg bg-white border-b flex items-center md:px-10 navbar px-5 py-6 top-0 z-10">
+<div class="flex items-center justify-around route-items w-full">
+<div class="flex flex-col items-center">
+<a data-active-link=/ href=/ class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-home flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">首页</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/about href=/about class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-heart flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">关于我</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/links href=/links class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-people flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">朋友们</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/twitter href=/twitter class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-twitter flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">推特动态</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/timeline href=/timeline class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-bar-chart flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">时间轴</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/github href=/github class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-github flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">GitHub</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/search href=/search class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-search flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">搜索</span>
+</div>
+</div>
+</nav>
+</header><main class=relative id=swup>
+<div class="h-full nuxt-main relative">
+<div class="h-full relative">
+<div class="bg-white h-full overflow-auto page-view-article">
+<div class=relative>
+<div class="article-cover h-0 relative w-full">
+<img src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/06/09/844.html/1630060151369582.jpg srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/06/09/844.html/1630060151369582_hubcf21500b872503b1fa0ed8940fd9635_24155_800x0_resize_q100_catmullrom.jpg 800w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/06/09/844.html/1630060151369582_hubcf21500b872503b1fa0ed8940fd9635_24155_1600x0_resize_q100_catmullrom.jpg 1600w" alt="用 Python 简单构建微信群机器人" class="absolute h-full left-0 object-center object-cover top-0 w-full">
+</div>
+<h1 class="absolute article-title bottom-0 left-0 md:text-4xl pb-6 pt-20 px-6 text-3xl text-white w-full">
+用 Python 简单构建微信群机器人
+</h1>
+</div>
+<div class="article-info p-6 pb-2">
+<div class="bg-red-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-clock-outline mr-1"></i>
+<span>
+<time datetime=2017-06-09T03:03:01Z>June 9, 2017</time>
+</span>
+</div>
+<span class="bg-green-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-person-outline mr-1"></i>
+<span>Ice-Hazymoon</span>
+</span>
+<div class="bg-indigo-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-flag-outline mr-1"></i>
+<span>阅读约 2 分钟</span>
+</div>
+<div class="bg-blue-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-bar-chart-outline mr-1"></i>
+<span>589 字</span>
+</div>
+</div>
+<div class="border-b border-gray-300 pb-6 px-6">
+<div class="flex items-center mb-2">
+<i class="eva eva-pricetags-outline mr-1"></i>
+<span class=mr-2>标签</span>
+<a href=/tags/python title=Python class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-hash-outline"></i>
+<span>Python</span>
+</a>
+<a href=/tags/%E5%BE%AE%E4%BF%A1 title=微信 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-hash-outline"></i>
+<span>微信</span>
+</a>
+<a href=/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA title=机器人 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-hash-outline"></i>
+<span>机器人</span>
+</a>
+</div>
+<div class="flex items-center mb-2">
+<i class="eva eva-folder-outline mr-1"></i>
+<span class=mr-2>分类</span>
+<a href=/categories/%E4%BB%A3%E7%A0%81%E5%90%91 title=代码向 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-book-outline"></i>
+<span>代码向</span>
+</a>
+</div>
+</div>
+<section class="article-content px-10 py-5 typo"><p>QQ群机器人现在已经烂大街了，甚至腾讯都推出了自家的QQ机器人，相比之下，微信群聊就显得无聊许多，有时候几个星期都不一定有一个人冒泡，于是便有了这篇水文 ❓</p>
+<p>首先要去 <a href=http://www.tuling123.com/>http://www.tuling123.com/</a> 申请一个api，免费的</p>
+<h2 id=准备>准备：</h2>
+<ul>
+<li>Python 2/3</li>
+<li>电脑*1（Linux，Windows不限，反正能运行Python就行）</li>
+<li>微信*1</li>
+</ul>
+<h2 id=安装>安装：</h2>
+<ul>
+<li>微信机器人用到的项目是 <a href=https://github.com/youfou/wxpy>wxpy</a>  官方文档说明很详细，可以根据自己的需要编写，这里只是一个简单的案例</li>
+<li>安装 wxpy：<code>pip install -U wxpy</code></li>
+<li>如果是Linux的话还需要安装pillow依赖：<code>pip install pillow</code></li>
+<li>有时候安装pillow会出现依赖包缺失错误，需要先安装pillow依赖库：<code>sudo apt-get install libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk</code></li>
+</ul>
+<h2 id=运行>运行：</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#6272a4># coding: utf-8</span>
+<span style=color:#ff79c6>import</span> requests
+<span style=color:#ff79c6>from</span> wxpy <span style=color:#ff79c6>import</span> <span style=color:#ff79c6>*</span>
+<span style=color:#ff79c6>import</span> json<span style=color:#6272a4>#登陆 //如果你是Linux系统在括号内添加console_qr=True</span>
+bot <span style=color:#ff79c6>=</span> Bot()<span style=color:#6272a4>#图灵接口</span>
+<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>talks_robot</span>(info <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;人工智障小月&#39;</span>):
+api_url <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;http://www.tuling123.com/openapi/api&#39;</span>
+apikey <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;你的api&#39;</span>
+data <span style=color:#ff79c6>=</span> {<span style=color:#f1fa8c>&#39;key&#39;</span>: apikey,
+<span style=color:#f1fa8c>&#39;info&#39;</span>: info}
+req <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>post(api_url, data<span style=color:#ff79c6>=</span>data)<span style=color:#ff79c6>.</span>text
+replys <span style=color:#ff79c6>=</span> json<span style=color:#ff79c6>.</span>loads(req)[<span style=color:#f1fa8c>&#39;text&#39;</span>]
+<span style=color:#ff79c6>return</span> replys<span style=color:#6272a4>#聊天回复 仅限群聊被@时回复，其他情况一律不回复</span>
+@bot<span style=color:#ff79c6>.</span>register([Group])
+<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>auto_reply</span>(msg):
+message <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>{}</span><span style=color:#f1fa8c>&#39;</span><span style=color:#ff79c6>.</span>format(msg<span style=color:#ff79c6>.</span>text)
+replys <span style=color:#ff79c6>=</span> talks_robot(info<span style=color:#ff79c6>=</span>message)
+<span style=color:#ff79c6>if</span> <span style=color:#8be9fd;font-style:italic>isinstance</span>(msg<span style=color:#ff79c6>.</span>chat, Group) <span style=color:#ff79c6>and</span> <span style=color:#ff79c6>not</span> msg<span style=color:#ff79c6>.</span>is_at:
+<span style=color:#ff79c6>return</span>
+<span style=color:#ff79c6>else</span> :
+<span style=color:#ff79c6>return</span> replys<span style=color:#6272a4>#让程序保持运行</span>
+bot<span style=color:#ff79c6>.</span>start()
+embed()
+</code></pre></div><ul>
+<li><del>将上面的代码另存为.py文件</del>  可能会出错，请到百度云下载：链接：<a href=http://pan.baidu.com/s/1c8KEZk>http://pan.baidu.com/s/1c8KEZk</a> 密码：v4l3</li>
+<li>运行后效果如下图</li>
+<li>
+<figure class=gallery-image style=flex-grow:106;flex-basis:256px>
+<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/06/09/844.html/1630060151369548.jpg width=791 height=741 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/06/09/844.html/1630060151369548_hu845d8c51774598edcc8ca9035e74fa41_14623_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/06/09/844.html/1630060151369548_hu845d8c51774598edcc8ca9035e74fa41_14623_1080x0_resize_q100_catmullrom.jpg 1080w" data-zoomable data-lazyload alt="用 Python 简单构建微信群机器人">
+<figcaption>用 Python 简单构建微信群机器人</figcaption>
+</figure></li>
+<li>
+<figure class=gallery-image style=flex-grow:157;flex-basis:377px>
+<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/06/09/844.html/1630060151369668.jpg width=1080 height=686 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/06/09/844.html/1630060151369668_hu3a2e7b13a0c4e078395edb5c85ffaa69_77566_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/06/09/844.html/1630060151369668_hu3a2e7b13a0c4e078395edb5c85ffaa69_77566_1080x0_resize_q100_catmullrom.jpg 1080w" data-zoomable data-lazyload alt="用 Python 简单构建微信群机器人">
+<figcaption>用 Python 简单构建微信群机器人</figcaption>
+</figure></li>
+</ul>
+<h2 id=还有更多功能自己去发掘吧>还有更多功能自己去发掘吧</h2>
+<p>
+<figure class=gallery-image style=flex-grow:438;flex-basis:1052px>
+<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/06/09/844.html/1630060151369933.jpg width=1504 height=343 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/06/09/844.html/1630060151369933_hu1a3f331c0d65d173480d014f36fa6258_42764_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/06/09/844.html/1630060151369933_hu1a3f331c0d65d173480d014f36fa6258_42764_1080x0_resize_q100_catmullrom.jpg 1080w" data-zoomable data-lazyload alt="用 Python 简单构建微信群机器人">
+<figcaption>用 Python 简单构建微信群机器人</figcaption>
+</figure></p>
+</section>
+<div class="border-b border-gray-300"></div>
+<div class="flex justify-between md:text-2xl p-4 text-xl">
+<a href=/2017/06/01/839.html/ title=" 网页设计作品奖励：景品*2 " class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible" style=visibility:visible>
+<span class="flex items-center text-4xl">
+<i class="eva eva-arrow-left-outline"></i>
+</span>
+<span>上一篇</span>
+</a>
+<div class="hidden items-center text-sm xl:flex">
+除特殊声明外，本博客一律使用 「
+<a href=https://creativecommons.org/licenses/by-nc-nd/4.0 target=_blank rel="noopener noreferrer" class=text-theme>署名 - 非商业性使用 - 禁止演绎 4.0</a>
+」许可协议进行授权
+</div>
+<div class="flex items-center text-sm xl:hidden">
+<a href=https://creativecommons.org/licenses/by-nc-nd/4.0 target=_blank rel="noopener noreferrer" class=text-theme>
+<img src=/images/Cc-by-nc-nd.svg alt="署名-非商业性使用-禁止演绎 4.0 国际" title="署名-非商业性使用-禁止演绎 4.0 国际" class=w-24>
+</a>
+</div>
+<a href=/2017/06/11/849.html/ title=" 论程序员的小冰和普通人的小冰 " class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible" style=visibility:visible>
+<span>下一篇</span>
+<span class="text-4xl flex items-center">
+<i class="eva eva-arrow-right-outline text-4xl"></i>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer>
+<div class="com-footer line-height-1 py-4 px-6 text-sm flex flex-col md:flex-row md:justify-between items-center border-t text-gray-600">
+<div class="text-center mb-2 md:mb-0 flex">
+<span>Copyright © 2016 - 2077 Ice-Hazymoon |</span>
+<a href=/index.xml target=_blank class="hover:text-theme ml-2">RSS</a>
+<a href=/sitemap.xml target=_blank class="hover:text-theme ml-2">Sitemap</a>
+</div>
+<div id=run-time>本博客已低调存活：<b>0</b> 天 <b>0</b> 小时 <b>0</b> 分 <b>0</b> 秒</div>
+</div>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+<script src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js></script>
+</footer></div>
+</div>
+<div onclick=window.backTop() class="back-top cursor-pointer">
+<div class=lt>
+<span>
+<i class="eva eva-arrow-upward-outline"></i>
+</span>
+</div>
+</div>
+</body>
+</html>

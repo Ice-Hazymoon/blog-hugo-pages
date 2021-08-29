@@ -1,0 +1,289 @@
+<!doctype html><html>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="Ice-Hazymoon,冰凌胧月,Hazymoon,MikuTools,">
+<meta name=description content="最近准备开始写日记，可是又不知道用什么样的程序好，Wordpress用的都想吐了，hexo等又不习惯，于是盯上了我一直很青睐的Ghost，刚">
+<meta itemprop=description content="最近准备开始写日记，可是又不知道用什么样的程序好，Wordpress用的都想吐了，hexo等又不习惯，于是盯上了我一直很青睐的Ghost，刚">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta itemprop=name content="Respbian安装NodeJs并搭建Ghost">
+<link href=https://imiku.me/index.xml title=Respbian安装NodeJs并搭建Ghost type=application/rss+xml rel=alternate>
+<title>Respbian安装NodeJs并搭建Ghost</title>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css>
+<meta property="og:site_name" content="Respbian安装NodeJs并搭建Ghost">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Respbian安装NodeJs并搭建Ghost">
+<meta property="og:description" content="最近准备开始写日记，可是又不知道用什么样的程序好，Wordpress用的都想吐了，hexo等又不习惯，于是盯上了我一直很青睐的Ghost，刚">
+<meta property="og:url" content="https://imiku.me/2017/07/10/903.html/">
+<meta property="og:image" content="https://imiku.me/2017/07/10/903.html/1630060151372767.jpg">
+<meta property="article:publisher" content="https://imiku.me/2017/07/10/903.html/">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:title content="Respbian安装NodeJs并搭建Ghost">
+<meta name=twitter:description content="最近准备开始写日记，可是又不知道用什么样的程序好，Wordpress用的都想吐了，hexo等又不习惯，于是盯上了我一直很青睐的Ghost，刚">
+<meta name=twitter:url content="https://imiku.me/2017/07/10/903.html/">
+<meta name=twitter:image content="https://imiku.me/2017/07/10/903.html/1630060151372767.jpg">
+<meta name=twitter:site content="@Ice-Hazymoon">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1280">
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Respbian安装NodeJs并搭建Ghost","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/07\/10\/903.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"Ghost, 树莓派","wordcount":954,"url":"https:\/\/imiku.me\/2017\/07\/10\/903.html\/","datePublished":"2017-07-10T06:54:18\u002b00:00","dateModified":"2017-07-10T06:54:18\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
+</head><body>
+<div class="mx-auto relative shadow-lg">
+<div class="bg-white main md:max-w-4xl mx-auto relative xl:max-w-4xl">
+<header class="relative z-40">
+<nav class="bg bg-white border-b flex items-center md:px-10 navbar px-5 py-6 top-0 z-10">
+<div class="flex items-center justify-around route-items w-full">
+<div class="flex flex-col items-center">
+<a data-active-link=/ href=/ class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-home flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">首页</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/about href=/about class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-heart flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">关于我</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/links href=/links class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-people flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">朋友们</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/twitter href=/twitter class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-twitter flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">推特动态</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/timeline href=/timeline class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-bar-chart flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">时间轴</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/github href=/github class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-github flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">GitHub</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/search href=/search class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-search flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">搜索</span>
+</div>
+</div>
+</nav>
+</header><main class=relative id=swup>
+<div class="h-full nuxt-main relative">
+<div class="h-full relative">
+<div class="bg-white h-full overflow-auto page-view-article">
+<div class=relative>
+<div class="article-cover h-0 relative w-full">
+<img src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/10/903.html/1630060151372767.jpg srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/10/903.html/1630060151372767_hu8427cd8f84b3d710ffce4177e40fce12_11678_800x0_resize_q100_catmullrom.jpg 800w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/10/903.html/1630060151372767_hu8427cd8f84b3d710ffce4177e40fce12_11678_1600x0_resize_q100_catmullrom.jpg 1600w" alt=Respbian安装NodeJs并搭建Ghost class="absolute h-full left-0 object-center object-cover top-0 w-full">
+</div>
+<h1 class="absolute article-title bottom-0 left-0 md:text-4xl pb-6 pt-20 px-6 text-3xl text-white w-full">
+Respbian安装NodeJs并搭建Ghost
+</h1>
+</div>
+<div class="article-info p-6 pb-2">
+<div class="bg-red-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-clock-outline mr-1"></i>
+<span>
+<time datetime=2017-07-10T06:54:18Z>July 10, 2017</time>
+</span>
+</div>
+<span class="bg-green-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-person-outline mr-1"></i>
+<span>Ice-Hazymoon</span>
+</span>
+<div class="bg-indigo-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-flag-outline mr-1"></i>
+<span>阅读约 2 分钟</span>
+</div>
+<div class="bg-blue-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-bar-chart-outline mr-1"></i>
+<span>954 字</span>
+</div>
+</div>
+<div class="border-b border-gray-300 pb-6 px-6">
+<div class="flex items-center mb-2">
+<i class="eva eva-pricetags-outline mr-1"></i>
+<span class=mr-2>标签</span>
+<a href=/tags/ghost title=Ghost class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-hash-outline"></i>
+<span>Ghost</span>
+</a>
+<a href=/tags/%E6%A0%91%E8%8E%93%E6%B4%BE title=树莓派 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-hash-outline"></i>
+<span>树莓派</span>
+</a>
+</div>
+<div class="flex items-center mb-2">
+<i class="eva eva-folder-outline mr-1"></i>
+<span class=mr-2>分类</span>
+<a href=/categories/%E5%96%B5%E5%96%B5%E5%96%B5 title=喵喵喵 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-book-outline"></i>
+<span>喵喵喵</span>
+</a>
+</div>
+</div>
+<section class="article-content px-10 py-5 typo"><p>最近准备开始写日记，可是又不知道用什么样的程序好，Wordpress用的都想吐了，hexo等又不习惯，于是盯上了我一直很青睐的Ghost，刚好树莓派还在那一直挂着，不如拿来利用一下 😎<br>
+PS：如果你的脸不是太黑的话，顺着敲代码肯定能搭建出来的</p>
+<p>环境：Debian8<br>
+设备：树莓派3B</p>
+<h1 id=安装nodejs>安装NodeJs</h1>
+<p>来自：<a href=https://weic.me/respbian-install-nodejs/>Weic`s Blog</a></p>
+<p>切换到root账户<br>
+<code>su root</code></p>
+<p>卸载自带Node<br>
+<code>apt-get remove nodejs nodered</code></p>
+<p>卸载完后可能会提示还有不需要的包，需要输入下面命令卸载<br>
+<code>apt-get autoremove</code></p>
+<p>卸载完查下看能不能输出Node版本信息<br>
+<code>node -v</code></p>
+<p>如果没有输出版本信息就说明卸载完了，下面我们安装我们自己的Node<br>
+首先定一个安装位置，我们这里以 /usr 目录为例<br>
+<code>cd /usr</code></p>
+<p>下载编译好的Node<br>
+<code>wget https://npm.taobao.org/dist/v4.6.2/node-v4.6.2-linux-armv6l.tar.gz</code></p>
+<p>链接node和npm<br>
+<code>ln -s /usr/node-v4.6.2-linux-armv6l/bin/node /usr/local/bin/node</code><br>
+<code>ln -s /usr/node-v4.6.2-linux-armv6l/bin/npm /usr/local/bin/npm</code></p>
+<p>现在查看node和npm版本<br>
+<code>node -v && npm -v</code></p>
+<p>如果有输出版本信息则表示安装完成,如下图：</p>
+<p>
+<figure class=gallery-image style=flex-grow:1308;flex-basis:3139px>
+<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/10/903.html/1630060151372749.png width=811 height=62 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/10/903.html/1630060151372749_hucd485a17aa23bef791f68c05f16c3220_13316_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/10/903.html/1630060151372749_hucd485a17aa23bef791f68c05f16c3220_13316_1080x0_resize_catmullrom_3.png 1080w" data-zoomable data-lazyload alt=Respbian安装NodeJs并搭建Ghost>
+<figcaption>Respbian安装NodeJs并搭建Ghost</figcaption>
+</figure></p>
+<p>更改npm源<br>
+如果你的服务器是在国外，请忽略此步骤；但如果服务器在国内的话想都不用想继续往下看：<br>
+<code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code><br>
+<code>ln -s /usr/node-4.6.2/bin/cnpm /usr/local/bin/cnpm</code></p>
+<h1 id=安装lamp>安装lamp</h1>
+<p>安装Nginx<br>
+<code>apt-get install nginx</code></p>
+<p>安装mysql,php,phpmyadmin &lt;–如果你要用mysql而不是sqlite的话<br>
+<code>apt-get install mysql-server php5 php5-mysql phpmyadmin</code><br>
+链接phpmyadmin<br>
+<code>ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin</code><br>
+给网站目录权限<br>
+<code>chmod -R 777 /var/www/html</code><br>
+重启服务<br>
+<code>php5enmod mcrypt</code><br>
+<code>service php5-fpm restart</code></p>
+<h1 id=安装ghost>安装Ghost</h1>
+<p>进入home目录<br>
+<code>cd /home</code><br>
+新建一个文件夹<br>
+<code>mkdir ghost</code><br>
+下载最新版本的ghost<br>
+<code>wget https://ghost.org/zip/ghost-latest.zip</code><br>
+解压文件<br>
+<code>unzip -d ghost ghost-latest.zip</code><br>
+进入安装目录<br>
+<code>cd ghost/</code><br>
+进行安装<br>
+<code>npm install --production</code></p>
+<h1 id=配置ghost>配置ghost</h1>
+<h1 id=复制configexamplejs-并命名为configjs>复制config.example.js 并命名为config.js</h1>
+<p><code>cp config.example.js config.js</code></p>
+<h1 id=按照以下说明进行修改>按照以下说明进行修改</h1>
+<p><code>vi config.js</code></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>config = {
+  // ### Production
+  // When running Ghost in the wild, use the production environment
+  // Configure your URL and mail settings here
+  production: {
+  url: &#39;http://my-ghost-blog.com&#39;,
+  #将‘ ’内部的内容修改为你的解析后的域名，注意带上http
+  mail: {},
+          database: {
+              client: &#39;mysql&#39;,
+              connection: {
+                  host     : &#39;127.0.0.1&#39;,
+                  user     : &#39;root&#39;,
+                  password : &#39;&#39;,
+                  database : &#39;ghost&#39;,
+                  charset  : &#39;utf8&#39;
+              }
+          },
+          server: {
+  // Host to be passed to node&#39;s `net.Server#listen()`
+  host: &#39;127.0.0.1&#39;,
+  #将‘127.0.0.1’改为‘0.0.0.0’
+  // Port to be passed to node&#39;s `net.Server#listen()`, for iisnode s$
+  port: &#39;2368&#39;
+  }
+},(...)
+</code></pre></div><p>然后</p>
+<h1 id=后台运行>后台运行</h1>
+<p>emmm…可以用PM2之类的软件，不过我还是喜欢新建一个screen窗口，看个人喜好吧</p>
+<p>使用PM2让Ghost永远在线<br>
+首先进到ghost的安装目录，之后安装PM2<br>
+<code>npm install pm2 -g</code><br>
+链接PM2
+<code>ln -s /usr/node-v4.6.2-linux-armv6l/bin/pm2 /usr/bin</code><br>
+让ghost以production模式运作，指定程序的入口index.js，并且此进程命名为ghost<br>
+<code>NODE_ENV=production pm2 start index.js --name "ghost"</code><br>
+开机启动<br>
+<code>pm2 startup</code><br>
+<code>pm2 save</code></p>
+</section>
+<div class="border-b border-gray-300"></div>
+<div class="flex justify-between md:text-2xl p-4 text-xl">
+<a href=/2017/07/09/899.html/ title=" wordpress 功能增强及优化 " class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible" style=visibility:visible>
+<span class="flex items-center text-4xl">
+<i class="eva eva-arrow-left-outline"></i>
+</span>
+<span>上一篇</span>
+</a>
+<div class="hidden items-center text-sm xl:flex">
+除特殊声明外，本博客一律使用 「
+<a href=https://creativecommons.org/licenses/by-nc-nd/4.0 target=_blank rel="noopener noreferrer" class=text-theme>署名 - 非商业性使用 - 禁止演绎 4.0</a>
+」许可协议进行授权
+</div>
+<div class="flex items-center text-sm xl:hidden">
+<a href=https://creativecommons.org/licenses/by-nc-nd/4.0 target=_blank rel="noopener noreferrer" class=text-theme>
+<img src=/images/Cc-by-nc-nd.svg alt="署名-非商业性使用-禁止演绎 4.0 国际" title="署名-非商业性使用-禁止演绎 4.0 国际" class=w-24>
+</a>
+</div>
+<a href=/2017/07/13/916.html/ title=" 优化 Google Analytics 异步加载来提高你的网站速度 " class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible" style=visibility:visible>
+<span>下一篇</span>
+<span class="text-4xl flex items-center">
+<i class="eva eva-arrow-right-outline text-4xl"></i>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer>
+<div class="com-footer line-height-1 py-4 px-6 text-sm flex flex-col md:flex-row md:justify-between items-center border-t text-gray-600">
+<div class="text-center mb-2 md:mb-0 flex">
+<span>Copyright © 2016 - 2077 Ice-Hazymoon |</span>
+<a href=/index.xml target=_blank class="hover:text-theme ml-2">RSS</a>
+<a href=/sitemap.xml target=_blank class="hover:text-theme ml-2">Sitemap</a>
+</div>
+<div id=run-time>本博客已低调存活：<b>0</b> 天 <b>0</b> 小时 <b>0</b> 分 <b>0</b> 秒</div>
+</div>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+<script src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js></script>
+</footer></div>
+</div>
+<div onclick=window.backTop() class="back-top cursor-pointer">
+<div class=lt>
+<span>
+<i class="eva eva-arrow-upward-outline"></i>
+</span>
+</div>
+</div>
+</body>
+</html>

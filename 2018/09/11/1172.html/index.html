@@ -1,0 +1,377 @@
+<!doctype html><html>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="Ice-Hazymoon,冰凌胧月,Hazymoon,MikuTools,">
+<meta name=description content="最近公司在做一个后台管理系统，顺便在这里记录一下登录权限验证的过程, 以便以后使用 工具： vue全家桶（Vuex，Vue Router，Vue） +">
+<meta itemprop=description content="最近公司在做一个后台管理系统，顺便在这里记录一下登录权限验证的过程, 以便以后使用 工具： vue全家桶（Vuex，Vue Router，Vue） +">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta itemprop=name content="Vue 登录验证练习">
+<link href=https://imiku.me/index.xml title="Vue 登录验证练习" type=application/rss+xml rel=alternate>
+<title>Vue 登录验证练习</title>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css>
+<meta property="og:site_name" content="Vue 登录验证练习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue 登录验证练习">
+<meta property="og:description" content="最近公司在做一个后台管理系统，顺便在这里记录一下登录权限验证的过程, 以便以后使用 工具： vue全家桶（Vuex，Vue Router，Vue） +">
+<meta property="og:url" content="https://imiku.me/2018/09/11/1172.html/">
+<meta property="og:image" content="https://imiku.me/2018/09/11/1172.html/1630060151384066.png">
+<meta property="article:publisher" content="https://imiku.me/2018/09/11/1172.html/">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:title content="Vue 登录验证练习">
+<meta name=twitter:description content="最近公司在做一个后台管理系统，顺便在这里记录一下登录权限验证的过程, 以便以后使用 工具： vue全家桶（Vuex，Vue Router，Vue） +">
+<meta name=twitter:url content="https://imiku.me/2018/09/11/1172.html/">
+<meta name=twitter:image content="https://imiku.me/2018/09/11/1172.html/1630060151384066.png">
+<meta name=twitter:site content="@Ice-Hazymoon">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1280">
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Vue 登录验证练习","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2018\/09\/11\/1172.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"vue, 代码, 安全","wordcount":1080,"url":"https:\/\/imiku.me\/2018\/09\/11\/1172.html\/","datePublished":"2018-09-11T11:55:33\u002b00:00","dateModified":"2018-09-11T11:55:33\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
+</head><body>
+<div class="mx-auto relative shadow-lg">
+<div class="bg-white main md:max-w-4xl mx-auto relative xl:max-w-4xl">
+<header class="relative z-40">
+<nav class="bg bg-white border-b flex items-center md:px-10 navbar px-5 py-6 top-0 z-10">
+<div class="flex items-center justify-around route-items w-full">
+<div class="flex flex-col items-center">
+<a data-active-link=/ href=/ class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-home flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">首页</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/about href=/about class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-heart flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">关于我</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/links href=/links class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-people flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">朋友们</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/twitter href=/twitter class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-twitter flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">推特动态</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/timeline href=/timeline class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-bar-chart flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">时间轴</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/github href=/github class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-github flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">GitHub</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/search href=/search class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-search flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">搜索</span>
+</div>
+</div>
+</nav>
+</header><main class=relative id=swup>
+<div class="h-full nuxt-main relative">
+<div class="h-full relative">
+<div class="bg-white h-full overflow-auto page-view-article">
+<div class=relative>
+<div class="article-cover h-0 relative w-full">
+<img src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2018/09/11/1172.html/1630060151384066.png srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2018/09/11/1172.html/1630060151384066_hudf1ce09ee13d8ab5c42c9025477cc09e_257000_800x0_resize_catmullrom_3.png 800w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2018/09/11/1172.html/1630060151384066_hudf1ce09ee13d8ab5c42c9025477cc09e_257000_1600x0_resize_catmullrom_3.png 1600w" alt="Vue 登录验证练习" class="absolute h-full left-0 object-center object-cover top-0 w-full">
+</div>
+<h1 class="absolute article-title bottom-0 left-0 md:text-4xl pb-6 pt-20 px-6 text-3xl text-white w-full">
+Vue 登录验证练习
+</h1>
+</div>
+<div class="article-info p-6 pb-2">
+<div class="bg-red-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-clock-outline mr-1"></i>
+<span>
+<time datetime=2018-09-11T11:55:33Z>September 11, 2018</time>
+</span>
+</div>
+<span class="bg-green-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-person-outline mr-1"></i>
+<span>Ice-Hazymoon</span>
+</span>
+<div class="bg-indigo-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-flag-outline mr-1"></i>
+<span>阅读约 3 分钟</span>
+</div>
+<div class="bg-blue-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-bar-chart-outline mr-1"></i>
+<span>1080 字</span>
+</div>
+</div>
+<div class="border-b border-gray-300 pb-6 px-6">
+<div class="flex items-center mb-2">
+<i class="eva eva-pricetags-outline mr-1"></i>
+<span class=mr-2>标签</span>
+<a href=/tags/vue title=vue class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-hash-outline"></i>
+<span>vue</span>
+</a>
+<a href=/tags/%E4%BB%A3%E7%A0%81 title=代码 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-hash-outline"></i>
+<span>代码</span>
+</a>
+<a href=/tags/%E5%AE%89%E5%85%A8 title=安全 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-hash-outline"></i>
+<span>安全</span>
+</a>
+</div>
+<div class="flex items-center mb-2">
+<i class="eva eva-folder-outline mr-1"></i>
+<span class=mr-2>分类</span>
+<a href=/categories/%E4%BB%A3%E7%A0%81%E5%90%91 title=代码向 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-book-outline"></i>
+<span>代码向</span>
+</a>
+</div>
+</div>
+<section class="article-content px-10 py-5 typo"><blockquote>
+<p>最近公司在做一个后台管理系统，顺便在这里记录一下登录权限验证的过程, 以便以后使用</p>
+</blockquote>
+<h2 id=工具>工具：</h2>
+<p>vue全家桶（Vuex，Vue Router，Vue） + axios；</p>
+<h2 id=思路>思路：</h2>
+<p>在登录页面登录成功后后台返回一个 token（该 token 用于验证用户登录状态），将 token 保存在 cookies 和 store 里。之后每次在向后端发送请求时在 header 里添加一个 token 字段用于验证用户状态，如果 token 失效，接口返回状态码 300, 使用 axios 创建一个拦截器，如果返回接口的状态码为300，将清除cookies 和 store 里的 token 值并转到登录页面。<br>
+每次刷新页面后 store 里的数据会丢失， 所以将判断 cookie 里是否存在 token ，如果存在， 将其赋予到 store 中保存</p>
+<h2 id=开始撸代码>开始撸代码</h2>
+<p>创建一个 axios 拦截器</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#6272a4>// request.js
+</span><span style=color:#6272a4></span><span style=color:#ff79c6>import</span> axios from <span style=color:#f1fa8c>&#39;axios&#39;</span>;
+<span style=color:#ff79c6>import</span> auth from <span style=color:#f1fa8c>&#39;./auth&#39;</span>;
+<span style=color:#ff79c6>import</span> store from <span style=color:#f1fa8c>&#39;./store&#39;</span>;
+<span style=color:#ff79c6>import</span> router from <span style=color:#f1fa8c>&#39;./router&#39;</span>;
+
+<span style=color:#ff79c6>const</span> request <span style=color:#ff79c6>=</span> axios.create({ <span style=color:#6272a4>//创建一个拦截器
+</span><span style=color:#6272a4></span>    baseURL<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#39;&#39;</span>,
+    timeout<span style=color:#ff79c6>:</span> <span style=color:#bd93f9>5000</span>
+});
+
+request.interceptors.request.use(
+    config <span style=color:#ff79c6>=&amp;</span>gt; {
+        <span style=color:#ff79c6>if</span> (store.state.token) {
+            config.headers[<span style=color:#f1fa8c>&#39;token&#39;</span>] <span style=color:#ff79c6>=</span> auth.getToken().token; <span style=color:#6272a4>// 在头部设置一个 token 字段来验证用户状态
+</span><span style=color:#6272a4></span>        }
+        <span style=color:#ff79c6>return</span> config;
+    },
+    err <span style=color:#ff79c6>=&amp;</span>gt; {
+        <span style=color:#ff79c6>return</span> <span style=color:#8be9fd;font-style:italic>Promise</span>.reject(err);
+    }
+);
+
+request.interceptors.response.use(
+    response <span style=color:#ff79c6>=&amp;</span>gt; {
+        <span style=color:#ff79c6>if</span> (response.data.code <span style=color:#ff79c6>===</span> <span style=color:#bd93f9>300</span>) {
+            <span style=color:#6272a4>// 如果 code 为 300 表示token已失效， 需要重新登录
+</span><span style=color:#6272a4></span>            store.commit(<span style=color:#f1fa8c>&#39;logout&#39;</span>); <span style=color:#6272a4>// 删除token
+</span><span style=color:#6272a4></span>            router.replace({ <span style=color:#6272a4>// 跳转到登录页，并记录下当前页面的路由路径
+</span><span style=color:#6272a4></span>                path<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#39;/login&#39;</span>,
+                query<span style=color:#ff79c6>:</span> {
+                    redirect<span style=color:#ff79c6>:</span> router.currentRoute.path
+                }
+            });
+        }
+        <span style=color:#ff79c6>return</span> response;
+    },
+    error <span style=color:#ff79c6>=&amp;</span>gt; {
+        console.log(error)
+        <span style=color:#ff79c6>return</span> <span style=color:#8be9fd;font-style:italic>Promise</span>.reject(error);
+    }
+);
+
+<span style=color:#ff79c6>export</span> <span style=color:#ff79c6>default</span> request;
+</code></pre></div><h3 id=创建一个-authjs-用于存放操作-token-的函数>创建一个 auth.js 用于存放操作 token 的函数</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#6272a4>// auth.js
+</span><span style=color:#6272a4></span><span style=color:#ff79c6>import</span> Cookies from <span style=color:#f1fa8c>&#39;js-cookie&#39;</span>;
+
+<span style=color:#ff79c6>const</span> TokenKey <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;Admin-Token&#39;</span>; <span style=color:#6272a4>// 存储在cookies中的名字
+</span><span style=color:#6272a4></span>
+<span style=color:#ff79c6>export</span> <span style=color:#ff79c6>default</span> {
+    getToken() {
+        <span style=color:#6272a4>//获取token
+</span><span style=color:#6272a4></span>        <span style=color:#ff79c6>return</span> Cookies.get(TokenKey);
+    },
+    setToken(token) {
+        <span style=color:#6272a4>//设置token
+</span><span style=color:#6272a4></span>        <span style=color:#ff79c6>return</span> Cookies.set(TokenKey, token);
+    },
+    removeToken() {
+        <span style=color:#6272a4>//删除token
+</span><span style=color:#6272a4></span>        <span style=color:#ff79c6>return</span> Cookies.remove(TokenKey);
+    }
+};
+</code></pre></div><h3 id=创建一个-storejs-用于存放vuex的一些配置>创建一个 store.js 用于存放vuex的一些配置</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#6272a4>// store.js
+</span><span style=color:#6272a4></span><span style=color:#ff79c6>import</span> Vue from <span style=color:#f1fa8c>&#39;vue&#39;</span>;
+<span style=color:#ff79c6>import</span> Vuex from <span style=color:#f1fa8c>&#39;vuex&#39;</span>;
+
+<span style=color:#ff79c6>import</span> auth from <span style=color:#f1fa8c>&#39;./auth&#39;</span>;
+
+Vue.use(Vuex);
+
+<span style=color:#ff79c6>export</span> <span style=color:#ff79c6>default</span> <span style=color:#ff79c6>new</span> Vuex.Store({
+    state<span style=color:#ff79c6>:</span> {
+        user<span style=color:#ff79c6>:</span> {},
+        token<span style=color:#ff79c6>:</span> <span style=color:#ff79c6>null</span>,
+        title<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#39;&#39;</span>
+    },
+    mutations<span style=color:#ff79c6>:</span> {
+        login<span style=color:#ff79c6>:</span> (state, data) <span style=color:#ff79c6>=&amp;</span>gt; {
+            auth.setToken(data);
+            state.token <span style=color:#ff79c6>=</span> data;
+        },
+        logout<span style=color:#ff79c6>:</span> state <span style=color:#ff79c6>=&amp;</span>gt; {
+            auth.removeToken();
+            state.token <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>null</span>;
+        }
+    },
+    actions<span style=color:#ff79c6>:</span> {}
+});
+</code></pre></div><h3 id=在-mainjs-中给路由加一个全局前置守卫>在 main.js 中给路由加一个全局前置守卫</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#6272a4>// main.js
+</span><span style=color:#6272a4>//···
+</span><span style=color:#6272a4></span><span style=color:#ff79c6>import</span> auth from <span style=color:#f1fa8c>&#39;./auth&#39;</span>;
+<span style=color:#ff79c6>import</span> router from <span style=color:#f1fa8c>&#39;./router&#39;</span>;
+<span style=color:#ff79c6>import</span> store from <span style=color:#f1fa8c>&#39;./store&#39;</span>;
+<span style=color:#ff79c6>import</span> axios from <span style=color:#f1fa8c>&#39;./request&#39;</span>;
+
+Vue.prototype.$http <span style=color:#ff79c6>=</span> axios;
+
+<span style=color:#6272a4>// 页面刷新时，重新赋值token
+</span><span style=color:#6272a4></span><span style=color:#ff79c6>if</span> (auth.getToken()) {
+    store.commit(<span style=color:#f1fa8c>&#39;login&#39;</span>, auth.getToken());
+}
+
+router.beforeEach((to, from, next) <span style=color:#ff79c6>=&amp;</span>gt; { <span style=color:#6272a4>// 给路由添加一个全局前置守卫
+</span><span style=color:#6272a4></span>    <span style=color:#ff79c6>if</span> (to.meta.requireAuth) { <span style=color:#6272a4>// 在路由配置中添加一个 meta.requireAuth 字段用于判断是否需要验证登录状态
+</span><span style=color:#6272a4></span>        <span style=color:#ff79c6>if</span> (store.state.token) {
+            <span style=color:#6272a4>// 通过vuex state获取当前的token是否存在
+</span><span style=color:#6272a4></span>            next();
+        } <span style=color:#ff79c6>else</span> {
+            next({
+                <span style=color:#6272a4>//如果token不存在， 跳转到登录页面， 并将当前页面的路由保存到url参数中， 以便登录成功后再跳转回当前页
+</span><span style=color:#6272a4></span>                path<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#39;/login&#39;</span>,
+                query<span style=color:#ff79c6>:</span> { redirect<span style=color:#ff79c6>:</span> to.fullPath }
+            });
+        }
+    } <span style=color:#ff79c6>else</span> {
+        next();
+    }
+});
+<span style=color:#6272a4>//···
+</span></code></pre></div><h3 id=登录页面>登录页面</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#6272a4>// Login.vue
+</span><span style=color:#6272a4></span>
+<span style=color:#6272a4>// 省略...
+</span><span style=color:#6272a4></span>
+login() { <span style=color:#6272a4>//点击登录按钮后执行
+</span><span style=color:#6272a4></span>    <span style=color:#ff79c6>this</span>.$http
+        .post(
+            <span style=color:#f1fa8c>&#39;http://127.0.0.1:8090/api&#39;</span>,
+            {
+                account<span style=color:#ff79c6>:</span> <span style=color:#ff79c6>this</span>.from.username,
+                password<span style=color:#ff79c6>:</span> <span style=color:#ff79c6>this</span>.from.password
+            }
+        )
+        .then(e <span style=color:#ff79c6>=&amp;</span>gt; {
+            <span style=color:#ff79c6>if</span> (e.data.code <span style=color:#ff79c6>===</span> <span style=color:#f1fa8c>&#39;200&#39;</span>) {
+                <span style=color:#6272a4>// 如果返回状态值等于200 将token存储到 cookie 中
+</span><span style=color:#6272a4></span>                <span style=color:#ff79c6>this</span>.$store.commit(<span style=color:#f1fa8c>&#39;login&#39;</span>, {
+                    token<span style=color:#ff79c6>:</span> e.data.data.token,
+                    identity<span style=color:#ff79c6>:</span> e.data.data.identity
+                });
+                <span style=color:#8be9fd;font-style:italic>let</span> redirect <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>decodeURIComponent</span>(
+                    <span style=color:#ff79c6>this</span>.$route.query.redirect <span style=color:#ff79c6>||</span> <span style=color:#f1fa8c>&#39;/&#39;</span>
+                ); <span style=color:#6272a4>// 获取当前页面中的redirect参数， 用于登录成功后进行跳转
+</span><span style=color:#6272a4></span>                <span style=color:#ff79c6>this</span>.$router.push({
+                    path<span style=color:#ff79c6>:</span> redirect
+                });<span style=color:#6272a4>// 跳转到登录前的页面
+</span><span style=color:#6272a4></span>            } <span style=color:#ff79c6>else</span> {
+                <span style=color:#6272a4>// 登录失败处理
+</span><span style=color:#6272a4></span>            }
+        })
+        .<span style=color:#ff79c6>catch</span>(err <span style=color:#ff79c6>=&amp;</span>gt; {
+            console.log(err)
+        });
+}
+
+<span style=color:#6272a4>// 省略...
+</span></code></pre></div><h3 id=退出登录>退出登录</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#6272a4>// 省略...
+</span><span style=color:#6272a4></span>
+logout() { <span style=color:#6272a4>// 点击退出登录按钮后
+</span><span style=color:#6272a4></span>    <span style=color:#ff79c6>this</span>.$store.commit(<span style=color:#f1fa8c>&#39;logout&#39;</span>); <span style=color:#6272a4>// 调用 vuex 中的logout方法用于删除 token
+</span><span style=color:#6272a4></span>    <span style=color:#ff79c6>this</span>.$router.replace({ <span style=color:#6272a4>// 跳转到登录页面
+</span><span style=color:#6272a4></span>        path<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#39;/login&#39;</span>
+    });
+}
+
+<span style=color:#6272a4>// 省略...
+</span></code></pre></div><blockquote>
+<p>至此， 一个简单的登录状态验证就搞定了@(撒花)</p>
+</blockquote>
+<p>参考了：<br>
+– <a href=https://juejin.im/post/591aa14f570c35006961acac>摸手，带你用vue撸后台 系列二(登录权限篇)</a>
+– <a href=https://github.com/superman66/vue-axios-github>vue-axios-github</a></p>
+</section>
+<div class="border-b border-gray-300"></div>
+<div class="flex justify-between md:text-2xl p-4 text-xl">
+<a href=/2018/08/26/1163.html/ title=" 离职壁纸 " class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible" style=visibility:visible>
+<span class="flex items-center text-4xl">
+<i class="eva eva-arrow-left-outline"></i>
+</span>
+<span>上一篇</span>
+</a>
+<div class="hidden items-center text-sm xl:flex">
+除特殊声明外，本博客一律使用 「
+<a href=https://creativecommons.org/licenses/by-nc-nd/4.0 target=_blank rel="noopener noreferrer" class=text-theme>署名 - 非商业性使用 - 禁止演绎 4.0</a>
+」许可协议进行授权
+</div>
+<div class="flex items-center text-sm xl:hidden">
+<a href=https://creativecommons.org/licenses/by-nc-nd/4.0 target=_blank rel="noopener noreferrer" class=text-theme>
+<img src=/images/Cc-by-nc-nd.svg alt="署名-非商业性使用-禁止演绎 4.0 国际" title="署名-非商业性使用-禁止演绎 4.0 国际" class=w-24>
+</a>
+</div>
+<a href=/2018/09/18/1176.html/ title=" 肥宅是如何度过台风——“山竹”的 " class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible" style=visibility:visible>
+<span>下一篇</span>
+<span class="text-4xl flex items-center">
+<i class="eva eva-arrow-right-outline text-4xl"></i>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer>
+<div class="com-footer line-height-1 py-4 px-6 text-sm flex flex-col md:flex-row md:justify-between items-center border-t text-gray-600">
+<div class="text-center mb-2 md:mb-0 flex">
+<span>Copyright © 2016 - 2077 Ice-Hazymoon |</span>
+<a href=/index.xml target=_blank class="hover:text-theme ml-2">RSS</a>
+<a href=/sitemap.xml target=_blank class="hover:text-theme ml-2">Sitemap</a>
+</div>
+<div id=run-time>本博客已低调存活：<b>0</b> 天 <b>0</b> 小时 <b>0</b> 分 <b>0</b> 秒</div>
+</div>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+<script src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js></script>
+</footer></div>
+</div>
+<div onclick=window.backTop() class="back-top cursor-pointer">
+<div class=lt>
+<span>
+<i class="eva eva-arrow-upward-outline"></i>
+</span>
+</div>
+</div>
+</body>
+</html>

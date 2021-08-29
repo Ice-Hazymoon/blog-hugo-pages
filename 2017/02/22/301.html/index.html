@@ -1,0 +1,456 @@
+<!doctype html><html>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="Ice-Hazymoon,冰凌胧月,Hazymoon,MikuTools,">
+<meta name=description content="文章转载自：woodenrobot.me 很早之前就想用树莓派当闹钟了，尝试过许多方法，比如用谷歌日历，PHP脚本等，但最后尝试下来效果都不是">
+<meta itemprop=description content="文章转载自：woodenrobot.me 很早之前就想用树莓派当闹钟了，尝试过许多方法，比如用谷歌日历，PHP脚本等，但最后尝试下来效果都不是">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta itemprop=name content="用树莓派打造你的私人闹钟~">
+<link href=https://imiku.me/index.xml title=用树莓派打造你的私人闹钟~ type=application/rss+xml rel=alternate>
+<title>用树莓派打造你的私人闹钟~</title>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css>
+<meta property="og:site_name" content="用树莓派打造你的私人闹钟~">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用树莓派打造你的私人闹钟~">
+<meta property="og:description" content="文章转载自：woodenrobot.me 很早之前就想用树莓派当闹钟了，尝试过许多方法，比如用谷歌日历，PHP脚本等，但最后尝试下来效果都不是">
+<meta property="og:url" content="https://imiku.me/2017/02/22/301.html/">
+<meta property="og:image" content="https://imiku.me/2017/02/22/301.html/1630060151353669.jpg">
+<meta property="article:publisher" content="https://imiku.me/2017/02/22/301.html/">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:title content="用树莓派打造你的私人闹钟~">
+<meta name=twitter:description content="文章转载自：woodenrobot.me 很早之前就想用树莓派当闹钟了，尝试过许多方法，比如用谷歌日历，PHP脚本等，但最后尝试下来效果都不是">
+<meta name=twitter:url content="https://imiku.me/2017/02/22/301.html/">
+<meta name=twitter:image content="https://imiku.me/2017/02/22/301.html/1630060151353669.jpg">
+<meta name=twitter:site content="@Ice-Hazymoon">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1280">
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"用树莓派打造你的私人闹钟~","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/02\/22\/301.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"分享, 教程, 树莓派","wordcount":2711,"url":"https:\/\/imiku.me\/2017\/02\/22\/301.html\/","datePublished":"2017-02-22T14:27:47\u002b00:00","dateModified":"2017-02-22T14:27:47\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
+</head><body>
+<div class="mx-auto relative shadow-lg">
+<div class="bg-white main md:max-w-4xl mx-auto relative xl:max-w-4xl">
+<header class="relative z-40">
+<nav class="bg bg-white border-b flex items-center md:px-10 navbar px-5 py-6 top-0 z-10">
+<div class="flex items-center justify-around route-items w-full">
+<div class="flex flex-col items-center">
+<a data-active-link=/ href=/ class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-home flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">首页</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/about href=/about class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-heart flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">关于我</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/links href=/links class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-people flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">朋友们</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/twitter href=/twitter class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-twitter flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">推特动态</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/timeline href=/timeline class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-bar-chart flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">时间轴</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/github href=/github class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-github flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">GitHub</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/search href=/search class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-search flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">搜索</span>
+</div>
+</div>
+</nav>
+</header><main class=relative id=swup>
+<div class="h-full nuxt-main relative">
+<div class="h-full relative">
+<div class="bg-white h-full overflow-auto page-view-article">
+<div class=relative>
+<div class="article-cover h-0 relative w-full">
+<img src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353669.jpg srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353669_hu08abcc46750dabdc1a7adf4dc19019f0_28622_800x0_resize_q100_catmullrom.jpg 800w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353669_hu08abcc46750dabdc1a7adf4dc19019f0_28622_1600x0_resize_q100_catmullrom.jpg 1600w" alt=用树莓派打造你的私人闹钟~ class="absolute h-full left-0 object-center object-cover top-0 w-full">
+</div>
+<h1 class="absolute article-title bottom-0 left-0 md:text-4xl pb-6 pt-20 px-6 text-3xl text-white w-full">
+用树莓派打造你的私人闹钟~
+</h1>
+</div>
+<div class="article-info p-6 pb-2">
+<div class="bg-red-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-clock-outline mr-1"></i>
+<span>
+<time datetime=2017-02-22T14:27:47Z>February 22, 2017</time>
+</span>
+</div>
+<span class="bg-green-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-person-outline mr-1"></i>
+<span>Ice-Hazymoon</span>
+</span>
+<div class="bg-indigo-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-flag-outline mr-1"></i>
+<span>阅读约 6 分钟</span>
+</div>
+<div class="bg-blue-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-bar-chart-outline mr-1"></i>
+<span>2711 字</span>
+</div>
+</div>
+<div class="border-b border-gray-300 pb-6 px-6">
+<div class="flex items-center mb-2">
+<i class="eva eva-pricetags-outline mr-1"></i>
+<span class=mr-2>标签</span>
+<a href=/tags/%E5%88%86%E4%BA%AB title=分享 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-hash-outline"></i>
+<span>分享</span>
+</a>
+<a href=/tags/%E6%95%99%E7%A8%8B title=教程 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-hash-outline"></i>
+<span>教程</span>
+</a>
+<a href=/tags/%E6%A0%91%E8%8E%93%E6%B4%BE title=树莓派 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-hash-outline"></i>
+<span>树莓派</span>
+</a>
+</div>
+<div class="flex items-center mb-2">
+<i class="eva eva-folder-outline mr-1"></i>
+<span class=mr-2>分类</span>
+<a href=/categories/%E4%BB%A3%E7%A0%81%E5%90%91 title=代码向 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-book-outline"></i>
+<span>代码向</span>
+</a>
+<a href=/categories/%E6%A0%91%E8%8E%93%E6%B4%BE title=树莓派 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-book-outline"></i>
+<span>树莓派</span>
+</a>
+</div>
+</div>
+<section class="article-content px-10 py-5 typo"><p><strong>文章转载自：<a href="https://link.zhihu.com/?target=http%3A//woodenrobot.me/">woodenrobot.me</a></strong></p>
+<p>很早之前就想用树莓派当闹钟了，尝试过许多方法，比如用谷歌日历，PHP脚本等，但最后尝试下来效果都不是很满意。今天在<a href="https://zhuanlan.zhihu.com/p/24983204?refer=woodenrobot">知乎</a>上看到了一篇用python脚本当闹钟的方法，尝试了一下，霸气的不要不要的，自带天气播放功能~所以就顺便写个教程吧</p>
+<h2 id=准备>准备</h2>
+<ul>
+<li>树莓派*1</li>
+<li>音箱*1</li>
+</ul>
+<h2 id=环境>环境</h2>
+<ul>
+<li>Python3.4</li>
+</ul>
+<h2 id=安装依赖>安装依赖</h2>
+<ul>
+<li>#树莓派自带的交易版本是2.7的，所以到最后不能正常运行，我在这里折腾了很久。。。首先把py的版本改成3.4~<br>
+<code>sudo ln -s /usr/bin/python3.4 /usr/bin/python</code> #把系统默认python命令改成python3</li>
+<li>#从 <a href=https://pypi.python.org/pypi/pip#downloads>https://pypi.python.org/pypi/pip#downloads</a> 下载最新版本的pip<br>
+#把刚刚下载的文件上传后解压<br>
+<code>tar -xzvf pip-9.0.1.tar.gz</code><br>
+#进入安装目录<br>
+<code>cd pip-9.0.1</code><br>
+#进行安装<br>
+<code>python setup.py install</code></li>
+<li>#安装Beautiful Soup4<br>
+#可通过系统的软件包管理来安装<br>
+<code>apt-get install Python-bs4</code><br>
+#也可以用easy_install安装<br>
+<code>easy_install beautifulsoup4</code><br>
+#也可以用pip进行安装（推荐）<br>
+<code>pip install beautifulsoup4</code></li>
+<li>#安装Requests<br>
+#通过pip安装（推荐）<br>
+<code>pip install requests</code><br>
+#也可以通过git库安装<br>
+<code>git clone git://github.com/kennethreitz/requests.git</code><br>
+<code>cd requests</code><br>
+<code>python setup.py install</code></li>
+</ul>
+<h2 id=获取所在位置天气>获取所在位置天气</h2>
+<p>这里选择墨迹天气获取实时天气信息，地址：<br>
+<a href=http://tianqi.moji.com/>http://tianqi.moji.com/</a>
+进入墨迹天气的页面，墨迹天气会根据你的ip加载相应地区的天气。</p>
+<p>
+<figure class=gallery-image style=flex-grow:255;flex-basis:612px>
+<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353902.jpg width=1325 height=519 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353902_hucf91b76d86c3966aeb56b3b89e5cf281_111714_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353902_hucf91b76d86c3966aeb56b3b89e5cf281_111714_1080x0_resize_q100_catmullrom.jpg 1080w" data-zoomable data-lazyload alt=用树莓派打造你的私人闹钟~>
+<figcaption>用树莓派打造你的私人闹钟~</figcaption>
+</figure></p>
+<p>进入墨迹天气的页面，墨迹天气会根据你的ip加载相应地区的天气。 这次我们主要抓取温度、天气、湿度、风力、空气质量和天气提示这几个数据。<br>
+这种小爬虫我们就不用Scrap那种重型武器啦，使用requests和BeautifulSoup这两个超级好用的库可以快速实现。</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#ff79c6>import</span> re
+<span style=color:#ff79c6>import</span> requests
+<span style=color:#ff79c6>from</span> datetime <span style=color:#ff79c6>import</span> datetime
+<span style=color:#ff79c6>from</span> bs4 <span style=color:#ff79c6>import</span> BeautifulSoup
+headers <span style=color:#ff79c6>=</span> {
+<span style=color:#f1fa8c>&#39;User-Agent&#39;</span>: <span style=color:#f1fa8c>&#39;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#39;</span>
+<span style=color:#f1fa8c>&#39;/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safar&#39;</span>
+<span style=color:#f1fa8c>&#39;i/537.36&#39;</span>,
+}
+
+res2 <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(<span style=color:#f1fa8c>&#39;http://tianqi.moji.com/&#39;</span>, headers<span style=color:#ff79c6>=</span>headers)
+
+soup <span style=color:#ff79c6>=</span> BeautifulSoup(res2<span style=color:#ff79c6>.</span>text, <span style=color:#f1fa8c>&#34;html.parser&#34;</span>)
+temp <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+weather <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>b<span style=color:#ff79c6>.</span>getText()
+sd <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>span<span style=color:#ff79c6>.</span>getText()
+sd_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, sd)<span style=color:#ff79c6>.</span>group()
+sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(sd_num, sd_num_zh)
+wind <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+aqi <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_alert clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+aqi_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, aqi)<span style=color:#ff79c6>.</span>group()
+aqi <span style=color:#ff79c6>=</span> aqi<span style=color:#ff79c6>.</span>replace(aqi_num, aqi_num_zh)
+info <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_tips clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39; &#39;</span>, <span style=color:#f1fa8c>&#39;百分之&#39;</span>)<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39;%&#39;</span>, <span style=color:#f1fa8c>&#39;&#39;</span>)
+aqi <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;aqi&#39;</span> <span style=color:#ff79c6>+</span> aqi
+
+today <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y年%m月</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>日&#39;</span>)
+text <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;早上好！今天是</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,天气</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,温度</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>摄氏度,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> \
+(today, weather, temp, sd, wind, aqi, info)
+</code></pre></div><h2 id=文字转语音>文字转语音</h2>
+<p>使用百度的文字转换语音API，地址：<a href=http://yuyin.baidu.com/#try>百度语音-永久免费智能语音开放平台</a> 还可以选各种声音，调节语速。虽然它没有给出直接的api接口，但是我们利用Chrome浏览器的开发者模式可以找到api。 打开开发者模式，点击播放的按钮，在network里就可以找到刚刚发出的请求。</p>
+<p>
+<figure class=gallery-image style=flex-grow:296;flex-basis:712px>
+<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353975.jpg width=1354 height=456 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353975_hub1ac523432d6390378e314efc7a65a7a_87877_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353975_hub1ac523432d6390378e314efc7a65a7a_87877_1080x0_resize_q100_catmullrom.jpg 1080w" data-zoomable data-lazyload alt=用树莓派打造你的私人闹钟~>
+<figcaption>用树莓派打造你的私人闹钟~</figcaption>
+</figure></p>
+<p>其中 <strong><a href="http://tts.baidu.com/text2audio?idx=1&tex=1&cuid=baidu_speech_demo&cod=2&lan=zh&ctp=1&pdt=1&spd=5&per=4&vol=5&pit=5">http://tts.baidu.com/text2audio?idx=1&tex=1&cuid=baidu_speech_demo&cod=2&lan=zh&ctp=1&pdt=1&spd=5&per=4&vol=5&pit=5</a></strong> 就是我们要找的百度文字转语音API,其中per是参数是语音的类型，spd是语速，vol是音量，而tex则是需要转换的文字。通过以下代码就可以实现将特定的文字转换为语音，并以mp3格式保存到本地。</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#ff79c6>import</span> requests
+
+headers <span style=color:#ff79c6>=</span> {
+<span style=color:#f1fa8c>&#39;User-Agent&#39;</span>: <span style=color:#f1fa8c>&#39;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#39;</span>
+<span style=color:#f1fa8c>&#39;/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safar&#39;</span>
+<span style=color:#f1fa8c>&#39;i/537.36&#39;</span>,
+}
+
+url <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;http://tts.baidu.com/text2audio?idx=1&amp;tex=</span><span style=color:#f1fa8c>{0}</span><span style=color:#f1fa8c>&amp;cuid=baidu_speech_&#39;</span> \
+<span style=color:#f1fa8c>&#39;demo&amp;cod=2&amp;lan=zh&amp;ctp=1&amp;pdt=1&amp;spd=4&amp;per=4&amp;vol=5&amp;pit=5&#39;</span><span style=color:#ff79c6>.</span>format(text)
+res <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(url, headers<span style=color:#ff79c6>=</span>headers)
+<span style=color:#ff79c6>with</span> <span style=color:#8be9fd;font-style:italic>open</span>(<span style=color:#f1fa8c>&#39;1.mp3&#39;</span>, <span style=color:#f1fa8c>&#39;wb&#39;</span>) <span style=color:#ff79c6>as</span> f:
+f<span style=color:#ff79c6>.</span>write(res<span style=color:#ff79c6>.</span>content)
+</code></pre></div><h2 id=实现定时播放语音>实现定时播放语音</h2>
+<p>使用mplayer实现语音播放,通过以下命令安装mplayer:</p>
+<p><code>sudo apt-get install mplayer</code><br>
+用法很简单输入以下命令即可播放音乐：</p>
+<p><code>mplayer \xxx\xxx\xxx.mp3</code>(绝对地址)</p>
+<p>本来是用crontab来实现定时播放的，但是后来发现了一个bug。程序运行的流程是实时下载语音MP3文件到本地，然后用os.system()直接调用mplayer播放语音。程序本地运行时正常，用crontab定时运行就找不到实时下载的语音文件。没有办法就自己写了一个每天定时播放的脚本。</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#ff79c6>import</span> time
+<span style=color:#ff79c6>from</span> datetime <span style=color:#ff79c6>import</span> datetime
+
+<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>get_seconds</span>(h<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;07&#39;</span>, m<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;30&#39;</span>, s<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;00&#39;</span>):
+    <span style=color:#f1fa8c>&#34;&#34;&#34;获取当前时间与程序启动时间间隔秒数&#34;&#34;&#34;</span>
+
+    <span style=color:#6272a4># 设置程序启动的时分秒</span>
+    time_pre <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (h, m, s)
+    <span style=color:#6272a4># 获取当前时间</span>
+    time1 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()
+    <span style=color:#6272a4># 获取程序今天启动的时间的字符串格式</span>
+    time2 <span style=color:#ff79c6>=</span> time1<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>&#39;</span>) <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#39; &#39;</span> <span style=color:#ff79c6>+</span> time_pre
+    <span style=color:#6272a4># 转换为datetime格式</span>
+    time2 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>strptime(time2, <span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c> %H:%M:%S&#39;</span>)
+    <span style=color:#6272a4># 判断当前时间是否晚于程序今天启动时间，若晚于则程序启动时间增加一天</span>
+    <span style=color:#ff79c6>if</span> time1 <span style=color:#ff79c6>&gt;</span> time2:
+        time2 <span style=color:#ff79c6>=</span> time2 <span style=color:#ff79c6>+</span> timedelta(days<span style=color:#ff79c6>=</span><span style=color:#bd93f9>1</span>)
+
+    <span style=color:#ff79c6>return</span> time<span style=color:#ff79c6>.</span>mktime(time2<span style=color:#ff79c6>.</span>timetuple()) <span style=color:#ff79c6>-</span> time<span style=color:#ff79c6>.</span>mktime(time1<span style=color:#ff79c6>.</span>timetuple())
+</code></pre></div><p>该函数默认计算当前事件距上午七点半间隔秒数，需要修改天气播报事件就自己修改三个默认参数，h是小时，m是分钟，s是秒。</p>
+<h2 id=完整脚本>完整脚本</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#6272a4># -*- coding: utf-8 -*-</span>
+<span style=color:#6272a4># @Time     : 2017/1/15 15:16</span>
+<span style=color:#6272a4># @Author   : woodenrobot</span>
+
+
+<span style=color:#ff79c6>import</span> os
+<span style=color:#ff79c6>import</span> re
+<span style=color:#ff79c6>import</span> time
+<span style=color:#ff79c6>import</span> requests
+<span style=color:#ff79c6>from</span> datetime <span style=color:#ff79c6>import</span> datetime, timedelta
+<span style=color:#ff79c6>from</span> bs4 <span style=color:#ff79c6>import</span> BeautifulSoup
+
+
+headers <span style=color:#ff79c6>=</span> {
+        <span style=color:#f1fa8c>&#39;User-Agent&#39;</span>: <span style=color:#f1fa8c>&#39;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#39;</span>
+                        <span style=color:#f1fa8c>&#39;/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safar&#39;</span>
+                        <span style=color:#f1fa8c>&#39;i/537.36&#39;</span>,
+    }
+
+
+<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>numtozh</span>(num):
+    num_dict <span style=color:#ff79c6>=</span> {<span style=color:#bd93f9>1</span>: <span style=color:#f1fa8c>&#39;一&#39;</span>, <span style=color:#bd93f9>2</span>: <span style=color:#f1fa8c>&#39;二&#39;</span>, <span style=color:#bd93f9>3</span>: <span style=color:#f1fa8c>&#39;三&#39;</span>, <span style=color:#bd93f9>4</span>: <span style=color:#f1fa8c>&#39;四&#39;</span>, <span style=color:#bd93f9>5</span>: <span style=color:#f1fa8c>&#39;五&#39;</span>, <span style=color:#bd93f9>6</span>: <span style=color:#f1fa8c>&#39;六&#39;</span>, <span style=color:#bd93f9>7</span>: <span style=color:#f1fa8c>&#39;七&#39;</span>,
+                <span style=color:#bd93f9>8</span>: <span style=color:#f1fa8c>&#39;八&#39;</span>, <span style=color:#bd93f9>9</span>: <span style=color:#f1fa8c>&#39;九&#39;</span>, <span style=color:#bd93f9>0</span>: <span style=color:#f1fa8c>&#39;零&#39;</span>}
+    num <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>int</span>(num)
+    <span style=color:#ff79c6>if</span> <span style=color:#bd93f9>100</span> <span style=color:#ff79c6>&lt;=</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>1000</span>:
+        b_num <span style=color:#ff79c6>=</span> num <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>100</span>
+        s_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>b_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>100</span>) <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>10</span>
+        g_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>b_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>100</span>) <span style=color:#ff79c6>%</span> <span style=color:#bd93f9>10</span>
+        <span style=color:#ff79c6>if</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span> <span style=color:#ff79c6>and</span> s_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
+            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num])
+        <span style=color:#ff79c6>elif</span> s_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
+            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百</span><span style=color:#f1fa8c>%s%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num], num_dict<span style=color:#ff79c6>.</span>get(s_num, <span style=color:#f1fa8c>&#39;&#39;</span>), num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
+        <span style=color:#ff79c6>elif</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
+            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num], num_dict<span style=color:#ff79c6>.</span>get(s_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
+        <span style=color:#ff79c6>else</span>:
+            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num], num_dict<span style=color:#ff79c6>.</span>get(s_num, <span style=color:#f1fa8c>&#39;&#39;</span>), num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
+    <span style=color:#ff79c6>elif</span> <span style=color:#bd93f9>10</span> <span style=color:#ff79c6>&lt;=</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>100</span>:
+        s_num <span style=color:#ff79c6>=</span> num <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>10</span>
+        g_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>s_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>10</span>) <span style=color:#ff79c6>%</span> <span style=color:#bd93f9>10</span>
+        <span style=color:#ff79c6>if</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
+            g_num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;&#39;</span>
+        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[s_num], num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
+    <span style=color:#ff79c6>elif</span> <span style=color:#bd93f9>0</span> <span style=color:#ff79c6>&lt;=</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>10</span>:
+        g_num <span style=color:#ff79c6>=</span> num
+        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[g_num])
+    <span style=color:#ff79c6>elif</span> <span style=color:#ff79c6>-</span><span style=color:#bd93f9>10</span> <span style=color:#ff79c6>&lt;</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>0</span>:
+        g_num <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>-</span>num
+        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;零下</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[g_num])
+    <span style=color:#ff79c6>elif</span> <span style=color:#ff79c6>-</span><span style=color:#bd93f9>100</span> <span style=color:#ff79c6>&lt;</span> num <span style=color:#ff79c6>&lt;=</span> <span style=color:#ff79c6>-</span><span style=color:#bd93f9>10</span>:
+        num <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>-</span>num
+        s_num <span style=color:#ff79c6>=</span> num <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>10</span>
+        g_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>s_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>10</span>) <span style=color:#ff79c6>%</span> <span style=color:#bd93f9>10</span>
+        <span style=color:#ff79c6>if</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
+            g_num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;&#39;</span>
+        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;零下</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[s_num], num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
+    <span style=color:#ff79c6>return</span> num
+
+
+<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>get_seconds</span>(h<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;07&#39;</span>, m<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;30&#39;</span>, s<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;00&#39;</span>):
+    <span style=color:#f1fa8c>&#34;&#34;&#34;获取当前时间与程序启动时间间隔秒数&#34;&#34;&#34;</span>
+
+    <span style=color:#6272a4># 设置程序启动的时分秒</span>
+    time_pre <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (h, m, s)
+    <span style=color:#6272a4># 获取当前时间</span>
+    time1 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()
+    <span style=color:#6272a4># 获取程序今天启动的时间的字符串格式</span>
+    time2 <span style=color:#ff79c6>=</span> time1<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>&#39;</span>) <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#39; &#39;</span> <span style=color:#ff79c6>+</span> time_pre
+    <span style=color:#6272a4># 转换为datetime格式</span>
+    time2 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>strptime(time2, <span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c> %H:%M:%S&#39;</span>)
+    <span style=color:#6272a4># 判断当前时间是否晚于程序今天启动时间，若晚于则程序启动时间增加一天</span>
+    <span style=color:#ff79c6>if</span> time1 <span style=color:#ff79c6>&gt;</span> time2:
+        time2 <span style=color:#ff79c6>=</span> time2 <span style=color:#ff79c6>+</span> timedelta(days<span style=color:#ff79c6>=</span><span style=color:#bd93f9>1</span>)
+
+    <span style=color:#ff79c6>return</span> time<span style=color:#ff79c6>.</span>mktime(time2<span style=color:#ff79c6>.</span>timetuple()) <span style=color:#ff79c6>-</span> time<span style=color:#ff79c6>.</span>mktime(time1<span style=color:#ff79c6>.</span>timetuple())
+
+
+<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>get_weather</span>():
+    <span style=color:#6272a4># 下载墨迹天气主页源码</span>
+    res <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(<span style=color:#f1fa8c>&#39;http://tianqi.moji.com/&#39;</span>, headers<span style=color:#ff79c6>=</span>headers)
+    <span style=color:#6272a4># 用BeautifulSoup获取所需信息</span>
+    soup <span style=color:#ff79c6>=</span> BeautifulSoup(res<span style=color:#ff79c6>.</span>text, <span style=color:#f1fa8c>&#34;html.parser&#34;</span>)
+    temp <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+    temp <span style=color:#ff79c6>=</span> numtozh(<span style=color:#8be9fd;font-style:italic>int</span>(temp))
+    weather <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>b<span style=color:#ff79c6>.</span>getText()
+    sd <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>span<span style=color:#ff79c6>.</span>getText()
+    sd_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, sd)<span style=color:#ff79c6>.</span>group()
+    sd_num_zh <span style=color:#ff79c6>=</span> numtozh(<span style=color:#8be9fd;font-style:italic>int</span>(sd_num))
+    sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(sd_num, sd_num_zh)
+    wind <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+    aqi <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_alert clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+    aqi_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, aqi)<span style=color:#ff79c6>.</span>group()
+    aqi_num_zh <span style=color:#ff79c6>=</span> numtozh(<span style=color:#8be9fd;font-style:italic>int</span>(aqi_num))
+    aqi <span style=color:#ff79c6>=</span> aqi<span style=color:#ff79c6>.</span>replace(aqi_num, aqi_num_zh)<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39; &#39;</span>, <span style=color:#f1fa8c>&#39;,空气质量&#39;</span>)
+    info <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_tips clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+    sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39; &#39;</span>, <span style=color:#f1fa8c>&#39;百分之&#39;</span>)<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39;%&#39;</span>, <span style=color:#f1fa8c>&#39;&#39;</span>)
+    aqi <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;aqi&#39;</span> <span style=color:#ff79c6>+</span> aqi
+    info <span style=color:#ff79c6>=</span> info<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39;，&#39;</span>, <span style=color:#f1fa8c>&#39;,&#39;</span>)
+    <span style=color:#6272a4># 获取今天的日期</span>
+    today <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y年%m月</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>日&#39;</span>)
+    <span style=color:#6272a4># 将获取的信息拼接成一句话</span>
+    text <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;早上好！今天是</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,天气</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,温度</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>摄氏度,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> \
+            (today, weather, temp, sd, wind, aqi, info)
+    <span style=color:#ff79c6>return</span> text
+
+
+<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>text2voice</span>(text):
+    url <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;http://tts.baidu.com/text2audio?idx=1&amp;tex=</span><span style=color:#f1fa8c>{0}</span><span style=color:#f1fa8c>&amp;cuid=baidu_speech_&#39;</span> \
+            <span style=color:#f1fa8c>&#39;demo&amp;cod=2&amp;lan=zh&amp;ctp=1&amp;pdt=1&amp;spd=4&amp;per=4&amp;vol=5&amp;pit=5&#39;</span><span style=color:#ff79c6>.</span>format(text)
+    <span style=color:#6272a4># 下载转换后的mp3格式语音</span>
+    res <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(url, headers<span style=color:#ff79c6>=</span>headers)
+    <span style=color:#6272a4># 将MP3存入本地</span>
+    <span style=color:#ff79c6>with</span> <span style=color:#8be9fd;font-style:italic>open</span>(<span style=color:#f1fa8c>&#39;1.mp3&#39;</span>, <span style=color:#f1fa8c>&#39;wb&#39;</span>) <span style=color:#ff79c6>as</span> f:
+        f<span style=color:#ff79c6>.</span>write(res<span style=color:#ff79c6>.</span>content)
+
+
+<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>main</span>():
+    <span style=color:#ff79c6>while</span> <span style=color:#ff79c6>True</span>:
+        s <span style=color:#ff79c6>=</span> get_seconds()
+        time<span style=color:#ff79c6>.</span>sleep(s)
+        <span style=color:#6272a4># 获取需要转换语音的文字</span>
+        text <span style=color:#ff79c6>=</span> get_weather()
+        <span style=color:#8be9fd;font-style:italic>print</span>(text)
+        <span style=color:#6272a4># 将文字转换为语音并存入程序所在文件夹</span>
+        text2voice(text)
+        <span style=color:#6272a4># 获取音乐文件绝对地址</span>
+        mp3path2 <span style=color:#ff79c6>=</span> os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>join(os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>dirname(__file__), <span style=color:#f1fa8c>&#39;2.mp3&#39;</span>)
+        <span style=color:#6272a4># 先播放一首音乐做闹钟</span>
+        os<span style=color:#ff79c6>.</span>system(<span style=color:#f1fa8c>&#39;mplayer </span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> mp3path2)
+        <span style=color:#6272a4># 播报语音天气</span>
+        mp3path1 <span style=color:#ff79c6>=</span> os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>join(os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>dirname(__file__), <span style=color:#f1fa8c>&#39;1.mp3&#39;</span>)
+        os<span style=color:#ff79c6>.</span>system(<span style=color:#f1fa8c>&#39;mplayer </span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> mp3path1)
+        os<span style=color:#ff79c6>.</span>remove(mp3path1)
+
+<span style=color:#ff79c6>if</span> __name__ <span style=color:#ff79c6>==</span> <span style=color:#f1fa8c>&#39;__main__&#39;</span>:
+    main()
+
+</code></pre></div><p>最后就尽情的享受你的专属闹钟吧~ 文章转载自：<strong><a href=http://woodenrobot.me/2017/01/21/%E5%88%A9%E7%94%A8%E7%88%AC%E8%99%AB%E5%92%8C%E6%A0%91%E8%8E%93%E6%B4%BE3%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%AF%AD%E9%9F%B3%E5%A4%A9%E6%B0%94%E9%97%B9%E9%92%9F/>woodenrobot</a></strong></p>
+</section>
+<div class="border-b border-gray-300"></div>
+<div class="flex justify-between md:text-2xl p-4 text-xl">
+<a href=/2017/02/18/285.html/ title=" 利用树莓派搭建24h下载机 " class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible" style=visibility:visible>
+<span class="flex items-center text-4xl">
+<i class="eva eva-arrow-left-outline"></i>
+</span>
+<span>上一篇</span>
+</a>
+<div class="hidden items-center text-sm xl:flex">
+除特殊声明外，本博客一律使用 「
+<a href=https://creativecommons.org/licenses/by-nc-nd/4.0 target=_blank rel="noopener noreferrer" class=text-theme>署名 - 非商业性使用 - 禁止演绎 4.0</a>
+」许可协议进行授权
+</div>
+<div class="flex items-center text-sm xl:hidden">
+<a href=https://creativecommons.org/licenses/by-nc-nd/4.0 target=_blank rel="noopener noreferrer" class=text-theme>
+<img src=/images/Cc-by-nc-nd.svg alt="署名-非商业性使用-禁止演绎 4.0 国际" title="署名-非商业性使用-禁止演绎 4.0 国际" class=w-24>
+</a>
+</div>
+<a href=/2017/02/22/311.html/ title=" 让树莓派定时说出温度和CPU使用情况 " class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible" style=visibility:visible>
+<span>下一篇</span>
+<span class="text-4xl flex items-center">
+<i class="eva eva-arrow-right-outline text-4xl"></i>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer>
+<div class="com-footer line-height-1 py-4 px-6 text-sm flex flex-col md:flex-row md:justify-between items-center border-t text-gray-600">
+<div class="text-center mb-2 md:mb-0 flex">
+<span>Copyright © 2016 - 2077 Ice-Hazymoon |</span>
+<a href=/index.xml target=_blank class="hover:text-theme ml-2">RSS</a>
+<a href=/sitemap.xml target=_blank class="hover:text-theme ml-2">Sitemap</a>
+</div>
+<div id=run-time>本博客已低调存活：<b>0</b> 天 <b>0</b> 小时 <b>0</b> 分 <b>0</b> 秒</div>
+</div>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+<script src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js></script>
+</footer></div>
+</div>
+<div onclick=window.backTop() class="back-top cursor-pointer">
+<div class=lt>
+<span>
+<i class="eva eva-arrow-upward-outline"></i>
+</span>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!doctype html><html>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="Ice-Hazymoon,冰凌胧月,Hazymoon,MikuTools,">
+<meta name=description content="前几天用树莓派搭建了个私有云盘，感觉利用的还不到位，所以准备用来当个下载机。一开始准备用JDownloader来做的，但是弄好之后发现。。。">
+<meta itemprop=description content="前几天用树莓派搭建了个私有云盘，感觉利用的还不到位，所以准备用来当个下载机。一开始准备用JDownloader来做的，但是弄好之后发现。。。">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta itemprop=name content="利用树莓派搭建24h下载机">
+<link href=https://imiku.me/index.xml title=利用树莓派搭建24h下载机 type=application/rss+xml rel=alternate>
+<title>利用树莓派搭建24h下载机</title>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css>
+<meta property="og:site_name" content="利用树莓派搭建24h下载机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用树莓派搭建24h下载机">
+<meta property="og:description" content="前几天用树莓派搭建了个私有云盘，感觉利用的还不到位，所以准备用来当个下载机。一开始准备用JDownloader来做的，但是弄好之后发现。。。">
+<meta property="og:url" content="https://imiku.me/2017/02/18/285.html/">
+<meta property="og:image" content="https://imiku.me/2017/02/18/285.html/1630060151352077.png">
+<meta property="article:publisher" content="https://imiku.me/2017/02/18/285.html/">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:title content="利用树莓派搭建24h下载机">
+<meta name=twitter:description content="前几天用树莓派搭建了个私有云盘，感觉利用的还不到位，所以准备用来当个下载机。一开始准备用JDownloader来做的，但是弄好之后发现。。。">
+<meta name=twitter:url content="https://imiku.me/2017/02/18/285.html/">
+<meta name=twitter:image content="https://imiku.me/2017/02/18/285.html/1630060151352077.png">
+<meta name=twitter:site content="@Ice-Hazymoon">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1280">
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"利用树莓派搭建24h下载机","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/02\/18\/285.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"树莓派","wordcount":1203,"url":"https:\/\/imiku.me\/2017\/02\/18\/285.html\/","datePublished":"2017-02-18T11:57:19\u002b00:00","dateModified":"2017-02-18T11:57:19\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
+</head><body>
+<div class="mx-auto relative shadow-lg">
+<div class="bg-white main md:max-w-4xl mx-auto relative xl:max-w-4xl">
+<header class="relative z-40">
+<nav class="bg bg-white border-b flex items-center md:px-10 navbar px-5 py-6 top-0 z-10">
+<div class="flex items-center justify-around route-items w-full">
+<div class="flex flex-col items-center">
+<a data-active-link=/ href=/ class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-home flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">首页</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/about href=/about class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-heart flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">关于我</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/links href=/links class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-people flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">朋友们</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/twitter href=/twitter class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-twitter flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">推特动态</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/timeline href=/timeline class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-bar-chart flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">时间轴</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/github href=/github class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-github flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">GitHub</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/search href=/search class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-search flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">搜索</span>
+</div>
+</div>
+</nav>
+</header><main class=relative id=swup>
+<div class="h-full nuxt-main relative">
+<div class="h-full relative">
+<div class="bg-white h-full overflow-auto page-view-article">
+<div class=relative>
+<div class="article-cover h-0 relative w-full">
+<img src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/18/285.html/1630060151352077.png srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/18/285.html/1630060151352077_hua8ad054beb31a972e030c1e45c5fe497_32017_800x0_resize_catmullrom_3.png 800w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/18/285.html/1630060151352077_hua8ad054beb31a972e030c1e45c5fe497_32017_1600x0_resize_catmullrom_3.png 1600w" alt=利用树莓派搭建24h下载机 class="absolute h-full left-0 object-center object-cover top-0 w-full">
+</div>
+<h1 class="absolute article-title bottom-0 left-0 md:text-4xl pb-6 pt-20 px-6 text-3xl text-white w-full">
+利用树莓派搭建24h下载机
+</h1>
+</div>
+<div class="article-info p-6 pb-2">
+<div class="bg-red-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-clock-outline mr-1"></i>
+<span>
+<time datetime=2017-02-18T11:57:19Z>February 18, 2017</time>
+</span>
+</div>
+<span class="bg-green-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-person-outline mr-1"></i>
+<span>Ice-Hazymoon</span>
+</span>
+<div class="bg-indigo-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-flag-outline mr-1"></i>
+<span>阅读约 3 分钟</span>
+</div>
+<div class="bg-blue-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-bar-chart-outline mr-1"></i>
+<span>1203 字</span>
+</div>
+</div>
+<div class="border-b border-gray-300 pb-6 px-6">
+<div class="flex items-center mb-2">
+<i class="eva eva-pricetags-outline mr-1"></i>
+<span class=mr-2>标签</span>
+<a href=/tags/%E6%A0%91%E8%8E%93%E6%B4%BE title=树莓派 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-hash-outline"></i>
+<span>树莓派</span>
+</a>
+</div>
+<div class="flex items-center mb-2">
+<i class="eva eva-folder-outline mr-1"></i>
+<span class=mr-2>分类</span>
+<a href=/categories/%E4%BB%A3%E7%A0%81%E5%90%91 title=代码向 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-book-outline"></i>
+<span>代码向</span>
+</a>
+<a href=/categories/%E6%A0%91%E8%8E%93%E6%B4%BE title=树莓派 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-book-outline"></i>
+<span>树莓派</span>
+</a>
+</div>
+</div>
+<section class="article-content px-10 py-5 typo"><p>前几天用树莓派搭建了个私有云盘，感觉利用的还不到位，所以准备用来当个下载机。一开始准备用JDownloader来做的，但是弄好之后发现。。。有点难看，对！就是因为有点难看，所以就不也了。之后无意中看到了Aria2这个神奇的东西，加上yaaw之类的web控制系统用着非常方便，支持bt和迅雷离线下载（需要会员），加上Chrome的插件可以支持下载百度云的文件，简直棒棒哒~</p>
+<h2 id=挂载硬盘>挂载硬盘</h2>
+<p>我的硬盘是gpt分区的，ntfs格式，3TB东芝硬盘，默认挂载NTFS格式的硬盘只有只读权限，需要借助其它工具实现，所以不能直接挂载。</p>
+<ul>
+<li>格式支持。<br>
+<code>apt-get install ntfs-3g</code><br>
+<code>apt-get install exfat-nofuse</code></li>
+<li>#新建一个挂载点<br>
+<code>mkdir /mnt/nas</code><br>
+<code>nano /etc/fstab</code></li>
+<li>#在最后一行加入<br>
+<code>/dev/sda4 /mnt/nas ntfs-3g defaults,noexec,umask=0000 0 0</code>  #/dev/sda1是我的移动硬盘分区，大家要根据自己的情况来定，否则会导致无法开机，可以通过<code>fdisk -l</code>查看</li>
+<li>#然后重启<br>
+<code>reboot</code></li>
+<li><code>fdisk -l</code><br>
+查看是否挂载成功，如果成功，会显示和下面类似的信息
+<figure class=gallery-image style=flex-grow:201;flex-basis:483px>
+<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/18/285.html/1630060151352894.png width=570 height=283 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/18/285.html/1630060151352894_huf91a1ee82551584c603e246722309347_23844_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/18/285.html/1630060151352894_huf91a1ee82551584c603e246722309347_23844_1080x0_resize_catmullrom_3.png 1080w" data-zoomable data-lazyload alt=利用树莓派搭建24h下载机>
+<figcaption>利用树莓派搭建24h下载机</figcaption>
+</figure></li>
+</ul>
+<h2 id=安装和配置aria2>安装和配置Aria2</h2>
+<ul>
+<li>安装<br>
+<code>sudo apt-get install aria2 apache2</code></li>
+<li><code>sudo visudo</code><br>
+# 在底部增加这一行<br>
+<code>www-data ALL=(ALL) NOPASSWD: ALL</code></li>
+<li><code>mkdir ~/.aria2</code><br>
+<code>touch ~/.aria2/aria2.session</code><br>
+<code>nano ~/.aria2/aria2.conf</code></li>
+<li>在 aria2.conf 写这些<br>
+<code># 下载默认的目录</code><br>
+<code>dir=/mnt/nas/aria2</code><br>
+<code>disable-ipv6=true</code><br>
+<code>enable-rpc=true</code><br>
+<code>rpc-allow-origin-all=true</code><br>
+<code>rpc-listen-all=true</code><br>
+<code>#rpc-listen-port=6800</code><br>
+<code>continue=true</code><br>
+<code>#刚才touch命令的那个文件，路径要绝对路径</code><br>
+<code>input-file=/root/.aria2/aria2.session</code><br>
+<code>#同上，这个文件的作用是保存你的下载列表，不保存的话重启后所有下载都木有了</code><br>
+<code>save-session=/root/.aria2/aria2.session</code><br>
+<code>max-concurrent-downloads=3</code></li>
+<li>之后运行<br>
+<code>aria2c –conf-path=/root/.aria2/aria2.conf</code><br>
+没有错误就可以退出了。</li>
+<li>把aria2做成系统的服务：<br>
+<code>sudo nano /etc/init.d/aria2c</code><br>
+添加以下内容<br>
+<code>#!/bin/sh</code><br>
+<code>### BEGIN INIT INFO</code><br>
+<code># Provides: aria2</code><br>
+<code># Required-Start: $remote_fs $network</code><br>
+<code># Required-Stop: $remote_fs $network</code><br>
+<code># Default-Start: 2 3 4 5</code><br>
+<code># Default-Stop: 0 1 6</code><br>
+<code># Short-Description: Aria2 Downloader</code><br>
+<code>### END INIT INFO</code><br>
+<code>case "$1" in</code><br>
+<code>start)</code><br>
+<code>echo -n "Starting aria2c"</code><br>
+<code>sudo -u root aria2c --conf-path=/root/.aria2/aria2.conf -D</code><br>
+<code>#sudo -u后面的是你正在使用的用户名</code><br>
+<code>;;</code><br>
+<code>stop)</code><br>
+<code>echo -n "Shutting down aria2c "</code><br>
+<code>killall aria2c</code><br>
+<code>;;</code><br>
+<code>restart)</code><br>
+<code>killall aria2c</code><br>
+<code>sudo -u root aria2c --conf-path=/root/.aria2/aria2.conf -D</code><br>
+<code>#同上面的一样，根据自己的用户名改。</code><br>
+<code>;;</code><br>
+<code>esac</code><br>
+<code>exit</code></li>
+<li>设置文件权限<br>
+<code>sudo chmod 777 /etc/init.d/aria2c</code></li>
+<li>测试服务是否可以启动：<br>
+<code>sudo service aria2c start</code></li>
+<li>添加aria2c服务自动运行：<br>
+<code>sudo update-rc.d aria2c defaults</code></li>
+</ul>
+<h2 id=配置web端控制aria2下载>配置web端控制Aria2下载</h2>
+<ul>
+<li>安装Apache<br>
+<code>sudo apt-get install apache2</code></li>
+<li>下载webui-aria2（当然yaaw也可以，不过没webui-aria2强大）<br>
+<code>cd /var/www/html</code><br>
+<code>git clone https://github.com/ghostry/webui-aria2.git&lt;br /></code> 这个是汉化好的，喜欢英文版的用这个https://github.com/ziahamza/webui-aria2</li>
+<li>全部配置好后打开<strong>http://ip/webui-aria2</strong>即可看到控制页面</li>
+</ul>
+<h2 id=利用chrome插件下载百度云文件>利用Chrome插件下载百度云文件</h2>
+<ul>
+<li>下载插件（一个名为chrome.crx的文件）<br>
+[download]https://github.com/acgotaku/BaiduExporter/blob/master/chrome.crx[/download]</li>
+<li>把刚刚下载的chrome.crx文件后缀名改为zip格式，然后解压出来</li>
+<li>安装插件<br>
+在浏览器地址栏输入<br>
+<code>chrome://extensions/</code></li>
+<li>点击左上角的<strong>加载已解压的扩展程序</strong>，选择你刚刚解压出来的目录进行安装</li>
+<li>之后打开百度云，选择要下载的文件，会出现导出下载的按钮，点击后会出现aria的下载信息
+<figure class=gallery-image style=flex-grow:174;flex-basis:417px>
+<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/18/285.html/1630060151352029.png width=1240 height=712 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/18/285.html/1630060151352029_hud831b42cc9833f6b29384eeaf0618871_86587_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/18/285.html/1630060151352029_hud831b42cc9833f6b29384eeaf0618871_86587_1080x0_resize_catmullrom_3.png 1080w" data-zoomable data-lazyload alt=利用树莓派搭建24h下载机>
+<figcaption>利用树莓派搭建24h下载机</figcaption>
+</figure></li>
+<li>之后返回aria的管理页面，点击左上角的添加-使用链接</li>
+<li>在配置页面中第一块填文件下载链接，header里填下载信息里的Cookie内容，否则无法下载，其他内容可填可不填，之后便可开始下载</li>
+</ul>
+<p>
+<figure class=gallery-image style=flex-grow:145;flex-basis:348px>
+<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/18/285.html/1630060151352181.png width=1089 height=749 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/18/285.html/1630060151352181_hu3cd823ca7c533bcf4d4078012ca0770b_100454_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/18/285.html/1630060151352181_hu3cd823ca7c533bcf4d4078012ca0770b_100454_1080x0_resize_catmullrom_3.png 1080w" data-zoomable data-lazyload alt=利用树莓派搭建24h下载机>
+<figcaption>利用树莓派搭建24h下载机</figcaption>
+</figure></p>
+<p>
+<figure class=gallery-image style=flex-grow:108;flex-basis:260px>
+<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/18/285.html/1630060151352159.png width=1440 height=1327 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/18/285.html/1630060151352159_hu4779944f1a2dc18b0a1851ddb6ece9bf_154419_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/18/285.html/1630060151352159_hu4779944f1a2dc18b0a1851ddb6ece9bf_154419_1080x0_resize_catmullrom_3.png 1080w" data-zoomable data-lazyload alt=利用树莓派搭建24h下载机>
+<figcaption>利用树莓派搭建24h下载机</figcaption>
+</figure></p>
+</section>
+<div class="border-b border-gray-300"></div>
+<div class="flex justify-between md:text-2xl p-4 text-xl">
+<a href=/2017/02/16/279.html/ title=" 树莓派从零开始整理环境 " class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible" style=visibility:visible>
+<span class="flex items-center text-4xl">
+<i class="eva eva-arrow-left-outline"></i>
+</span>
+<span>上一篇</span>
+</a>
+<div class="hidden items-center text-sm xl:flex">
+除特殊声明外，本博客一律使用 「
+<a href=https://creativecommons.org/licenses/by-nc-nd/4.0 target=_blank rel="noopener noreferrer" class=text-theme>署名 - 非商业性使用 - 禁止演绎 4.0</a>
+」许可协议进行授权
+</div>
+<div class="flex items-center text-sm xl:hidden">
+<a href=https://creativecommons.org/licenses/by-nc-nd/4.0 target=_blank rel="noopener noreferrer" class=text-theme>
+<img src=/images/Cc-by-nc-nd.svg alt="署名-非商业性使用-禁止演绎 4.0 国际" title="署名-非商业性使用-禁止演绎 4.0 国际" class=w-24>
+</a>
+</div>
+<a href=/2017/02/22/301.html/ title=" 用树莓派打造你的私人闹钟~ " class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible" style=visibility:visible>
+<span>下一篇</span>
+<span class="text-4xl flex items-center">
+<i class="eva eva-arrow-right-outline text-4xl"></i>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer>
+<div class="com-footer line-height-1 py-4 px-6 text-sm flex flex-col md:flex-row md:justify-between items-center border-t text-gray-600">
+<div class="text-center mb-2 md:mb-0 flex">
+<span>Copyright © 2016 - 2077 Ice-Hazymoon |</span>
+<a href=/index.xml target=_blank class="hover:text-theme ml-2">RSS</a>
+<a href=/sitemap.xml target=_blank class="hover:text-theme ml-2">Sitemap</a>
+</div>
+<div id=run-time>本博客已低调存活：<b>0</b> 天 <b>0</b> 小时 <b>0</b> 分 <b>0</b> 秒</div>
+</div>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+<script src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js></script>
+</footer></div>
+</div>
+<div onclick=window.backTop() class="back-top cursor-pointer">
+<div class=lt>
+<span>
+<i class="eva eva-arrow-upward-outline"></i>
+</span>
+</div>
+</div>
+</body>
+</html>
