@@ -29,7 +29,7 @@
 <script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"搜索","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/search\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"page","wordcount":0,"url":"https:\/\/imiku.me\/search\/","datePublished":"2021-08-23T15:26:35\u002b08:00","dateModified":"2021-08-23T15:26:35\u002b08:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
 </head><body>
 <div class="mx-auto relative shadow-lg">
-<div class="bg-white main md:max-w-4xl mx-auto relative xl:max-w-4xl">
+<div class="bg-white main md:max-w-4xl mx-auto relative xl:max-w-4xl flex flex-col justify-between">
 <header class="relative z-40">
 <nav class="bg bg-white border-b flex items-center md:px-10 navbar px-5 py-6 top-0 z-10">
 <div class="flex items-center justify-around route-items w-full">
@@ -77,15 +77,15 @@
 </div>
 </div>
 </nav>
-</header><main class=relative id=swup>
-<div class="page-search flex flex-col nuxt-main">
+</header><main class="relative flex-grow" id=swup>
+<div class=page-search>
 <div class="search-input bg-gray-100 border-b px-3 py-2 flex items-center text-2xl">
 <input id=search-input type=search placeholder=输入内容回车搜索 autofocus class=w-full>
 <i class="eva eva-search ml-4 cursor-pointer block text-gray-500"></i>
 </div>
-<div class="flex-grow relative">
-<div id=search-image class="flex justify-center items-center absolute left-0 top-0 w-full h-full">
-<img src=/images/search.svg alt=search-results class="pointer-events-none max-w-xs md:max-w-md max-h-full">
+<div class=relative>
+<div id=search-image class="flex justify-center items-center mt-20">
+<img src=/images/search.svg alt=search-results class="pointer-events-none max-w-xs md:max-w-sm max-h-full">
 </div>
 <div id=search-results></div>
 </div>
