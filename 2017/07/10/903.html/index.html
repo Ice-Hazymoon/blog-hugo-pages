@@ -9,7 +9,7 @@
 <meta itemprop=name content="Respbian安装NodeJs并搭建Ghost">
 <link href=https://imiku.me/index.xml title=Respbian安装NodeJs并搭建Ghost type=application/rss+xml rel=alternate>
 <title>Respbian安装NodeJs并搭建Ghost</title>
-<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1630651893">
+<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1631087921">
 <meta property="og:site_name" content="Respbian安装NodeJs并搭建Ghost">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Respbian安装NodeJs并搭建Ghost">
@@ -26,7 +26,7 @@
 <meta property="og:image:width" content="1920">
 <meta property="og:image:height" content="1280">
 <link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Respbian安装NodeJs并搭建Ghost","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/07\/10\/903.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"Ghost, 树莓派","wordcount":954,"url":"https:\/\/imiku.me\/2017\/07\/10\/903.html\/","datePublished":"2017-07-10T06:54:18\u002b00:00","dateModified":"2017-07-10T06:54:18\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Respbian安装NodeJs并搭建Ghost","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/07\/10\/903.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"Ghost, 树莓派","wordcount":978,"url":"https:\/\/imiku.me\/2017\/07\/10\/903.html\/","datePublished":"2017-07-10T06:54:18\u002b00:00","dateModified":"2017-07-10T06:54:18\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
 </head><body>
 <div class="mx-auto relative shadow-lg">
 <div class="bg-white main md:max-w-4xl mx-auto relative xl:max-w-4xl flex flex-col justify-between">
@@ -106,7 +106,7 @@ Respbian安装NodeJs并搭建Ghost
 </div>
 <div class="bg-blue-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
 <i class="eva eva-bar-chart-outline mr-1"></i>
-<span>954 字</span>
+<span>978 字</span>
 </div>
 </div>
 <div class="border-b border-gray-300 pb-6 px-6">
@@ -201,32 +201,32 @@ PS：如果你的脸不是太黑的话，顺着敲代码肯定能搭建出来的
 <p><code>cp config.example.js config.js</code></p>
 <h1 id=按照以下说明进行修改>按照以下说明进行修改</h1>
 <p><code>vi config.js</code></p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>config = {
-  // ### Production
-  // When running Ghost in the wild, use the production environment
-  // Configure your URL and mail settings here
-  production: {
-  url: &#39;http://my-ghost-blog.com&#39;,
-  #将‘ ’内部的内容修改为你的解析后的域名，注意带上http
-  mail: {},
-          database: {
-              client: &#39;mysql&#39;,
-              connection: {
-                  host     : &#39;127.0.0.1&#39;,
-                  user     : &#39;root&#39;,
-                  password : &#39;&#39;,
-                  database : &#39;ghost&#39;,
-                  charset  : &#39;utf8&#39;
-              }
-          },
-          server: {
-  // Host to be passed to node&#39;s `net.Server#listen()`
-  host: &#39;127.0.0.1&#39;,
-  #将‘127.0.0.1’改为‘0.0.0.0’
-  // Port to be passed to node&#39;s `net.Server#listen()`, for iisnode s$
-  port: &#39;2368&#39;
-  }
-},(...)
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1</span>config = {
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2</span>  // ### Production
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3</span>  // When running Ghost in the wild, use the production environment
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4</span>  // Configure your URL and mail settings here
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5</span>  production: {
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6</span>  url: &#39;http://my-ghost-blog.com&#39;,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7</span>  #将‘ ’内部的内容修改为你的解析后的域名，注意带上http
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8</span>  mail: {},
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9</span>          database: {
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10</span>              client: &#39;mysql&#39;,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11</span>              connection: {
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12</span>                  host     : &#39;127.0.0.1&#39;,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13</span>                  user     : &#39;root&#39;,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14</span>                  password : &#39;&#39;,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15</span>                  database : &#39;ghost&#39;,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16</span>                  charset  : &#39;utf8&#39;
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17</span>              }
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18</span>          },
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19</span>          server: {
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20</span>  // Host to be passed to node&#39;s `net.Server#listen()`
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21</span>  host: &#39;127.0.0.1&#39;,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22</span>  #将‘127.0.0.1’改为‘0.0.0.0’
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23</span>  // Port to be passed to node&#39;s `net.Server#listen()`, for iisnode s$
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24</span>  port: &#39;2368&#39;
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25</span>  }
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26</span>},(...)
 </code></pre></div><p>然后</p>
 <h1 id=后台运行>后台运行</h1>
 <p>emmm…可以用PM2之类的软件，不过我还是喜欢新建一个screen窗口，看个人喜好吧</p>
@@ -280,7 +280,7 @@ PS：如果你的脸不是太黑的话，顺着敲代码肯定能搭建出来的
 </div>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
-<script src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1630651893"></script>
+<script async src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1631087921"></script>
 </footer></div>
 </div>
 <div onclick=window.backTop() class="back-top cursor-pointer">

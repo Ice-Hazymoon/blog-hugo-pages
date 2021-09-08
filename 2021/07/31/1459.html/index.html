@@ -9,7 +9,7 @@
 <meta itemprop=name content="JS 西班牙语语音合成在 MacOS 上没有声音的问题">
 <link href=https://imiku.me/index.xml title="JS 西班牙语语音合成在 MacOS 上没有声音的问题" type=application/rss+xml rel=alternate>
 <title>JS 西班牙语语音合成在 MacOS 上没有声音的问题</title>
-<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1630651927">
+<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1631087955">
 <meta property="og:site_name" content="JS 西班牙语语音合成在 MacOS 上没有声音的问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS 西班牙语语音合成在 MacOS 上没有声音的问题">
@@ -155,13 +155,13 @@ JS 西班牙语语音合成在 MacOS 上没有声音的问题
 </figure></p>
 <p>之后会自动下载所需的 TTS 语言包，下载完成后重启 Safari 浏览器</p>
 <h2 id=tts-合成代码>TTS 合成代码</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#8be9fd;font-style:italic>window</span>.speechSynthesis.cancel();
-<span style=color:#ff79c6>const</span> utterThis <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> <span style=color:#8be9fd;font-style:italic>window</span>.SpeechSynthesisUtterance();
-utterThis.text <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;Hola!&#39;</span>;
-utterThis.lang <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;es-ES&#39;</span>;
-utterThis.volume <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>1</span>;
-utterThis.voice <span style=color:#ff79c6>=</span> speechSynthesis.getVoices().filter(e =&gt; e.lang <span style=color:#ff79c6>===</span> <span style=color:#f1fa8c>&#39;es-ES&#39;</span>); <span style=color:#6272a4>// 这句很重要，否则将会合成英文的发音
-</span><span style=color:#6272a4></span><span style=color:#8be9fd;font-style:italic>window</span>.speechSynthesis.speak(utterThis);
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span><span style=color:#8be9fd;font-style:italic>window</span>.speechSynthesis.cancel();
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span><span style=color:#ff79c6>const</span> utterThis <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> <span style=color:#8be9fd;font-style:italic>window</span>.SpeechSynthesisUtterance();
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3</span>utterThis.text <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;Hola!&#39;</span>;
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4</span>utterThis.lang <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;es-ES&#39;</span>;
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5</span>utterThis.volume <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>1</span>;
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6</span>utterThis.voice <span style=color:#ff79c6>=</span> speechSynthesis.getVoices().filter(e =&gt; e.lang <span style=color:#ff79c6>===</span> <span style=color:#f1fa8c>&#39;es-ES&#39;</span>); <span style=color:#6272a4>// 这句很重要，否则将会合成英文的发音
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">7</span><span style=color:#6272a4></span><span style=color:#8be9fd;font-style:italic>window</span>.speechSynthesis.speak(utterThis);
 </code></pre></div></section>
 <div class="border-b border-gray-300"></div>
 <div class="flex justify-between md:text-2xl p-4 text-xl">
@@ -202,7 +202,7 @@ utterThis.voice <span style=color:#ff79c6>=</span> speechSynthesis.getVoices().f
 </div>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
-<script src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1630651927"></script>
+<script async src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1631087956"></script>
 </footer></div>
 </div>
 <div onclick=window.backTop() class="back-top cursor-pointer">

@@ -9,7 +9,7 @@
 <meta itemprop=name content="Oculus Quest 2上手“评测”">
 <link href=https://imiku.me/index.xml title="Oculus Quest 2上手“评测”" type=application/rss+xml rel=alternate>
 <title>Oculus Quest 2上手“评测”</title>
-<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1630651921">
+<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1631087949">
 <meta property="og:site_name" content="Oculus Quest 2上手“评测”">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Oculus Quest 2上手“评测”">
@@ -168,19 +168,19 @@ Oculus Quest 2上手“评测”
 </figure></p>
 <hr>
 <p>也可以用 ADB 来修改上述设置（重启后会失效</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>adb shell setprop debug.oculus.textureWidth <span style=color:#bd93f9>2560</span> 
-adb shell setprop debug.oculus.textureHeight <span style=color:#bd93f9>2560</span> 
-adb shell setprop debug.oculus.cpuLevel <span style=color:#bd93f9>4</span> 
-adb shell setprop debug.oculus.gpuLevel <span style=color:#bd93f9>4</span> 
-adb shell setprop debug.oculus.refreshRate <span style=color:#bd93f9>90</span>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>adb shell setprop debug.oculus.textureWidth <span style=color:#bd93f9>2560</span> 
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span>adb shell setprop debug.oculus.textureHeight <span style=color:#bd93f9>2560</span> 
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3</span>adb shell setprop debug.oculus.cpuLevel <span style=color:#bd93f9>4</span> 
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4</span>adb shell setprop debug.oculus.gpuLevel <span style=color:#bd93f9>4</span> 
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5</span>adb shell setprop debug.oculus.refreshRate <span style=color:#bd93f9>90</span>
 </code></pre></div><h2 id=关闭检测未知应用的代码>关闭检测未知应用的代码</h2>
 <p>如果不禁用的话安装破解软件可能会有封号的风险</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>adb shell pm disable-user --user <span style=color:#bd93f9>0</span> com.oculus.unifiedtelemetry
-adb shell pm disable-user --user <span style=color:#bd93f9>0</span> com.oculus.gatekeeperservice
-adb shell pm disable-user --user <span style=color:#bd93f9>0</span> com.oculus.notification_proxy
-adb shell pm disable-user --user <span style=color:#bd93f9>0</span> com.oculus.bugreporter
-adb shell pm disable-user --user <span style=color:#bd93f9>0</span> com.oculus.os.logcollector
-adb shell pm disable-user --user <span style=color:#bd93f9>0</span> com.oculus.appsafety
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>adb shell pm disable-user --user <span style=color:#bd93f9>0</span> com.oculus.unifiedtelemetry
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span>adb shell pm disable-user --user <span style=color:#bd93f9>0</span> com.oculus.gatekeeperservice
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3</span>adb shell pm disable-user --user <span style=color:#bd93f9>0</span> com.oculus.notification_proxy
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4</span>adb shell pm disable-user --user <span style=color:#bd93f9>0</span> com.oculus.bugreporter
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5</span>adb shell pm disable-user --user <span style=color:#bd93f9>0</span> com.oculus.os.logcollector
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6</span>adb shell pm disable-user --user <span style=color:#bd93f9>0</span> com.oculus.appsafety
 </code></pre></div><h2 id=启用开发者模式>启用开发者模式</h2>
 <p>在 <a href=https://dashboard.oculus.com/organizations/create>https://dashboard.oculus.com/organizations/create</a> 申请，Create New Organization 随意填写名称，勾选 I understand，点击提交，打钩同意即可。</p>
 <p>开发者模式可以开启 USB 调试之类的功能，申请后在手机APP中——高级设置——开发者选项——启用</p>
@@ -234,7 +234,7 @@ adb shell pm disable-user --user <span style=color:#bd93f9>0</span> com.oculus.a
 </div>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
-<script src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1630651921"></script>
+<script async src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1631087949"></script>
 </footer></div>
 </div>
 <div onclick=window.backTop() class="back-top cursor-pointer">

@@ -9,7 +9,7 @@
 <meta itemprop=name content="CNZZ统计报错的解决方法">
 <link href=https://imiku.me/index.xml title=CNZZ统计报错的解决方法 type=application/rss+xml rel=alternate>
 <title>CNZZ统计报错的解决方法</title>
-<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1630651860">
+<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1631087888">
 <meta property="og:site_name" content="CNZZ统计报错的解决方法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CNZZ统计报错的解决方法">
@@ -142,16 +142,16 @@ CNZZ统计报错的解决方法
 <h2 id=解决方法来自csdnhttpblogcsdnnetaerchiarticledetails66969377>解决方法（来自<a href=http://blog.csdn.net/aerchi/article/details/66969377>CSDN</a>）：</h2>
 <p>将统计代码改为异步加载<br>
 新统计代码如下：(注意替换 xxx ID为自己的统计站在点ID)</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#6272a4>&lt;!-- cnzz stats --&gt;</span>
-&lt;<span style=color:#ff79c6>script</span> <span style=color:#50fa7b>type</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;text/JavaScript&#34;</span>&gt;
-<span style=color:#8be9fd;font-style:italic>var</span> cnzz_s_tag <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>document</span>.createElement(<span style=color:#f1fa8c>&#39;script&#39;</span>);
-cnzz_s_tag.type <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;text/javascript&#39;</span>;
-cnzz_s_tag.<span style=color:#ff79c6>async</span> <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>true</span>;
-cnzz_s_tag.charset <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;utf-8&#39;</span>;
-cnzz_s_tag.src <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;https://w.cnzz.com/c.php?id=&lt;span style=&#34;color: #ff0000;&#34;&gt;XXXXX&lt;/span&gt;&amp;async=1&#39;</span>;
-<span style=color:#8be9fd;font-style:italic>var</span> root_s <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>document</span>.getElementsByTagName(<span style=color:#f1fa8c>&#39;script&#39;</span>)[<span style=color:#bd93f9>0</span>];
-root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
-&lt;/<span style=color:#ff79c6>script</span>&gt;
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1</span><span style=color:#6272a4>&lt;!-- cnzz stats --&gt;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2</span>&lt;<span style=color:#ff79c6>script</span> <span style=color:#50fa7b>type</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;text/JavaScript&#34;</span>&gt;
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3</span><span style=color:#8be9fd;font-style:italic>var</span> cnzz_s_tag <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>document</span>.createElement(<span style=color:#f1fa8c>&#39;script&#39;</span>);
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4</span>cnzz_s_tag.type <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;text/javascript&#39;</span>;
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5</span>cnzz_s_tag.<span style=color:#ff79c6>async</span> <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>true</span>;
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6</span>cnzz_s_tag.charset <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;utf-8&#39;</span>;
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7</span>cnzz_s_tag.src <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;https://w.cnzz.com/c.php?id=&lt;span style=&#34;color: #ff0000;&#34;&gt;XXXXX&lt;/span&gt;&amp;async=1&#39;</span>;
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8</span><span style=color:#8be9fd;font-style:italic>var</span> root_s <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>document</span>.getElementsByTagName(<span style=color:#f1fa8c>&#39;script&#39;</span>)[<span style=color:#bd93f9>0</span>];
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9</span>root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10</span>&lt;/<span style=color:#ff79c6>script</span>&gt;
 </code></pre></div><p>
 <figure class=gallery-image style=flex-grow:358;flex-basis:859px>
 <img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/04/12/730.html/1630060151362439.png width=899 height=251 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/04/12/730.html/1630060151362439_hu190ed61abce35a7748906ac107e4b75f_5152_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/04/12/730.html/1630060151362439_hu190ed61abce35a7748906ac107e4b75f_5152_1080x0_resize_catmullrom_3.png 1080w" data-zoomable data-lazyload alt=CNZZ统计报错的解决方法>
@@ -198,7 +198,7 @@ root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
 </div>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
-<script src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1630651863"></script>
+<script async src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1631087889"></script>
 </footer></div>
 </div>
 <div onclick=window.backTop() class="back-top cursor-pointer">

@@ -9,7 +9,7 @@
 <meta itemprop=name content="用 Python 简单构建微信群机器人">
 <link href=https://imiku.me/index.xml title="用 Python 简单构建微信群机器人" type=application/rss+xml rel=alternate>
 <title>用 Python 简单构建微信群机器人</title>
-<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1630651887">
+<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1631087917">
 <meta property="og:site_name" content="用 Python 简单构建微信群机器人">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用 Python 简单构建微信群机器人">
@@ -164,29 +164,29 @@
 <li>有时候安装pillow会出现依赖包缺失错误，需要先安装pillow依赖库：<code>sudo apt-get install libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk</code></li>
 </ul>
 <h2 id=运行>运行：</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#6272a4># coding: utf-8</span>
-<span style=color:#ff79c6>import</span> requests
-<span style=color:#ff79c6>from</span> wxpy <span style=color:#ff79c6>import</span> <span style=color:#ff79c6>*</span>
-<span style=color:#ff79c6>import</span> json<span style=color:#6272a4>#登陆 //如果你是Linux系统在括号内添加console_qr=True</span>
-bot <span style=color:#ff79c6>=</span> Bot()<span style=color:#6272a4>#图灵接口</span>
-<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>talks_robot</span>(info <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;人工智障小月&#39;</span>):
-api_url <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;http://www.tuling123.com/openapi/api&#39;</span>
-apikey <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;你的api&#39;</span>
-data <span style=color:#ff79c6>=</span> {<span style=color:#f1fa8c>&#39;key&#39;</span>: apikey,
-<span style=color:#f1fa8c>&#39;info&#39;</span>: info}
-req <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>post(api_url, data<span style=color:#ff79c6>=</span>data)<span style=color:#ff79c6>.</span>text
-replys <span style=color:#ff79c6>=</span> json<span style=color:#ff79c6>.</span>loads(req)[<span style=color:#f1fa8c>&#39;text&#39;</span>]
-<span style=color:#ff79c6>return</span> replys<span style=color:#6272a4>#聊天回复 仅限群聊被@时回复，其他情况一律不回复</span>
-@bot<span style=color:#ff79c6>.</span>register([Group])
-<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>auto_reply</span>(msg):
-message <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>{}</span><span style=color:#f1fa8c>&#39;</span><span style=color:#ff79c6>.</span>format(msg<span style=color:#ff79c6>.</span>text)
-replys <span style=color:#ff79c6>=</span> talks_robot(info<span style=color:#ff79c6>=</span>message)
-<span style=color:#ff79c6>if</span> <span style=color:#8be9fd;font-style:italic>isinstance</span>(msg<span style=color:#ff79c6>.</span>chat, Group) <span style=color:#ff79c6>and</span> <span style=color:#ff79c6>not</span> msg<span style=color:#ff79c6>.</span>is_at:
-<span style=color:#ff79c6>return</span>
-<span style=color:#ff79c6>else</span> :
-<span style=color:#ff79c6>return</span> replys<span style=color:#6272a4>#让程序保持运行</span>
-bot<span style=color:#ff79c6>.</span>start()
-embed()
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1</span><span style=color:#6272a4># coding: utf-8</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2</span><span style=color:#ff79c6>import</span> requests
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3</span><span style=color:#ff79c6>from</span> wxpy <span style=color:#ff79c6>import</span> <span style=color:#ff79c6>*</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4</span><span style=color:#ff79c6>import</span> json<span style=color:#6272a4>#登陆 //如果你是Linux系统在括号内添加console_qr=True</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5</span>bot <span style=color:#ff79c6>=</span> Bot()<span style=color:#6272a4>#图灵接口</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6</span><span style=color:#ff79c6>def</span> <span style=color:#50fa7b>talks_robot</span>(info <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;人工智障小月&#39;</span>):
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7</span>api_url <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;http://www.tuling123.com/openapi/api&#39;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8</span>apikey <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;你的api&#39;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9</span>data <span style=color:#ff79c6>=</span> {<span style=color:#f1fa8c>&#39;key&#39;</span>: apikey,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10</span><span style=color:#f1fa8c>&#39;info&#39;</span>: info}
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11</span>req <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>post(api_url, data<span style=color:#ff79c6>=</span>data)<span style=color:#ff79c6>.</span>text
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12</span>replys <span style=color:#ff79c6>=</span> json<span style=color:#ff79c6>.</span>loads(req)[<span style=color:#f1fa8c>&#39;text&#39;</span>]
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13</span><span style=color:#ff79c6>return</span> replys<span style=color:#6272a4>#聊天回复 仅限群聊被@时回复，其他情况一律不回复</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14</span>@bot<span style=color:#ff79c6>.</span>register([Group])
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15</span><span style=color:#ff79c6>def</span> <span style=color:#50fa7b>auto_reply</span>(msg):
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16</span>message <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>{}</span><span style=color:#f1fa8c>&#39;</span><span style=color:#ff79c6>.</span>format(msg<span style=color:#ff79c6>.</span>text)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17</span>replys <span style=color:#ff79c6>=</span> talks_robot(info<span style=color:#ff79c6>=</span>message)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18</span><span style=color:#ff79c6>if</span> <span style=color:#8be9fd;font-style:italic>isinstance</span>(msg<span style=color:#ff79c6>.</span>chat, Group) <span style=color:#ff79c6>and</span> <span style=color:#ff79c6>not</span> msg<span style=color:#ff79c6>.</span>is_at:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19</span><span style=color:#ff79c6>return</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20</span><span style=color:#ff79c6>else</span> :
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21</span><span style=color:#ff79c6>return</span> replys<span style=color:#6272a4>#让程序保持运行</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22</span>bot<span style=color:#ff79c6>.</span>start()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23</span>embed()
 </code></pre></div><ul>
 <li><del>将上面的代码另存为.py文件</del>  可能会出错，请到百度云下载：链接：<a href=http://pan.baidu.com/s/1c8KEZk>http://pan.baidu.com/s/1c8KEZk</a> 密码：v4l3</li>
 <li>运行后效果如下图</li>
@@ -247,7 +247,7 @@ embed()
 </div>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
-<script src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1630651889"></script>
+<script async src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1631087918"></script>
 </footer></div>
 </div>
 <div onclick=window.backTop() class="back-top cursor-pointer">

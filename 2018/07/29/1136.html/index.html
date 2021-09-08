@@ -9,7 +9,7 @@
 <meta itemprop=name content="安卓抖音使用国际服绕过锁区的方法">
 <link href=https://imiku.me/index.xml title=安卓抖音使用国际服绕过锁区的方法 type=application/rss+xml rel=alternate>
 <title>安卓抖音使用国际服绕过锁区的方法</title>
-<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1630651900">
+<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1631087928">
 <meta property="og:site_name" content="安卓抖音使用国际服绕过锁区的方法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="安卓抖音使用国际服绕过锁区的方法">
@@ -171,10 +171,10 @@
 <h2 id=开始作死需root权限>开始作死(需ROOT权限)</h2>
 <p>先下载个终端软件, 类似的有很多, 我用的<a href=https://www.coolapk.com/apk/com.romide.terminal>Ansole</a></p>
 <p>然后以下代码顺着敲</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>su
-setprop gsm.sim.operator.alpha <span style=color:#f1fa8c>&#34;eMobile&#34;</span>
-setprop gsm.sim.operator.iso-country <span style=color:#f1fa8c>&#34;jp&#34;</span>
-setprop gsm.sim.operator.numeric <span style=color:#f1fa8c>&#34;44000&#34;</span>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>su
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span>setprop gsm.sim.operator.alpha <span style=color:#f1fa8c>&#34;eMobile&#34;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3</span>setprop gsm.sim.operator.iso-country <span style=color:#f1fa8c>&#34;jp&#34;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4</span>setprop gsm.sim.operator.numeric <span style=color:#f1fa8c>&#34;44000&#34;</span>
 </code></pre></div><p>代码解释:</p>
 <p><strong>su</strong>: 使用 root 账户<br>
 <strong>setprop gsm.sim.operator.alpha “eMobile”</strong>: 设置 SIM 卡的运营商信息<br>
@@ -194,9 +194,9 @@ setprop gsm.sim.operator.numeric <span style=color:#f1fa8c>&#34;44000&#34;</span
 </ul>
 <h2 id=其他>其他:</h2>
 <p>可以将 <code>set</code> 改为 <code>get</code> 来获取SIM卡的配置</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>getprop gsm.sim.operator.alpha
-getprop gsm.sim.operator.iso-country
-getprop gsm.sim.operator.numeric
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>getprop gsm.sim.operator.alpha
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span>getprop gsm.sim.operator.iso-country
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3</span>getprop gsm.sim.operator.numeric
 </code></pre></div><p>iOS 的话好像不受地区限制, 如果有使用 1.2.2 版本即可解决</p>
 </section>
 <div class="border-b border-gray-300"></div>
@@ -238,7 +238,7 @@ getprop gsm.sim.operator.numeric
 </div>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
-<script src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1630651901"></script>
+<script async src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1631087929"></script>
 </footer></div>
 </div>
 <div onclick=window.backTop() class="back-top cursor-pointer">

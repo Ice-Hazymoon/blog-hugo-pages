@@ -9,7 +9,7 @@
 <meta itemprop=name content="用树莓派打造你的私人闹钟~">
 <link href=https://imiku.me/index.xml title=用树莓派打造你的私人闹钟~ type=application/rss+xml rel=alternate>
 <title>用树莓派打造你的私人闹钟~</title>
-<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1630651831">
+<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1631087856">
 <meta property="og:site_name" content="用树莓派打造你的私人闹钟~">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用树莓派打造你的私人闹钟~">
@@ -26,7 +26,7 @@
 <meta property="og:image:width" content="1920">
 <meta property="og:image:height" content="1280">
 <link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"用树莓派打造你的私人闹钟~","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/02\/22\/301.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"分享, 教程, 树莓派","wordcount":2711,"url":"https:\/\/imiku.me\/2017\/02\/22\/301.html\/","datePublished":"2017-02-22T14:27:47\u002b00:00","dateModified":"2017-02-22T14:27:47\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"用树莓派打造你的私人闹钟~","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/02\/22\/301.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"分享, 教程, 树莓派","wordcount":2852,"url":"https:\/\/imiku.me\/2017\/02\/22\/301.html\/","datePublished":"2017-02-22T14:27:47\u002b00:00","dateModified":"2017-02-22T14:27:47\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
 </head><body>
 <div class="mx-auto relative shadow-lg">
 <div class="bg-white main md:max-w-4xl mx-auto relative xl:max-w-4xl flex flex-col justify-between">
@@ -106,7 +106,7 @@
 </div>
 <div class="bg-blue-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
 <i class="eva eva-bar-chart-outline mr-1"></i>
-<span>2711 字</span>
+<span>2852 字</span>
 </div>
 </div>
 <div class="border-b border-gray-300 pb-6 px-6">
@@ -203,35 +203,35 @@
 </figure></p>
 <p>进入墨迹天气的页面，墨迹天气会根据你的ip加载相应地区的天气。 这次我们主要抓取温度、天气、湿度、风力、空气质量和天气提示这几个数据。<br>
 这种小爬虫我们就不用Scrap那种重型武器啦，使用requests和BeautifulSoup这两个超级好用的库可以快速实现。</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#ff79c6>import</span> re
-<span style=color:#ff79c6>import</span> requests
-<span style=color:#ff79c6>from</span> datetime <span style=color:#ff79c6>import</span> datetime
-<span style=color:#ff79c6>from</span> bs4 <span style=color:#ff79c6>import</span> BeautifulSoup
-headers <span style=color:#ff79c6>=</span> {
-<span style=color:#f1fa8c>&#39;User-Agent&#39;</span>: <span style=color:#f1fa8c>&#39;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#39;</span>
-<span style=color:#f1fa8c>&#39;/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safar&#39;</span>
-<span style=color:#f1fa8c>&#39;i/537.36&#39;</span>,
-}
-
-res2 <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(<span style=color:#f1fa8c>&#39;http://tianqi.moji.com/&#39;</span>, headers<span style=color:#ff79c6>=</span>headers)
-
-soup <span style=color:#ff79c6>=</span> BeautifulSoup(res2<span style=color:#ff79c6>.</span>text, <span style=color:#f1fa8c>&#34;html.parser&#34;</span>)
-temp <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
-weather <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>b<span style=color:#ff79c6>.</span>getText()
-sd <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>span<span style=color:#ff79c6>.</span>getText()
-sd_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, sd)<span style=color:#ff79c6>.</span>group()
-sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(sd_num, sd_num_zh)
-wind <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
-aqi <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_alert clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
-aqi_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, aqi)<span style=color:#ff79c6>.</span>group()
-aqi <span style=color:#ff79c6>=</span> aqi<span style=color:#ff79c6>.</span>replace(aqi_num, aqi_num_zh)
-info <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_tips clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
-sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39; &#39;</span>, <span style=color:#f1fa8c>&#39;百分之&#39;</span>)<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39;%&#39;</span>, <span style=color:#f1fa8c>&#39;&#39;</span>)
-aqi <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;aqi&#39;</span> <span style=color:#ff79c6>+</span> aqi
-
-today <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y年%m月</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>日&#39;</span>)
-text <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;早上好！今天是</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,天气</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,温度</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>摄氏度,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> \
-(today, weather, temp, sd, wind, aqi, info)
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1</span><span style=color:#ff79c6>import</span> re
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2</span><span style=color:#ff79c6>import</span> requests
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3</span><span style=color:#ff79c6>from</span> datetime <span style=color:#ff79c6>import</span> datetime
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4</span><span style=color:#ff79c6>from</span> bs4 <span style=color:#ff79c6>import</span> BeautifulSoup
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5</span>headers <span style=color:#ff79c6>=</span> {
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6</span><span style=color:#f1fa8c>&#39;User-Agent&#39;</span>: <span style=color:#f1fa8c>&#39;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#39;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7</span><span style=color:#f1fa8c>&#39;/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safar&#39;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8</span><span style=color:#f1fa8c>&#39;i/537.36&#39;</span>,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9</span>}
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11</span>res2 <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(<span style=color:#f1fa8c>&#39;http://tianqi.moji.com/&#39;</span>, headers<span style=color:#ff79c6>=</span>headers)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13</span>soup <span style=color:#ff79c6>=</span> BeautifulSoup(res2<span style=color:#ff79c6>.</span>text, <span style=color:#f1fa8c>&#34;html.parser&#34;</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14</span>temp <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15</span>weather <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>b<span style=color:#ff79c6>.</span>getText()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16</span>sd <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>span<span style=color:#ff79c6>.</span>getText()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17</span>sd_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, sd)<span style=color:#ff79c6>.</span>group()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18</span>sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(sd_num, sd_num_zh)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19</span>wind <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20</span>aqi <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_alert clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21</span>aqi_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, aqi)<span style=color:#ff79c6>.</span>group()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22</span>aqi <span style=color:#ff79c6>=</span> aqi<span style=color:#ff79c6>.</span>replace(aqi_num, aqi_num_zh)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23</span>info <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_tips clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24</span>sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39; &#39;</span>, <span style=color:#f1fa8c>&#39;百分之&#39;</span>)<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39;%&#39;</span>, <span style=color:#f1fa8c>&#39;&#39;</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25</span>aqi <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;aqi&#39;</span> <span style=color:#ff79c6>+</span> aqi
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27</span>today <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y年%m月</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>日&#39;</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28</span>text <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;早上好！今天是</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,天气</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,温度</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>摄氏度,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> \
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29</span>(today, weather, temp, sd, wind, aqi, info)
 </code></pre></div><h2 id=文字转语音>文字转语音</h2>
 <p>使用百度的文字转换语音API，地址：<a href=http://yuyin.baidu.com/#try>百度语音-永久免费智能语音开放平台</a> 还可以选各种声音，调节语速。虽然它没有给出直接的api接口，但是我们利用Chrome浏览器的开发者模式可以找到api。 打开开发者模式，点击播放的按钮，在network里就可以找到刚刚发出的请求。</p>
 <p>
@@ -240,182 +240,182 @@ text <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;早上好
 <figcaption>用树莓派打造你的私人闹钟~</figcaption>
 </figure></p>
 <p>其中 <strong><a href="http://tts.baidu.com/text2audio?idx=1&tex=1&cuid=baidu_speech_demo&cod=2&lan=zh&ctp=1&pdt=1&spd=5&per=4&vol=5&pit=5">http://tts.baidu.com/text2audio?idx=1&tex=1&cuid=baidu_speech_demo&cod=2&lan=zh&ctp=1&pdt=1&spd=5&per=4&vol=5&pit=5</a></strong> 就是我们要找的百度文字转语音API,其中per是参数是语音的类型，spd是语速，vol是音量，而tex则是需要转换的文字。通过以下代码就可以实现将特定的文字转换为语音，并以mp3格式保存到本地。</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#ff79c6>import</span> requests
-
-headers <span style=color:#ff79c6>=</span> {
-<span style=color:#f1fa8c>&#39;User-Agent&#39;</span>: <span style=color:#f1fa8c>&#39;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#39;</span>
-<span style=color:#f1fa8c>&#39;/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safar&#39;</span>
-<span style=color:#f1fa8c>&#39;i/537.36&#39;</span>,
-}
-
-url <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;http://tts.baidu.com/text2audio?idx=1&amp;tex=</span><span style=color:#f1fa8c>{0}</span><span style=color:#f1fa8c>&amp;cuid=baidu_speech_&#39;</span> \
-<span style=color:#f1fa8c>&#39;demo&amp;cod=2&amp;lan=zh&amp;ctp=1&amp;pdt=1&amp;spd=4&amp;per=4&amp;vol=5&amp;pit=5&#39;</span><span style=color:#ff79c6>.</span>format(text)
-res <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(url, headers<span style=color:#ff79c6>=</span>headers)
-<span style=color:#ff79c6>with</span> <span style=color:#8be9fd;font-style:italic>open</span>(<span style=color:#f1fa8c>&#39;1.mp3&#39;</span>, <span style=color:#f1fa8c>&#39;wb&#39;</span>) <span style=color:#ff79c6>as</span> f:
-f<span style=color:#ff79c6>.</span>write(res<span style=color:#ff79c6>.</span>content)
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1</span><span style=color:#ff79c6>import</span> requests
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3</span>headers <span style=color:#ff79c6>=</span> {
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4</span><span style=color:#f1fa8c>&#39;User-Agent&#39;</span>: <span style=color:#f1fa8c>&#39;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#39;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5</span><span style=color:#f1fa8c>&#39;/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safar&#39;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6</span><span style=color:#f1fa8c>&#39;i/537.36&#39;</span>,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7</span>}
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9</span>url <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;http://tts.baidu.com/text2audio?idx=1&amp;tex=</span><span style=color:#f1fa8c>{0}</span><span style=color:#f1fa8c>&amp;cuid=baidu_speech_&#39;</span> \
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10</span><span style=color:#f1fa8c>&#39;demo&amp;cod=2&amp;lan=zh&amp;ctp=1&amp;pdt=1&amp;spd=4&amp;per=4&amp;vol=5&amp;pit=5&#39;</span><span style=color:#ff79c6>.</span>format(text)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11</span>res <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(url, headers<span style=color:#ff79c6>=</span>headers)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12</span><span style=color:#ff79c6>with</span> <span style=color:#8be9fd;font-style:italic>open</span>(<span style=color:#f1fa8c>&#39;1.mp3&#39;</span>, <span style=color:#f1fa8c>&#39;wb&#39;</span>) <span style=color:#ff79c6>as</span> f:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13</span>f<span style=color:#ff79c6>.</span>write(res<span style=color:#ff79c6>.</span>content)
 </code></pre></div><h2 id=实现定时播放语音>实现定时播放语音</h2>
 <p>使用mplayer实现语音播放,通过以下命令安装mplayer:</p>
 <p><code>sudo apt-get install mplayer</code><br>
 用法很简单输入以下命令即可播放音乐：</p>
 <p><code>mplayer \xxx\xxx\xxx.mp3</code>(绝对地址)</p>
 <p>本来是用crontab来实现定时播放的，但是后来发现了一个bug。程序运行的流程是实时下载语音MP3文件到本地，然后用os.system()直接调用mplayer播放语音。程序本地运行时正常，用crontab定时运行就找不到实时下载的语音文件。没有办法就自己写了一个每天定时播放的脚本。</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#ff79c6>import</span> time
-<span style=color:#ff79c6>from</span> datetime <span style=color:#ff79c6>import</span> datetime
-
-<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>get_seconds</span>(h<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;07&#39;</span>, m<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;30&#39;</span>, s<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;00&#39;</span>):
-    <span style=color:#f1fa8c>&#34;&#34;&#34;获取当前时间与程序启动时间间隔秒数&#34;&#34;&#34;</span>
-
-    <span style=color:#6272a4># 设置程序启动的时分秒</span>
-    time_pre <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (h, m, s)
-    <span style=color:#6272a4># 获取当前时间</span>
-    time1 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()
-    <span style=color:#6272a4># 获取程序今天启动的时间的字符串格式</span>
-    time2 <span style=color:#ff79c6>=</span> time1<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>&#39;</span>) <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#39; &#39;</span> <span style=color:#ff79c6>+</span> time_pre
-    <span style=color:#6272a4># 转换为datetime格式</span>
-    time2 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>strptime(time2, <span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c> %H:%M:%S&#39;</span>)
-    <span style=color:#6272a4># 判断当前时间是否晚于程序今天启动时间，若晚于则程序启动时间增加一天</span>
-    <span style=color:#ff79c6>if</span> time1 <span style=color:#ff79c6>&gt;</span> time2:
-        time2 <span style=color:#ff79c6>=</span> time2 <span style=color:#ff79c6>+</span> timedelta(days<span style=color:#ff79c6>=</span><span style=color:#bd93f9>1</span>)
-
-    <span style=color:#ff79c6>return</span> time<span style=color:#ff79c6>.</span>mktime(time2<span style=color:#ff79c6>.</span>timetuple()) <span style=color:#ff79c6>-</span> time<span style=color:#ff79c6>.</span>mktime(time1<span style=color:#ff79c6>.</span>timetuple())
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1</span><span style=color:#ff79c6>import</span> time
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2</span><span style=color:#ff79c6>from</span> datetime <span style=color:#ff79c6>import</span> datetime
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4</span><span style=color:#ff79c6>def</span> <span style=color:#50fa7b>get_seconds</span>(h<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;07&#39;</span>, m<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;30&#39;</span>, s<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;00&#39;</span>):
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5</span>    <span style=color:#f1fa8c>&#34;&#34;&#34;获取当前时间与程序启动时间间隔秒数&#34;&#34;&#34;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7</span>    <span style=color:#6272a4># 设置程序启动的时分秒</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8</span>    time_pre <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (h, m, s)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9</span>    <span style=color:#6272a4># 获取当前时间</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10</span>    time1 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11</span>    <span style=color:#6272a4># 获取程序今天启动的时间的字符串格式</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12</span>    time2 <span style=color:#ff79c6>=</span> time1<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>&#39;</span>) <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#39; &#39;</span> <span style=color:#ff79c6>+</span> time_pre
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13</span>    <span style=color:#6272a4># 转换为datetime格式</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14</span>    time2 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>strptime(time2, <span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c> %H:%M:%S&#39;</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15</span>    <span style=color:#6272a4># 判断当前时间是否晚于程序今天启动时间，若晚于则程序启动时间增加一天</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16</span>    <span style=color:#ff79c6>if</span> time1 <span style=color:#ff79c6>&gt;</span> time2:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17</span>        time2 <span style=color:#ff79c6>=</span> time2 <span style=color:#ff79c6>+</span> timedelta(days<span style=color:#ff79c6>=</span><span style=color:#bd93f9>1</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19</span>    <span style=color:#ff79c6>return</span> time<span style=color:#ff79c6>.</span>mktime(time2<span style=color:#ff79c6>.</span>timetuple()) <span style=color:#ff79c6>-</span> time<span style=color:#ff79c6>.</span>mktime(time1<span style=color:#ff79c6>.</span>timetuple())
 </code></pre></div><p>该函数默认计算当前事件距上午七点半间隔秒数，需要修改天气播报事件就自己修改三个默认参数，h是小时，m是分钟，s是秒。</p>
 <h2 id=完整脚本>完整脚本</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#6272a4># -*- coding: utf-8 -*-</span>
-<span style=color:#6272a4># @Time     : 2017/1/15 15:16</span>
-<span style=color:#6272a4># @Author   : woodenrobot</span>
-
-
-<span style=color:#ff79c6>import</span> os
-<span style=color:#ff79c6>import</span> re
-<span style=color:#ff79c6>import</span> time
-<span style=color:#ff79c6>import</span> requests
-<span style=color:#ff79c6>from</span> datetime <span style=color:#ff79c6>import</span> datetime, timedelta
-<span style=color:#ff79c6>from</span> bs4 <span style=color:#ff79c6>import</span> BeautifulSoup
-
-
-headers <span style=color:#ff79c6>=</span> {
-        <span style=color:#f1fa8c>&#39;User-Agent&#39;</span>: <span style=color:#f1fa8c>&#39;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#39;</span>
-                        <span style=color:#f1fa8c>&#39;/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safar&#39;</span>
-                        <span style=color:#f1fa8c>&#39;i/537.36&#39;</span>,
-    }
-
-
-<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>numtozh</span>(num):
-    num_dict <span style=color:#ff79c6>=</span> {<span style=color:#bd93f9>1</span>: <span style=color:#f1fa8c>&#39;一&#39;</span>, <span style=color:#bd93f9>2</span>: <span style=color:#f1fa8c>&#39;二&#39;</span>, <span style=color:#bd93f9>3</span>: <span style=color:#f1fa8c>&#39;三&#39;</span>, <span style=color:#bd93f9>4</span>: <span style=color:#f1fa8c>&#39;四&#39;</span>, <span style=color:#bd93f9>5</span>: <span style=color:#f1fa8c>&#39;五&#39;</span>, <span style=color:#bd93f9>6</span>: <span style=color:#f1fa8c>&#39;六&#39;</span>, <span style=color:#bd93f9>7</span>: <span style=color:#f1fa8c>&#39;七&#39;</span>,
-                <span style=color:#bd93f9>8</span>: <span style=color:#f1fa8c>&#39;八&#39;</span>, <span style=color:#bd93f9>9</span>: <span style=color:#f1fa8c>&#39;九&#39;</span>, <span style=color:#bd93f9>0</span>: <span style=color:#f1fa8c>&#39;零&#39;</span>}
-    num <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>int</span>(num)
-    <span style=color:#ff79c6>if</span> <span style=color:#bd93f9>100</span> <span style=color:#ff79c6>&lt;=</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>1000</span>:
-        b_num <span style=color:#ff79c6>=</span> num <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>100</span>
-        s_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>b_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>100</span>) <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>10</span>
-        g_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>b_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>100</span>) <span style=color:#ff79c6>%</span> <span style=color:#bd93f9>10</span>
-        <span style=color:#ff79c6>if</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span> <span style=color:#ff79c6>and</span> s_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
-            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num])
-        <span style=color:#ff79c6>elif</span> s_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
-            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百</span><span style=color:#f1fa8c>%s%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num], num_dict<span style=color:#ff79c6>.</span>get(s_num, <span style=color:#f1fa8c>&#39;&#39;</span>), num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
-        <span style=color:#ff79c6>elif</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
-            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num], num_dict<span style=color:#ff79c6>.</span>get(s_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
-        <span style=color:#ff79c6>else</span>:
-            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num], num_dict<span style=color:#ff79c6>.</span>get(s_num, <span style=color:#f1fa8c>&#39;&#39;</span>), num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
-    <span style=color:#ff79c6>elif</span> <span style=color:#bd93f9>10</span> <span style=color:#ff79c6>&lt;=</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>100</span>:
-        s_num <span style=color:#ff79c6>=</span> num <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>10</span>
-        g_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>s_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>10</span>) <span style=color:#ff79c6>%</span> <span style=color:#bd93f9>10</span>
-        <span style=color:#ff79c6>if</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
-            g_num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;&#39;</span>
-        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[s_num], num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
-    <span style=color:#ff79c6>elif</span> <span style=color:#bd93f9>0</span> <span style=color:#ff79c6>&lt;=</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>10</span>:
-        g_num <span style=color:#ff79c6>=</span> num
-        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[g_num])
-    <span style=color:#ff79c6>elif</span> <span style=color:#ff79c6>-</span><span style=color:#bd93f9>10</span> <span style=color:#ff79c6>&lt;</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>0</span>:
-        g_num <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>-</span>num
-        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;零下</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[g_num])
-    <span style=color:#ff79c6>elif</span> <span style=color:#ff79c6>-</span><span style=color:#bd93f9>100</span> <span style=color:#ff79c6>&lt;</span> num <span style=color:#ff79c6>&lt;=</span> <span style=color:#ff79c6>-</span><span style=color:#bd93f9>10</span>:
-        num <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>-</span>num
-        s_num <span style=color:#ff79c6>=</span> num <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>10</span>
-        g_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>s_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>10</span>) <span style=color:#ff79c6>%</span> <span style=color:#bd93f9>10</span>
-        <span style=color:#ff79c6>if</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
-            g_num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;&#39;</span>
-        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;零下</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[s_num], num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
-    <span style=color:#ff79c6>return</span> num
-
-
-<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>get_seconds</span>(h<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;07&#39;</span>, m<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;30&#39;</span>, s<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;00&#39;</span>):
-    <span style=color:#f1fa8c>&#34;&#34;&#34;获取当前时间与程序启动时间间隔秒数&#34;&#34;&#34;</span>
-
-    <span style=color:#6272a4># 设置程序启动的时分秒</span>
-    time_pre <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (h, m, s)
-    <span style=color:#6272a4># 获取当前时间</span>
-    time1 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()
-    <span style=color:#6272a4># 获取程序今天启动的时间的字符串格式</span>
-    time2 <span style=color:#ff79c6>=</span> time1<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>&#39;</span>) <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#39; &#39;</span> <span style=color:#ff79c6>+</span> time_pre
-    <span style=color:#6272a4># 转换为datetime格式</span>
-    time2 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>strptime(time2, <span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c> %H:%M:%S&#39;</span>)
-    <span style=color:#6272a4># 判断当前时间是否晚于程序今天启动时间，若晚于则程序启动时间增加一天</span>
-    <span style=color:#ff79c6>if</span> time1 <span style=color:#ff79c6>&gt;</span> time2:
-        time2 <span style=color:#ff79c6>=</span> time2 <span style=color:#ff79c6>+</span> timedelta(days<span style=color:#ff79c6>=</span><span style=color:#bd93f9>1</span>)
-
-    <span style=color:#ff79c6>return</span> time<span style=color:#ff79c6>.</span>mktime(time2<span style=color:#ff79c6>.</span>timetuple()) <span style=color:#ff79c6>-</span> time<span style=color:#ff79c6>.</span>mktime(time1<span style=color:#ff79c6>.</span>timetuple())
-
-
-<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>get_weather</span>():
-    <span style=color:#6272a4># 下载墨迹天气主页源码</span>
-    res <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(<span style=color:#f1fa8c>&#39;http://tianqi.moji.com/&#39;</span>, headers<span style=color:#ff79c6>=</span>headers)
-    <span style=color:#6272a4># 用BeautifulSoup获取所需信息</span>
-    soup <span style=color:#ff79c6>=</span> BeautifulSoup(res<span style=color:#ff79c6>.</span>text, <span style=color:#f1fa8c>&#34;html.parser&#34;</span>)
-    temp <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
-    temp <span style=color:#ff79c6>=</span> numtozh(<span style=color:#8be9fd;font-style:italic>int</span>(temp))
-    weather <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>b<span style=color:#ff79c6>.</span>getText()
-    sd <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>span<span style=color:#ff79c6>.</span>getText()
-    sd_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, sd)<span style=color:#ff79c6>.</span>group()
-    sd_num_zh <span style=color:#ff79c6>=</span> numtozh(<span style=color:#8be9fd;font-style:italic>int</span>(sd_num))
-    sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(sd_num, sd_num_zh)
-    wind <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
-    aqi <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_alert clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
-    aqi_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, aqi)<span style=color:#ff79c6>.</span>group()
-    aqi_num_zh <span style=color:#ff79c6>=</span> numtozh(<span style=color:#8be9fd;font-style:italic>int</span>(aqi_num))
-    aqi <span style=color:#ff79c6>=</span> aqi<span style=color:#ff79c6>.</span>replace(aqi_num, aqi_num_zh)<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39; &#39;</span>, <span style=color:#f1fa8c>&#39;,空气质量&#39;</span>)
-    info <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_tips clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
-    sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39; &#39;</span>, <span style=color:#f1fa8c>&#39;百分之&#39;</span>)<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39;%&#39;</span>, <span style=color:#f1fa8c>&#39;&#39;</span>)
-    aqi <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;aqi&#39;</span> <span style=color:#ff79c6>+</span> aqi
-    info <span style=color:#ff79c6>=</span> info<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39;，&#39;</span>, <span style=color:#f1fa8c>&#39;,&#39;</span>)
-    <span style=color:#6272a4># 获取今天的日期</span>
-    today <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y年%m月</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>日&#39;</span>)
-    <span style=color:#6272a4># 将获取的信息拼接成一句话</span>
-    text <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;早上好！今天是</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,天气</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,温度</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>摄氏度,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> \
-            (today, weather, temp, sd, wind, aqi, info)
-    <span style=color:#ff79c6>return</span> text
-
-
-<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>text2voice</span>(text):
-    url <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;http://tts.baidu.com/text2audio?idx=1&amp;tex=</span><span style=color:#f1fa8c>{0}</span><span style=color:#f1fa8c>&amp;cuid=baidu_speech_&#39;</span> \
-            <span style=color:#f1fa8c>&#39;demo&amp;cod=2&amp;lan=zh&amp;ctp=1&amp;pdt=1&amp;spd=4&amp;per=4&amp;vol=5&amp;pit=5&#39;</span><span style=color:#ff79c6>.</span>format(text)
-    <span style=color:#6272a4># 下载转换后的mp3格式语音</span>
-    res <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(url, headers<span style=color:#ff79c6>=</span>headers)
-    <span style=color:#6272a4># 将MP3存入本地</span>
-    <span style=color:#ff79c6>with</span> <span style=color:#8be9fd;font-style:italic>open</span>(<span style=color:#f1fa8c>&#39;1.mp3&#39;</span>, <span style=color:#f1fa8c>&#39;wb&#39;</span>) <span style=color:#ff79c6>as</span> f:
-        f<span style=color:#ff79c6>.</span>write(res<span style=color:#ff79c6>.</span>content)
-
-
-<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>main</span>():
-    <span style=color:#ff79c6>while</span> <span style=color:#ff79c6>True</span>:
-        s <span style=color:#ff79c6>=</span> get_seconds()
-        time<span style=color:#ff79c6>.</span>sleep(s)
-        <span style=color:#6272a4># 获取需要转换语音的文字</span>
-        text <span style=color:#ff79c6>=</span> get_weather()
-        <span style=color:#8be9fd;font-style:italic>print</span>(text)
-        <span style=color:#6272a4># 将文字转换为语音并存入程序所在文件夹</span>
-        text2voice(text)
-        <span style=color:#6272a4># 获取音乐文件绝对地址</span>
-        mp3path2 <span style=color:#ff79c6>=</span> os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>join(os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>dirname(__file__), <span style=color:#f1fa8c>&#39;2.mp3&#39;</span>)
-        <span style=color:#6272a4># 先播放一首音乐做闹钟</span>
-        os<span style=color:#ff79c6>.</span>system(<span style=color:#f1fa8c>&#39;mplayer </span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> mp3path2)
-        <span style=color:#6272a4># 播报语音天气</span>
-        mp3path1 <span style=color:#ff79c6>=</span> os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>join(os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>dirname(__file__), <span style=color:#f1fa8c>&#39;1.mp3&#39;</span>)
-        os<span style=color:#ff79c6>.</span>system(<span style=color:#f1fa8c>&#39;mplayer </span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> mp3path1)
-        os<span style=color:#ff79c6>.</span>remove(mp3path1)
-
-<span style=color:#ff79c6>if</span> __name__ <span style=color:#ff79c6>==</span> <span style=color:#f1fa8c>&#39;__main__&#39;</span>:
-    main()
-
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  1</span><span style=color:#6272a4># -*- coding: utf-8 -*-</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  2</span><span style=color:#6272a4># @Time     : 2017/1/15 15:16</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  3</span><span style=color:#6272a4># @Author   : woodenrobot</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  4</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  5</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  6</span><span style=color:#ff79c6>import</span> os
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  7</span><span style=color:#ff79c6>import</span> re
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  8</span><span style=color:#ff79c6>import</span> time
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  9</span><span style=color:#ff79c6>import</span> requests
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 10</span><span style=color:#ff79c6>from</span> datetime <span style=color:#ff79c6>import</span> datetime, timedelta
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 11</span><span style=color:#ff79c6>from</span> bs4 <span style=color:#ff79c6>import</span> BeautifulSoup
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 12</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 13</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 14</span>headers <span style=color:#ff79c6>=</span> {
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 15</span>        <span style=color:#f1fa8c>&#39;User-Agent&#39;</span>: <span style=color:#f1fa8c>&#39;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#39;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 16</span>                        <span style=color:#f1fa8c>&#39;/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safar&#39;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 17</span>                        <span style=color:#f1fa8c>&#39;i/537.36&#39;</span>,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 18</span>    }
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 19</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 20</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 21</span><span style=color:#ff79c6>def</span> <span style=color:#50fa7b>numtozh</span>(num):
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 22</span>    num_dict <span style=color:#ff79c6>=</span> {<span style=color:#bd93f9>1</span>: <span style=color:#f1fa8c>&#39;一&#39;</span>, <span style=color:#bd93f9>2</span>: <span style=color:#f1fa8c>&#39;二&#39;</span>, <span style=color:#bd93f9>3</span>: <span style=color:#f1fa8c>&#39;三&#39;</span>, <span style=color:#bd93f9>4</span>: <span style=color:#f1fa8c>&#39;四&#39;</span>, <span style=color:#bd93f9>5</span>: <span style=color:#f1fa8c>&#39;五&#39;</span>, <span style=color:#bd93f9>6</span>: <span style=color:#f1fa8c>&#39;六&#39;</span>, <span style=color:#bd93f9>7</span>: <span style=color:#f1fa8c>&#39;七&#39;</span>,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 23</span>                <span style=color:#bd93f9>8</span>: <span style=color:#f1fa8c>&#39;八&#39;</span>, <span style=color:#bd93f9>9</span>: <span style=color:#f1fa8c>&#39;九&#39;</span>, <span style=color:#bd93f9>0</span>: <span style=color:#f1fa8c>&#39;零&#39;</span>}
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 24</span>    num <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>int</span>(num)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 25</span>    <span style=color:#ff79c6>if</span> <span style=color:#bd93f9>100</span> <span style=color:#ff79c6>&lt;=</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>1000</span>:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 26</span>        b_num <span style=color:#ff79c6>=</span> num <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>100</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 27</span>        s_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>b_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>100</span>) <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>10</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 28</span>        g_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>b_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>100</span>) <span style=color:#ff79c6>%</span> <span style=color:#bd93f9>10</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 29</span>        <span style=color:#ff79c6>if</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span> <span style=color:#ff79c6>and</span> s_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 30</span>            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num])
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 31</span>        <span style=color:#ff79c6>elif</span> s_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 32</span>            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百</span><span style=color:#f1fa8c>%s%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num], num_dict<span style=color:#ff79c6>.</span>get(s_num, <span style=color:#f1fa8c>&#39;&#39;</span>), num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 33</span>        <span style=color:#ff79c6>elif</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 34</span>            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num], num_dict<span style=color:#ff79c6>.</span>get(s_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 35</span>        <span style=color:#ff79c6>else</span>:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 36</span>            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num], num_dict<span style=color:#ff79c6>.</span>get(s_num, <span style=color:#f1fa8c>&#39;&#39;</span>), num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 37</span>    <span style=color:#ff79c6>elif</span> <span style=color:#bd93f9>10</span> <span style=color:#ff79c6>&lt;=</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>100</span>:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 38</span>        s_num <span style=color:#ff79c6>=</span> num <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>10</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 39</span>        g_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>s_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>10</span>) <span style=color:#ff79c6>%</span> <span style=color:#bd93f9>10</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 40</span>        <span style=color:#ff79c6>if</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 41</span>            g_num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;&#39;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 42</span>        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[s_num], num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 43</span>    <span style=color:#ff79c6>elif</span> <span style=color:#bd93f9>0</span> <span style=color:#ff79c6>&lt;=</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>10</span>:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 44</span>        g_num <span style=color:#ff79c6>=</span> num
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 45</span>        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[g_num])
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 46</span>    <span style=color:#ff79c6>elif</span> <span style=color:#ff79c6>-</span><span style=color:#bd93f9>10</span> <span style=color:#ff79c6>&lt;</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>0</span>:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 47</span>        g_num <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>-</span>num
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 48</span>        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;零下</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[g_num])
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 49</span>    <span style=color:#ff79c6>elif</span> <span style=color:#ff79c6>-</span><span style=color:#bd93f9>100</span> <span style=color:#ff79c6>&lt;</span> num <span style=color:#ff79c6>&lt;=</span> <span style=color:#ff79c6>-</span><span style=color:#bd93f9>10</span>:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 50</span>        num <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>-</span>num
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 51</span>        s_num <span style=color:#ff79c6>=</span> num <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>10</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 52</span>        g_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>s_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>10</span>) <span style=color:#ff79c6>%</span> <span style=color:#bd93f9>10</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 53</span>        <span style=color:#ff79c6>if</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 54</span>            g_num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;&#39;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 55</span>        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;零下</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[s_num], num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 56</span>    <span style=color:#ff79c6>return</span> num
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 57</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 58</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 59</span><span style=color:#ff79c6>def</span> <span style=color:#50fa7b>get_seconds</span>(h<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;07&#39;</span>, m<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;30&#39;</span>, s<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;00&#39;</span>):
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 60</span>    <span style=color:#f1fa8c>&#34;&#34;&#34;获取当前时间与程序启动时间间隔秒数&#34;&#34;&#34;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 61</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 62</span>    <span style=color:#6272a4># 设置程序启动的时分秒</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 63</span>    time_pre <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (h, m, s)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 64</span>    <span style=color:#6272a4># 获取当前时间</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 65</span>    time1 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 66</span>    <span style=color:#6272a4># 获取程序今天启动的时间的字符串格式</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 67</span>    time2 <span style=color:#ff79c6>=</span> time1<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>&#39;</span>) <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#39; &#39;</span> <span style=color:#ff79c6>+</span> time_pre
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 68</span>    <span style=color:#6272a4># 转换为datetime格式</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 69</span>    time2 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>strptime(time2, <span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c> %H:%M:%S&#39;</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 70</span>    <span style=color:#6272a4># 判断当前时间是否晚于程序今天启动时间，若晚于则程序启动时间增加一天</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 71</span>    <span style=color:#ff79c6>if</span> time1 <span style=color:#ff79c6>&gt;</span> time2:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 72</span>        time2 <span style=color:#ff79c6>=</span> time2 <span style=color:#ff79c6>+</span> timedelta(days<span style=color:#ff79c6>=</span><span style=color:#bd93f9>1</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 73</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 74</span>    <span style=color:#ff79c6>return</span> time<span style=color:#ff79c6>.</span>mktime(time2<span style=color:#ff79c6>.</span>timetuple()) <span style=color:#ff79c6>-</span> time<span style=color:#ff79c6>.</span>mktime(time1<span style=color:#ff79c6>.</span>timetuple())
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 75</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 76</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 77</span><span style=color:#ff79c6>def</span> <span style=color:#50fa7b>get_weather</span>():
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 78</span>    <span style=color:#6272a4># 下载墨迹天气主页源码</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 79</span>    res <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(<span style=color:#f1fa8c>&#39;http://tianqi.moji.com/&#39;</span>, headers<span style=color:#ff79c6>=</span>headers)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 80</span>    <span style=color:#6272a4># 用BeautifulSoup获取所需信息</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 81</span>    soup <span style=color:#ff79c6>=</span> BeautifulSoup(res<span style=color:#ff79c6>.</span>text, <span style=color:#f1fa8c>&#34;html.parser&#34;</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 82</span>    temp <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 83</span>    temp <span style=color:#ff79c6>=</span> numtozh(<span style=color:#8be9fd;font-style:italic>int</span>(temp))
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 84</span>    weather <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>b<span style=color:#ff79c6>.</span>getText()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 85</span>    sd <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>span<span style=color:#ff79c6>.</span>getText()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 86</span>    sd_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, sd)<span style=color:#ff79c6>.</span>group()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 87</span>    sd_num_zh <span style=color:#ff79c6>=</span> numtozh(<span style=color:#8be9fd;font-style:italic>int</span>(sd_num))
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 88</span>    sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(sd_num, sd_num_zh)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 89</span>    wind <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 90</span>    aqi <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_alert clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 91</span>    aqi_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, aqi)<span style=color:#ff79c6>.</span>group()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 92</span>    aqi_num_zh <span style=color:#ff79c6>=</span> numtozh(<span style=color:#8be9fd;font-style:italic>int</span>(aqi_num))
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 93</span>    aqi <span style=color:#ff79c6>=</span> aqi<span style=color:#ff79c6>.</span>replace(aqi_num, aqi_num_zh)<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39; &#39;</span>, <span style=color:#f1fa8c>&#39;,空气质量&#39;</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 94</span>    info <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_tips clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 95</span>    sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39; &#39;</span>, <span style=color:#f1fa8c>&#39;百分之&#39;</span>)<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39;%&#39;</span>, <span style=color:#f1fa8c>&#39;&#39;</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 96</span>    aqi <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;aqi&#39;</span> <span style=color:#ff79c6>+</span> aqi
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 97</span>    info <span style=color:#ff79c6>=</span> info<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39;，&#39;</span>, <span style=color:#f1fa8c>&#39;,&#39;</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 98</span>    <span style=color:#6272a4># 获取今天的日期</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 99</span>    today <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y年%m月</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>日&#39;</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">100</span>    <span style=color:#6272a4># 将获取的信息拼接成一句话</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">101</span>    text <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;早上好！今天是</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,天气</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,温度</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>摄氏度,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> \
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">102</span>            (today, weather, temp, sd, wind, aqi, info)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">103</span>    <span style=color:#ff79c6>return</span> text
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">104</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">105</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">106</span><span style=color:#ff79c6>def</span> <span style=color:#50fa7b>text2voice</span>(text):
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">107</span>    url <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;http://tts.baidu.com/text2audio?idx=1&amp;tex=</span><span style=color:#f1fa8c>{0}</span><span style=color:#f1fa8c>&amp;cuid=baidu_speech_&#39;</span> \
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">108</span>            <span style=color:#f1fa8c>&#39;demo&amp;cod=2&amp;lan=zh&amp;ctp=1&amp;pdt=1&amp;spd=4&amp;per=4&amp;vol=5&amp;pit=5&#39;</span><span style=color:#ff79c6>.</span>format(text)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">109</span>    <span style=color:#6272a4># 下载转换后的mp3格式语音</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">110</span>    res <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(url, headers<span style=color:#ff79c6>=</span>headers)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">111</span>    <span style=color:#6272a4># 将MP3存入本地</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">112</span>    <span style=color:#ff79c6>with</span> <span style=color:#8be9fd;font-style:italic>open</span>(<span style=color:#f1fa8c>&#39;1.mp3&#39;</span>, <span style=color:#f1fa8c>&#39;wb&#39;</span>) <span style=color:#ff79c6>as</span> f:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">113</span>        f<span style=color:#ff79c6>.</span>write(res<span style=color:#ff79c6>.</span>content)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">114</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">115</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">116</span><span style=color:#ff79c6>def</span> <span style=color:#50fa7b>main</span>():
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">117</span>    <span style=color:#ff79c6>while</span> <span style=color:#ff79c6>True</span>:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">118</span>        s <span style=color:#ff79c6>=</span> get_seconds()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">119</span>        time<span style=color:#ff79c6>.</span>sleep(s)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">120</span>        <span style=color:#6272a4># 获取需要转换语音的文字</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">121</span>        text <span style=color:#ff79c6>=</span> get_weather()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">122</span>        <span style=color:#8be9fd;font-style:italic>print</span>(text)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">123</span>        <span style=color:#6272a4># 将文字转换为语音并存入程序所在文件夹</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">124</span>        text2voice(text)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">125</span>        <span style=color:#6272a4># 获取音乐文件绝对地址</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">126</span>        mp3path2 <span style=color:#ff79c6>=</span> os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>join(os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>dirname(__file__), <span style=color:#f1fa8c>&#39;2.mp3&#39;</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">127</span>        <span style=color:#6272a4># 先播放一首音乐做闹钟</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">128</span>        os<span style=color:#ff79c6>.</span>system(<span style=color:#f1fa8c>&#39;mplayer </span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> mp3path2)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">129</span>        <span style=color:#6272a4># 播报语音天气</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">130</span>        mp3path1 <span style=color:#ff79c6>=</span> os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>join(os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>dirname(__file__), <span style=color:#f1fa8c>&#39;1.mp3&#39;</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">131</span>        os<span style=color:#ff79c6>.</span>system(<span style=color:#f1fa8c>&#39;mplayer </span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> mp3path1)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">132</span>        os<span style=color:#ff79c6>.</span>remove(mp3path1)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">133</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">134</span><span style=color:#ff79c6>if</span> __name__ <span style=color:#ff79c6>==</span> <span style=color:#f1fa8c>&#39;__main__&#39;</span>:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">135</span>    main()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">136</span>
 </code></pre></div><p>最后就尽情的享受你的专属闹钟吧~ 文章转载自：<strong><a href=http://woodenrobot.me/2017/01/21/%E5%88%A9%E7%94%A8%E7%88%AC%E8%99%AB%E5%92%8C%E6%A0%91%E8%8E%93%E6%B4%BE3%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%AF%AD%E9%9F%B3%E5%A4%A9%E6%B0%94%E9%97%B9%E9%92%9F/>woodenrobot</a></strong></p>
 </section>
 <div class="border-b border-gray-300"></div>
@@ -457,7 +457,7 @@ headers <span style=color:#ff79c6>=</span> {
 </div>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
-<script src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1630651832"></script>
+<script async src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1631087857"></script>
 </footer></div>
 </div>
 <div onclick=window.backTop() class="back-top cursor-pointer">

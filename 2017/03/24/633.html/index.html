@@ -9,7 +9,7 @@
 <meta itemprop=name content="WordPress 禁用裁剪缩略图的功能">
 <link href=https://imiku.me/index.xml title="WordPress 禁用裁剪缩略图的功能" type=application/rss+xml rel=alternate>
 <title>WordPress 禁用裁剪缩略图的功能</title>
-<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1630651849">
+<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1631087875">
 <meta property="og:site_name" content="WordPress 禁用裁剪缩略图的功能">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WordPress 禁用裁剪缩略图的功能">
@@ -26,7 +26,7 @@
 <meta property="og:image:width" content="1920">
 <meta property="og:image:height" content="1280">
 <link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"WordPress 禁用裁剪缩略图的功能","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/03\/24\/633.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"wordpress","wordcount":291,"url":"https:\/\/imiku.me\/2017\/03\/24\/633.html\/","datePublished":"2017-03-24T04:56:34\u002b00:00","dateModified":"2017-03-24T04:56:34\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"WordPress 禁用裁剪缩略图的功能","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/03\/24\/633.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"wordpress","wordcount":292,"url":"https:\/\/imiku.me\/2017\/03\/24\/633.html\/","datePublished":"2017-03-24T04:56:34\u002b00:00","dateModified":"2017-03-24T04:56:34\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
 </head><body>
 <div class="mx-auto relative shadow-lg">
 <div class="bg-white main md:max-w-4xl mx-auto relative xl:max-w-4xl flex flex-col justify-between">
@@ -106,7 +106,7 @@ WordPress 禁用裁剪缩略图的功能
 </div>
 <div class="bg-blue-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
 <i class="eva eva-bar-chart-outline mr-1"></i>
-<span>291 字</span>
+<span>292 字</span>
 </div>
 </div>
 <div class="border-b border-gray-300 pb-6 px-6">
@@ -136,8 +136,8 @@ WordPress 禁用裁剪缩略图的功能
 <ul>
 <li>在主题模板的 functions.php 里加上</li>
 </ul>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#6272a4>//彻底禁止WordPress缩略图
-</span><span style=color:#6272a4></span>add_filter( <span style=color:#f1fa8c>&#39;add_image_size&#39;</span>, create_function( <span style=color:#f1fa8c>&#39;&#39;</span>, <span style=color:#f1fa8c>&#39;return 1;&#39;</span> ) );
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span><span style=color:#6272a4>//彻底禁止WordPress缩略图
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span><span style=color:#6272a4></span>add_filter( <span style=color:#f1fa8c>&#39;add_image_size&#39;</span>, create_function( <span style=color:#f1fa8c>&#39;&#39;</span>, <span style=color:#f1fa8c>&#39;return 1;&#39;</span> ) );
 </code></pre></div><ul>
 <li>打开WordPress上帝模式(/wp-admin/options.php)，Ctrl+F搜索medium_large_size_w ，将其值改为 0<br>
 <figure class=gallery-image style=flex-grow:181;flex-basis:435px>
@@ -186,7 +186,7 @@ WordPress 禁用裁剪缩略图的功能
 </div>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
-<script src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1630651849"></script>
+<script async src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1631087875"></script>
 </footer></div>
 </div>
 <div onclick=window.backTop() class="back-top cursor-pointer">

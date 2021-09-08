@@ -9,7 +9,7 @@
 <meta itemprop=name content="在树莓派上安装使用硬件看门狗防止树莓派死机">
 <link href=https://imiku.me/index.xml title=在树莓派上安装使用硬件看门狗防止树莓派死机 type=application/rss+xml rel=alternate>
 <title>在树莓派上安装使用硬件看门狗防止树莓派死机</title>
-<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1630651824">
+<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1631087851">
 <meta property="og:site_name" content="在树莓派上安装使用硬件看门狗防止树莓派死机">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在树莓派上安装使用硬件看门狗防止树莓派死机">
@@ -151,23 +151,23 @@
 <p>系统：Debian</p>
 <p>安装看门狗:</p>
 <p>1.加载看门狗模块,编辑/etc/modules文件,添加一行”bcm2708_wdog”</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo modprobe bcm2708_wdog
-sudo nano /etc/modules
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>sudo modprobe bcm2708_wdog
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span>sudo nano /etc/modules
 </code></pre></div><p>
 <figure class=gallery-image style=flex-grow:450;flex-basis:1081px>
 <img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348497.jpg width=775 height=172 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348497_hu2c63e7465b3c5b60d0b8e7b26903d74f_31572_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348497_hu2c63e7465b3c5b60d0b8e7b26903d74f_31572_1080x0_resize_q100_catmullrom.jpg 1080w" data-zoomable data-lazyload alt=在树莓派上安装使用硬件看门狗防止树莓派死机>
 <figcaption>在树莓派上安装使用硬件看门狗防止树莓派死机</figcaption>
 </figure></p>
 <p>2.安装系统配置软件和看门狗程序</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo apt-get install chkconfig
-sudo apt-get install watchdog
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>sudo apt-get install chkconfig
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span>sudo apt-get install watchdog
 </code></pre></div><p>
 <figure class=gallery-image style=flex-grow:310;flex-basis:744px>
 <img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348689.jpg width=785 height=253 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348689_hu3f851d3d4998c6b92810d05e79aaa7a7_76037_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348689_hu3f851d3d4998c6b92810d05e79aaa7a7_76037_1080x0_resize_q100_catmullrom.jpg 1080w" data-zoomable data-lazyload alt=在树莓派上安装使用硬件看门狗防止树莓派死机>
 <figcaption>在树莓派上安装使用硬件看门狗防止树莓派死机</figcaption>
 </figure></p>
 <p>3.配置看门狗程序，编辑“/etc/watchdog.conf”文件</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo nano /etc/watchdog.conf
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>sudo nano /etc/watchdog.conf
 </code></pre></div><p>去掉 watchdog-device = /dev/watchdog 前的#号，让看门狗设备对应树莓派的硬件看门狗</p>
 <p>
 <figure class=gallery-image style=flex-grow:786;flex-basis:1886px>
@@ -182,11 +182,11 @@ sudo apt-get install watchdog
 </figure></p>
 <p>还可以设置高温复位：
 去掉</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>temperature-device <span style=color:#ff79c6>=</span>  
-max-temperature <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>120</span>  
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>temperature-device <span style=color:#ff79c6>=</span>  
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span>max-temperature <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>120</span>  
 </code></pre></div><p>前的#号，改为</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>temperature-device <span style=color:#ff79c6>=</span> /sys/class/thermal/thermal_zone0/temp  
-max-temperature <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>80000</span>  
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>temperature-device <span style=color:#ff79c6>=</span> /sys/class/thermal/thermal_zone0/temp  
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span>max-temperature <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>80000</span>  
 </code></pre></div><p>温度超过80度就会引起重启，保护CPU</p>
 <p>
 <figure class=gallery-image style=flex-grow:1215;flex-basis:2916px>
@@ -195,11 +195,11 @@ max-temperature <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>800
 </figure></p>
 <p>配置完后，保存（Ctrl+O），退出（ctrl+x）</p>
 <p>4.配置看门狗程序，开机自动运行</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>chkconfig watchdog on
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>chkconfig watchdog on
 </code></pre></div><p>5.启动看门狗</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo /etc/init.d/watchdog start
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>sudo /etc/init.d/watchdog start
 </code></pre></div><p>到这里就配置完成看门狗了，大家可以试试输入下面的符号，这个符号可以引起树莓派死机，如果看门狗正常的话，等一会就能复位了</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>:<span style=color:#ff79c6>(){</span>:|:&amp;<span style=color:#ff79c6>}</span>;:
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>:<span style=color:#ff79c6>(){</span>:|:&amp;<span style=color:#ff79c6>}</span>;:
 </code></pre></div><p>详情请参考原文：<a href=http://pi.gadgetoid.com/article/who-watches-the-watcher>http://pi.gadgetoid.com/article/who-watches-the-watcher</a></p>
 </section>
 <div class="border-b border-gray-300"></div>
@@ -241,7 +241,7 @@ max-temperature <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>800
 </div>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
-<script src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1630651825"></script>
+<script async src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1631087851"></script>
 </footer></div>
 </div>
 <div onclick=window.backTop() class="back-top cursor-pointer">

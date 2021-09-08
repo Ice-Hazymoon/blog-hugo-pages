@@ -9,7 +9,7 @@
 <meta itemprop=name content="关于 xmapp Apache 访问 localhost/icons 下的文件时返回404的解决方案">
 <link href=https://imiku.me/index.xml title="关于 xmapp Apache 访问 localhost/icons 下的文件时返回404的解决方案" type=application/rss+xml rel=alternate>
 <title>关于 xmapp Apache 访问 localhost/icons 下的文件时返回404的解决方案</title>
-<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1630651894">
+<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1631087922">
 <meta property="og:site_name" content="关于 xmapp Apache 访问 localhost/icons 下的文件时返回404的解决方案">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于 xmapp Apache 访问 localhost/icons 下的文件时返回404的解决方案">
@@ -26,7 +26,7 @@
 <meta property="og:image:width" content="1920">
 <meta property="og:image:height" content="1280">
 <link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"关于 xmapp Apache 访问 localhost\/icons 下的文件时返回404的解决方案","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2018\/03\/29\/1022.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","wordcount":233,"url":"https:\/\/imiku.me\/2018\/03\/29\/1022.html\/","datePublished":"2018-03-29T10:35:13\u002b00:00","dateModified":"2018-03-29T10:35:13\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"关于 xmapp Apache 访问 localhost\/icons 下的文件时返回404的解决方案","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2018\/03\/29\/1022.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","wordcount":236,"url":"https:\/\/imiku.me\/2018\/03\/29\/1022.html\/","datePublished":"2018-03-29T10:35:13\u002b00:00","dateModified":"2018-03-29T10:35:13\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
 </head><body>
 <div class="mx-auto relative shadow-lg">
 <div class="bg-white main md:max-w-4xl mx-auto relative xl:max-w-4xl flex flex-col justify-between">
@@ -106,7 +106,7 @@
 </div>
 <div class="bg-blue-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
 <i class="eva eva-bar-chart-outline mr-1"></i>
-<span>233 字</span>
+<span>236 字</span>
 </div>
 </div>
 <div class="border-b border-gray-300 pb-6 px-6">
@@ -123,20 +123,20 @@
 <p>见 <a href=https://stackoverflow.com/questions/4433631/apache-how-to-override-index-of-icons>xampp – apache – how to override index of /icons? – Stack Overflow</a></p>
 <p>大概原因就是, 当访问 localhost/icons 下的资源时, Apache会直接读取 /icons 下的图标资源</p>
 <p>打开<code>%XAMPP_PATH%\apache\conf\extra\httpd-autoindex.conf</code>文件可以看到:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>Alias /icons/ &#34;D:/xampp/apache/icons/&#34;
-
-&amp;lt;Directory &#34;D:/xampp/apache/icons&#34;&amp;gt;
- Options Indexes MultiViews
- AllowOverride None
-&amp;lt;/Directory&amp;gt;
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>Alias /icons/ &#34;D:/xampp/apache/icons/&#34;
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3</span>&amp;lt;Directory &#34;D:/xampp/apache/icons&#34;&amp;gt;
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4</span> Options Indexes MultiViews
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5</span> AllowOverride None
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6</span>&amp;lt;/Directory&amp;gt;
 </code></pre></div><p>将其注释即可</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback># Alias /icons/ &#34;D:/xampp/apache/icons/&#34;
-# 
-# &amp;lt;Directory &#34;D:/xampp/apache/icons&#34;&amp;gt;
-#     Options Indexes MultiViews
-#     AllowOverride None
-#     Require all granted
-# &amp;lt;/Directory&amp;gt;
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span># Alias /icons/ &#34;D:/xampp/apache/icons/&#34;
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span># 
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3</span># &amp;lt;Directory &#34;D:/xampp/apache/icons&#34;&amp;gt;
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4</span>#     Options Indexes MultiViews
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5</span>#     AllowOverride None
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6</span>#     Require all granted
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">7</span># &amp;lt;/Directory&amp;gt;
 </code></pre></div><p>至今没明白为什么会有这么反人类的设计</p>
 </section>
 <div class="border-b border-gray-300"></div>
@@ -178,7 +178,7 @@
 </div>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
-<script src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1630651894"></script>
+<script async src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1631087922"></script>
 </footer></div>
 </div>
 <div onclick=window.backTop() class="back-top cursor-pointer">

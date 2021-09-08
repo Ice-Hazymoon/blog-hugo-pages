@@ -9,7 +9,7 @@
 <meta itemprop=name content="让树莓派定时说出温度和CPU使用情况">
 <link href=https://imiku.me/index.xml title=让树莓派定时说出温度和CPU使用情况 type=application/rss+xml rel=alternate>
 <title>让树莓派定时说出温度和CPU使用情况</title>
-<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1630651831">
+<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1631087856">
 <meta property="og:site_name" content="让树莓派定时说出温度和CPU使用情况">
 <meta property="og:type" content="article">
 <meta property="og:title" content="让树莓派定时说出温度和CPU使用情况">
@@ -26,7 +26,7 @@
 <meta property="og:image:width" content="1920">
 <meta property="og:image:height" content="1280">
 <link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"让树莓派定时说出温度和CPU使用情况","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/02\/22\/311.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"Python, 教程, 树莓派","wordcount":350,"url":"https:\/\/imiku.me\/2017\/02\/22\/311.html\/","datePublished":"2017-02-22T19:45:45\u002b00:00","dateModified":"2017-02-22T19:45:45\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"让树莓派定时说出温度和CPU使用情况","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/02\/22\/311.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"Python, 教程, 树莓派","wordcount":368,"url":"https:\/\/imiku.me\/2017\/02\/22\/311.html\/","datePublished":"2017-02-22T19:45:45\u002b00:00","dateModified":"2017-02-22T19:45:45\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
 </head><body>
 <div class="mx-auto relative shadow-lg">
 <div class="bg-white main md:max-w-4xl mx-auto relative xl:max-w-4xl flex flex-col justify-between">
@@ -106,7 +106,7 @@
 </div>
 <div class="bg-blue-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
 <i class="eva eva-bar-chart-outline mr-1"></i>
-<span>350 字</span>
+<span>368 字</span>
 </div>
 </div>
 <div class="border-b border-gray-300 pb-6 px-6">
@@ -149,38 +149,38 @@
 <li>依赖：Requests</li>
 </ul>
 <h2 id=脚本内容>脚本内容</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#ff79c6>import</span> requests
-<span style=color:#ff79c6>import</span> os
-
-headers <span style=color:#ff79c6>=</span> {
-  <span style=color:#f1fa8c>&#39;User-Agent&#39;</span>: <span style=color:#f1fa8c>&#39;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#39;</span>
-  <span style=color:#f1fa8c>&#39;/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safar&#39;</span>
-  <span style=color:#f1fa8c>&#39;i/537.36&#39;</span>,
-}
-<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>getCPUtemperature</span>():
-  res <span style=color:#ff79c6>=</span> os<span style=color:#ff79c6>.</span>popen(<span style=color:#f1fa8c>&#39;vcgencmd measure_temp&#39;</span>)<span style=color:#ff79c6>.</span>readline()
-  <span style=color:#ff79c6>return</span>(res<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#34;temp=&#34;</span>,<span style=color:#f1fa8c>&#34;&#34;</span>)<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#34;&#39;C</span><span style=color:#f1fa8c>\n</span><span style=color:#f1fa8c>&#34;</span>,<span style=color:#f1fa8c>&#34;&#34;</span>))
-  
-<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>getCPUuse</span>():
-  <span style=color:#ff79c6>return</span>(<span style=color:#8be9fd;font-style:italic>str</span>(os<span style=color:#ff79c6>.</span>popen(<span style=color:#f1fa8c>&#34;top -n1 | awk &#39;/Cpu\(s\):/ {print $2}&#39;&#34;</span>)<span style=color:#ff79c6>.</span>readline()<span style=color:#ff79c6>.</span>strip()))
-
-CPU_temp <span style=color:#ff79c6>=</span> getCPUtemperature()
-CPU_usage <span style=color:#ff79c6>=</span> getCPUuse()
-
-text <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;树莓派现在的CPU温度为</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>度,CPU使用百分之</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> \
-  (CPU_temp, CPU_usage)
-url <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>u</span><span style=color:#f1fa8c>&#39;http://tts.baidu.com/text2audio?idx=1&amp;tex=</span><span style=color:#f1fa8c>{0}</span><span style=color:#f1fa8c>&amp;cuid=baidu_speech_&#39;</span> \
-  <span style=color:#f1fa8c>u</span><span style=color:#f1fa8c>&#39;demo&amp;cod=2&amp;lan=zh&amp;ctp=1&amp;pdt=1&amp;spd=4&amp;per=4&amp;vol=5&amp;pit=5&#39;</span><span style=color:#ff79c6>.</span>format(text)
-res <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(url, headers<span style=color:#ff79c6>=</span>headers)
-<span style=color:#ff79c6>with</span> <span style=color:#8be9fd;font-style:italic>open</span>(<span style=color:#f1fa8c>u</span><span style=color:#f1fa8c>&#39;1.mp3&#39;</span>, <span style=color:#f1fa8c>u</span><span style=color:#f1fa8c>&#39;wb&#39;</span>) <span style=color:#ff79c6>as</span> f:
-  f<span style=color:#ff79c6>.</span>write(res<span style=color:#ff79c6>.</span>content)
-<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>main</span>():
-  mp3path2 <span style=color:#ff79c6>=</span> os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>join(os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>dirname(__file__), <span style=color:#f1fa8c>&#39;2.mp3&#39;</span>)
-  os<span style=color:#ff79c6>.</span>system(<span style=color:#f1fa8c>&#39;mplayer </span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> mp3path2)
-  mp3path1 <span style=color:#ff79c6>=</span> os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>join(os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>dirname(__file__), <span style=color:#f1fa8c>&#39;1.mp3&#39;</span>)
-  os<span style=color:#ff79c6>.</span>system(<span style=color:#f1fa8c>&#39;mplayer </span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> mp3path1)
-<span style=color:#ff79c6>if</span> __name__ <span style=color:#ff79c6>==</span> <span style=color:#f1fa8c>&#39;__main__&#39;</span>:
-  main()
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1</span><span style=color:#ff79c6>import</span> requests
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2</span><span style=color:#ff79c6>import</span> os
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4</span>headers <span style=color:#ff79c6>=</span> {
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5</span>  <span style=color:#f1fa8c>&#39;User-Agent&#39;</span>: <span style=color:#f1fa8c>&#39;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#39;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6</span>  <span style=color:#f1fa8c>&#39;/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safar&#39;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7</span>  <span style=color:#f1fa8c>&#39;i/537.36&#39;</span>,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8</span>}
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9</span><span style=color:#ff79c6>def</span> <span style=color:#50fa7b>getCPUtemperature</span>():
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10</span>  res <span style=color:#ff79c6>=</span> os<span style=color:#ff79c6>.</span>popen(<span style=color:#f1fa8c>&#39;vcgencmd measure_temp&#39;</span>)<span style=color:#ff79c6>.</span>readline()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11</span>  <span style=color:#ff79c6>return</span>(res<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#34;temp=&#34;</span>,<span style=color:#f1fa8c>&#34;&#34;</span>)<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#34;&#39;C</span><span style=color:#f1fa8c>\n</span><span style=color:#f1fa8c>&#34;</span>,<span style=color:#f1fa8c>&#34;&#34;</span>))
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12</span>  
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13</span><span style=color:#ff79c6>def</span> <span style=color:#50fa7b>getCPUuse</span>():
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14</span>  <span style=color:#ff79c6>return</span>(<span style=color:#8be9fd;font-style:italic>str</span>(os<span style=color:#ff79c6>.</span>popen(<span style=color:#f1fa8c>&#34;top -n1 | awk &#39;/Cpu\(s\):/ {print $2}&#39;&#34;</span>)<span style=color:#ff79c6>.</span>readline()<span style=color:#ff79c6>.</span>strip()))
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16</span>CPU_temp <span style=color:#ff79c6>=</span> getCPUtemperature()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17</span>CPU_usage <span style=color:#ff79c6>=</span> getCPUuse()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19</span>text <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;树莓派现在的CPU温度为</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>度,CPU使用百分之</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> \
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20</span>  (CPU_temp, CPU_usage)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21</span>url <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>u</span><span style=color:#f1fa8c>&#39;http://tts.baidu.com/text2audio?idx=1&amp;tex=</span><span style=color:#f1fa8c>{0}</span><span style=color:#f1fa8c>&amp;cuid=baidu_speech_&#39;</span> \
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22</span>  <span style=color:#f1fa8c>u</span><span style=color:#f1fa8c>&#39;demo&amp;cod=2&amp;lan=zh&amp;ctp=1&amp;pdt=1&amp;spd=4&amp;per=4&amp;vol=5&amp;pit=5&#39;</span><span style=color:#ff79c6>.</span>format(text)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23</span>res <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(url, headers<span style=color:#ff79c6>=</span>headers)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24</span><span style=color:#ff79c6>with</span> <span style=color:#8be9fd;font-style:italic>open</span>(<span style=color:#f1fa8c>u</span><span style=color:#f1fa8c>&#39;1.mp3&#39;</span>, <span style=color:#f1fa8c>u</span><span style=color:#f1fa8c>&#39;wb&#39;</span>) <span style=color:#ff79c6>as</span> f:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25</span>  f<span style=color:#ff79c6>.</span>write(res<span style=color:#ff79c6>.</span>content)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26</span><span style=color:#ff79c6>def</span> <span style=color:#50fa7b>main</span>():
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27</span>  mp3path2 <span style=color:#ff79c6>=</span> os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>join(os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>dirname(__file__), <span style=color:#f1fa8c>&#39;2.mp3&#39;</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28</span>  os<span style=color:#ff79c6>.</span>system(<span style=color:#f1fa8c>&#39;mplayer </span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> mp3path2)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29</span>  mp3path1 <span style=color:#ff79c6>=</span> os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>join(os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>dirname(__file__), <span style=color:#f1fa8c>&#39;1.mp3&#39;</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">30</span>  os<span style=color:#ff79c6>.</span>system(<span style=color:#f1fa8c>&#39;mplayer </span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> mp3path1)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31</span><span style=color:#ff79c6>if</span> __name__ <span style=color:#ff79c6>==</span> <span style=color:#f1fa8c>&#39;__main__&#39;</span>:
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">32</span>  main()
 </code></pre></div><h2 id=定时任务>定时任务</h2>
 <ul>
 <li><code>crontab -e</code></li>
@@ -226,7 +226,7 @@ res <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span
 </div>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
-<script src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1630651831"></script>
+<script async src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1631087856"></script>
 </footer></div>
 </div>
 <div onclick=window.backTop() class="back-top cursor-pointer">
