@@ -9,7 +9,7 @@
 <meta itemprop=name content="WordPress使用MySQL5.6数据库迁移至5.5提示错误的解决方法">
 <link href=https://imiku.me/index.xml title=WordPress使用MySQL5.6数据库迁移至5.5提示错误的解决方法 type=application/rss+xml rel=alternate>
 <title>WordPress使用MySQL5.6数据库迁移至5.5提示错误的解决方法</title>
-<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1631087875">
+<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1631869638">
 <meta property="og:site_name" content="WordPress使用MySQL5.6数据库迁移至5.5提示错误的解决方法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WordPress使用MySQL5.6数据库迁移至5.5提示错误的解决方法">
@@ -138,7 +138,7 @@ WordPress使用MySQL5.6数据库迁移至5.5提示错误的解决方法
 <section class="article-content px-10 py-5 typo"><p>之前一直使用的MySQL5.6版本的数据库，但后来换成了锐壳云的空间，只支持5.5的，导入数据表的时候一直提示表的结构不对，折腾了一晚上，各个版本的MySQL都试过了，依旧提示同样的错误 😥</p>
 <p>
 <figure class=gallery-image style=flex-grow:174;flex-basis:419px>
-<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/03/20/405.html/1630060151358372.png width=615 height=352 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/03/20/405.html/1630060151358372_huc3fc636c0275d5f6c2e926c3f80b8fdd_15048_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/03/20/405.html/1630060151358372_huc3fc636c0275d5f6c2e926c3f80b8fdd_15048_1080x0_resize_catmullrom_3.png 1080w" data-zoomable data-lazyload alt=WordPress使用MySQL5.6数据库迁移至5.5提示错误的解决方法>
+<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/03/20/405.html/1630060151358372.png src=/2017/03/20/405.html/1630060151358372_huc3fc636c0275d5f6c2e926c3f80b8fdd_15048_ba79ddb2ffa84e5653f558a57a4ccc3f.png width=615 height=352 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/03/20/405.html/1630060151358372_huc3fc636c0275d5f6c2e926c3f80b8fdd_15048_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/03/20/405.html/1630060151358372_huc3fc636c0275d5f6c2e926c3f80b8fdd_15048_1080x0_resize_catmullrom_3.png 1080w" data-zoomable data-lazyload alt=WordPress使用MySQL5.6数据库迁移至5.5提示错误的解决方法>
 <figcaption>WordPress使用MySQL5.6数据库迁移至5.5提示错误的解决方法</figcaption>
 </figure></p>
 <p>后来我用了个脑残点的方法 ❓ ：</p>
@@ -146,11 +146,11 @@ WordPress使用MySQL5.6数据库迁移至5.5提示错误的解决方法
 <p>在两台服务器上同时安装WordPress，把两台服务器上的数据表全部导出，做个对比。果然，发现不对的地方了。。。（左：5.5     右：5.6</p>
 <p>
 <figure class=gallery-image style=flex-grow:138;flex-basis:331px>
-<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/03/20/405.html/1630060151358714.png width=580 height=420 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/03/20/405.html/1630060151358714_hubfbb4e5af40fbf018192782f83fe2952_28891_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/03/20/405.html/1630060151358714_hubfbb4e5af40fbf018192782f83fe2952_28891_1080x0_resize_catmullrom_3.png 1080w" data-zoomable data-lazyload alt=WordPress使用MySQL5.6数据库迁移至5.5提示错误的解决方法>
+<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/03/20/405.html/1630060151358714.png src=/2017/03/20/405.html/1630060151358714_hubfbb4e5af40fbf018192782f83fe2952_28891_04c9e04cecd94e9c3c3d2c9ec4f35e90.png width=580 height=420 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/03/20/405.html/1630060151358714_hubfbb4e5af40fbf018192782f83fe2952_28891_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/03/20/405.html/1630060151358714_hubfbb4e5af40fbf018192782f83fe2952_28891_1080x0_resize_catmullrom_3.png 1080w" data-zoomable data-lazyload alt=WordPress使用MySQL5.6数据库迁移至5.5提示错误的解决方法>
 <figcaption>WordPress使用MySQL5.6数据库迁移至5.5提示错误的解决方法</figcaption>
 </figure>
 <figure class=gallery-image style=flex-grow:129;flex-basis:309px>
-<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/03/20/405.html/1630060151358090.png width=551 height=427 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/03/20/405.html/1630060151358090_huf346f37b6879b6dd290c9b2c9035e258_30945_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/03/20/405.html/1630060151358090_huf346f37b6879b6dd290c9b2c9035e258_30945_1080x0_resize_catmullrom_3.png 1080w" data-zoomable data-lazyload alt=WordPress使用MySQL5.6数据库迁移至5.5提示错误的解决方法>
+<img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/03/20/405.html/1630060151358090.png src=/2017/03/20/405.html/1630060151358090_huf346f37b6879b6dd290c9b2c9035e258_30945_569530cbeb86c547d1c859aaa8828c1f.png width=551 height=427 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/03/20/405.html/1630060151358090_huf346f37b6879b6dd290c9b2c9035e258_30945_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/03/20/405.html/1630060151358090_huf346f37b6879b6dd290c9b2c9035e258_30945_1080x0_resize_catmullrom_3.png 1080w" data-zoomable data-lazyload alt=WordPress使用MySQL5.6数据库迁移至5.5提示错误的解决方法>
 <figcaption>WordPress使用MySQL5.6数据库迁移至5.5提示错误的解决方法</figcaption>
 </figure></p>
 <p><strong>很明显图中绿色的地方不一致，5.6比5.5多了个520 😈</strong></p>
@@ -159,8 +159,8 @@ WordPress使用MySQL5.6数据库迁移至5.5提示错误的解决方法
 <div class="border-b border-gray-300"></div>
 <div class="flex justify-between md:text-2xl p-4 text-xl">
 <a href=/2017/03/19/432.html/ title=" 移动硬盘满血复活 " class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible" style=visibility:visible>
-<span class="flex items-center text-4xl">
-<i class="eva eva-arrow-left-outline"></i>
+<span class="flex items-center text-5xl text-gray-400">
+<i class="eva eva-chevron-left-outline"></i>
 </span>
 <span>上一篇</span>
 </a>
@@ -176,8 +176,8 @@ WordPress使用MySQL5.6数据库迁移至5.5提示错误的解决方法
 </div>
 <a href=/2017/03/24/633.html/ title=" WordPress 禁用裁剪缩略图的功能 " class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible" style=visibility:visible>
 <span>下一篇</span>
-<span class="text-4xl flex items-center">
-<i class="eva eva-arrow-right-outline text-4xl"></i>
+<span class="flex items-center text-5xl text-gray-400">
+<i class="eva eva-chevron-right-outline"></i>
 </span>
 </a>
 </div></div>
@@ -195,7 +195,7 @@ WordPress使用MySQL5.6数据库迁移至5.5提示错误的解决方法
 </div>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
-<script async src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1631087878"></script>
+<script async src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1631869639"></script>
 </footer></div>
 </div>
 <div onclick=window.backTop() class="back-top cursor-pointer">
