@@ -44,10 +44,11 @@
 &lt;p>
 &lt;figure
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/search.gif"
+&lt;picture>&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/search.gif"
 data-zoomable
 data-lazyload
 alt="搜索预览">
+&lt;/picture>
 &lt;figcaption>搜索预览&lt;/figcaption>
 &lt;/figure>&lt;/p>
 &lt;h3 id="良好的-seo-优化">良好的 SEO 优化&lt;/h3>
@@ -205,14 +206,15 @@ style="
 flex-grow: 66;
 flex-basis: 159px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/4.jpg"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/4_hu9a1859cd49732e711b8f9682e78b38b0_175762_50x0_resize_q100_catmullrom.jpg"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/4_hu34aa8227897d0ad4d735dad52c8de43c_68003_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/4_hu34aa8227897d0ad4d735dad52c8de43c_68003_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/4.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/4_hu34aa8227897d0ad4d735dad52c8de43c_68003_50x0_resize_q90_catmullrom.jpg"
 width="996"
 height="1500"
-data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/4_hu9a1859cd49732e711b8f9682e78b38b0_175762_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/4_hu9a1859cd49732e711b8f9682e78b38b0_175762_1080x0_resize_q100_catmullrom.jpg 1080w"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/4_hu34aa8227897d0ad4d735dad52c8de43c_68003_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/4_hu34aa8227897d0ad4d735dad52c8de43c_68003_1080x0_resize_q90_catmullrom.jpg 1080w"
 data-zoomable
 data-lazyload
 >
+&lt;/picture>
 &lt;/figure>
 &lt;figure
 class="gallery-image"
@@ -220,14 +222,15 @@ style="
 flex-grow: 150;
 flex-basis: 360px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/2.jpg"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/2_hu558a11b6013ad9baa670cb6de6fac4af_258113_50x0_resize_q100_catmullrom.jpg"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/2_hu584058098a9b77435d377097cf241a1a_202741_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/2_hu584058098a9b77435d377097cf241a1a_202741_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/2.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/2_hu584058098a9b77435d377097cf241a1a_202741_50x0_resize_q90_catmullrom.jpg"
 width="1200"
 height="800"
-data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/2_hu558a11b6013ad9baa670cb6de6fac4af_258113_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/2_hu558a11b6013ad9baa670cb6de6fac4af_258113_1080x0_resize_q100_catmullrom.jpg 1080w"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/2_hu584058098a9b77435d377097cf241a1a_202741_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/2_hu584058098a9b77435d377097cf241a1a_202741_1080x0_resize_q90_catmullrom.jpg 1080w"
 data-zoomable
 data-lazyload
 >
+&lt;/picture>
 &lt;/figure>&lt;/p>
 &lt;p>
 &lt;figure
@@ -236,14 +239,15 @@ style="
 flex-grow: 66;
 flex-basis: 160px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/6.jpg"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/6_hu0f11578d6dc8556db87c68bac73638ea_237798_50x0_resize_q100_catmullrom.jpg"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/6_hu0b3772ef97be9473c84faf4f8bc41c24_94221_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/6_hu0b3772ef97be9473c84faf4f8bc41c24_94221_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/6.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/6_hu0b3772ef97be9473c84faf4f8bc41c24_94221_50x0_resize_q90_catmullrom.jpg"
 width="1200"
 height="1800"
-data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/6_hu0f11578d6dc8556db87c68bac73638ea_237798_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/6_hu0f11578d6dc8556db87c68bac73638ea_237798_1080x0_resize_q100_catmullrom.jpg 1080w"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/6_hu0b3772ef97be9473c84faf4f8bc41c24_94221_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/6_hu0b3772ef97be9473c84faf4f8bc41c24_94221_1080x0_resize_q90_catmullrom.jpg 1080w"
 data-zoomable
 data-lazyload
 >
+&lt;/picture>
 &lt;/figure>
 &lt;figure
 class="gallery-image"
@@ -251,14 +255,15 @@ style="
 flex-grow: 117;
 flex-basis: 281px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/7.jpg"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/7_hu37fa0f99f73757b357303bff27a93f4b_65628_50x0_resize_q100_catmullrom.jpg"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/7_hu2c3220d89c0d7665dccd4ad786654b94_27054_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/7_hu2c3220d89c0d7665dccd4ad786654b94_27054_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/7.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/7_hu2c3220d89c0d7665dccd4ad786654b94_27054_50x0_resize_q90_catmullrom.jpg"
 width="1200"
 height="1022"
-data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/7_hu37fa0f99f73757b357303bff27a93f4b_65628_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/7_hu37fa0f99f73757b357303bff27a93f4b_65628_1080x0_resize_q100_catmullrom.jpg 1080w"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/7_hu2c3220d89c0d7665dccd4ad786654b94_27054_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/7_hu2c3220d89c0d7665dccd4ad786654b94_27054_1080x0_resize_q90_catmullrom.jpg 1080w"
 data-zoomable
 data-lazyload
 >
+&lt;/picture>
 &lt;/figure>
 &lt;figure
 class="gallery-image"
@@ -266,14 +271,15 @@ style="
 flex-grow: 66;
 flex-basis: 160px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/8.jpg"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/8_hu745afd746880d23a73bc0bd743db6ef4_379758_50x0_resize_q100_catmullrom.jpg"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/8_hu1c428075e3e7ab19a5b9971e6af50364_204055_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/8_hu1c428075e3e7ab19a5b9971e6af50364_204055_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/8.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/8_hu1c428075e3e7ab19a5b9971e6af50364_204055_50x0_resize_q90_catmullrom.jpg"
 width="1200"
 height="1800"
-data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/8_hu745afd746880d23a73bc0bd743db6ef4_379758_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/8_hu745afd746880d23a73bc0bd743db6ef4_379758_1080x0_resize_q100_catmullrom.jpg 1080w"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/8_hu1c428075e3e7ab19a5b9971e6af50364_204055_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/8_hu1c428075e3e7ab19a5b9971e6af50364_204055_1080x0_resize_q90_catmullrom.jpg 1080w"
 data-zoomable
 data-lazyload
 >
+&lt;/picture>
 &lt;/figure>
 &lt;figure
 class="gallery-image"
@@ -281,14 +287,15 @@ style="
 flex-grow: 66;
 flex-basis: 160px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/9.jpg"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/9_hub5746f0a5e8cf50984a3d3fe57f3b0f0_145119_50x0_resize_q100_catmullrom.jpg"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/9_hud197a2fb04bed1fbdf90bf91c9e02091_59645_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/9_hud197a2fb04bed1fbdf90bf91c9e02091_59645_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/9.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/9_hud197a2fb04bed1fbdf90bf91c9e02091_59645_50x0_resize_q90_catmullrom.jpg"
 width="1200"
 height="1800"
-data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/9_hub5746f0a5e8cf50984a3d3fe57f3b0f0_145119_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/9_hub5746f0a5e8cf50984a3d3fe57f3b0f0_145119_1080x0_resize_q100_catmullrom.jpg 1080w"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/9_hud197a2fb04bed1fbdf90bf91c9e02091_59645_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/9_hud197a2fb04bed1fbdf90bf91c9e02091_59645_1080x0_resize_q90_catmullrom.jpg 1080w"
 data-zoomable
 data-lazyload
 >
+&lt;/picture>
 &lt;/figure>&lt;/p>
 &lt;h3 id="标签和分类页面">标签和分类页面&lt;/h3>
 &lt;p>&lt;a class="link" href="https://imiku.me/tags/" >标签页面&lt;/a>和&lt;a class="link" href="https://imiku.me/categories/" >分类页面&lt;/a>&lt;/p>
@@ -299,14 +306,15 @@ style="
 flex-grow: 147;
 flex-basis: 353px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115715842.png"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831115715842_hu07244720b5557be8bf7dd38507fbf852_109481_50x0_resize_catmullrom_3.png"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115715842_hu2b9fbccf954a02459e4aaa307a27e730_117952_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115715842_hu2b9fbccf954a02459e4aaa307a27e730_117952_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115715842.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115715842_hu2b9fbccf954a02459e4aaa307a27e730_117952_50x0_resize_q90_catmullrom.jpg"
 width="1328"
 height="901"
-data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115715842_hu07244720b5557be8bf7dd38507fbf852_109481_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115715842_hu07244720b5557be8bf7dd38507fbf852_109481_1080x0_resize_catmullrom_3.png 1080w"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115715842_hu2b9fbccf954a02459e4aaa307a27e730_117952_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115715842_hu2b9fbccf954a02459e4aaa307a27e730_117952_1080x0_resize_q90_catmullrom.jpg 1080w"
 data-zoomable
 data-lazyload
 >
+&lt;/picture>
 &lt;/figure>&lt;/p>
 &lt;h3 id="说说类型文章">说说类型文章&lt;/h3>
 &lt;p>根据文章类型，判断应该显示什么样的卡片&lt;/p>
@@ -317,14 +325,15 @@ style="
 flex-grow: 157;
 flex-basis: 378px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115424244.png"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831115424244_hucb114a7eedb555eb8fc2c84b5795aa59_502050_50x0_resize_catmullrom_3.png"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115424244_hu637dc307e0b5f90f94b27f10589575a3_82558_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115424244_hu637dc307e0b5f90f94b27f10589575a3_82558_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115424244.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115424244_hu637dc307e0b5f90f94b27f10589575a3_82558_50x0_resize_q90_catmullrom.jpg"
 width="1317"
 height="835"
-data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115424244_hucb114a7eedb555eb8fc2c84b5795aa59_502050_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115424244_hucb114a7eedb555eb8fc2c84b5795aa59_502050_1080x0_resize_catmullrom_3.png 1080w"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115424244_hu637dc307e0b5f90f94b27f10589575a3_82558_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115424244_hu637dc307e0b5f90f94b27f10589575a3_82558_1080x0_resize_q90_catmullrom.jpg 1080w"
 data-zoomable
 data-lazyload
 >
+&lt;/picture>
 &lt;/figure>&lt;/p>
 &lt;h3 id="友情链接页面">友情链接页面&lt;/h3>
 &lt;p>支持链接语法，可用于&lt;a class="link" href="https://imiku.me/links/" >友情链接页面&lt;/a>&lt;/p>
@@ -335,14 +344,15 @@ style="
 flex-grow: 121;
 flex-basis: 292px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114934801.png"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831114934801_hue7cc87603ae7589ef134d39244271772_206122_50x0_resize_catmullrom_3.png"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114934801_hu1fc839c1301e30e89102ef421a7a01e2_63674_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114934801_hu1fc839c1301e30e89102ef421a7a01e2_63674_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114934801.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114934801_hu1fc839c1301e30e89102ef421a7a01e2_63674_50x0_resize_q90_catmullrom.jpg"
 width="1322"
 height="1085"
-data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114934801_hue7cc87603ae7589ef134d39244271772_206122_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114934801_hue7cc87603ae7589ef134d39244271772_206122_1080x0_resize_catmullrom_3.png 1080w"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114934801_hu1fc839c1301e30e89102ef421a7a01e2_63674_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114934801_hu1fc839c1301e30e89102ef421a7a01e2_63674_1080x0_resize_q90_catmullrom.jpg 1080w"
 data-zoomable
 data-lazyload
 >
+&lt;/picture>
 &lt;/figure>&lt;/p>
 &lt;h3 id="github-项目展示">GitHub 项目展示&lt;/h3>
 &lt;p>自动抓取 GItHub 上的项目，并根据 star 数量排名，生成&lt;a class="link" href="https://imiku.me/github/" >GitHub 项目页面&lt;/a>&lt;/p>
@@ -353,14 +363,15 @@ style="
 flex-grow: 142;
 flex-basis: 342px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114753611.png"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831114753611_hu8b598ce0b312f9e076b5b05a02ab8c2c_80387_50x0_resize_catmullrom_3.png"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114753611_hufc6a6903a8ffd05efc2c5cad833bf2fa_50035_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114753611_hufc6a6903a8ffd05efc2c5cad833bf2fa_50035_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114753611.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114753611_hufc6a6903a8ffd05efc2c5cad833bf2fa_50035_50x0_resize_q90_catmullrom.jpg"
 width="1323"
 height="927"
-data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114753611_hu8b598ce0b312f9e076b5b05a02ab8c2c_80387_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114753611_hu8b598ce0b312f9e076b5b05a02ab8c2c_80387_1080x0_resize_catmullrom_3.png 1080w"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114753611_hufc6a6903a8ffd05efc2c5cad833bf2fa_50035_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114753611_hufc6a6903a8ffd05efc2c5cad833bf2fa_50035_1080x0_resize_q90_catmullrom.jpg 1080w"
 data-zoomable
 data-lazyload
 >
+&lt;/picture>
 &lt;/figure>&lt;/p>
 &lt;h3 id="归档页面">归档页面&lt;/h3>
 &lt;p>自动生成漂亮的&lt;a class="link" href="https://imiku.me/timeline/" >时间轴归档页面&lt;/a>&lt;/p>
@@ -371,14 +382,15 @@ style="
 flex-grow: 146;
 flex-basis: 350px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114825278.png"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831114825278_hu96904f55b98454eec2220fcb38a846fd_77866_50x0_resize_catmullrom_3.png"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114825278_hu56e6af0c46cbc9c29d29f36c10515e09_49141_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114825278_hu56e6af0c46cbc9c29d29f36c10515e09_49141_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114825278.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114825278_hu56e6af0c46cbc9c29d29f36c10515e09_49141_50x0_resize_q90_catmullrom.jpg"
 width="1317"
 height="901"
-data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114825278_hu96904f55b98454eec2220fcb38a846fd_77866_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114825278_hu96904f55b98454eec2220fcb38a846fd_77866_1080x0_resize_catmullrom_3.png 1080w"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114825278_hu56e6af0c46cbc9c29d29f36c10515e09_49141_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114825278_hu56e6af0c46cbc9c29d29f36c10515e09_49141_1080x0_resize_q90_catmullrom.jpg 1080w"
 data-zoomable
 data-lazyload
 >
+&lt;/picture>
 &lt;/figure>&lt;/p>
 &lt;h3 id="twitter-动态页面">Twitter 动态页面&lt;/h3>
 &lt;p>支持同步 &lt;a class="link" href="https://imiku.me/twitter/" >Twitter 动态的更新页面&lt;/a>，抓取 Twitter 上的图片和视频资源到本地，并使用 &lt;a class="link" href="https://www.jsdelivr.com/" target="_blank" rel="noopener"
@@ -390,14 +402,15 @@ style="
 flex-grow: 108;
 flex-basis: 260px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111752680.png"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831111752680_hu0641f4225484078d1b7ab81520305a98_379204_50x0_resize_catmullrom_3.png"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111752680_hucdec8887ea724509d982a4b9537c9589_80371_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111752680_hucdec8887ea724509d982a4b9537c9589_80371_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111752680.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111752680_hucdec8887ea724509d982a4b9537c9589_80371_50x0_resize_q90_catmullrom.jpg"
 width="1337"
 height="1233"
-data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111752680_hu0641f4225484078d1b7ab81520305a98_379204_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111752680_hu0641f4225484078d1b7ab81520305a98_379204_1080x0_resize_catmullrom_3.png 1080w"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111752680_hucdec8887ea724509d982a4b9537c9589_80371_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111752680_hucdec8887ea724509d982a4b9537c9589_80371_1080x0_resize_q90_catmullrom.jpg 1080w"
 data-zoomable
 data-lazyload
 >
+&lt;/picture>
 &lt;/figure>&lt;/p>
 &lt;h3 id="github-actions-支持">GitHub Actions 支持&lt;/h3>
 &lt;p>支持 GitHub Actions 自动部署，只需要安静的写文章，剩下的交给 Actions 完成就行，打包完后自动上传到 GitHub Pages 上，自动更新和下载 GitHub 和 Twitter 页面数据，并且自动转换资源链接到 &lt;a class="link" href="https://www.jsdelivr.com/" target="_blank" rel="noopener"
@@ -409,14 +422,15 @@ style="
 flex-grow: 143;
 flex-basis: 343px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111358209.png"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831111358209_hu34d22f28e12de8e4aaa780a5ba820610_34890_50x0_resize_catmullrom_3.png"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111358209_hua21922f96784eebf1155031eaf351588_18090_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111358209_hua21922f96784eebf1155031eaf351588_18090_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111358209.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111358209_hua21922f96784eebf1155031eaf351588_18090_50x0_resize_q90_catmullrom.jpg"
 width="897"
 height="627"
-data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111358209_hu34d22f28e12de8e4aaa780a5ba820610_34890_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111358209_hu34d22f28e12de8e4aaa780a5ba820610_34890_1080x0_resize_catmullrom_3.png 1080w"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111358209_hua21922f96784eebf1155031eaf351588_18090_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111358209_hua21922f96784eebf1155031eaf351588_18090_1080x0_resize_q90_catmullrom.jpg 1080w"
 data-zoomable
 data-lazyload
 >
+&lt;/picture>
 &lt;/figure>&lt;/p>
 &lt;p>其他特性：&lt;/p>
 &lt;ul>
@@ -448,14 +462,15 @@ style="
 flex-grow: 121;
 flex-basis: 292px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/23/n2-pass.html/jlpt.jpg"
-src="https://imiku.me/2021/08/23/n2-pass.html/jlpt_hud550b1eb497a7857fb8b4d20834638c1_125616_50x0_resize_q100_catmullrom.jpg"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/23/n2-pass.html/jlpt_hufbe0adb39d3d02aafb6308372909766f_56728_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/23/n2-pass.html/jlpt_hufbe0adb39d3d02aafb6308372909766f_56728_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/23/n2-pass.html/jlpt.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/23/n2-pass.html/jlpt_hufbe0adb39d3d02aafb6308372909766f_56728_50x0_resize_q90_catmullrom.jpg"
 width="1084"
 height="890"
-data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/23/n2-pass.html/jlpt_hud550b1eb497a7857fb8b4d20834638c1_125616_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/23/n2-pass.html/jlpt_hud550b1eb497a7857fb8b4d20834638c1_125616_1080x0_resize_q100_catmullrom.jpg 1080w"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/23/n2-pass.html/jlpt_hufbe0adb39d3d02aafb6308372909766f_56728_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/23/n2-pass.html/jlpt_hufbe0adb39d3d02aafb6308372909766f_56728_1080x0_resize_q90_catmullrom.jpg 1080w"
 data-zoomable
 data-lazyload
 alt="查询成绩">
+&lt;/picture>
 &lt;figcaption>查询成绩&lt;/figcaption>
 &lt;/figure>&lt;/p></description></item><item><title>JS 西班牙语语音合成在 MacOS 上没有声音的问题</title><link>https://imiku.me/2021/07/31/1459.html/</link><pubDate>Sat, 31 Jul 2021 13:27:27 +0000</pubDate><guid>https://imiku.me/2021/07/31/1459.html/</guid><description>&lt;p>在上篇文章中提到的 &lt;a class="link" href="https://imiku.me/2021/07/26/1445.html" >写了个西班牙语学习工具&lt;/a> 中，最近在 Mac 上使用时发现语音合成一直没有声音，研究了半天才找到解决方法。&lt;/p>
 &lt;p>
@@ -465,14 +480,15 @@ style="
 flex-grow: 114;
 flex-basis: 275px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397813.png"
-src="https://imiku.me/2021/07/31/1459.html/1630060151397813_hubd31d6f73ab25e1cf0280a5e6d9d2584_58030_50x0_resize_catmullrom_3.png"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397813_hubd31d6f73ab25e1cf0280a5e6d9d2584_58030_640x0_resize_q90_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397813_hubd31d6f73ab25e1cf0280a5e6d9d2584_58030_1080x0_resize_q90_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397813.png"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397813_hubd31d6f73ab25e1cf0280a5e6d9d2584_58030_50x0_resize_catmullrom_3.png"
 width="800"
 height="697"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397813_hubd31d6f73ab25e1cf0280a5e6d9d2584_58030_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397813_hubd31d6f73ab25e1cf0280a5e6d9d2584_58030_1080x0_resize_catmullrom_3.png 1080w"
 data-zoomable
 data-lazyload
 alt="在系统设置中打开【辅助功能】">
+&lt;/picture>
 &lt;figcaption>在系统设置中打开【辅助功能】&lt;/figcaption>
 &lt;/figure>
 &lt;figure
@@ -481,14 +497,15 @@ style="
 flex-grow: 129;
 flex-basis: 311px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397631.png"
-src="https://imiku.me/2021/07/31/1459.html/1630060151397631_hu3dcef8126cf1a840a0279e998069a100_52511_50x0_resize_catmullrom_3.png"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397631_hu3dcef8126cf1a840a0279e998069a100_52511_640x0_resize_q90_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397631_hu3dcef8126cf1a840a0279e998069a100_52511_1080x0_resize_q90_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397631.png"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397631_hu3dcef8126cf1a840a0279e998069a100_52511_50x0_resize_catmullrom_3.png"
 width="800"
 height="617"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397631_hu3dcef8126cf1a840a0279e998069a100_52511_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397631_hu3dcef8126cf1a840a0279e998069a100_52511_1080x0_resize_catmullrom_3.png 1080w"
 data-zoomable
 data-lazyload
 alt="左侧选择【朗读内容】，点击系统声音">
+&lt;/picture>
 &lt;figcaption>左侧选择【朗读内容】，点击系统声音&lt;/figcaption>
 &lt;/figure>
 &lt;figure
@@ -497,14 +514,15 @@ style="
 flex-grow: 129;
 flex-basis: 311px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397117.png"
-src="https://imiku.me/2021/07/31/1459.html/1630060151397117_hub0e77b46526da327a2c2900adcbb46e1_43770_50x0_resize_catmullrom_3.png"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397117_hub0e77b46526da327a2c2900adcbb46e1_43770_640x0_resize_q90_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397117_hub0e77b46526da327a2c2900adcbb46e1_43770_1080x0_resize_q90_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397117.png"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397117_hub0e77b46526da327a2c2900adcbb46e1_43770_50x0_resize_catmullrom_3.png"
 width="800"
 height="617"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397117_hub0e77b46526da327a2c2900adcbb46e1_43770_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397117_hub0e77b46526da327a2c2900adcbb46e1_43770_1080x0_resize_catmullrom_3.png 1080w"
 data-zoomable
 data-lazyload
 alt="勾选需要的语言，然后确定">
+&lt;/picture>
 &lt;figcaption>勾选需要的语言，然后确定&lt;/figcaption>
 &lt;/figure>&lt;/p>
 &lt;p>之后会自动下载所需的 TTS 语言包，下载完成后重启 Safari 浏览器&lt;/p>
@@ -552,10 +570,11 @@ mismatch() &amp;amp; -1 &amp;amp; \text{ or \textbf{bold} text.} \\\hline
 &lt;/div>&lt;p>
 &lt;figure
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396934.gif"
+&lt;picture>&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396934.gif"
 data-zoomable
 data-lazyload
 alt="Notion 如何创建简单表格（非数据库）">
+&lt;/picture>
 &lt;figcaption>Notion 如何创建简单表格（非数据库）&lt;/figcaption>
 &lt;/figure>&lt;/p>
 &lt;p>
@@ -565,14 +584,15 @@ style="
 flex-grow: 317;
 flex-basis: 762px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396651.png"
-src="https://imiku.me/2021/07/29/1451.html/1630060151396651_huab84eda8e111888a5b0e150fa14823b9_18595_50x0_resize_catmullrom_3.png"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396651_huab84eda8e111888a5b0e150fa14823b9_18595_640x0_resize_q90_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396651_huab84eda8e111888a5b0e150fa14823b9_18595_1080x0_resize_q90_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396651.png"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396651_huab84eda8e111888a5b0e150fa14823b9_18595_50x0_resize_catmullrom_3.png"
 width="569"
 height="179"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396651_huab84eda8e111888a5b0e150fa14823b9_18595_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396651_huab84eda8e111888a5b0e150fa14823b9_18595_1080x0_resize_catmullrom_3.png 1080w"
 data-zoomable
 data-lazyload
 alt="Notion 如何创建简单表格（非数据库）">
+&lt;/picture>
 &lt;figcaption>Notion 如何创建简单表格（非数据库）&lt;/figcaption>
 &lt;/figure>&lt;/p>
 &lt;h2 id="方法b">方法B：&lt;/h2>
@@ -580,10 +600,11 @@ alt="Notion 如何创建简单表格（非数据库）">
 &lt;p>
 &lt;figure
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396413.gif"
+&lt;picture>&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396413.gif"
 data-zoomable
 data-lazyload
 alt="Notion 如何创建简单表格（非数据库）">
+&lt;/picture>
 &lt;figcaption>Notion 如何创建简单表格（非数据库）&lt;/figcaption>
 &lt;/figure>
 &lt;figure
@@ -592,14 +613,15 @@ style="
 flex-grow: 275;
 flex-basis: 662px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396504.jpg"
-src="https://imiku.me/2021/07/29/1451.html/1630060151396504_hu97181d613c1e0a48ea37000436cb8d75_21091_50x0_resize_q100_catmullrom.jpg"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396504_hu97181d613c1e0a48ea37000436cb8d75_21091_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396504_hu97181d613c1e0a48ea37000436cb8d75_21091_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396504.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396504_hu97181d613c1e0a48ea37000436cb8d75_21091_50x0_resize_q90_catmullrom.jpg"
 width="891"
 height="323"
-data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396504_hu97181d613c1e0a48ea37000436cb8d75_21091_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396504_hu97181d613c1e0a48ea37000436cb8d75_21091_1080x0_resize_q100_catmullrom.jpg 1080w"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396504_hu97181d613c1e0a48ea37000436cb8d75_21091_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396504_hu97181d613c1e0a48ea37000436cb8d75_21091_1080x0_resize_q90_catmullrom.jpg 1080w"
 data-zoomable
 data-lazyload
 alt="Notion 如何创建简单表格（非数据库）">
+&lt;/picture>
 &lt;figcaption>Notion 如何创建简单表格（非数据库）&lt;/figcaption>
 &lt;/figure>&lt;/p></description></item><item><title>写了个西班牙语学习工具</title><link>https://imiku.me/2021/07/26/1445.html/</link><pubDate>Mon, 26 Jul 2021 04:51:22 +0000</pubDate><guid>https://imiku.me/2021/07/26/1445.html/</guid><description>&lt;blockquote>
 &lt;p>GitHub &lt;a class="link" href="https://github.com/Ice-Hazymoon/spanish" target="_blank" rel="noopener"
@@ -693,14 +715,15 @@ style="
 flex-grow: 133;
 flex-basis: 319px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393951.jpg"
-src="https://imiku.me/2020/10/25/1362.html/1630060151393951_huc9b30fedc52d7a5e5522c81180b5a08b_38153_50x0_resize_q100_catmullrom.jpg"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393951_huc9b30fedc52d7a5e5522c81180b5a08b_38153_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393951_huc9b30fedc52d7a5e5522c81180b5a08b_38153_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393951.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393951_huc9b30fedc52d7a5e5522c81180b5a08b_38153_50x0_resize_q90_catmullrom.jpg"
 width="680"
 height="511"
-data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393951_huc9b30fedc52d7a5e5522c81180b5a08b_38153_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393951_huc9b30fedc52d7a5e5522c81180b5a08b_38153_1080x0_resize_q100_catmullrom.jpg 1080w"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393951_huc9b30fedc52d7a5e5522c81180b5a08b_38153_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393951_huc9b30fedc52d7a5e5522c81180b5a08b_38153_1080x0_resize_q90_catmullrom.jpg 1080w"
 data-zoomable
 data-lazyload
 alt="Oculus Quest 2上手“评测”">
+&lt;/picture>
 &lt;figcaption>Oculus Quest 2上手“评测”&lt;/figcaption>
 &lt;/figure>&lt;/p>
 &lt;p>
@@ -710,14 +733,15 @@ style="
 flex-grow: 75;
 flex-basis: 180px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393576.jpg"
-src="https://imiku.me/2020/10/25/1362.html/1630060151393576_huca333d01b0172482d61a2515bf83a806_353981_50x0_resize_q100_catmullrom.jpg"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393576_huca333d01b0172482d61a2515bf83a806_353981_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393576_huca333d01b0172482d61a2515bf83a806_353981_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393576.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393576_huca333d01b0172482d61a2515bf83a806_353981_50x0_resize_q90_catmullrom.jpg"
 width="1538"
 height="2048"
-data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393576_huca333d01b0172482d61a2515bf83a806_353981_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393576_huca333d01b0172482d61a2515bf83a806_353981_1080x0_resize_q100_catmullrom.jpg 1080w"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393576_huca333d01b0172482d61a2515bf83a806_353981_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393576_huca333d01b0172482d61a2515bf83a806_353981_1080x0_resize_q90_catmullrom.jpg 1080w"
 data-zoomable
 data-lazyload
 alt="Oculus Quest 2上手“评测”">
+&lt;/picture>
 &lt;figcaption>Oculus Quest 2上手“评测”&lt;/figcaption>
 &lt;/figure>&lt;/p>
 &lt;h2 id="软件优化">软件优化&lt;/h2>
@@ -733,14 +757,15 @@ style="
 flex-grow: 132;
 flex-basis: 319px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393263.png"
-src="https://imiku.me/2020/10/25/1362.html/1630060151393263_hue82f392370e003eec5de95f3aa0d3374_367868_50x0_resize_catmullrom_3.png"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393263_hue82f392370e003eec5de95f3aa0d3374_367868_640x0_resize_q90_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393263_hue82f392370e003eec5de95f3aa0d3374_367868_1080x0_resize_q90_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393263.png"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393263_hue82f392370e003eec5de95f3aa0d3374_367868_50x0_resize_catmullrom_3.png"
 width="1284"
 height="966"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393263_hue82f392370e003eec5de95f3aa0d3374_367868_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393263_hue82f392370e003eec5de95f3aa0d3374_367868_1080x0_resize_catmullrom_3.png 1080w"
 data-zoomable
 data-lazyload
 alt="Oculus Quest 2上手“评测”">
+&lt;/picture>
 &lt;figcaption>Oculus Quest 2上手“评测”&lt;/figcaption>
 &lt;/figure>&lt;/p>
 &lt;hr>
@@ -804,14 +829,15 @@ style="
 flex-grow: 140;
 flex-basis: 337px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392606.png"
-src="https://imiku.me/2019/06/09/1332.html/1630060151392606_hu2ce4dfc940bb6c1cfae61d9f26580c12_34250_50x0_resize_catmullrom_3.png"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392606_hu2ce4dfc940bb6c1cfae61d9f26580c12_34250_640x0_resize_q90_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392606_hu2ce4dfc940bb6c1cfae61d9f26580c12_34250_1080x0_resize_q90_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392606.png"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392606_hu2ce4dfc940bb6c1cfae61d9f26580c12_34250_50x0_resize_catmullrom_3.png"
 width="453"
 height="322"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392606_hu2ce4dfc940bb6c1cfae61d9f26580c12_34250_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392606_hu2ce4dfc940bb6c1cfae61d9f26580c12_34250_1080x0_resize_catmullrom_3.png 1080w"
 data-zoomable
 data-lazyload
 alt="foobar2000 音乐文件路劲更换后的解决方法">
+&lt;/picture>
 &lt;figcaption>foobar2000 音乐文件路劲更换后的解决方法&lt;/figcaption>
 &lt;/figure>&lt;/p>
 &lt;p>才想起来，装系统的时候把音乐文件移动到了另一个磁盘上，fb2k里的内容自然也都播放不了了，原先的备份也都是&lt;code>fpl&lt;/code> 格式的，无法编辑，折腾了半天，找到了解决方案。&lt;/p>
@@ -824,14 +850,15 @@ style="
 flex-grow: 118;
 flex-basis: 284px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392053.png"
-src="https://imiku.me/2019/06/09/1332.html/1630060151392053_hu595318e3fd91974e80f9c71b305361d9_20314_50x0_resize_catmullrom_3.png"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392053_hu595318e3fd91974e80f9c71b305361d9_20314_640x0_resize_q90_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392053_hu595318e3fd91974e80f9c71b305361d9_20314_1080x0_resize_q90_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392053.png"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392053_hu595318e3fd91974e80f9c71b305361d9_20314_50x0_resize_catmullrom_3.png"
 width="374"
 height="315"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392053_hu595318e3fd91974e80f9c71b305361d9_20314_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392053_hu595318e3fd91974e80f9c71b305361d9_20314_1080x0_resize_catmullrom_3.png 1080w"
 data-zoomable
 data-lazyload
 alt="foobar2000 音乐文件路劲更换后的解决方法">
+&lt;/picture>
 &lt;figcaption>foobar2000 音乐文件路劲更换后的解决方法&lt;/figcaption>
 &lt;/figure>&lt;/p>
 &lt;p>二、打开保存好的播放列表，这时看到的就是明文的内容了，替换所有的路劲&lt;/p>
@@ -842,14 +869,15 @@ style="
 flex-grow: 194;
 flex-basis: 466px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392534.png"
-src="https://imiku.me/2019/06/09/1332.html/1630060151392534_hu008bcf6388b903e5ea75427b7b86ac10_180696_50x0_resize_catmullrom_3.png"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392534_hu008bcf6388b903e5ea75427b7b86ac10_180696_640x0_resize_q90_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392534_hu008bcf6388b903e5ea75427b7b86ac10_180696_1080x0_resize_q90_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392534.png"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392534_hu008bcf6388b903e5ea75427b7b86ac10_180696_50x0_resize_catmullrom_3.png"
 width="1059"
 height="545"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392534_hu008bcf6388b903e5ea75427b7b86ac10_180696_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392534_hu008bcf6388b903e5ea75427b7b86ac10_180696_1080x0_resize_catmullrom_3.png 1080w"
 data-zoomable
 data-lazyload
 alt="foobar2000 音乐文件路劲更换后的解决方法">
+&lt;/picture>
 &lt;figcaption>foobar2000 音乐文件路劲更换后的解决方法&lt;/figcaption>
 &lt;/figure>&lt;/p>
 &lt;p>三、替换好后先别急着导入，因为当前的播放列表里有很多重复的内容，需要去重后再重新导入。这里我写了个小工具来实现这一步骤。打开：&lt;a class="link" href="https://miku.tools/tools/remove_duplicate" target="_blank" rel="noopener"
@@ -861,14 +889,15 @@ style="
 flex-grow: 138;
 flex-basis: 333px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392089.png"
-src="https://imiku.me/2019/06/09/1332.html/1630060151392089_hu5c05793ac7cdc8d22cf99e4fb8af98e1_230665_50x0_resize_catmullrom_3.png"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392089_hu5c05793ac7cdc8d22cf99e4fb8af98e1_230665_640x0_resize_q90_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392089_hu5c05793ac7cdc8d22cf99e4fb8af98e1_230665_1080x0_resize_q90_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392089.png"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392089_hu5c05793ac7cdc8d22cf99e4fb8af98e1_230665_50x0_resize_catmullrom_3.png"
 width="1283"
 height="924"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392089_hu5c05793ac7cdc8d22cf99e4fb8af98e1_230665_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392089_hu5c05793ac7cdc8d22cf99e4fb8af98e1_230665_1080x0_resize_catmullrom_3.png 1080w"
 data-zoomable
 data-lazyload
 alt="foobar2000 音乐文件路劲更换后的解决方法">
+&lt;/picture>
 &lt;figcaption>foobar2000 音乐文件路劲更换后的解决方法&lt;/figcaption>
 &lt;/figure>&lt;/p>
 &lt;p>四、重新导入歌单，即可正常播放
@@ -878,14 +907,15 @@ style="
 flex-grow: 153;
 flex-basis: 368px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392514.png"
-src="https://imiku.me/2019/06/09/1332.html/1630060151392514_hu250b2caf56f55b76f7596bad999cec31_28788_50x0_resize_catmullrom_3.png"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392514_hu250b2caf56f55b76f7596bad999cec31_28788_640x0_resize_q90_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392514_hu250b2caf56f55b76f7596bad999cec31_28788_1080x0_resize_q90_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392514.png"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392514_hu250b2caf56f55b76f7596bad999cec31_28788_50x0_resize_catmullrom_3.png"
 width="459"
 height="299"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392514_hu250b2caf56f55b76f7596bad999cec31_28788_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392514_hu250b2caf56f55b76f7596bad999cec31_28788_1080x0_resize_catmullrom_3.png 1080w"
 data-zoomable
 data-lazyload
 alt="foobar2000 音乐文件路劲更换后的解决方法">
+&lt;/picture>
 &lt;figcaption>foobar2000 音乐文件路劲更换后的解决方法&lt;/figcaption>
 &lt;/figure>
 &lt;figure
@@ -894,14 +924,15 @@ style="
 flex-grow: 174;
 flex-basis: 419px"
 >
-&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392247.png"
-src="https://imiku.me/2019/06/09/1332.html/1630060151392247_hubb6722d6ab3d1a8b50bd19f2f9a12462_293994_50x0_resize_catmullrom_3.png"
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392247_hubb6722d6ab3d1a8b50bd19f2f9a12462_293994_640x0_resize_q90_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392247_hubb6722d6ab3d1a8b50bd19f2f9a12462_293994_1080x0_resize_q90_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392247.png"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392247_hubb6722d6ab3d1a8b50bd19f2f9a12462_293994_50x0_resize_catmullrom_3.png"
 width="1263"
 height="722"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392247_hubb6722d6ab3d1a8b50bd19f2f9a12462_293994_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392247_hubb6722d6ab3d1a8b50bd19f2f9a12462_293994_1080x0_resize_catmullrom_3.png 1080w"
 data-zoomable
 data-lazyload
 alt="foobar2000 音乐文件路劲更换后的解决方法">
+&lt;/picture>
 &lt;figcaption>foobar2000 音乐文件路劲更换后的解决方法&lt;/figcaption>
 &lt;/figure>&lt;/p>
 &lt;h2 id="其他">其他&lt;/h2>
