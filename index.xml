@@ -443,6 +443,8 @@ data-lazyload
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 页面无刷新加载，自带进度条&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 文章 TOC&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 图片渐进式加载&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 自动 WEBP 支持&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 响应式图片&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 文章更新时间&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 夜间模式&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 语言切换&lt;/li>
