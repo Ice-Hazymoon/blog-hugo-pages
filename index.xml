@@ -1,7 +1,8 @@
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>Ice-Hazymoon 的博客</title><atom:link href="%7balternate%20%7bRSS%20application/rss+xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/index.xml%20https://imiku.me/index.xml%7d" rel="self" type="application/rss+xml"/><link>https://imiku.me/</link><managingEditor>Ice-Hazymoon</managingEditor><description>向着现充的生活拼命咸鱼中</description><lastBuildDate>Tue, 31 Aug 2021 12:48:35 +0800</lastBuildDate><language/><generator>Hugo -- gohugo.io</generator><item><title>博客迁移到了 Hugo</title><link>https://imiku.me/2021/08/31/wordpress-to-hugo.html/</link><pubDate>Tue, 31 Aug 2021 12:48:35 +0800</pubDate><guid>https://imiku.me/2021/08/31/wordpress-to-hugo.html/</guid><description>&lt;blockquote>
 &lt;p>这次抛弃了wordpress，选用了 Hugo 来开发，时隔几年又上了全静态博客&lt;/p>
 &lt;/blockquote>
-&lt;p>本来想换成 Ghost 的，但是 Ghost 简直不把用户当人，主题开发的体验跟屎一样，都 2021 年了，连基本的搜索功能都没有，hbs 语法限制还多，还不能自己扩展 hbs 功能（更新后会重置），下线了原本有的插件系统。如果你想使用 Ghost，建议先看看这篇文章：&lt;a href="https://nehalist.io/why-i-dont-like-the-ghost-blogging-platform-anymore/">为什么我不再喜欢 Ghost&lt;/a> 作者说出了我用 Ghost 的真实感受，其实早在 17 年的时候我就尝试&lt;a href="https://imiku.me/2017/07/10/903.html/">从 Wordpress 更换为 Ghost&lt;/a>，最后由于 Ghost 限制太多，最终还是换回了 Wordpress。4年过去了，没想到 Ghost 还是这个死样子。&lt;/p>
+&lt;p>本来想换成 Ghost 的，但是 Ghost 简直不把用户当人，主题开发的体验跟屎一样，都 2021 年了，连基本的搜索功能都没有，hbs 语法限制还多，还不能自己扩展 hbs 功能（更新后会重置），下线了原本有的插件系统。如果你想使用 Ghost，建议先看看这篇文章：&lt;a class="link" href="https://nehalist.io/why-i-dont-like-the-ghost-blogging-platform-anymore/" target="_blank" rel="noopener"
+>为什么我不再喜欢 Ghost&lt;/a> 作者说出了我用 Ghost 的真实感受，其实早在 17 年的时候我就尝试&lt;a class="link" href="https://imiku.me/2017/07/10/903.html/" >从 Wordpress 更换为 Ghost&lt;/a>，最后由于 Ghost 限制太多，最终还是换回了 Wordpress。4年过去了，没想到 Ghost 还是这个死样子。&lt;/p>
 &lt;h2 id="主题对比">主题对比&lt;/h2>
 &lt;p>选来选取，最终决定了 Hexo 和 Hugo，说下两者的优缺点：&lt;/p>
 &lt;h3 id="hugo">Hugo&lt;/h3>
@@ -10,8 +11,10 @@
 &lt;li>世界最快，几千篇文章1秒不到即可生成&lt;/li>
 &lt;li>开发友好，模板自带很多常用函数，还支持图片处理，保存后可以实时预览&lt;/li>
 &lt;li>开发模式什么样，线上模式就什么样，不像某些静态平台，开发的时候好好的，一上线就各种报错，说的就是你 Ghost&lt;/li>
-&lt;li>有一个非常棒的社区，基本所有问题你都能在这里找到答案 &lt;a href="https://discourse.gohugo.io/">https://discourse.gohugo.io/&lt;/a>&lt;/li>
-&lt;li>支持很多的&lt;a href="https://gohugo.io/content-management/shortcodes/">短代码&lt;/a>&lt;/li>
+&lt;li>有一个非常棒的社区，基本所有问题你都能在这里找到答案 &lt;a class="link" href="https://discourse.gohugo.io/" target="_blank" rel="noopener"
+>https://discourse.gohugo.io/&lt;/a>&lt;/li>
+&lt;li>支持很多的&lt;a class="link" href="https://gohugo.io/content-management/shortcodes/" target="_blank" rel="noopener"
+>短代码&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>缺点：&lt;/p>
 &lt;ul>
@@ -21,7 +24,8 @@
 &lt;h3 id="hexo">Hexo&lt;/h3>
 &lt;p>优点：&lt;/p>
 &lt;ul>
-&lt;li>生态强大，主题多，虽然很多时候打开一篇博客文章看到的都是 &lt;a href="https://github.com/theme-next/hexo-theme-next">Next&lt;/a> 主题&lt;/li>
+&lt;li>生态强大，主题多，虽然很多时候打开一篇博客文章看到的都是 &lt;a class="link" href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener"
+>Next&lt;/a> 主题&lt;/li>
 &lt;li>支持插件系统，除了速度就没有解决不了的事&lt;/li>
 &lt;li>JS 开发，省点头发&lt;/li>
 &lt;/ul>
@@ -35,7 +39,8 @@
 &lt;h2 id="关于主题">关于主题&lt;/h2>
 &lt;p>从之前的 SSR 渲染变成现在的全站纯静态，访问速度+++&lt;/p>
 &lt;h3 id="支持搜索功能">支持搜索功能&lt;/h3>
-&lt;p>把所有的内容都存到了 json 里面，然后使用 &lt;a href="https://github.com/nextapps-de/flexsearch">flexsearch&lt;/a> 建立 key 来进行快速搜索&lt;/p>
+&lt;p>把所有的内容都存到了 json 里面，然后使用 &lt;a class="link" href="https://github.com/nextapps-de/flexsearch" target="_blank" rel="noopener"
+>flexsearch&lt;/a> 建立 key 来进行快速搜索&lt;/p>
 &lt;p>
 &lt;figure
 >
@@ -47,74 +52,152 @@ alt="搜索预览">
 &lt;/figure>&lt;/p>
 &lt;h3 id="良好的-seo-优化">良好的 SEO 优化&lt;/h3>
 &lt;p>虽然对于个人博客来说 SEO 可能没那么的重要，但还是写一下比较好，&lt;code>head&lt;/code> 部分把常用的 SEO 相关内容都写进去了，未来会支持 PWA 和 AMP&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">charset&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">utf-8&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">title&lt;/span>&amp;gt;JS 西班牙语语音合成在 MacOS 上没有声音的问题&amp;lt;/&lt;span style="color:#ff79c6">title&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">viewport&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;width=device-width,initial-scale=1&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">keywords&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Ice-Hazymoon,冰凌胧月,Hazymoon,MikuTools,&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">description&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;在上篇文章中提到的 写了个西班牙语学习工具 中，最近在 Mac 上使用时发现语音合成一直没有声音，研究了半天才找到解决方法。 在系统设置中打开【辅助功能】&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">itemprop&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">description&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;在上篇文章中提到的 写了个西班牙语学习工具 中，最近在 Mac 上使用时发现语音合成一直没有声音，研究了半天才找到解决方法。 在系统设置中打开【辅助功能】&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">http-equiv&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">x-ua-compatible&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;ie=edge&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">itemprop&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">name&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;JS 西班牙语语音合成在 MacOS 上没有声音的问题&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">link&lt;/span> &lt;span style="color:#50fa7b">href&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">https://imiku.me/index.xml&lt;/span> &lt;span style="color:#50fa7b">title&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;JS 西班牙语语音合成在 MacOS 上没有声音的问题&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">type&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">application/rss+xml&lt;/span> &lt;span style="color:#50fa7b">rel&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">alternate&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">link&lt;/span> &lt;span style="color:#50fa7b">rel&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">stylesheet&lt;/span> &lt;span style="color:#50fa7b">href&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1630320278&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:site_name&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;JS 西班牙语语音合成在 MacOS 上没有声音的问题&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:type&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;article&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:title&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;JS 西班牙语语音合成在 MacOS 上没有声音的问题&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:description&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;在上篇文章中提到的 写了个西班牙语学习工具 中，最近在 Mac 上使用时发现语音合成一直没有声音，研究了半天才找到解决方法。 在系统设置中打开【辅助功能】&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:url&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;https://imiku.me/2021/07/31/1459.html/&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:image&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;https://imiku.me/2021/07/31/1459.html/1630060151397491.jpg&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;article:publisher&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;https://imiku.me/2021/07/31/1459.html/&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">twitter:card&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;summary_large_image&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">twitter:title&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;JS 西班牙语语音合成在 MacOS 上没有声音的问题&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">twitter:description&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;在上篇文章中提到的 写了个西班牙语学习工具 中，最近在 Mac 上使用时发现语音合成一直没有声音，研究了半天才找到解决方法。 在系统设置中打开【辅助功能】&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">twitter:url&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;https://imiku.me/2021/07/31/1459.html/&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">twitter:image&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;https://imiku.me/2021/07/31/1459.html/1630060151397491.jpg&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">twitter:site&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;@Ice-Hazymoon&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:image:width&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;1920&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:image:height&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;1280&amp;#34;&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">link&lt;/span> &lt;span style="color:#50fa7b">rel&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;shortcut icon&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">href&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">/favicon.ico&lt;/span> &lt;span style="color:#50fa7b">type&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">image/x-icon&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">script&lt;/span> &lt;span style="color:#50fa7b">type&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">application/ld+json&lt;/span>&amp;gt;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28&lt;/span> {
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;@context&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;http://schema.org&amp;#34;&lt;/span>,
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;@type&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;BlogPosting&amp;#34;&lt;/span>,
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;headline&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;JS 西班牙语语音合成在 MacOS上没有声音的问题&amp;#34;&lt;/span>,
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;mainEntityOfPage&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> {
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;@type&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;WebPage&amp;#34;&lt;/span>,
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;@id&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;https:\/\/imiku.me\/2021\/07\/31\/1459.html\/&amp;#34;&lt;/span>
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35&lt;/span> },
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;image&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> {
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;@type&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;ImageObject&amp;#34;&lt;/span>,
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;https:\/\/imiku.me\/cover.png&amp;#34;&lt;/span>,
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;width&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#bd93f9">1e3&lt;/span>,
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;height&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#bd93f9">519&lt;/span>
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41&lt;/span> },
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;genre&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;post&amp;#34;&lt;/span>,
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;keywords&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;MacOS,Safari,语音合成&amp;#34;&lt;/span>,
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;wordcount&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#bd93f9">171&lt;/span>,
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;https:\/\/imiku.me\/2021\/07\/31\/1459.html\/&amp;#34;&lt;/span>,
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;datePublished&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;2021-07-31T13:27:27\u002b00:00&amp;#34;&lt;/span>,
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;dateModified&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;2021-07-31T13:27:27\u002b00:00&amp;#34;&lt;/span>,
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;author&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> {
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;@type&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;Person&amp;#34;&lt;/span>,
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;name&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;Ice-Hazymoon&amp;#34;&lt;/span>
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51&lt;/span> },
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;description&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;&amp;#34;&lt;/span>
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53&lt;/span> }
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54&lt;/span>&amp;lt;/&lt;span style="color:#ff79c6">script&lt;/span>&amp;gt;
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>图片部分支持自动添加 &lt;code>srcset&lt;/code> 部分，SEO+++，支持懒加载，默认有加载动画，自动添加 &lt;code>ALT&lt;/code> 属性，支持图片查看缩放动画&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1&lt;/span>&amp;lt;&lt;span style="color:#ff79c6">img&lt;/span>
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2&lt;/span> &lt;span style="color:#50fa7b">width&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;800&amp;#34;&lt;/span>
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3&lt;/span> &lt;span style="color:#50fa7b">height&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;617&amp;#34;&lt;/span>
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4&lt;/span> &lt;span style="color:#50fa7b">data-zoomable&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&amp;#34;&lt;/span>
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5&lt;/span> &lt;span style="color:#50fa7b">data-lazyload&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&amp;#34;&lt;/span>
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6&lt;/span> &lt;span style="color:#50fa7b">alt&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;左侧选择【朗读内容】，点击系统声音&amp;#34;&lt;/span>
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7&lt;/span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;medium-zoom-image entered loaded&amp;#34;&lt;/span>
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8&lt;/span> &lt;span style="color:#50fa7b">data-ll-status&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;loaded&amp;#34;&lt;/span>
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9&lt;/span> &lt;span style="color:#50fa7b">srcset&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;2021/07/31/1459.html/1630060151397631_hu3dcef8126cf1a840a0279e998069a100_52511_640x0_resize_catmullrom_3.png 640w, 2021/07/31/1459.html/1630060151397631_hu3dcef8126cf1a840a0279e998069a100_52511_1080x0_resize_catmullrom_3.png 1080w&amp;#34;&lt;/span>
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10&lt;/span> &lt;span style="color:#50fa7b">src&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;2021/07/31/1459.html/1630060151397631.png&amp;#34;&lt;/span>
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11&lt;/span>&amp;gt;
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="画廊模式">画廊模式&lt;/h3>
-&lt;p>支持画廊模式，语法来自 &lt;a href="https://typlog.com/">Typlog&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">charset&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">utf-8&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">title&lt;/span>&amp;gt;JS 西班牙语语音合成在 MacOS 上没有声音的问题&amp;lt;/&lt;span style="color:#ff79c6">title&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">viewport&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;width=device-width,initial-scale=1&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">keywords&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Ice-Hazymoon,冰凌胧月,Hazymoon,MikuTools,&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">description&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;在上篇文章中提到的 写了个西班牙语学习工具 中，最近在 Mac 上使用时发现语音合成一直没有声音，研究了半天才找到解决方法。 在系统设置中打开【辅助功能】&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">itemprop&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">description&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;在上篇文章中提到的 写了个西班牙语学习工具 中，最近在 Mac 上使用时发现语音合成一直没有声音，研究了半天才找到解决方法。 在系统设置中打开【辅助功能】&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">http-equiv&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">x-ua-compatible&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;ie=edge&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">itemprop&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">name&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;JS 西班牙语语音合成在 MacOS 上没有声音的问题&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">link&lt;/span> &lt;span style="color:#50fa7b">href&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">https://imiku.me/index.xml&lt;/span> &lt;span style="color:#50fa7b">title&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;JS 西班牙语语音合成在 MacOS 上没有声音的问题&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">type&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">application/rss+xml&lt;/span> &lt;span style="color:#50fa7b">rel&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">alternate&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">link&lt;/span> &lt;span style="color:#50fa7b">rel&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">stylesheet&lt;/span> &lt;span style="color:#50fa7b">href&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1630320278&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:site_name&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;JS 西班牙语语音合成在 MacOS 上没有声音的问题&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:type&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;article&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:title&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;JS 西班牙语语音合成在 MacOS 上没有声音的问题&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:description&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;在上篇文章中提到的 写了个西班牙语学习工具 中，最近在 Mac 上使用时发现语音合成一直没有声音，研究了半天才找到解决方法。 在系统设置中打开【辅助功能】&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:url&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;https://imiku.me/2021/07/31/1459.html/&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:image&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;https://imiku.me/2021/07/31/1459.html/1630060151397491.jpg&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;article:publisher&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;https://imiku.me/2021/07/31/1459.html/&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">twitter:card&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;summary_large_image&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">twitter:title&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;JS 西班牙语语音合成在 MacOS 上没有声音的问题&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">twitter:description&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;在上篇文章中提到的 写了个西班牙语学习工具 中，最近在 Mac 上使用时发现语音合成一直没有声音，研究了半天才找到解决方法。 在系统设置中打开【辅助功能】&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">twitter:url&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;https://imiku.me/2021/07/31/1459.html/&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">twitter:image&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;https://imiku.me/2021/07/31/1459.html/1630060151397491.jpg&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">twitter:site&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;@Ice-Hazymoon&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:image:width&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;1920&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:image:height&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;1280&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">link&lt;/span> &lt;span style="color:#50fa7b">rel&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;shortcut icon&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">href&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">/favicon.ico&lt;/span> &lt;span style="color:#50fa7b">type&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">image/x-icon&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">script&lt;/span> &lt;span style="color:#50fa7b">type&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">application/ld+json&lt;/span>&amp;gt;
+{
+&lt;span style="color:#f1fa8c">&amp;#34;@context&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;http://schema.org&amp;#34;&lt;/span>,
+&lt;span style="color:#f1fa8c">&amp;#34;@type&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;BlogPosting&amp;#34;&lt;/span>,
+&lt;span style="color:#f1fa8c">&amp;#34;headline&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;JS 西班牙语语音合成在 MacOS上没有声音的问题&amp;#34;&lt;/span>,
+&lt;span style="color:#f1fa8c">&amp;#34;mainEntityOfPage&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> {
+&lt;span style="color:#f1fa8c">&amp;#34;@type&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;WebPage&amp;#34;&lt;/span>,
+&lt;span style="color:#f1fa8c">&amp;#34;@id&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;https:\/\/imiku.me\/2021\/07\/31\/1459.html\/&amp;#34;&lt;/span>
+},
+&lt;span style="color:#f1fa8c">&amp;#34;image&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> {
+&lt;span style="color:#f1fa8c">&amp;#34;@type&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;ImageObject&amp;#34;&lt;/span>,
+&lt;span style="color:#f1fa8c">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;https:\/\/imiku.me\/cover.png&amp;#34;&lt;/span>,
+&lt;span style="color:#f1fa8c">&amp;#34;width&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#bd93f9">1e3&lt;/span>,
+&lt;span style="color:#f1fa8c">&amp;#34;height&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#bd93f9">519&lt;/span>
+},
+&lt;span style="color:#f1fa8c">&amp;#34;genre&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;post&amp;#34;&lt;/span>,
+&lt;span style="color:#f1fa8c">&amp;#34;keywords&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;MacOS,Safari,语音合成&amp;#34;&lt;/span>,
+&lt;span style="color:#f1fa8c">&amp;#34;wordcount&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#bd93f9">171&lt;/span>,
+&lt;span style="color:#f1fa8c">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;https:\/\/imiku.me\/2021\/07\/31\/1459.html\/&amp;#34;&lt;/span>,
+&lt;span style="color:#f1fa8c">&amp;#34;datePublished&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;2021-07-31T13:27:27\u002b00:00&amp;#34;&lt;/span>,
+&lt;span style="color:#f1fa8c">&amp;#34;dateModified&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;2021-07-31T13:27:27\u002b00:00&amp;#34;&lt;/span>,
+&lt;span style="color:#f1fa8c">&amp;#34;author&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> {
+&lt;span style="color:#f1fa8c">&amp;#34;@type&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;Person&amp;#34;&lt;/span>,
+&lt;span style="color:#f1fa8c">&amp;#34;name&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;Ice-Hazymoon&amp;#34;&lt;/span>
+},
+&lt;span style="color:#f1fa8c">&amp;#34;description&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;&amp;#34;&lt;/span>
+}
+&amp;lt;/&lt;span style="color:#ff79c6">script&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>图片部分支持自动添加 &lt;code>srcset&lt;/code> 部分，SEO+++，支持懒加载，默认有加载动画，自动添加 &lt;code>ALT&lt;/code> 属性，支持图片查看缩放动画&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#ff79c6">img&lt;/span>
+&lt;span style="color:#50fa7b">width&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;800&amp;#34;&lt;/span>
+&lt;span style="color:#50fa7b">height&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;617&amp;#34;&lt;/span>
+&lt;span style="color:#50fa7b">data-zoomable&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&amp;#34;&lt;/span>
+&lt;span style="color:#50fa7b">data-lazyload&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&amp;#34;&lt;/span>
+&lt;span style="color:#50fa7b">alt&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;左侧选择【朗读内容】，点击系统声音&amp;#34;&lt;/span>
+&lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;medium-zoom-image entered loaded&amp;#34;&lt;/span>
+&lt;span style="color:#50fa7b">data-ll-status&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;loaded&amp;#34;&lt;/span>
+&lt;span style="color:#50fa7b">srcset&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;2021/07/31/1459.html/1630060151397631_hu3dcef8126cf1a840a0279e998069a100_52511_640x0_resize_catmullrom_3.png 640w, 2021/07/31/1459.html/1630060151397631_hu3dcef8126cf1a840a0279e998069a100_52511_1080x0_resize_catmullrom_3.png 1080w&amp;#34;&lt;/span>
+&lt;span style="color:#50fa7b">src&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;2021/07/31/1459.html/1630060151397631.png&amp;#34;&lt;/span>
+&amp;gt;
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="画廊模式">画廊模式&lt;/h3>
+&lt;p>支持画廊模式，语法来自 &lt;a class="link" href="https://typlog.com/" target="_blank" rel="noopener"
+>Typlog&lt;/a>&lt;/p>
 &lt;p>
 &lt;figure
 class="gallery-image"
@@ -123,7 +206,7 @@ flex-grow: 66;
 flex-basis: 159px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/4.jpg"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/4_hu9a1859cd49732e711b8f9682e78b38b0_175762_424bd222211d2cccfa0068b9e9813c53.jpg"
+src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/4_hu9a1859cd49732e711b8f9682e78b38b0_175762_50x0_resize_q100_catmullrom.jpg"
 width="996"
 height="1500"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/4_hu9a1859cd49732e711b8f9682e78b38b0_175762_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/4_hu9a1859cd49732e711b8f9682e78b38b0_175762_1080x0_resize_q100_catmullrom.jpg 1080w"
@@ -138,7 +221,7 @@ flex-grow: 150;
 flex-basis: 360px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/2.jpg"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/2_hu558a11b6013ad9baa670cb6de6fac4af_258113_42a536ee2b12b3ad06a3a2a240714186.jpg"
+src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/2_hu558a11b6013ad9baa670cb6de6fac4af_258113_50x0_resize_q100_catmullrom.jpg"
 width="1200"
 height="800"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/2_hu558a11b6013ad9baa670cb6de6fac4af_258113_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/2_hu558a11b6013ad9baa670cb6de6fac4af_258113_1080x0_resize_q100_catmullrom.jpg 1080w"
@@ -154,7 +237,7 @@ flex-grow: 66;
 flex-basis: 160px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/6.jpg"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/6_hu0f11578d6dc8556db87c68bac73638ea_237798_5f2479d46519d0d2697a0f07f814776b.jpg"
+src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/6_hu0f11578d6dc8556db87c68bac73638ea_237798_50x0_resize_q100_catmullrom.jpg"
 width="1200"
 height="1800"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/6_hu0f11578d6dc8556db87c68bac73638ea_237798_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/6_hu0f11578d6dc8556db87c68bac73638ea_237798_1080x0_resize_q100_catmullrom.jpg 1080w"
@@ -169,7 +252,7 @@ flex-grow: 117;
 flex-basis: 281px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/7.jpg"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/7_hu37fa0f99f73757b357303bff27a93f4b_65628_7f3507720c8f9917ab9004b807337857.jpg"
+src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/7_hu37fa0f99f73757b357303bff27a93f4b_65628_50x0_resize_q100_catmullrom.jpg"
 width="1200"
 height="1022"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/7_hu37fa0f99f73757b357303bff27a93f4b_65628_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/7_hu37fa0f99f73757b357303bff27a93f4b_65628_1080x0_resize_q100_catmullrom.jpg 1080w"
@@ -184,7 +267,7 @@ flex-grow: 66;
 flex-basis: 160px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/8.jpg"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/8_hu745afd746880d23a73bc0bd743db6ef4_379758_bcadcfbebb24a3967bc8ac8f5ae72d9f.jpg"
+src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/8_hu745afd746880d23a73bc0bd743db6ef4_379758_50x0_resize_q100_catmullrom.jpg"
 width="1200"
 height="1800"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/8_hu745afd746880d23a73bc0bd743db6ef4_379758_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/8_hu745afd746880d23a73bc0bd743db6ef4_379758_1080x0_resize_q100_catmullrom.jpg 1080w"
@@ -199,7 +282,7 @@ flex-grow: 66;
 flex-basis: 160px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/9.jpg"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/9_hub5746f0a5e8cf50984a3d3fe57f3b0f0_145119_b12e8eaa75f6ec89fdf2656987f3d061.jpg"
+src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/9_hub5746f0a5e8cf50984a3d3fe57f3b0f0_145119_50x0_resize_q100_catmullrom.jpg"
 width="1200"
 height="1800"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/9_hub5746f0a5e8cf50984a3d3fe57f3b0f0_145119_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/9_hub5746f0a5e8cf50984a3d3fe57f3b0f0_145119_1080x0_resize_q100_catmullrom.jpg 1080w"
@@ -208,7 +291,7 @@ data-lazyload
 >
 &lt;/figure>&lt;/p>
 &lt;h3 id="标签和分类页面">标签和分类页面&lt;/h3>
-&lt;p>&lt;a href="https://imiku.me/tags/">标签页面&lt;/a>和&lt;a href="https://imiku.me/categories/">分类页面&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://imiku.me/tags/" >标签页面&lt;/a>和&lt;a class="link" href="https://imiku.me/categories/" >分类页面&lt;/a>&lt;/p>
 &lt;p>
 &lt;figure
 class="gallery-image"
@@ -217,7 +300,7 @@ flex-grow: 147;
 flex-basis: 353px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115715842.png"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831115715842_hu07244720b5557be8bf7dd38507fbf852_109481_bcdd57fbf8118e4e5efe4f8688c9cc1b.png"
+src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831115715842_hu07244720b5557be8bf7dd38507fbf852_109481_50x0_resize_catmullrom_3.png"
 width="1328"
 height="901"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115715842_hu07244720b5557be8bf7dd38507fbf852_109481_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115715842_hu07244720b5557be8bf7dd38507fbf852_109481_1080x0_resize_catmullrom_3.png 1080w"
@@ -235,7 +318,7 @@ flex-grow: 157;
 flex-basis: 378px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115424244.png"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831115424244_hucb114a7eedb555eb8fc2c84b5795aa59_502050_b45d0f69b63a233a35cfce39c067dc68.png"
+src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831115424244_hucb114a7eedb555eb8fc2c84b5795aa59_502050_50x0_resize_catmullrom_3.png"
 width="1317"
 height="835"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115424244_hucb114a7eedb555eb8fc2c84b5795aa59_502050_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831115424244_hucb114a7eedb555eb8fc2c84b5795aa59_502050_1080x0_resize_catmullrom_3.png 1080w"
@@ -244,7 +327,7 @@ data-lazyload
 >
 &lt;/figure>&lt;/p>
 &lt;h3 id="友情链接页面">友情链接页面&lt;/h3>
-&lt;p>支持链接语法，可用于&lt;a href="https://imiku.me/links/">友情链接页面&lt;/a>&lt;/p>
+&lt;p>支持链接语法，可用于&lt;a class="link" href="https://imiku.me/links/" >友情链接页面&lt;/a>&lt;/p>
 &lt;p>
 &lt;figure
 class="gallery-image"
@@ -253,7 +336,7 @@ flex-grow: 121;
 flex-basis: 292px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114934801.png"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831114934801_hue7cc87603ae7589ef134d39244271772_206122_95e2bbd745fc5c6347bab74516d061c9.png"
+src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831114934801_hue7cc87603ae7589ef134d39244271772_206122_50x0_resize_catmullrom_3.png"
 width="1322"
 height="1085"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114934801_hue7cc87603ae7589ef134d39244271772_206122_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114934801_hue7cc87603ae7589ef134d39244271772_206122_1080x0_resize_catmullrom_3.png 1080w"
@@ -262,7 +345,7 @@ data-lazyload
 >
 &lt;/figure>&lt;/p>
 &lt;h3 id="github-项目展示">GitHub 项目展示&lt;/h3>
-&lt;p>自动抓取 GItHub 上的项目，并根据 star 数量排名，生成&lt;a href="https://imiku.me/github/">GitHub 项目页面&lt;/a>&lt;/p>
+&lt;p>自动抓取 GItHub 上的项目，并根据 star 数量排名，生成&lt;a class="link" href="https://imiku.me/github/" >GitHub 项目页面&lt;/a>&lt;/p>
 &lt;p>
 &lt;figure
 class="gallery-image"
@@ -271,7 +354,7 @@ flex-grow: 142;
 flex-basis: 342px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114753611.png"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831114753611_hu8b598ce0b312f9e076b5b05a02ab8c2c_80387_07cc11c8e03ba03c21d27564ddd7419c.png"
+src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831114753611_hu8b598ce0b312f9e076b5b05a02ab8c2c_80387_50x0_resize_catmullrom_3.png"
 width="1323"
 height="927"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114753611_hu8b598ce0b312f9e076b5b05a02ab8c2c_80387_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114753611_hu8b598ce0b312f9e076b5b05a02ab8c2c_80387_1080x0_resize_catmullrom_3.png 1080w"
@@ -280,7 +363,7 @@ data-lazyload
 >
 &lt;/figure>&lt;/p>
 &lt;h3 id="归档页面">归档页面&lt;/h3>
-&lt;p>自动生成漂亮的&lt;a href="https://imiku.me/timeline/">时间轴归档页面&lt;/a>&lt;/p>
+&lt;p>自动生成漂亮的&lt;a class="link" href="https://imiku.me/timeline/" >时间轴归档页面&lt;/a>&lt;/p>
 &lt;p>
 &lt;figure
 class="gallery-image"
@@ -289,7 +372,7 @@ flex-grow: 146;
 flex-basis: 350px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114825278.png"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831114825278_hu96904f55b98454eec2220fcb38a846fd_77866_68b7f7740a54ca32207267969aa6c334.png"
+src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831114825278_hu96904f55b98454eec2220fcb38a846fd_77866_50x0_resize_catmullrom_3.png"
 width="1317"
 height="901"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114825278_hu96904f55b98454eec2220fcb38a846fd_77866_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831114825278_hu96904f55b98454eec2220fcb38a846fd_77866_1080x0_resize_catmullrom_3.png 1080w"
@@ -298,7 +381,8 @@ data-lazyload
 >
 &lt;/figure>&lt;/p>
 &lt;h3 id="twitter-动态页面">Twitter 动态页面&lt;/h3>
-&lt;p>支持同步 &lt;a href="https://imiku.me/twitter/">Twitter 动态的更新页面&lt;/a>，抓取 Twitter 上的图片和视频资源到本地，并使用 &lt;a href="https://www.jsdelivr.com/">jsDelivr&lt;/a> CDN 防止大陆地区无法访问图片的问题&lt;/p>
+&lt;p>支持同步 &lt;a class="link" href="https://imiku.me/twitter/" >Twitter 动态的更新页面&lt;/a>，抓取 Twitter 上的图片和视频资源到本地，并使用 &lt;a class="link" href="https://www.jsdelivr.com/" target="_blank" rel="noopener"
+>jsDelivr&lt;/a> CDN 防止大陆地区无法访问图片的问题&lt;/p>
 &lt;p>
 &lt;figure
 class="gallery-image"
@@ -307,7 +391,7 @@ flex-grow: 108;
 flex-basis: 260px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111752680.png"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831111752680_hu0641f4225484078d1b7ab81520305a98_379204_9283c650633ff5134e0d1e2e21acfe55.png"
+src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831111752680_hu0641f4225484078d1b7ab81520305a98_379204_50x0_resize_catmullrom_3.png"
 width="1337"
 height="1233"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111752680_hu0641f4225484078d1b7ab81520305a98_379204_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111752680_hu0641f4225484078d1b7ab81520305a98_379204_1080x0_resize_catmullrom_3.png 1080w"
@@ -316,7 +400,8 @@ data-lazyload
 >
 &lt;/figure>&lt;/p>
 &lt;h3 id="github-actions-支持">GitHub Actions 支持&lt;/h3>
-&lt;p>支持 GitHub Actions 自动部署，只需要安静的写文章，剩下的交给 Actions 完成就行，打包完后自动上传到 GitHub Pages 上，自动更新和下载 GitHub 和 Twitter 页面数据，并且自动转换资源链接到 &lt;a href="https://www.jsdelivr.com/">jsDelivr&lt;/a> CDN，加快站点访问速度&lt;/p>
+&lt;p>支持 GitHub Actions 自动部署，只需要安静的写文章，剩下的交给 Actions 完成就行，打包完后自动上传到 GitHub Pages 上，自动更新和下载 GitHub 和 Twitter 页面数据，并且自动转换资源链接到 &lt;a class="link" href="https://www.jsdelivr.com/" target="_blank" rel="noopener"
+>jsDelivr&lt;/a> CDN，加快站点访问速度&lt;/p>
 &lt;p>
 &lt;figure
 class="gallery-image"
@@ -325,7 +410,7 @@ flex-grow: 143;
 flex-basis: 343px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111358209.png"
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831111358209_hu34d22f28e12de8e4aaa780a5ba820610_34890_bd90f0305864083fc7f163e8bcd14a0e.png"
+src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831111358209_hu34d22f28e12de8e4aaa780a5ba820610_34890_50x0_resize_catmullrom_3.png"
 width="897"
 height="627"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111358209_hu34d22f28e12de8e4aaa780a5ba820610_34890_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/image-20210831111358209_hu34d22f28e12de8e4aaa780a5ba820610_34890_1080x0_resize_catmullrom_3.png 1080w"
@@ -338,17 +423,24 @@ data-lazyload
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 分类、标签页面&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 文章阅读时间&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 网站运行时间&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;a href="https://imiku.me/index.xml">RSS&lt;/a> 自动生成&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;a href="https://imiku.me/sitemap.xml">Sitemap&lt;/a> 自动生成&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;a class="link" href="https://imiku.me/index.xml" >RSS&lt;/a> 自动生成&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;a class="link" href="https://imiku.me/sitemap.xml" >Sitemap&lt;/a> 自动生成&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> i18N 多语言博客&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 页面无刷新加载，自带进度条&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 文章 TOC&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 图片渐进式加载&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 文章更新时间&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 夜间模式&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 语言切换&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> PWA 支持&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> AMP 支持&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 文章 TOC&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 分享功能&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 阅读进度条&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 评论系统&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 文章编辑器&lt;/li>
 &lt;/ul>
-&lt;p>因为目前主题处于开发阶段，还有一些BUG等待被发现和解决，待稳定后将会开源至 GitHub&lt;/p></description></item><item><title>N2 合格！！</title><link>https://imiku.me/2021/08/23/n2-pass.html/</link><pubDate>Mon, 23 Aug 2021 17:30:26 +0800</pubDate><guid>https://imiku.me/2021/08/23/n2-pass.html/</guid><description>&lt;p>断断续续从五十音开始学了 5-6 个月，N3 测试的时候考了 174，N2 的时候就没好好学，每天专注于打&lt;a href="https://store.steampowered.com/app/457140">缺氧&lt;/a>，本以为这次考试稳挂了，成绩发表的当天 9 点就起床查询，没想到居然过了，目标 90 的及格线，还超了几十分，也算是放下个包袱了，等学完西班牙语以后继续冲 N1，争取考个高点的分。&lt;/p>
+&lt;p>因为目前主题处于开发阶段，还有一些BUG等待被发现和解决，待稳定后将会开源至 GitHub&lt;/p></description></item><item><title>N2 合格！！</title><link>https://imiku.me/2021/08/23/n2-pass.html/</link><pubDate>Mon, 23 Aug 2021 17:30:26 +0800</pubDate><guid>https://imiku.me/2021/08/23/n2-pass.html/</guid><description>&lt;p>断断续续从五十音开始学了 5-6 个月，N3 测试的时候考了 174，N2 的时候就没好好学，每天专注于打&lt;a class="link" href="https://store.steampowered.com/app/457140" target="_blank" rel="noopener"
+>缺氧&lt;/a>，本以为这次考试稳挂了，成绩发表的当天 9 点就起床查询，没想到居然过了，目标 90 的及格线，还超了几十分，也算是放下个包袱了，等学完西班牙语以后继续冲 N1，争取考个高点的分。&lt;/p>
 &lt;p>
 &lt;figure
 class="gallery-image"
@@ -357,7 +449,7 @@ flex-grow: 121;
 flex-basis: 292px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/23/n2-pass.html/jlpt.jpg"
-src="https://imiku.me/2021/08/23/n2-pass.html/jlpt_hud550b1eb497a7857fb8b4d20834638c1_125616_4e0ff3af2b5a29a2fdd3b5621d5ca09d.jpg"
+src="https://imiku.me/2021/08/23/n2-pass.html/jlpt_hud550b1eb497a7857fb8b4d20834638c1_125616_50x0_resize_q100_catmullrom.jpg"
 width="1084"
 height="890"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/23/n2-pass.html/jlpt_hud550b1eb497a7857fb8b4d20834638c1_125616_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/23/n2-pass.html/jlpt_hud550b1eb497a7857fb8b4d20834638c1_125616_1080x0_resize_q100_catmullrom.jpg 1080w"
@@ -365,7 +457,7 @@ data-zoomable
 data-lazyload
 alt="查询成绩">
 &lt;figcaption>查询成绩&lt;/figcaption>
-&lt;/figure>&lt;/p></description></item><item><title>JS 西班牙语语音合成在 MacOS 上没有声音的问题</title><link>https://imiku.me/2021/07/31/1459.html/</link><pubDate>Sat, 31 Jul 2021 13:27:27 +0000</pubDate><guid>https://imiku.me/2021/07/31/1459.html/</guid><description>&lt;p>在上篇文章中提到的 &lt;a href="https://imiku.me/2021/07/26/1445.html">写了个西班牙语学习工具&lt;/a> 中，最近在 Mac 上使用时发现语音合成一直没有声音，研究了半天才找到解决方法。&lt;/p>
+&lt;/figure>&lt;/p></description></item><item><title>JS 西班牙语语音合成在 MacOS 上没有声音的问题</title><link>https://imiku.me/2021/07/31/1459.html/</link><pubDate>Sat, 31 Jul 2021 13:27:27 +0000</pubDate><guid>https://imiku.me/2021/07/31/1459.html/</guid><description>&lt;p>在上篇文章中提到的 &lt;a class="link" href="https://imiku.me/2021/07/26/1445.html" >写了个西班牙语学习工具&lt;/a> 中，最近在 Mac 上使用时发现语音合成一直没有声音，研究了半天才找到解决方法。&lt;/p>
 &lt;p>
 &lt;figure
 class="gallery-image"
@@ -374,7 +466,7 @@ flex-grow: 114;
 flex-basis: 275px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397813.png"
-src="https://imiku.me/2021/07/31/1459.html/1630060151397813_hubd31d6f73ab25e1cf0280a5e6d9d2584_58030_38bbb4ccc90cb68240513bbf4dd1d404.png"
+src="https://imiku.me/2021/07/31/1459.html/1630060151397813_hubd31d6f73ab25e1cf0280a5e6d9d2584_58030_50x0_resize_catmullrom_3.png"
 width="800"
 height="697"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397813_hubd31d6f73ab25e1cf0280a5e6d9d2584_58030_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397813_hubd31d6f73ab25e1cf0280a5e6d9d2584_58030_1080x0_resize_catmullrom_3.png 1080w"
@@ -390,7 +482,7 @@ flex-grow: 129;
 flex-basis: 311px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397631.png"
-src="https://imiku.me/2021/07/31/1459.html/1630060151397631_hu3dcef8126cf1a840a0279e998069a100_52511_b8ac6a519023d1204ce546d06978ccaf.png"
+src="https://imiku.me/2021/07/31/1459.html/1630060151397631_hu3dcef8126cf1a840a0279e998069a100_52511_50x0_resize_catmullrom_3.png"
 width="800"
 height="617"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397631_hu3dcef8126cf1a840a0279e998069a100_52511_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397631_hu3dcef8126cf1a840a0279e998069a100_52511_1080x0_resize_catmullrom_3.png 1080w"
@@ -406,7 +498,7 @@ flex-grow: 129;
 flex-basis: 311px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397117.png"
-src="https://imiku.me/2021/07/31/1459.html/1630060151397117_hub0e77b46526da327a2c2900adcbb46e1_43770_a575827222861d4fab4ad1a511ab649f.png"
+src="https://imiku.me/2021/07/31/1459.html/1630060151397117_hub0e77b46526da327a2c2900adcbb46e1_43770_50x0_resize_catmullrom_3.png"
 width="800"
 height="617"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397117_hub0e77b46526da327a2c2900adcbb46e1_43770_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/31/1459.html/1630060151397117_hub0e77b46526da327a2c2900adcbb46e1_43770_1080x0_resize_catmullrom_3.png 1080w"
@@ -417,22 +509,47 @@ alt="勾选需要的语言，然后确定">
 &lt;/figure>&lt;/p>
 &lt;p>之后会自动下载所需的 TTS 语言包，下载完成后重启 Safari 浏览器&lt;/p>
 &lt;h2 id="tts-合成代码">TTS 合成代码&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">window&lt;/span>.speechSynthesis.cancel();
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2&lt;/span>&lt;span style="color:#ff79c6">const&lt;/span> utterThis &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#ff79c6">new&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">window&lt;/span>.SpeechSynthesisUtterance();
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3&lt;/span>utterThis.text &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;Hola!&amp;#39;&lt;/span>;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4&lt;/span>utterThis.lang &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;es-ES&amp;#39;&lt;/span>;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5&lt;/span>utterThis.volume &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">1&lt;/span>;
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6&lt;/span>utterThis.voice &lt;span style="color:#ff79c6">=&lt;/span> speechSynthesis.getVoices().filter(e =&amp;gt; e.lang &lt;span style="color:#ff79c6">===&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;es-ES&amp;#39;&lt;/span>); &lt;span style="color:#6272a4">// 这句很重要，否则将会合成英文的发音
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7&lt;/span>&lt;span style="color:#6272a4">&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">window&lt;/span>.speechSynthesis.speak(utterThis);
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Notion 如何创建简单表格（非数据库）</title><link>https://imiku.me/2021/07/29/1451.html/</link><pubDate>Thu, 29 Jul 2021 04:06:33 +0000</pubDate><guid>https://imiku.me/2021/07/29/1451.html/</guid><description>&lt;h2 id="方法a">方法A：&lt;/h2>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8be9fd;font-style:italic">window&lt;/span>.speechSynthesis.cancel();
+&lt;span style="color:#ff79c6">const&lt;/span> utterThis &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#ff79c6">new&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">window&lt;/span>.SpeechSynthesisUtterance();
+utterThis.text &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;Hola!&amp;#39;&lt;/span>;
+utterThis.lang &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;es-ES&amp;#39;&lt;/span>;
+utterThis.volume &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">1&lt;/span>;
+utterThis.voice &lt;span style="color:#ff79c6">=&lt;/span> speechSynthesis.getVoices().filter(e =&amp;gt; e.lang &lt;span style="color:#ff79c6">===&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;es-ES&amp;#39;&lt;/span>); &lt;span style="color:#6272a4">// 这句很重要，否则将会合成英文的发音
+&lt;/span>&lt;span style="color:#6272a4">&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">window&lt;/span>.speechSynthesis.speak(utterThis);
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Notion 如何创建简单表格（非数据库）</title><link>https://imiku.me/2021/07/29/1451.html/</link><pubDate>Thu, 29 Jul 2021 04:06:33 +0000</pubDate><guid>https://imiku.me/2021/07/29/1451.html/</guid><description>&lt;h2 id="方法a">方法A：&lt;/h2>
 &lt;p>使用 &lt;code>/match&lt;/code> 科学公式创建&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1&lt;/span>\begin{array}{|c | c |c |}\hline
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2&lt;/span> \text{ Hello } &amp;amp; \text{ World } &amp;amp; \text{ From a simple table } \\\hline
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3&lt;/span> equals() &amp;amp; true &amp;amp; false \\\hline
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4&lt;/span> compare() &amp;amp; 0 &amp;amp; \text{Here is a text.} \\\hline
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5&lt;/span> mismatch() &amp;amp; -1 &amp;amp; \text{ or \textbf{bold} text.} \\\hline
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6&lt;/span>\end{array}
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">\begin{array}{|c | c |c |}\hline
+\text{ Hello } &amp;amp; \text{ World } &amp;amp; \text{ From a simple table } \\\hline
+equals() &amp;amp; true &amp;amp; false \\\hline
+compare() &amp;amp; 0 &amp;amp; \text{Here is a text.} \\\hline
+mismatch() &amp;amp; -1 &amp;amp; \text{ or \textbf{bold} text.} \\\hline
+\end{array}
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>
 &lt;figure
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396934.gif"
@@ -449,7 +566,7 @@ flex-grow: 317;
 flex-basis: 762px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396651.png"
-src="https://imiku.me/2021/07/29/1451.html/1630060151396651_huab84eda8e111888a5b0e150fa14823b9_18595_53d757258ad3ac2b7c05193aeee0eca1.png"
+src="https://imiku.me/2021/07/29/1451.html/1630060151396651_huab84eda8e111888a5b0e150fa14823b9_18595_50x0_resize_catmullrom_3.png"
 width="569"
 height="179"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396651_huab84eda8e111888a5b0e150fa14823b9_18595_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396651_huab84eda8e111888a5b0e150fa14823b9_18595_1080x0_resize_catmullrom_3.png 1080w"
@@ -476,7 +593,7 @@ flex-grow: 275;
 flex-basis: 662px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396504.jpg"
-src="https://imiku.me/2021/07/29/1451.html/1630060151396504_hu97181d613c1e0a48ea37000436cb8d75_21091_3f769d3d71c1abb702f9b685a7b662dd.jpg"
+src="https://imiku.me/2021/07/29/1451.html/1630060151396504_hu97181d613c1e0a48ea37000436cb8d75_21091_50x0_resize_q100_catmullrom.jpg"
 width="891"
 height="323"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396504_hu97181d613c1e0a48ea37000436cb8d75_21091_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/07/29/1451.html/1630060151396504_hu97181d613c1e0a48ea37000436cb8d75_21091_1080x0_resize_q100_catmullrom.jpg 1080w"
@@ -485,7 +602,8 @@ data-lazyload
 alt="Notion 如何创建简单表格（非数据库）">
 &lt;figcaption>Notion 如何创建简单表格（非数据库）&lt;/figcaption>
 &lt;/figure>&lt;/p></description></item><item><title>写了个西班牙语学习工具</title><link>https://imiku.me/2021/07/26/1445.html/</link><pubDate>Mon, 26 Jul 2021 04:51:22 +0000</pubDate><guid>https://imiku.me/2021/07/26/1445.html/</guid><description>&lt;blockquote>
-&lt;p>GitHub &lt;a href="https://github.com/Ice-Hazymoon/spanish">Ice-Hazymoon/spanish&lt;/a>&lt;/p>
+&lt;p>GitHub &lt;a class="link" href="https://github.com/Ice-Hazymoon/spanish" target="_blank" rel="noopener"
+>Ice-Hazymoon/spanish&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="预览">预览&lt;/h2>
 &lt;div class="video-wrapper">
@@ -553,14 +671,20 @@ Your browser doesn't support HTML5 video. Here is a
 毕竟，人类的本质就是双标🤪&lt;/p>
 &lt;p>安乐死是一个在社会、伦理、医学、法律等多层次多方面都需要慎重考虑的复杂问题，如果某一天世界上出现了一种无痛死亡，且人人都能买得到的药物，那世界会。。。。&lt;/p>
 &lt;h2 id="其他资料">其他资料&lt;/h2>
-&lt;p>&lt;a href="https://www.bilibili.com/video/av62006493/">【中日双语】NHK特别篇 她选择了结束生命 ~日本女性安乐死纪实~【MT字幕组】&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.bilibili.com/video/av62006493/" target="_blank" rel="noopener"
+>【中日双语】NHK特别篇 她选择了结束生命 ~日本女性安乐死纪实~【MT字幕组】&lt;/a>&lt;/p>
 &lt;h2 id="引用">引用&lt;/h2>
 &lt;ul>
-&lt;li>&lt;a href="https://baike.baidu.com/item/%E5%AE%89%E4%B9%90%E6%AD%BB%E6%B3%95%E6%A1%88">安乐死法案&amp;lt;百度百科&amp;gt;：https://baike.baidu.com/item/安乐死法案&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://zh.wikipedia.org/wiki/%E5%8D%8F%E5%8A%A9%E8%87%AA%E6%9D%80">协助自杀&amp;lt;维基百科&amp;gt;：https://zh.wikipedia.org/wiki/协助自杀&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://zh.wikipedia.org/wiki/%E8%8D%B7%E8%98%AD%E5%AE%89%E6%A8%82%E6%AD%BB%E8%AD%B0%E9%A1%8C">荷兰安乐死议题&amp;lt;维基百科&amp;gt;：https://zh.wikipedia.org/wiki/荷蘭安樂死議題&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://zh.wikipedia.org/zh-hans/%E5%AE%89%E4%B9%90%E6%AD%BB">安乐死&amp;lt;维基百科&amp;gt;：https://zh.wikipedia.org/zh-hans/安乐死&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://baike.baidu.com/item/%E7%BB%B4%E6%8C%81%E7%94%9F%E5%91%BD%E5%8C%BB%E7%96%97%E5%86%B3%E5%AE%9A%E6%B3%95">维持生命医疗决定法&amp;lt;百度百科&amp;gt;https://baike.baidu.com/item/维持生命医疗决定法&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://baike.baidu.com/item/%e5%ae%89%e4%b9%90%e6%ad%bb%e6%b3%95%e6%a1%88" target="_blank" rel="noopener"
+>安乐死法案&amp;lt;百度百科&amp;gt;：https://baike.baidu.com/item/安乐死法案&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://zh.wikipedia.org/wiki/%E5%8D%8F%E5%8A%A9%E8%87%AA%E6%9D%80" target="_blank" rel="noopener"
+>协助自杀&amp;lt;维基百科&amp;gt;：https://zh.wikipedia.org/wiki/协助自杀&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://zh.wikipedia.org/wiki/%E8%8D%B7%E8%98%AD%E5%AE%89%E6%A8%82%E6%AD%BB%E8%AD%B0%E9%A1%8C" target="_blank" rel="noopener"
+>荷兰安乐死议题&amp;lt;维基百科&amp;gt;：https://zh.wikipedia.org/wiki/荷蘭安樂死議題&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://zh.wikipedia.org/zh-hans/%E5%AE%89%E4%B9%90%E6%AD%BB" target="_blank" rel="noopener"
+>安乐死&amp;lt;维基百科&amp;gt;：https://zh.wikipedia.org/zh-hans/安乐死&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://baike.baidu.com/item/%E7%BB%B4%E6%8C%81%E7%94%9F%E5%91%BD%E5%8C%BB%E7%96%97%E5%86%B3%E5%AE%9A%E6%B3%95" target="_blank" rel="noopener"
+>维持生命医疗决定法&amp;lt;百度百科&amp;gt;https://baike.baidu.com/item/维持生命医疗决定法&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Oculus Quest 2上手“评测”</title><link>https://imiku.me/2020/10/25/1362.html/</link><pubDate>Sun, 25 Oct 2020 17:18:53 +0000</pubDate><guid>https://imiku.me/2020/10/25/1362.html/</guid><description>&lt;p>经历了一个月的运输，终于到了，颜值还行，比上一代的黑色清爽多了，亚马逊买的，到手价2300左右，现在估计降价了点，看到某些网友2100就拿到手了&lt;/p>
 &lt;p>
 &lt;figure
@@ -570,7 +694,7 @@ flex-grow: 133;
 flex-basis: 319px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393951.jpg"
-src="https://imiku.me/2020/10/25/1362.html/1630060151393951_huc9b30fedc52d7a5e5522c81180b5a08b_38153_b8721b39ce36ea8b49ac14e792c27b3b.jpg"
+src="https://imiku.me/2020/10/25/1362.html/1630060151393951_huc9b30fedc52d7a5e5522c81180b5a08b_38153_50x0_resize_q100_catmullrom.jpg"
 width="680"
 height="511"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393951_huc9b30fedc52d7a5e5522c81180b5a08b_38153_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393951_huc9b30fedc52d7a5e5522c81180b5a08b_38153_1080x0_resize_q100_catmullrom.jpg 1080w"
@@ -587,7 +711,7 @@ flex-grow: 75;
 flex-basis: 180px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393576.jpg"
-src="https://imiku.me/2020/10/25/1362.html/1630060151393576_huca333d01b0172482d61a2515bf83a806_353981_db6f3e3f0c89ae9bf1caabe6634a20ef.jpg"
+src="https://imiku.me/2020/10/25/1362.html/1630060151393576_huca333d01b0172482d61a2515bf83a806_353981_50x0_resize_q100_catmullrom.jpg"
 width="1538"
 height="2048"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393576_huca333d01b0172482d61a2515bf83a806_353981_640x0_resize_q100_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393576_huca333d01b0172482d61a2515bf83a806_353981_1080x0_resize_q100_catmullrom.jpg 1080w"
@@ -597,8 +721,10 @@ alt="Oculus Quest 2上手“评测”">
 &lt;figcaption>Oculus Quest 2上手“评测”&lt;/figcaption>
 &lt;/figure>&lt;/p>
 &lt;h2 id="软件优化">软件优化&lt;/h2>
-&lt;p>首次激活时如果提示WiFi网络受限，可以下载官方 &lt;a href="https://play.google.com/store/apps/details?id=com.oculus.twilight&amp;amp;hl=en_US&amp;amp;gl=US">Oculus&lt;/a> 手机APP连接激活&lt;/p>
-&lt;p>之后可以下载个 &lt;a href="https://sidequestvr.com/">SideQuest&lt;/a> ，修改机器分辨率为单眼2.5k，刷新率修改为90hz，还能超频下 GPU 和 CPU，不知道为啥 Facebook 要在软件上砍一刀，学小米和苹果？为了省电？还是为了延长硬件寿命？&lt;/p>
+&lt;p>首次激活时如果提示WiFi网络受限，可以下载官方 &lt;a class="link" href="https://play.google.com/store/apps/details?id=com.oculus.twilight&amp;amp;hl=en_US&amp;amp;gl=US" target="_blank" rel="noopener"
+>Oculus&lt;/a> 手机APP连接激活&lt;/p>
+&lt;p>之后可以下载个 &lt;a class="link" href="https://sidequestvr.com/" target="_blank" rel="noopener"
+>SideQuest&lt;/a> ，修改机器分辨率为单眼2.5k，刷新率修改为90hz，还能超频下 GPU 和 CPU，不知道为啥 Facebook 要在软件上砍一刀，学小米和苹果？为了省电？还是为了延长硬件寿命？&lt;/p>
 &lt;p>除此之外，SQ 还可以卸载，安装，提取APP，浏览文件等，功能还算强大，网上也有一些个人汉化版&lt;/p>
 &lt;p>
 &lt;figure
@@ -608,7 +734,7 @@ flex-grow: 132;
 flex-basis: 319px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393263.png"
-src="https://imiku.me/2020/10/25/1362.html/1630060151393263_hue82f392370e003eec5de95f3aa0d3374_367868_5f639187a4eb92481f38a361533ac77f.png"
+src="https://imiku.me/2020/10/25/1362.html/1630060151393263_hue82f392370e003eec5de95f3aa0d3374_367868_50x0_resize_catmullrom_3.png"
 width="1284"
 height="966"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393263_hue82f392370e003eec5de95f3aa0d3374_367868_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2020/10/25/1362.html/1630060151393263_hue82f392370e003eec5de95f3aa0d3374_367868_1080x0_resize_catmullrom_3.png 1080w"
@@ -619,32 +745,59 @@ alt="Oculus Quest 2上手“评测”">
 &lt;/figure>&lt;/p>
 &lt;hr>
 &lt;p>也可以用 ADB 来修改上述设置（重启后会失效&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1&lt;/span>adb shell setprop debug.oculus.textureWidth &lt;span style="color:#bd93f9">2560&lt;/span>
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2&lt;/span>adb shell setprop debug.oculus.textureHeight &lt;span style="color:#bd93f9">2560&lt;/span>
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3&lt;/span>adb shell setprop debug.oculus.cpuLevel &lt;span style="color:#bd93f9">4&lt;/span>
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4&lt;/span>adb shell setprop debug.oculus.gpuLevel &lt;span style="color:#bd93f9">4&lt;/span>
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5&lt;/span>adb shell setprop debug.oculus.refreshRate &lt;span style="color:#bd93f9">90&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="关闭检测未知应用的代码">关闭检测未知应用的代码&lt;/h2>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">adb shell setprop debug.oculus.textureWidth &lt;span style="color:#bd93f9">2560&lt;/span>
+adb shell setprop debug.oculus.textureHeight &lt;span style="color:#bd93f9">2560&lt;/span>
+adb shell setprop debug.oculus.cpuLevel &lt;span style="color:#bd93f9">4&lt;/span>
+adb shell setprop debug.oculus.gpuLevel &lt;span style="color:#bd93f9">4&lt;/span>
+adb shell setprop debug.oculus.refreshRate &lt;span style="color:#bd93f9">90&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="关闭检测未知应用的代码">关闭检测未知应用的代码&lt;/h2>
 &lt;p>如果不禁用的话安装破解软件可能会有封号的风险&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1&lt;/span>adb shell pm disable-user --user &lt;span style="color:#bd93f9">0&lt;/span> com.oculus.unifiedtelemetry
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2&lt;/span>adb shell pm disable-user --user &lt;span style="color:#bd93f9">0&lt;/span> com.oculus.gatekeeperservice
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3&lt;/span>adb shell pm disable-user --user &lt;span style="color:#bd93f9">0&lt;/span> com.oculus.notification_proxy
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4&lt;/span>adb shell pm disable-user --user &lt;span style="color:#bd93f9">0&lt;/span> com.oculus.bugreporter
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5&lt;/span>adb shell pm disable-user --user &lt;span style="color:#bd93f9">0&lt;/span> com.oculus.os.logcollector
-&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6&lt;/span>adb shell pm disable-user --user &lt;span style="color:#bd93f9">0&lt;/span> com.oculus.appsafety
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="启用开发者模式">启用开发者模式&lt;/h2>
-&lt;p>在 &lt;a href="https://dashboard.oculus.com/organizations/create">https://dashboard.oculus.com/organizations/create&lt;/a> 申请，Create New Organization 随意填写名称，勾选 I understand，点击提交，打钩同意即可。&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">adb shell pm disable-user --user &lt;span style="color:#bd93f9">0&lt;/span> com.oculus.unifiedtelemetry
+adb shell pm disable-user --user &lt;span style="color:#bd93f9">0&lt;/span> com.oculus.gatekeeperservice
+adb shell pm disable-user --user &lt;span style="color:#bd93f9">0&lt;/span> com.oculus.notification_proxy
+adb shell pm disable-user --user &lt;span style="color:#bd93f9">0&lt;/span> com.oculus.bugreporter
+adb shell pm disable-user --user &lt;span style="color:#bd93f9">0&lt;/span> com.oculus.os.logcollector
+adb shell pm disable-user --user &lt;span style="color:#bd93f9">0&lt;/span> com.oculus.appsafety
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="启用开发者模式">启用开发者模式&lt;/h2>
+&lt;p>在 &lt;a class="link" href="https://dashboard.oculus.com/organizations/create" target="_blank" rel="noopener"
+>https://dashboard.oculus.com/organizations/create&lt;/a> 申请，Create New Organization 随意填写名称，勾选 I understand，点击提交，打钩同意即可。&lt;/p>
 &lt;p>开发者模式可以开启 USB 调试之类的功能，申请后在手机APP中——高级设置——开发者选项——启用&lt;/p>
 &lt;h2 id="使用体验">使用体验&lt;/h2>
 &lt;p>官方默认的头戴体验一言难尽，跟带了个颈箍咒一样，而且特别重，十个用过九个骂，感觉就是骗你买精英头戴，但据网友称精英头戴容易断，而且现在官方也断货了，可以去淘宝搜一些第三方的头戴，价格会便宜许多&lt;/p>
 &lt;p>鼻子部分漏光严重，如果在意的话可以塞一坨纸挡着&lt;/p>
 &lt;p>硬件和软件方面作为一体机完全够用了，追踪什么的感觉不到延迟，超频后小型游戏体验和 VIVE 差不多，除了头戴舒适度差点，其他都很满意。&lt;/p>
-&lt;p>部分游戏锁区，比如：&lt;a href="https://www.oculus.com/experiences/quest/3857024597703276/">Kizuna AI – Touch the Beat!&lt;/a> ，需要日区才能下载，明明有官方简中，却搞个这种操作，真让人不解。&lt;/p>
+&lt;p>部分游戏锁区，比如：&lt;a class="link" href="https://www.oculus.com/experiences/quest/3857024597703276/" target="_blank" rel="noopener"
+>Kizuna AI – Touch the Beat!&lt;/a> ，需要日区才能下载，明明有官方简中，却搞个这种操作，真让人不解。&lt;/p>
 &lt;h2 id="投屏">投屏&lt;/h2>
-&lt;p>我用的是 &lt;a href="https://sidequestvr.com/">SideQuest&lt;/a> 带的投屏功能，如果不想用 SQ，可以单独下个 Scrcpy 来投屏。也可以无线串联，但对路由器要求会稍微有点高&lt;/p>
-&lt;p>也可以尝试 &lt;a href="https://github.com/polygraphene/ALVR">ALVR&lt;/a>，一个免费的VR无线投屏软件&lt;/p>
+&lt;p>我用的是 &lt;a class="link" href="https://sidequestvr.com/" target="_blank" rel="noopener"
+>SideQuest&lt;/a> 带的投屏功能，如果不想用 SQ，可以单独下个 Scrcpy 来投屏。也可以无线串联，但对路由器要求会稍微有点高&lt;/p>
+&lt;p>也可以尝试 &lt;a class="link" href="https://github.com/polygraphene/ALVR" target="_blank" rel="noopener"
+>ALVR&lt;/a>，一个免费的VR无线投屏软件&lt;/p>
 &lt;h2 id="其他">其他&lt;/h2>
-&lt;p>由于 Facebook 的封号措施很谜，强烈不建议前期在 Oculus 商店买东西，一旦Facebook 账号被封，所有游戏都没了，不止一个人遇到这个问题了。破解版游戏也不是不能玩（&lt;/p></description></item><item><title/><link>https://imiku.me/2020/06/16/1359.html/</link><pubDate>Tue, 16 Jun 2020 18:45:41 +0000</pubDate><guid>https://imiku.me/2020/06/16/1359.html/</guid><description>&lt;p>船新主题已上线，遇到问题请联系 &lt;a href="mailto:imiku.me@gmail.com">imiku.me@gmail.com&lt;/a> 反馈&lt;/p></description></item><item><title>foobar2000 音乐文件路劲更换后的解决方法</title><link>https://imiku.me/2019/06/09/1332.html/</link><pubDate>Sun, 09 Jun 2019 12:37:22 +0000</pubDate><guid>https://imiku.me/2019/06/09/1332.html/</guid><description>&lt;p>最近重装了下系统，今天打开fb2k的时候发现所有歌曲都无法播放了，提示：
+&lt;p>由于 Facebook 的封号措施很谜，强烈不建议前期在 Oculus 商店买东西，一旦Facebook 账号被封，所有游戏都没了，不止一个人遇到这个问题了。破解版游戏也不是不能玩（&lt;/p></description></item><item><title/><link>https://imiku.me/2020/06/16/1359.html/</link><pubDate>Tue, 16 Jun 2020 18:45:41 +0000</pubDate><guid>https://imiku.me/2020/06/16/1359.html/</guid><description>&lt;p>船新主题已上线，遇到问题请联系 &lt;a class="link" href="mailto:imiku.me@gmail.com" >imiku.me@gmail.com&lt;/a> 反馈&lt;/p></description></item><item><title>foobar2000 音乐文件路劲更换后的解决方法</title><link>https://imiku.me/2019/06/09/1332.html/</link><pubDate>Sun, 09 Jun 2019 12:37:22 +0000</pubDate><guid>https://imiku.me/2019/06/09/1332.html/</guid><description>&lt;p>最近重装了下系统，今天打开fb2k的时候发现所有歌曲都无法播放了，提示：
 &lt;figure
 class="gallery-image"
 style="
@@ -652,7 +805,7 @@ flex-grow: 140;
 flex-basis: 337px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392606.png"
-src="https://imiku.me/2019/06/09/1332.html/1630060151392606_hu2ce4dfc940bb6c1cfae61d9f26580c12_34250_1657e3a3892a29d5529881334c2be791.png"
+src="https://imiku.me/2019/06/09/1332.html/1630060151392606_hu2ce4dfc940bb6c1cfae61d9f26580c12_34250_50x0_resize_catmullrom_3.png"
 width="453"
 height="322"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392606_hu2ce4dfc940bb6c1cfae61d9f26580c12_34250_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392606_hu2ce4dfc940bb6c1cfae61d9f26580c12_34250_1080x0_resize_catmullrom_3.png 1080w"
@@ -672,7 +825,7 @@ flex-grow: 118;
 flex-basis: 284px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392053.png"
-src="https://imiku.me/2019/06/09/1332.html/1630060151392053_hu595318e3fd91974e80f9c71b305361d9_20314_d4aeac54267245146af0b468f4089222.png"
+src="https://imiku.me/2019/06/09/1332.html/1630060151392053_hu595318e3fd91974e80f9c71b305361d9_20314_50x0_resize_catmullrom_3.png"
 width="374"
 height="315"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392053_hu595318e3fd91974e80f9c71b305361d9_20314_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392053_hu595318e3fd91974e80f9c71b305361d9_20314_1080x0_resize_catmullrom_3.png 1080w"
@@ -690,7 +843,7 @@ flex-grow: 194;
 flex-basis: 466px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392534.png"
-src="https://imiku.me/2019/06/09/1332.html/1630060151392534_hu008bcf6388b903e5ea75427b7b86ac10_180696_e0be35551fca4d6134cd93cb3a3e1c89.png"
+src="https://imiku.me/2019/06/09/1332.html/1630060151392534_hu008bcf6388b903e5ea75427b7b86ac10_180696_50x0_resize_catmullrom_3.png"
 width="1059"
 height="545"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392534_hu008bcf6388b903e5ea75427b7b86ac10_180696_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392534_hu008bcf6388b903e5ea75427b7b86ac10_180696_1080x0_resize_catmullrom_3.png 1080w"
@@ -699,7 +852,8 @@ data-lazyload
 alt="foobar2000 音乐文件路劲更换后的解决方法">
 &lt;figcaption>foobar2000 音乐文件路劲更换后的解决方法&lt;/figcaption>
 &lt;/figure>&lt;/p>
-&lt;p>三、替换好后先别急着导入，因为当前的播放列表里有很多重复的内容，需要去重后再重新导入。这里我写了个小工具来实现这一步骤。打开：&lt;a href="https://miku.tools/tools/remove_duplicate">文本去重工具&lt;/a> 输入你播放列表的内容，将会自动帮你去重，把去重好的内容替换原来的歌单数据&lt;/p>
+&lt;p>三、替换好后先别急着导入，因为当前的播放列表里有很多重复的内容，需要去重后再重新导入。这里我写了个小工具来实现这一步骤。打开：&lt;a class="link" href="https://miku.tools/tools/remove_duplicate" target="_blank" rel="noopener"
+>文本去重工具&lt;/a> 输入你播放列表的内容，将会自动帮你去重，把去重好的内容替换原来的歌单数据&lt;/p>
 &lt;p>
 &lt;figure
 class="gallery-image"
@@ -708,7 +862,7 @@ flex-grow: 138;
 flex-basis: 333px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392089.png"
-src="https://imiku.me/2019/06/09/1332.html/1630060151392089_hu5c05793ac7cdc8d22cf99e4fb8af98e1_230665_6ab0b7960ab162236ed3452fe5bad90e.png"
+src="https://imiku.me/2019/06/09/1332.html/1630060151392089_hu5c05793ac7cdc8d22cf99e4fb8af98e1_230665_50x0_resize_catmullrom_3.png"
 width="1283"
 height="924"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392089_hu5c05793ac7cdc8d22cf99e4fb8af98e1_230665_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392089_hu5c05793ac7cdc8d22cf99e4fb8af98e1_230665_1080x0_resize_catmullrom_3.png 1080w"
@@ -725,7 +879,7 @@ flex-grow: 153;
 flex-basis: 368px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392514.png"
-src="https://imiku.me/2019/06/09/1332.html/1630060151392514_hu250b2caf56f55b76f7596bad999cec31_28788_f23e2eb76a3362c41d05c0b22577156a.png"
+src="https://imiku.me/2019/06/09/1332.html/1630060151392514_hu250b2caf56f55b76f7596bad999cec31_28788_50x0_resize_catmullrom_3.png"
 width="459"
 height="299"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392514_hu250b2caf56f55b76f7596bad999cec31_28788_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392514_hu250b2caf56f55b76f7596bad999cec31_28788_1080x0_resize_catmullrom_3.png 1080w"
@@ -741,7 +895,7 @@ flex-grow: 174;
 flex-basis: 419px"
 >
 &lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392247.png"
-src="https://imiku.me/2019/06/09/1332.html/1630060151392247_hubb6722d6ab3d1a8b50bd19f2f9a12462_293994_06c71d611d406c6fe8d7f9f25d972e3a.png"
+src="https://imiku.me/2019/06/09/1332.html/1630060151392247_hubb6722d6ab3d1a8b50bd19f2f9a12462_293994_50x0_resize_catmullrom_3.png"
 width="1263"
 height="722"
 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392247_hubb6722d6ab3d1a8b50bd19f2f9a12462_293994_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2019/06/09/1332.html/1630060151392247_hubb6722d6ab3d1a8b50bd19f2f9a12462_293994_1080x0_resize_catmullrom_3.png 1080w"

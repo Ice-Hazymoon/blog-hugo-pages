@@ -9,7 +9,7 @@
 <meta itemprop=name content="树莓派从零开始整理环境">
 <link href=https://imiku.me/index.xml title=树莓派从零开始整理环境 type=application/rss+xml rel=alternate>
 <title>树莓派从零开始整理环境</title>
-<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1631869612">
+<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1631984664">
 <meta property="og:site_name" content="树莓派从零开始整理环境">
 <meta property="og:type" content="article">
 <meta property="og:title" content="树莓派从零开始整理环境">
@@ -83,7 +83,7 @@
 <div class="bg-white h-full overflow-auto page-view-article">
 <div class=relative>
 <div class="article-cover h-0 relative w-full">
-<img src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/16/279.html/1630060151351502.jpg srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/16/279.html/1630060151351502_hu08abcc46750dabdc1a7adf4dc19019f0_28622_800x0_resize_q100_catmullrom.jpg 800w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/16/279.html/1630060151351502_hu08abcc46750dabdc1a7adf4dc19019f0_28622_1600x0_resize_q100_catmullrom.jpg 1600w" alt=树莓派从零开始整理环境 class="absolute h-full left-0 object-center object-cover top-0 w-full">
+<img src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/16/279.html/1630060151351502_hu08abcc46750dabdc1a7adf4dc19019f0_28622_50x0_resize_q100_catmullrom.jpg data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/16/279.html/1630060151351502.jpg data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/16/279.html/1630060151351502_hu08abcc46750dabdc1a7adf4dc19019f0_28622_800x0_resize_q100_catmullrom.jpg 800w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/16/279.html/1630060151351502_hu08abcc46750dabdc1a7adf4dc19019f0_28622_1600x0_resize_q100_catmullrom.jpg 1600w" alt=树莓派从零开始整理环境 data-lazyload class="absolute h-full left-0 object-center object-cover top-0 w-full">
 </div>
 <h1 class="absolute article-title bottom-0 left-0 md:text-4xl pb-6 pt-20 px-6 text-3xl text-white w-full">
 树莓派从零开始整理环境
@@ -150,9 +150,9 @@
 <h2 id=系统安装>系统安装</h2>
 <p><strong>需要下载的东西</strong></p>
 <blockquote>
-<p>下载sd卡格式化工具：<a href=https://www.sdcard.org/chs/downloads/formatter_4/eula_windows/index.html>SDFormatter</a></p>
-<p>下载镜像写入工具：<a href=https://sourceforge.net/projects/win32diskimager/>Win32 DiskImager</a></p>
-<p>下载系统镜像（推荐使用Raspbian）：<a href=https://www.raspberrypi.org/downloads/>官方下载</a></p>
+<p>下载sd卡格式化工具：<a class=link href=https://www.sdcard.org/chs/downloads/formatter_4/eula_windows/index.html target=_blank rel=noopener>SDFormatter</a></p>
+<p>下载镜像写入工具：<a class=link href=https://sourceforge.net/projects/win32diskimager/ target=_blank rel=noopener>Win32 DiskImager</a></p>
+<p>下载系统镜像（推荐使用Raspbian）：<a class=link href=https://www.raspberrypi.org/downloads/ target=_blank rel=noopener>官方下载</a></p>
 </blockquote>
 <ol>
 <li>首先打开SDFormatter，开始格式化sd卡<br>
@@ -161,7 +161,7 @@
 然后device那选择内存卡盘符，别选错了，点击write写入，等待写入完即可</li>
 </ol>
 <h2 id=安装更换软件源>安装更换软件源</h2>
-<p>由于树莓派默认的软件源在国外，所以安装软件的速度十分的慢，有时候安装个几m的东西要花上一天，所以我们把软件源更换为国内的可以大大提升速度，相关软件源可以参考<a href=http://shumeipai.nxez.com/2013/08/31/raspbian-chinese-software-source.html>树莓派实验室</a>的这篇文章。</p>
+<p>由于树莓派默认的软件源在国外，所以安装软件的速度十分的慢，有时候安装个几m的东西要花上一天，所以我们把软件源更换为国内的可以大大提升速度，相关软件源可以参考<a class=link href=http://shumeipai.nxez.com/2013/08/31/raspbian-chinese-software-source.html target=_blank rel=noopener>树莓派实验室</a>的这篇文章。</p>
 <ol>
 <li>把内存卡插到pi里，此时ssh可能连不上，因为据说16年11月以后发布的系统默认关闭了ssh。先连接上显示器，等待系统完全启动，点击桌面左上角那个黑黑的东西，进入命令窗口</li>
 <li>编辑/etc/apt/sources.list 文件，参考如下命令：<br>
@@ -268,7 +268,7 @@ B1 Console<br>
 </div>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
-<script async src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1631869613"></script>
+<script async src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app.js?v=1631984664"></script>
 </footer></div>
 </div>
 <div onclick=window.backTop() class="back-top cursor-pointer">
