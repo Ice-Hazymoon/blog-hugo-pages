@@ -1,7 +1,9 @@
 const workboxVersion = '6.3.0';
 
 importScripts(`https://storage.googleapis.com/workbox-cdn/releases/${workboxVersion}/workbox-sw.js`);
-workbox.setConfig({debug: false});
+workbox.setConfig({
+    debug: false
+});
 workbox.routing.setCatchHandler(async ({
     event
 }) => {
@@ -24,6 +26,24 @@ workbox.core.clientsClaim();
 workbox.precaching.precacheAndRoute([]);
 
 workbox.precaching.cleanupOutdatedCaches();
+
+workbox.routing.registerRoute(
+    // Check to see if the request is a navigation to a new page
+    ({
+        request
+    }) => request.mode === 'navigate',
+    // Use a Network First caching strategy
+    new workbox.strategies.StaleWhileRevalidate({
+        // Put all cached files in a cache named 'pages'
+        cacheName: 'pages',
+        plugins: [
+            // Ensure that only requests that result in a 200 status are cached
+            new workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses: [200],
+            }),
+        ],
+    }),
+);
 
 // Images
 workbox.routing.registerRoute(
