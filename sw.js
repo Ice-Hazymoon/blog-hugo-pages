@@ -31,7 +31,10 @@ workbox.routing.registerRoute(
 );
 
 workbox.core.setCacheNameDetails({
-    prefix: "hazymoon"
+    prefix: "hazymoon",
+    suffix: "v1",
+    precache:'precache',
+    runtime:'runtime'
 });
 
 workbox.core.skipWaiting();
