@@ -4,16 +4,31 @@ importScripts(`https://storage.googleapis.com/workbox-cdn/releases/${workboxVers
 workbox.setConfig({
     debug: false
 });
-workbox.routing.setCatchHandler(async ({
-    event
-}) => {
-    // Return the precached offline page if a document is being requested
-    if (event.request.destination === 'document') {
-        return workbox.precaching.matchPrecache('/offline.html');
-    }
 
-    return Response.error();
+const CACHE_NAME = 'offline-html';
+const FALLBACK_HTML_URL = '/offline.html';
+self.addEventListener('install', async (event) => {
+    event.waitUntil(
+        caches.open(CACHE_NAME).then((cache) => cache.add(new Request(FALLBACK_HTML_URL, {
+            cache: "reload"
+        })))
+    );
 });
+workbox.navigationPreload.enable();
+  // Register this strategy to handle all navigations.
+workbox.routing.registerRoute(
+    new workbox.routing.NavigationRoute(async (params) => {
+        try {
+          // Attempt a network request.
+            return await (new workbox.strategies.NetworkFirst()).handle(params);
+        } catch (error) {
+          // If it fails, return the cached HTML.
+            return caches.match(FALLBACK_HTML_URL, {
+                cacheName: CACHE_NAME,
+            });
+        }
+    })
+);
 
 workbox.core.setCacheNameDetails({
     prefix: "hazymoon"
@@ -28,16 +43,12 @@ workbox.precaching.precacheAndRoute([]);
 workbox.precaching.cleanupOutdatedCaches();
 
 workbox.routing.registerRoute(
-    // Check to see if the request is a navigation to a new page
     ({
         request
     }) => request.mode === 'navigate',
-    // Use a Network First caching strategy
-    new workbox.strategies.StaleWhileRevalidate({
-        // Put all cached files in a cache named 'pages'
+    new workbox.strategies.NetworkFirst({
         cacheName: 'pages',
         plugins: [
-            // Ensure that only requests that result in a 200 status are cached
             new workbox.cacheableResponse.CacheableResponsePlugin({
                 statuses: [200],
             }),
