@@ -561,7 +561,43 @@ alt="offline.html">
 &lt;/blockquote>
 &lt;p>本来想换成 Ghost 的，但是 Ghost 简直不把用户当人，主题开发的体验跟屎一样，都 2021 年了，连基本的搜索功能都没有，hbs 语法限制还多，还不能自己扩展 hbs 功能（更新后会重置），下线了原本有的插件系统。如果你想使用 Ghost，建议先看看这篇文章：&lt;a class="link" href="https://nehalist.io/why-i-dont-like-the-ghost-blogging-platform-anymore/" target="_blank" rel="noopener"
 >为什么我不再喜欢 Ghost&lt;/a> 作者说出了我用 Ghost 的真实感受，其实早在 17 年的时候我就尝试&lt;a class="link" href="https://imiku.me/2017/07/10/903.html/" >从 Wordpress 更换为 Ghost&lt;/a>，最后由于 Ghost 限制太多，最终还是换回了 Wordpress。4年过去了，没想到 Ghost 还是这个死样子。&lt;/p>
-&lt;h2 id="博客对比">博客对比&lt;/h2>
+&lt;h2 id="先跑个分吧">先跑个分吧&lt;/h2>
+&lt;p>
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 117;
+flex-basis: 281px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/gtmetrix_hu1efb5f18b09c14912cebd1f1f8b4d153_43186_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/gtmetrix_hu1efb5f18b09c14912cebd1f1f8b4d153_43186_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/gtmetrix.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/gtmetrix_hu1efb5f18b09c14912cebd1f1f8b4d153_43186_50x0_resize_q90_catmullrom.jpg"
+width="873"
+height="745"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/gtmetrix_hu1efb5f18b09c14912cebd1f1f8b4d153_43186_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/gtmetrix_hu1efb5f18b09c14912cebd1f1f8b4d153_43186_1080x0_resize_q90_catmullrom.jpg 1080w"
+data-zoomable
+data-lazyload
+alt="GTmetrix">
+&lt;/picture>
+&lt;figcaption>GTmetrix&lt;/figcaption>
+&lt;/figure>
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 284;
+flex-basis: 682px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/pagespeed_insights_hud5b15fe984a8277c542a425a2ba093e5_61522_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/pagespeed_insights_hud5b15fe984a8277c542a425a2ba093e5_61522_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/pagespeed_insights.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/pagespeed_insights_hud5b15fe984a8277c542a425a2ba093e5_61522_50x0_resize_q90_catmullrom.jpg"
+width="1599"
+height="562"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/pagespeed_insights_hud5b15fe984a8277c542a425a2ba093e5_61522_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/08/31/wordpress-to-hugo.html/pagespeed_insights_hud5b15fe984a8277c542a425a2ba093e5_61522_1080x0_resize_q90_catmullrom.jpg 1080w"
+data-zoomable
+data-lazyload
+alt="PageSpeed Insights">
+&lt;/picture>
+&lt;figcaption>PageSpeed Insights&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;h2 id="博客系统对比">博客系统对比&lt;/h2>
 &lt;p>选来选取，最终决定了 Hexo 和 Hugo，说下两者的优缺点：&lt;/p>
 &lt;h3 id="hugo">Hugo&lt;/h3>
 &lt;p>优点：&lt;/p>
@@ -589,10 +625,10 @@ alt="offline.html">
 &lt;/ul>
 &lt;p>缺点：&lt;/p>
 &lt;ul>
-&lt;li>速度相对于 Hugo 就慢了很多&lt;/li>
+&lt;li>生成速度相对于 Hugo 就慢了很多&lt;/li>
 &lt;li>没有自带的图片处理函数，且自带的模板函数没有 Hugo 多&lt;/li>
 &lt;/ul>
-&lt;p>相比下来，由于我比较追求生成速度和开箱即用，所以选择了 Hugo，Hugo 除了不支持插件，毫不逊色 Hexo，所有内置函数不支持的东西写个 JS 脚本处理一下就行了。&lt;/p>
+&lt;p>相比下来，由于我比较追求生成速度和开箱即用，所以选择了 Hugo，Hugo 除了不支持插件，毫不逊色 Hexo，所有内置函数不支持的地方东西写个 JS 脚本处理一下就行了。&lt;/p>
 &lt;p>从 Vue 主题迁移到 Hugo 废了不少头发，花了 4 天的时间才全部迁移完成，但是其中的快感也是之前用 WP+Vue 体验不到的&lt;/p>
 &lt;h2 id="关于主题">关于主题&lt;/h2>
 &lt;p>从之前的 SSR 渲染变成现在的全站纯静态，访问速度+++&lt;/p>
@@ -1003,10 +1039,10 @@ data-lazyload
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 图片渐进式加载&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 自动 WEBP 支持&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 响应式图片&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> PWA 支持&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 文章更新时间&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 夜间模式&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 语言切换&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> PWA 支持&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> AMP 支持&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 分享功能&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 阅读进度条&lt;/li>
