@@ -1,0 +1,750 @@
+<!doctype html><html lang=zh-cn>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="Ice-Hazymoon,冰凌胧月,Hazymoon,MikuTools,">
+<meta name=description content="研究了一天，终于勉强能用了，但是目前还不支持使用 Pjax 的网站，例如本站，无法缓存 Pjax 加载的内容，一开始使用的 Workbox 版本，但是为了一个简单的功能加载大量">
+<meta itemprop=description content="研究了一天，终于勉强能用了，但是目前还不支持使用 Pjax 的网站，例如本站，无法缓存 Pjax 加载的内容，一开始使用的 Workbox 版本，但是为了一个简单的功能加载大量">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta itemprop=name content="Service Worker 实践">
+<link href=https://imiku.me/index.xml title="Service Worker 实践" type=application/rss+xml rel=alternate>
+<title>Service Worker 实践</title>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main_2975a92386b435476b475e4da5d33a15ba293c82.css>
+<meta property="og:site_name" content="Service Worker 实践">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Service Worker 实践">
+<meta property="og:description" content="研究了一天，终于勉强能用了，但是目前还不支持使用 Pjax 的网站，例如本站，无法缓存 Pjax 加载的内容，一开始使用的 Workbox 版本，但是为了一个简单的功能加载大量">
+<meta property="og:url" content="https://imiku.me/2021/09/20/service-worker-practice.html/">
+<meta property="og:image" content="https://imiku.me/2021/09/20/service-worker-practice.html/cover.jpg">
+<meta property="article:publisher" content="https://imiku.me/2021/09/20/service-worker-practice.html/">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:title content="Service Worker 实践">
+<meta name=twitter:description content="研究了一天，终于勉强能用了，但是目前还不支持使用 Pjax 的网站，例如本站，无法缓存 Pjax 加载的内容，一开始使用的 Workbox 版本，但是为了一个简单的功能加载大量">
+<meta name=twitter:url content="https://imiku.me/2021/09/20/service-worker-practice.html/">
+<meta name=twitter:image content="https://imiku.me/2021/09/20/service-worker-practice.html/cover.jpg">
+<meta name=twitter:site content="@Ice-Hazymoon">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1280">
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<link rel=manifest href=/manifest.json>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Service Worker 实践","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2021\/09\/20\/service-worker-practice.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"Service Worker, PWA","wordcount":1250,"url":"https:\/\/imiku.me\/2021\/09\/20\/service-worker-practice.html\/","datePublished":"2021-09-20T17:28:26\u002b08:00","dateModified":"2021-09-20T17:28:26\u002b08:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
+</head><body>
+<div class="mx-auto relative shadow-lg">
+<div class="bg-white main md:max-w-4xl mx-auto relative xl:max-w-4xl flex flex-col justify-between">
+<header class="relative z-40">
+<nav class="bg bg-white border-b flex items-center md:px-10 navbar px-5 py-6 top-0 z-10">
+<div class="flex items-center justify-around route-items w-full">
+<div class="flex flex-col items-center">
+<a data-active-link=/ href=/ class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-home flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">首页</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/about href=/about class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-heart flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">关于我</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/links href=/links class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-people flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">朋友们</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/twitter href=/twitter class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-twitter flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">推特动态</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/timeline href=/timeline class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-bar-chart flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">时间轴</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/github href=/github class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-github flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">GitHub</span>
+</div>
+<div class="flex flex-col items-center">
+<a data-active-link=/search href=/search class="cursor-pointer relative text-gray-700 ts-3-ease">
+<i class="eva eva-search flex justify-center items-center h-8 text-3xl line-height-1 text-gray-500 ts-3-ease w-8"></i>
+</a>
+<span class="block md:hidden mt-2 text-xs">搜索</span>
+</div>
+</div>
+</nav>
+</header><main class="relative flex-grow" id=swup>
+<div class="h-full nuxt-main relative">
+<div class="h-full relative">
+<div class="bg-white h-full overflow-auto page-view-article">
+<div class=relative>
+<div class="article-cover h-0 relative w-full">
+<picture><source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/09/20/service-worker-practice.html/cover_hu8c9b11b861d5a25af672faad95d17c26_20682_800x0_resize_q90_h2_catmullrom.webp 800w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/09/20/service-worker-practice.html/cover_hu8c9b11b861d5a25af672faad95d17c26_20682_1200x0_resize_q90_h2_catmullrom.webp 1200w" type=image/webp><img src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/09/20/service-worker-practice.html/cover_hu8c9b11b861d5a25af672faad95d17c26_20682_50x0_resize_q90_catmullrom.jpg data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/09/20/service-worker-practice.html/cover.jpg data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/09/20/service-worker-practice.html/cover_hu8c9b11b861d5a25af672faad95d17c26_20682_800x0_resize_q90_catmullrom.jpg 800w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/09/20/service-worker-practice.html/cover_hu8c9b11b861d5a25af672faad95d17c26_20682_1200x0_resize_q90_catmullrom.jpg 1200w" alt="Service Worker 实践" data-lazyload width=1000 height=500 class="absolute h-full left-0 object-center object-cover top-0 w-full">
+</picture>
+</div>
+<h1 class="absolute article-title bottom-0 left-0 md:text-4xl pb-6 pt-20 px-6 text-3xl text-white w-full">
+Service Worker 实践
+</h1>
+</div>
+<div class="article-info p-6 pb-2">
+<div class="bg-red-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-clock-outline mr-1"></i>
+<span>
+<time datetime=2021-09-20T17:28:26+08:00>2021-09-20 17:28:26</time>
+</span>
+</div>
+<span class="bg-green-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-person-outline mr-1"></i>
+<span>Ice-Hazymoon</span>
+</span>
+<div class="bg-indigo-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-flag-outline mr-1"></i>
+<span>阅读约 3 分钟</span>
+</div>
+<div class="bg-blue-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
+<i class="eva eva-bar-chart-outline mr-1"></i>
+<span>1250 字</span>
+</div>
+</div>
+<div class="border-b border-gray-300 pb-6 px-6">
+<div class="flex items-center mb-2">
+<i class="eva eva-pricetags-outline mr-1"></i>
+<span class=mr-2>标签</span>
+<a href=/tags/service-worker title="Service Worker" class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-hash-outline"></i>
+<span>Service Worker</span>
+</a>
+<a href=/tags/pwa title=PWA class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-hash-outline"></i>
+<span>PWA</span>
+</a>
+</div>
+<div class="flex items-center mb-2">
+<i class="eva eva-folder-outline mr-1"></i>
+<span class=mr-2>分类</span>
+<a href=/categories/%E4%BB%A3%E7%A0%81%E5%90%91 title=代码向 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
+<i class="eva eva-book-outline"></i>
+<span>代码向</span>
+</a>
+</div>
+</div>
+<section class="article-content px-10 py-5 typo"><p>研究了一天，终于勉强能用了，但是目前还不支持使用 Pjax 的网站，例如本站，无法缓存 Pjax 加载的内容，一开始使用的 Workbox 版本，但是为了一个简单的功能加载大量的资源有些不划算，所以改成了原生的版本，实现了以下功能</p>
+<ul>
+<li>采用 Network first 策略，网络优先，其次缓存</li>
+<li>支持离线页面，参考 <a class=link href=https://imiku.me/offline.html target=_blank rel=noopener>预览</a></li>
+<li>跳过视频资源缓存</li>
+<li>支持CDN资源，永久缓存</li>
+</ul>
+<p><code>manifest.json</code> 可以在 <a class=link href=https://www.simicart.com/manifest-generator.html/ target=_blank rel=noopener>https://www.simicart.com/manifest-generator.html/</a> 生成</p>
+<hr>
+<p><strong>index.html</strong></p>
+<div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#6272a4>&lt;!-- head --&gt;</span>
+&lt;<span style=color:#ff79c6>link</span> <span style=color:#50fa7b>rel</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;manifest&#34;</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;/manifest.json&#34;</span>&gt;
+<span style=color:#6272a4>&lt;!-- footer --&gt;</span>
+&lt;<span style=color:#ff79c6>script</span>&gt;
+    <span style=color:#ff79c6>if</span> (<span style=color:#f1fa8c>&#39;serviceWorker&#39;</span> <span style=color:#ff79c6>in</span> navigator) {
+        <span style=color:#8be9fd;font-style:italic>window</span>.addEventListener(<span style=color:#f1fa8c>&#39;load&#39;</span>, <span style=color:#8be9fd;font-style:italic>function</span>() {
+            navigator.serviceWorker.register(<span style=color:#f1fa8c>&#39;/sw.js&#39;</span>);
+        });
+    }
+&lt;/<span style=color:#ff79c6>script</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>sw.js workbox 版本</strong></p>
+<div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 10
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 11
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 12
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 13
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 14
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 15
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 16
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 17
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 18
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 19
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 20
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 21
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 22
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 23
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 24
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 25
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 26
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 27
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 28
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 29
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 30
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 31
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 32
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 33
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 34
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 35
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 36
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 37
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 38
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 39
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 40
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 41
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 42
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 43
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 44
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 45
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 46
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 47
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 48
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 49
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 50
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 51
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 52
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 53
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 54
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 55
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 56
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 57
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 58
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 59
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 60
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 61
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 62
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 63
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 64
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 65
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 66
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 67
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 68
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 69
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 70
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 71
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 72
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 73
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 74
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 75
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 76
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 77
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 78
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 79
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 80
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 81
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 82
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 83
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 84
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 85
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 86
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 87
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 88
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 89
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 90
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 91
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 92
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 93
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 94
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 95
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 96
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 97
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 98
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 99
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">100
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">101
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">102
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">103
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">104
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">105
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">106
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">107
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">108
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">109
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">110
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">111
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">112
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">113
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">114
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">115
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">116
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">117
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">118
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">119
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">120
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">121
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">122
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">123
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">124
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">125
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">126
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">127
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">128
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">129
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">130
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">131
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">132
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">133
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">134
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">135
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">136
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">137
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">138
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">139
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">140
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">141
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">142
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">143
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">144
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">145
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">146
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">147
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">148
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">149
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">150
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">151
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">152
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">153
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">154
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#ff79c6>const</span> workboxVersion <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;6.3.0&#39;</span>;
+
+importScripts(<span style=color:#f1fa8c>`https://storage.googleapis.com/workbox-cdn/releases/</span><span style=color:#f1fa8c>${</span>workboxVersion<span style=color:#f1fa8c>}</span><span style=color:#f1fa8c>/workbox-sw.js`</span>);
+workbox.setConfig({
+    debug<span style=color:#ff79c6>:</span> <span style=color:#ff79c6>false</span>
+});
+
+<span style=color:#ff79c6>const</span> CACHE_NAME <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;offline-html&#39;</span>;
+<span style=color:#ff79c6>const</span> FALLBACK_HTML_URL <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;/offline.html&#39;</span>;
+self.addEventListener(<span style=color:#f1fa8c>&#39;install&#39;</span>, <span style=color:#ff79c6>async</span> (event) =&gt; {
+    event.waitUntil(
+        caches.open(CACHE_NAME).then((cache) =&gt; cache.add(<span style=color:#ff79c6>new</span> Request(FALLBACK_HTML_URL, {
+            cache<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#34;reload&#34;</span>
+        })))
+    );
+});
+workbox.navigationPreload.enable();
+workbox.routing.registerRoute(
+    <span style=color:#ff79c6>new</span> workbox.routing.NavigationRoute(<span style=color:#ff79c6>async</span> (params) =&gt; {
+        <span style=color:#ff79c6>try</span> {
+            <span style=color:#ff79c6>return</span> <span style=color:#ff79c6>await</span> (<span style=color:#ff79c6>new</span> workbox.strategies.NetworkFirst()).handle(params);
+        } <span style=color:#ff79c6>catch</span> (error) {
+            <span style=color:#ff79c6>return</span> caches.match(FALLBACK_HTML_URL, {
+                cacheName<span style=color:#ff79c6>:</span> CACHE_NAME,
+            });
+        }
+    })
+);
+
+workbox.core.setCacheNameDetails({
+    prefix<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#34;hazymoon&#34;</span>,
+    suffix<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#34;v1&#34;</span>,
+    precache<span style=color:#ff79c6>:</span><span style=color:#f1fa8c>&#39;precache&#39;</span>,
+    runtime<span style=color:#ff79c6>:</span><span style=color:#f1fa8c>&#39;runtime&#39;</span>
+});
+
+workbox.core.skipWaiting();
+
+workbox.core.clientsClaim();
+
+workbox.precaching.precacheAndRoute([]);
+
+workbox.precaching.cleanupOutdatedCaches();
+
+workbox.routing.registerRoute(
+    ({
+        request
+    }) =&gt; request.mode <span style=color:#ff79c6>===</span> <span style=color:#f1fa8c>&#39;navigate&#39;</span>,
+    <span style=color:#ff79c6>new</span> workbox.strategies.NetworkFirst({
+        cacheName<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#39;pages&#39;</span>,
+        plugins<span style=color:#ff79c6>:</span> [
+            <span style=color:#ff79c6>new</span> workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses<span style=color:#ff79c6>:</span> [<span style=color:#bd93f9>200</span>],
+            }),
+        ],
+    }),
+);
+
+<span style=color:#6272a4>// Images
+</span><span style=color:#6272a4></span>workbox.routing.registerRoute(
+    <span style=color:#f1fa8c>/\.(?:png|jpg|jpeg|gif|bmp|webp|svg|ico)$/</span>,
+    <span style=color:#ff79c6>new</span> workbox.strategies.CacheFirst({
+        cacheName<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#34;images&#34;</span>,
+        plugins<span style=color:#ff79c6>:</span> [
+            <span style=color:#ff79c6>new</span> workbox.expiration.ExpirationPlugin({
+                maxEntries<span style=color:#ff79c6>:</span> <span style=color:#bd93f9>1000</span>,
+                maxAgeSeconds<span style=color:#ff79c6>:</span> <span style=color:#bd93f9>60</span> <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>60</span> <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>24</span> <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>30</span>
+            }),
+            <span style=color:#ff79c6>new</span> workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses<span style=color:#ff79c6>:</span> [<span style=color:#bd93f9>0</span>, <span style=color:#bd93f9>200</span>]
+            })
+        ]
+    })
+);
+
+<span style=color:#6272a4>// Fonts
+</span><span style=color:#6272a4></span>workbox.routing.registerRoute(
+    <span style=color:#f1fa8c>/\.(?:eot|ttf|woff|woff2)$/</span>,
+    <span style=color:#ff79c6>new</span> workbox.strategies.CacheFirst({
+        cacheName<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#34;fonts&#34;</span>,
+        plugins<span style=color:#ff79c6>:</span> [
+            <span style=color:#ff79c6>new</span> workbox.expiration.ExpirationPlugin({
+                maxEntries<span style=color:#ff79c6>:</span> <span style=color:#bd93f9>1000</span>,
+                maxAgeSeconds<span style=color:#ff79c6>:</span> <span style=color:#bd93f9>60</span> <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>60</span> <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>24</span> <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>30</span>
+            }),
+            <span style=color:#ff79c6>new</span> workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses<span style=color:#ff79c6>:</span> [<span style=color:#bd93f9>0</span>, <span style=color:#bd93f9>200</span>]
+            })
+        ]
+    })
+);
+
+<span style=color:#6272a4>// Static Libraries
+</span><span style=color:#6272a4></span>workbox.routing.registerRoute(
+    <span style=color:#f1fa8c>/^https:\/\/cdn\.jsdelivr\.net/</span>,
+    <span style=color:#ff79c6>new</span> workbox.strategies.CacheFirst({
+        cacheName<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#34;static-libs&#34;</span>,
+        plugins<span style=color:#ff79c6>:</span> [
+            <span style=color:#ff79c6>new</span> workbox.expiration.ExpirationPlugin({
+                maxEntries<span style=color:#ff79c6>:</span> <span style=color:#bd93f9>1000</span>,
+                maxAgeSeconds<span style=color:#ff79c6>:</span> <span style=color:#bd93f9>60</span> <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>60</span> <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>24</span> <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>30</span>
+            }),
+            <span style=color:#ff79c6>new</span> workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses<span style=color:#ff79c6>:</span> [<span style=color:#bd93f9>0</span>, <span style=color:#bd93f9>200</span>]
+            })
+        ]
+    })
+);
+
+workbox.routing.registerRoute(
+    <span style=color:#6272a4>// Check to see if the request&#39;s destination is style for stylesheets, script for JavaScript, or worker for web worker
+</span><span style=color:#6272a4></span>    ({
+        request
+    }) =&gt;
+    request.destination <span style=color:#ff79c6>===</span> <span style=color:#f1fa8c>&#39;style&#39;</span> <span style=color:#ff79c6>||</span>
+    request.destination <span style=color:#ff79c6>===</span> <span style=color:#f1fa8c>&#39;script&#39;</span> <span style=color:#ff79c6>||</span>
+    request.destination <span style=color:#ff79c6>===</span> <span style=color:#f1fa8c>&#39;worker&#39;</span>,
+    <span style=color:#6272a4>// Use a Stale While Revalidate caching strategy
+</span><span style=color:#6272a4></span>    <span style=color:#ff79c6>new</span> workbox.strategies.StaleWhileRevalidate({
+        <span style=color:#6272a4>// Put all cached files in a cache named &#39;assets&#39;
+</span><span style=color:#6272a4></span>        cacheName<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#39;assets&#39;</span>,
+        plugins<span style=color:#ff79c6>:</span> [
+            <span style=color:#6272a4>// Ensure that only requests that result in a 200 status are cached
+</span><span style=color:#6272a4></span>            <span style=color:#ff79c6>new</span> workbox.cacheableResponse.CacheableResponse({
+                statuses<span style=color:#ff79c6>:</span> [<span style=color:#bd93f9>200</span>],
+            }),
+        ],
+    }),
+);
+
+workbox.routing.registerRoute(
+    <span style=color:#6272a4>// Check to see if the request&#39;s destination is style for an image
+</span><span style=color:#6272a4></span>    ({
+        request
+    }) =&gt; request.destination <span style=color:#ff79c6>===</span> <span style=color:#f1fa8c>&#39;image&#39;</span>,
+    <span style=color:#6272a4>// Use a Cache First caching strategy
+</span><span style=color:#6272a4></span>    <span style=color:#ff79c6>new</span> workbox.strategies.CacheFirst({
+        <span style=color:#6272a4>// Put all cached files in a cache named &#39;images&#39;
+</span><span style=color:#6272a4></span>        cacheName<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#39;images&#39;</span>,
+        plugins<span style=color:#ff79c6>:</span> [
+            <span style=color:#6272a4>// Don&#39;t cache more than 50 items, and expire them after 30 days
+</span><span style=color:#6272a4></span>            <span style=color:#ff79c6>new</span> workbox.expiration.ExpirationPlugin({
+                maxEntries<span style=color:#ff79c6>:</span> <span style=color:#bd93f9>50</span>,
+                maxAgeSeconds<span style=color:#ff79c6>:</span> <span style=color:#bd93f9>60</span> <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>60</span> <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>24</span> <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>30</span>, <span style=color:#6272a4>// 30 Days
+</span><span style=color:#6272a4></span>            }),
+            <span style=color:#6272a4>// Ensure that only requests that result in a 200 status are cached
+</span><span style=color:#6272a4></span>            <span style=color:#ff79c6>new</span> workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses<span style=color:#ff79c6>:</span> [<span style=color:#bd93f9>200</span>],
+            }),
+        ],
+    }),
+);
+
+workbox.googleAnalytics.initialize();
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><strong>sw.js 原生版本</strong></p>
+<div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">36
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">37
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">38
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">39
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">40
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">41
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">42
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">43
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">44
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">45
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">46
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">47
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">48
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">49
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">50
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">51
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">52
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">53
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#ff79c6>const</span> CACHE_NAME <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;hazymoon_sw&#39;</span>;
+<span style=color:#ff79c6>const</span> OFFLINE_URL <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;/offline.html&#39;</span>;
+<span style=color:#ff79c6>const</span> OFFLINE_IMAGE <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;/offline.jpg&#39;</span>;
+
+<span style=color:#6272a4>// 注册离线页面资源
+</span><span style=color:#6272a4></span>self.addEventListener(<span style=color:#f1fa8c>&#39;install&#39;</span>, (event) =&gt; {
+    event.waitUntil(
+        caches.open(CACHE_NAME).then((cache) =&gt; {
+            cache.add(<span style=color:#ff79c6>new</span> Request(OFFLINE_URL, {
+                cache<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#34;reload&#34;</span>
+            }))
+            cache.add(<span style=color:#ff79c6>new</span> Request(OFFLINE_IMAGE, {
+                cache<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#34;reload&#34;</span>
+            }))
+        })
+    );
+});
+
+<span style=color:#6272a4>// 如果支持，启用预加载
+</span><span style=color:#6272a4></span>self.addEventListener(<span style=color:#f1fa8c>&#39;activate&#39;</span>, (event) =&gt; {
+    event.waitUntil((<span style=color:#ff79c6>async</span> () =&gt; {
+        <span style=color:#ff79c6>if</span> (<span style=color:#f1fa8c>&#39;navigationPreload&#39;</span> <span style=color:#ff79c6>in</span> self.registration) {
+            <span style=color:#ff79c6>await</span> self.registration.navigationPreload.enable();
+        }
+    })());
+    self.clients.claim();
+});
+
+self.skipWaiting();
+
+self.addEventListener(<span style=color:#f1fa8c>&#39;fetch&#39;</span>, (event) =&gt; {
+    <span style=color:#ff79c6>if</span> (event.request.url.startsWith(self.location.origin) <span style=color:#ff79c6>||</span> event.request.url.match(<span style=color:#f1fa8c>/^https:\/\/cdn\.jsdelivr\.net/</span>)) {
+        event.respondWith((<span style=color:#ff79c6>async</span> () =&gt; {
+            <span style=color:#ff79c6>const</span> cache <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>await</span> caches.open(CACHE_NAME);
+            <span style=color:#ff79c6>try</span> {
+                <span style=color:#ff79c6>const</span> networkResponse <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>await</span> fetch(event.request);
+                <span style=color:#ff79c6>if</span> (networkResponse.status <span style=color:#ff79c6>===</span> <span style=color:#bd93f9>200</span>) {
+                    <span style=color:#6272a4>// 必须返回200才存储资源，防止出现错误，视频类的资源会返回206（成功但又没有完全成功）
+</span><span style=color:#6272a4></span>                    <span style=color:#ff79c6>await</span> cache.put(event.request, networkResponse.clone());
+                }
+                <span style=color:#ff79c6>return</span> networkResponse;
+            } <span style=color:#ff79c6>catch</span> (error) {
+                <span style=color:#6272a4>// 如果网络请求失败，返回离线页面
+</span><span style=color:#6272a4></span>                <span style=color:#8be9fd;font-style:italic>let</span> cachedResponse <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>await</span> cache.match(event.request);
+                <span style=color:#ff79c6>if</span> (cachedResponse) {
+                    <span style=color:#ff79c6>return</span> cachedResponse;
+                } <span style=color:#ff79c6>else</span> {
+                    <span style=color:#ff79c6>return</span> <span style=color:#ff79c6>await</span> cache.match(OFFLINE_URL);
+                }
+            }
+        })());
+    }
+});
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>offline.html</strong></p>
+<div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">36
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">37
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">38
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#ff79c6>&lt;!DOCTYPE html&gt;</span>
+&lt;<span style=color:#ff79c6>html</span> <span style=color:#50fa7b>lang</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;en&#34;</span>&gt;
+&lt;<span style=color:#ff79c6>head</span>&gt;
+    &lt;<span style=color:#ff79c6>meta</span> <span style=color:#50fa7b>charset</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;UTF-8&#34;</span>&gt;
+    &lt;<span style=color:#ff79c6>meta</span> <span style=color:#50fa7b>http-equiv</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;X-UA-Compatible&#34;</span> <span style=color:#50fa7b>content</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;IE=edge&#34;</span>&gt;
+    &lt;<span style=color:#ff79c6>meta</span> <span style=color:#50fa7b>name</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;viewport&#34;</span> <span style=color:#50fa7b>content</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+    &lt;<span style=color:#ff79c6>title</span>&gt;Sorry!&lt;/<span style=color:#ff79c6>title</span>&gt;
+
+    &lt;<span style=color:#ff79c6>style</span>&gt;
+        <span style=color:#ff79c6>body</span> {
+            <span style=color:#ff79c6>padding</span>: <span style=color:#bd93f9>20</span><span style=color:#8be9fd>px</span>;
+            <span style=color:#ff79c6>background-color</span>: <span style=color:#bd93f9>#f4f8fb</span>;
+        }
+        <span style=color:#ff79c6>img</span> {
+            <span style=color:#ff79c6>max-width</span>: <span style=color:#bd93f9>100</span><span style=color:#8be9fd>%</span>;
+            <span style=color:#ff79c6>max-height</span>: <span style=color:#bd93f9>50</span><span style=color:#8be9fd>vh</span>;
+            <span style=color:#ff79c6>display</span>: <span style=color:#ff79c6>block</span>;
+            <span style=color:#ff79c6>margin</span>: <span style=color:#bd93f9>30</span><span style=color:#8be9fd>px</span> <span style=color:#bd93f9>0</span>;
+        }
+        <span style=color:#ff79c6>h4</span><span style=color:#ff79c6>,</span> <span style=color:#ff79c6>h3</span><span style=color:#ff79c6>,</span> <span style=color:#ff79c6>h1</span><span style=color:#ff79c6>,</span> <span style=color:#ff79c6>a</span> {
+            <span style=color:#ff79c6>color</span>: <span style=color:#8be9fd;font-style:italic>rgb</span>(<span style=color:#bd93f9>55</span>, <span style=color:#bd93f9>65</span>, <span style=color:#bd93f9>81</span>);
+        }
+        <span style=color:#ff79c6>a</span> {
+            <span style=color:#ff79c6>display</span>: <span style=color:#ff79c6>block</span>;
+            <span style=color:#ff79c6>font-size</span>: <span style=color:#bd93f9>20</span><span style=color:#8be9fd>px</span>;
+        }
+    &lt;/<span style=color:#ff79c6>style</span>&gt;
+&lt;/<span style=color:#ff79c6>head</span>&gt;
+&lt;<span style=color:#ff79c6>body</span>&gt;
+    &lt;<span style=color:#ff79c6>h1</span>&gt;呕吼，完蛋!&lt;/<span style=color:#ff79c6>h1</span>&gt;
+    &lt;<span style=color:#ff79c6>h3</span>&gt;你的网络好像出现了点问题，但是没关系，你仍然可以访问你之前访问过的页面&lt;/<span style=color:#ff79c6>h3</span>&gt;
+    &lt;<span style=color:#ff79c6>h4</span>&gt;现在请尽情欣赏下面这只可爱的兔狲吧&lt;/<span style=color:#ff79c6>h4</span>&gt;
+
+    &lt;<span style=color:#ff79c6>img</span> <span style=color:#50fa7b>src</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;/offline.jpg&#34;</span> <span style=color:#50fa7b>alt</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;&#34;</span>&gt;
+
+    &lt;<span style=color:#ff79c6>a</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;/&#34;</span>&gt;点我返回首页&lt;/<span style=color:#ff79c6>a</span>&gt;
+&lt;/<span style=color:#ff79c6>body</span>&gt;
+&lt;/<span style=color:#ff79c6>html</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>现在页面在离线状态下访问未缓存的页面时将会显示</p>
+<p>
+<figure class=gallery-image style=flex-grow:133;flex-basis:320px>
+<picture><source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/09/20/service-worker-practice.html/screenshot_hu62130fd67e0bdb341b056f85b5e6410b_61876_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/09/20/service-worker-practice.html/screenshot_hu62130fd67e0bdb341b056f85b5e6410b_61876_1080x0_resize_q90_h2_catmullrom.webp 1080w" type=image/webp><img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/09/20/service-worker-practice.html/screenshot.jpg src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/09/20/service-worker-practice.html/screenshot_hu62130fd67e0bdb341b056f85b5e6410b_61876_50x0_resize_q90_catmullrom.jpg width=1123 height=840 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/09/20/service-worker-practice.html/screenshot_hu62130fd67e0bdb341b056f85b5e6410b_61876_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/09/20/service-worker-practice.html/screenshot_hu62130fd67e0bdb341b056f85b5e6410b_61876_1080x0_resize_q90_catmullrom.jpg 1080w" data-zoomable data-lazyload alt=offline.html>
+</picture>
+<figcaption>offline.html</figcaption>
+</figure></p>
+<h2 id=参考>参考</h2>
+<blockquote>
+<p><a class=link href=https://googlechrome.github.io/samples/service-worker/custom-offline-page/ target=_blank rel=noopener>https://googlechrome.github.io/samples/service-worker/custom-offline-page/</a>
+<a class=link href=https://github.com/reuixiy/hugo-theme-meme/blob/master/assets/js/sw.js target=_blank rel=noopener>https://github.com/reuixiy/hugo-theme-meme/blob/master/assets/js/sw.js</a>
+<a class=link href=https://www.bookstack.cn/read/pwa-book/03d0606a5d298800.md target=_blank rel=noopener>https://www.bookstack.cn/read/pwa-book/03d0606a5d298800.md</a>
+<a class=link href=https://developers.google.com/web/tools/workbox target=_blank rel=noopener>https://developers.google.com/web/tools/workbox</a></p>
+</blockquote>
+</section>
+<div class="border-b border-gray-300"></div>
+<div class="flex justify-between md:text-2xl p-4 text-xl">
+<a href=/2021/08/31/wordpress-to-hugo.html/ title=" 博客迁移到了 Hugo " class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible" style=visibility:visible>
+<span class="flex items-center text-5xl text-gray-400">
+<i class="eva eva-chevron-left-outline"></i>
+</span>
+<span>上一篇</span>
+</a>
+<div class="hidden items-center text-sm xl:flex">
+除特殊声明外，本博客一律使用 「
+<a href=https://creativecommons.org/licenses/by-nc-nd/4.0 target=_blank rel="noopener noreferrer" class=text-theme>署名 - 非商业性使用 - 禁止演绎 4.0</a>
+」许可协议进行授权
+</div>
+<div class="flex items-center text-sm xl:hidden">
+<a href=https://creativecommons.org/licenses/by-nc-nd/4.0 target=_blank rel="noopener noreferrer" class=text-theme>
+<img src=/images/Cc-by-nc-nd.svg alt="署名-非商业性使用-禁止演绎 4.0 国际" title="署名-非商业性使用-禁止演绎 4.0 国际" class=w-24>
+</a>
+</div>
+<a href title class="cursor-pointer flex hover:text-theme items-center text-gray-500 ts-3-ease invisible">
+<span>下一篇</span>
+<span class="flex items-center text-5xl text-gray-400">
+<i class="eva eva-chevron-right-outline"></i>
+</span>
+</a>
+</div></div>
+</div>
+</div>
+</main>
+<footer>
+<div class="com-footer line-height-1 py-4 px-6 text-sm flex flex-col md:flex-row md:justify-between items-center border-t text-gray-600">
+<div class="text-center mb-2 md:mb-0 flex">
+<span>Copyright © 2016 - 2077 Ice-Hazymoon |</span>
+<a href=/index.xml target=_blank class="hover:text-theme ml-2">RSS</a>
+<a href=/sitemap.xml target=_blank class="hover:text-theme ml-2">Sitemap</a>
+</div>
+<div id=run-time>本博客已低调存活：<b>0</b> 天 <b>0</b> 小时 <b>0</b> 分 <b>0</b> 秒</div>
+</div>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+<script async src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app_2975a92386b435476b475e4da5d33a15ba293c82.js></script>
+<script>'serviceWorker'in navigator&&window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')})</script>
+</footer></div>
+</div>
+<div onclick=window.backTop() class="back-top cursor-pointer">
+<div class=lt>
+<span>
+<i class="eva eva-arrow-upward-outline"></i>
+</span>
+</div>
+</div>
+</body>
+</html>
