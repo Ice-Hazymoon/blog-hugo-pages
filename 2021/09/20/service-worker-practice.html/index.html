@@ -9,7 +9,7 @@
 <meta itemprop=name content="Service Worker 实践">
 <link href=https://imiku.me/index.xml title="Service Worker 实践" type=application/rss+xml rel=alternate>
 <title>Service Worker 实践</title>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main_b34740b84d1b0bf15806fcd4ac21be011b7c9392.css>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main_14ab564caa1323350cbded127bf54bb446129107.css>
 <meta property="og:site_name" content="Service Worker 实践">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Service Worker 实践">
@@ -31,7 +31,7 @@
 <link href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/icon.png rel="shortcut icon">
 <link href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/icon.png rel=bookmark>
 <link rel=apple-touch-icon href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/icon.png>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Service Worker 实践","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2021\/09\/20\/service-worker-practice.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"Service Worker, PWA","wordcount":1262,"url":"https:\/\/imiku.me\/2021\/09\/20\/service-worker-practice.html\/","datePublished":"2021-09-20T17:28:26\u002b08:00","dateModified":"2021-09-20T17:28:26\u002b08:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Service Worker 实践","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2021\/09\/20\/service-worker-practice.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"Service Worker, PWA","wordcount":1271,"url":"https:\/\/imiku.me\/2021\/09\/20\/service-worker-practice.html\/","datePublished":"2021-09-20T17:28:26\u002b08:00","dateModified":"2021-09-20T17:28:26\u002b08:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
 </head><body>
 <div class="mx-auto relative shadow-lg">
 <div class="bg-white main md:max-w-4xl mx-auto relative xl:max-w-4xl flex flex-col justify-between">
@@ -99,7 +99,7 @@ Service Worker 实践
 <div class="bg-red-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
 <i class="eva eva-clock-outline mr-1"></i>
 <span>
-<time datetime=2021-09-20T17:28:26+08:00>2021-09-20 17:28:26</time>
+<time title="2021年09月20日 17:28:26" datetime=2021-09-20T17:28:26+08:00>2021-09-20 17:28:26</time>
 </span>
 </div>
 <span class="bg-green-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
@@ -112,7 +112,7 @@ Service Worker 实践
 </div>
 <div class="bg-blue-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
 <i class="eva eva-bar-chart-outline mr-1"></i>
-<span>1262 字</span>
+<span>1271 字</span>
 </div>
 </div>
 <div class="border-b border-gray-300 pb-6 px-6">
@@ -137,7 +137,7 @@ Service Worker 实践
 </a>
 </div>
 </div>
-<section class="article-content px-10 py-5 typo"><p>研究了一天，终于勉强能用了，但是目前还不支持使用 Pjax 的网站，例如本站，无法缓存 Pjax 加载的内容，目前还没有找到解决方法。</p>
+<section class="article-content px-6 md:px-10 py-5 typo"><p>研究了一天，终于勉强能用了，但是目前还不支持使用 Pjax 的网站，例如本站，无法缓存 Pjax 加载的内容，目前还没有找到解决方法。</p>
 <p>一开始使用的 Workbox 版本，但是为了一个简单的功能加载大量的资源有些不划算，所以改成了原生的版本，实现了以下功能</p>
 <ul>
 <li>采用 Network first 策略，网络优先，其次缓存</li>
@@ -145,7 +145,7 @@ Service Worker 实践
 <li>跳过视频资源缓存</li>
 <li>支持CDN资源，永久缓存</li>
 </ul>
-<p><code>manifest.json</code> 可以在 <a class=link href=https://www.simicart.com/manifest-generator.html/ target=_blank rel=noopener>https://www.simicart.com/manifest-generator.html/</a> 生成</p>
+<p><em>manifest.json</em> 可以在 <a class=link href=https://www.simicart.com/manifest-generator.html/ target=_blank rel=noopener>https://www.simicart.com/manifest-generator.html/</a> 生成</p>
 <hr>
 <p><strong>index.html</strong></p>
 <div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
@@ -174,7 +174,7 @@ Service Worker 实践
 &lt;/<span style=color:#ff79c6>script</span>&gt;
 </code></pre></td></tr></table>
 </div>
-</div><p><strong>sw.js workbox 版本</strong></p>
+</div><p><strong>sw.js workbox 版本（不推荐）</strong></p>
 <div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
 <table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
 <pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  1
@@ -489,8 +489,7 @@ workbox.routing.registerRoute(
 workbox.googleAnalytics.initialize();
 </code></pre></td></tr></table>
 </div>
-</div><hr>
-<p><strong>sw.js 原生版本</strong></p>
+</div><p><strong>sw.js 原生版本（推荐）</strong></p>
 <div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
 <table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
 <pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
@@ -740,7 +739,7 @@ self.addEventListener(<span style=color:#f1fa8c>&#39;fetch&#39;</span>, (event) 
 </div>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
-<script async src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app_b34740b84d1b0bf15806fcd4ac21be011b7c9392.js></script>
+<script async src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app_14ab564caa1323350cbded127bf54bb446129107.js></script>
 <script>'serviceWorker'in navigator&&window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')})</script>
 </footer></div>
 </div>
