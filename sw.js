@@ -1,6 +1,7 @@
 const CACHE_NAME = 'hazymoon_sw';
 const OFFLINE_URL = '/offline.html';
 const OFFLINE_IMAGE = '/offline.jpg';
+const CDN = 'https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest'
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
@@ -9,6 +10,12 @@ self.addEventListener('install', (event) => {
                 cache: "reload"
             }))
             cache.add(new Request(OFFLINE_IMAGE, {
+                cache: "reload"
+            }))
+            cache.add(new Request(CDN + '/images/search.svg', {
+                cache: "reload"
+            }))
+            cache.add(new Request(CDN + '/images/error.svg', {
                 cache: "reload"
             }))
         })
