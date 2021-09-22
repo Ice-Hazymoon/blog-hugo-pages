@@ -98,6 +98,24 @@ event.respondWith(handleRequest(event));
 >https://github.com/Ice-Hazymoon/status&lt;/a>，修改配置文件后直接使用&lt;/p>
 &lt;p>预览我的服务监控页面：&lt;a class="link" href="https://status.imiku.me/" target="_blank" rel="noopener"
 >https://status.imiku.me/&lt;/a>&lt;/p>
+&lt;p>
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 163;
+flex-basis: 392px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/09/22/create-a-status-page.html/status.imiku.me__hu53c811c0cb5e0cf4c7c46b313690ed44_97440_640x0_resize_q90_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/09/22/create-a-status-page.html/status.imiku.me__hu53c811c0cb5e0cf4c7c46b313690ed44_97440_1080x0_resize_q90_h2_catmullrom.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/09/22/create-a-status-page.html/status.imiku.me_.jpg"
+src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/09/22/create-a-status-page.html/status.imiku.me__hu53c811c0cb5e0cf4c7c46b313690ed44_97440_50x0_resize_q90_catmullrom.jpg"
+width="1200"
+height="733"
+data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/09/22/create-a-status-page.html/status.imiku.me__hu53c811c0cb5e0cf4c7c46b313690ed44_97440_640x0_resize_q90_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/09/22/create-a-status-page.html/status.imiku.me__hu53c811c0cb5e0cf4c7c46b313690ed44_97440_1080x0_resize_q90_catmullrom.jpg 1080w"
+data-zoomable
+data-lazyload
+alt="status.imiku.me">
+&lt;/picture>
+&lt;figcaption>status.imiku.me&lt;/figcaption>
+&lt;/figure>&lt;/p>
 &lt;h2 id="替代品">替代品&lt;/h2>
 &lt;p>如果你不喜欢用 UptimeRobot 的服务，可以尝试一下 &lt;a class="link" href="https://github.com/louislam/uptime-kuma" target="_blank" rel="noopener"
 >https://github.com/louislam/uptime-kuma&lt;/a>，但是需要有一台自己的服务器，而且不能自己监控自己，万一监控服务器炸了咋办 XD&lt;/p></description></item><item><title>Service Worker 实践</title><link>https://imiku.me/2021/09/20/service-worker-practice.html/</link><pubDate>Mon, 20 Sep 2021 17:28:26 +0800</pubDate><guid>https://imiku.me/2021/09/20/service-worker-practice.html/</guid><description>&lt;p>研究了一天，终于勉强能用了，但是目前还不支持使用 Pjax 的网站，例如本站，无法缓存 Pjax 加载的内容，目前还没有找到解决方法。&lt;/p>
