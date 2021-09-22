@@ -1,4 +1,106 @@
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>Ice-Hazymoon 的博客</title><atom:link href="%7balternate%20%7bRSS%20application/rss+xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/index.xml%20https://imiku.me/index.xml%7d" rel="self" type="application/rss+xml"/><link>https://imiku.me/</link><managingEditor>Ice-Hazymoon</managingEditor><description>向着现充的生活拼命咸鱼中</description><lastBuildDate>Mon, 20 Sep 2021 17:28:26 +0800</lastBuildDate><language>zh-cn</language><generator>Hugo -- gohugo.io</generator><item><title>Service Worker 实践</title><link>https://imiku.me/2021/09/20/service-worker-practice.html/</link><pubDate>Mon, 20 Sep 2021 17:28:26 +0800</pubDate><guid>https://imiku.me/2021/09/20/service-worker-practice.html/</guid><description>&lt;p>研究了一天，终于勉强能用了，但是目前还不支持使用 Pjax 的网站，例如本站，无法缓存 Pjax 加载的内容，目前还没有找到解决方法。&lt;/p>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>Ice-Hazymoon 的博客</title><atom:link href="%7balternate%20%7bRSS%20application/rss+xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/index.xml%20https://imiku.me/index.xml%7d" rel="self" type="application/rss+xml"/><link>https://imiku.me/</link><managingEditor>Ice-Hazymoon</managingEditor><description>向着现充的生活拼命咸鱼中</description><lastBuildDate>Wed, 22 Sep 2021 13:53:43 +0800</lastBuildDate><language>zh-cn</language><generator>Hugo -- gohugo.io</generator><item><title>创建一个自己的服务监控页面</title><link>https://imiku.me/2021/09/22/create-a-status-page.html/</link><pubDate>Wed, 22 Sep 2021 13:53:43 +0800</pubDate><guid>https://imiku.me/2021/09/22/create-a-status-page.html/</guid><description>&lt;p>用了很久的 &lt;a class="link" href="https://uptimerobot.com/" target="_blank" rel="noopener"
+>UptimeRobot&lt;/a> 的自定义页面居然收费了，不能忍，于是在 GitHub 上找到了 &lt;a class="link" href="https://github.com/yb/uptime-status" target="_blank" rel="noopener"
+>uptime-status&lt;/a> 这个项目，但是发现会暴露自己的 API 密钥 和域名，于是对 Cloudflare Workers 代码进行了一些修改，可以隐藏域名和 API 密钥&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#ff79c6">const&lt;/span> handleRequest &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#ff79c6">async&lt;/span> ({
+request
+}) =&amp;gt; {
+&lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> url &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#ff79c6">new&lt;/span> URL(request.url);
+&lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> body &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#ff79c6">await&lt;/span> request.text();
+&lt;span style="color:#ff79c6">try&lt;/span> {
+body &lt;span style="color:#ff79c6">=&lt;/span> JSON.parse(body);
+body.api_key &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;你的 UptimeRobot key&amp;#39;&lt;/span>
+body &lt;span style="color:#ff79c6">=&lt;/span> JSON.stringify(body);
+} &lt;span style="color:#ff79c6">catch&lt;/span> (error) {
+console.log(error)
+}
+&lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> response &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#ff79c6">await&lt;/span> fetch(&lt;span style="color:#f1fa8c">&amp;#39;https://api.uptimerobot.com&amp;#39;&lt;/span> &lt;span style="color:#ff79c6">+&lt;/span> url.pathname, {
+body&lt;span style="color:#ff79c6">:&lt;/span> body,
+headers&lt;span style="color:#ff79c6">:&lt;/span> {
+&lt;span style="color:#f1fa8c">&amp;#39;user-agent&amp;#39;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;Mozilla/4.0 MDN Example&amp;#39;&lt;/span>,
+&lt;span style="color:#f1fa8c">&amp;#39;content-type&amp;#39;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;application/json&amp;#39;&lt;/span>
+},
+method&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;POST&amp;#39;&lt;/span>, &lt;span style="color:#6272a4">// *GET, POST, PUT, DELETE, etc.
+&lt;/span>&lt;span style="color:#6272a4">&lt;/span> redirect&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;follow&amp;#39;&lt;/span>, &lt;span style="color:#6272a4">// manual, *follow, error
+&lt;/span>&lt;span style="color:#6272a4">&lt;/span> });
+response &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#ff79c6">new&lt;/span> Response(response.body, response);
+response.headers.set(&lt;span style="color:#f1fa8c">&amp;#39;Access-Control-Allow-Origin&amp;#39;&lt;/span>, &lt;span style="color:#f1fa8c">&amp;#39;*&amp;#39;&lt;/span>);
+response.headers.set(&lt;span style="color:#f1fa8c">&amp;#39;Access-Control-Allow-Methods&amp;#39;&lt;/span>, &lt;span style="color:#f1fa8c">&amp;#39;*&amp;#39;&lt;/span>);
+response.headers.set(&lt;span style="color:#f1fa8c">&amp;#39;Access-Control-Allow-Credentials&amp;#39;&lt;/span>, &lt;span style="color:#f1fa8c">&amp;#39;true&amp;#39;&lt;/span>);
+response.headers.set(&lt;span style="color:#f1fa8c">&amp;#39;Access-Control-Allow-Headers&amp;#39;&lt;/span>, &lt;span style="color:#f1fa8c">&amp;#39;Content-Type,Access-Token&amp;#39;&lt;/span>);
+response.headers.set(&lt;span style="color:#f1fa8c">&amp;#39;Access-Control-Expose-Headers&amp;#39;&lt;/span>, &lt;span style="color:#f1fa8c">&amp;#39;*&amp;#39;&lt;/span>);
+&lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> json &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#ff79c6">await&lt;/span> response.text()
+&lt;span style="color:#ff79c6">try&lt;/span> {
+json &lt;span style="color:#ff79c6">=&lt;/span> JSON.parse(json)
+&lt;span style="color:#6272a4">// 隐藏域名
+&lt;/span>&lt;span style="color:#6272a4">&lt;/span> json.monitors &lt;span style="color:#ff79c6">=&lt;/span> json.monitors.map(site =&amp;gt; {
+site.url &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#ff79c6">undefined&lt;/span>
+&lt;span style="color:#ff79c6">return&lt;/span> site
+});
+json &lt;span style="color:#ff79c6">=&lt;/span> JSON.stringify(json)
+} &lt;span style="color:#ff79c6">catch&lt;/span> (error) {}
+&lt;span style="color:#ff79c6">return&lt;/span> &lt;span style="color:#ff79c6">new&lt;/span> Response(json, response)
+}
+addEventListener(&lt;span style="color:#f1fa8c">&amp;#39;fetch&amp;#39;&lt;/span>, (event) =&amp;gt; {
+event.respondWith(handleRequest(event));
+});
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>顺便对原项目增加了一个 gh-pages 脚本，build 完以后运行 &lt;code>npm run gh-pages&lt;/code> 可以快速发布到 GitHub Pages 上&lt;/p>
+&lt;p>可以直接 fork &lt;a class="link" href="https://github.com/Ice-Hazymoon/status" target="_blank" rel="noopener"
+>https://github.com/Ice-Hazymoon/status&lt;/a>，修改配置文件后直接使用&lt;/p>
+&lt;p>预览我的服务监控页面：&lt;a class="link" href="https://status.imiku.me/" target="_blank" rel="noopener"
+>https://status.imiku.me/&lt;/a>&lt;/p>
+&lt;h2 id="替代品">替代品&lt;/h2>
+&lt;p>如果你不喜欢用 UptimeRobot 的服务，可以尝试一下 &lt;a class="link" href="https://github.com/louislam/uptime-kuma" target="_blank" rel="noopener"
+>https://github.com/louislam/uptime-kuma&lt;/a>，但是需要有一台自己的服务器，而且不能自己监控自己，万一监控服务器炸了咋办 XD&lt;/p></description></item><item><title>Service Worker 实践</title><link>https://imiku.me/2021/09/20/service-worker-practice.html/</link><pubDate>Mon, 20 Sep 2021 17:28:26 +0800</pubDate><guid>https://imiku.me/2021/09/20/service-worker-practice.html/</guid><description>&lt;p>研究了一天，终于勉强能用了，但是目前还不支持使用 Pjax 的网站，例如本站，无法缓存 Pjax 加载的内容，目前还没有找到解决方法。&lt;/p>
 &lt;p>一开始使用的 Workbox 版本，但是为了一个简单的功能加载大量的资源有些不划算，所以改成了原生的版本，实现了以下功能&lt;/p>
 &lt;ul>
 &lt;li>采用 Network first 策略，网络优先，其次缓存&lt;/li>
@@ -1387,4 +1489,4 @@ adb shell pm disable-user --user &lt;span style="color:#bd93f9">0&lt;/span> com.
 &lt;p>也可以尝试 &lt;a class="link" href="https://github.com/polygraphene/ALVR" target="_blank" rel="noopener"
 >ALVR&lt;/a>，一个免费的VR无线投屏软件&lt;/p>
 &lt;h2 id="其他">其他&lt;/h2>
-&lt;p>由于 Facebook 的封号措施很谜，强烈不建议前期在 Oculus 商店买东西，一旦Facebook 账号被封，所有游戏都没了，不止一个人遇到这个问题了。破解版游戏也不是不能玩（&lt;/p></description></item><item><title/><link>https://imiku.me/2020/06/16/1359.html/</link><pubDate>Tue, 16 Jun 2020 18:45:41 +0000</pubDate><guid>https://imiku.me/2020/06/16/1359.html/</guid><description>&lt;p>船新主题已上线，遇到问题请联系 &lt;a class="link" href="mailto:imiku.me@gmail.com" >imiku.me@gmail.com&lt;/a> 反馈&lt;/p></description></item></channel></rss>
+&lt;p>由于 Facebook 的封号措施很谜，强烈不建议前期在 Oculus 商店买东西，一旦Facebook 账号被封，所有游戏都没了，不止一个人遇到这个问题了。破解版游戏也不是不能玩（&lt;/p></description></item></channel></rss>
