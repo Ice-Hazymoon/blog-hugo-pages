@@ -1081,7 +1081,7 @@ data-lazyload
 &lt;/picture>
 &lt;/figure>&lt;/p>
 &lt;h3 id="归档页面">归档页面&lt;/h3>
-&lt;p>自动生成漂亮的&lt;a class="link" href="https://imiku.me/timeline/" >时间轴归档页面&lt;/a>&lt;/p>
+&lt;p>自动生成漂亮的&lt;a class="link" href="https://imiku.me/archives/" >时间轴归档页面&lt;/a>&lt;/p>
 &lt;p>
 &lt;figure
 class="gallery-image"
@@ -1153,11 +1153,11 @@ data-lazyload
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 自动 WEBP 支持&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 响应式图片&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> PWA 支持&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 文章更新时间&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 文章更新时间&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 夜间模式&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 语言切换&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> AMP 支持&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 分享功能&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 分享功能&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 阅读进度条&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 评论系统&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 文章编辑器&lt;/li>
