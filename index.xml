@@ -23,9 +23,12 @@
 &lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
 &lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 &lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#ff79c6">script&lt;/span> &lt;span style="color:#50fa7b">async&lt;/span> &lt;span style="color:#50fa7b">src&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;/translate-google.js&amp;#34;&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#ff79c6">script&lt;/span>&amp;gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#ff79c6">div&lt;/span> &lt;span style="color:#50fa7b">id&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;google_translate_element&amp;#34;&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#ff79c6">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#ff79c6">script&lt;/span> &lt;span style="color:#50fa7b">async&lt;/span> &lt;span style="color:#50fa7b">src&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;/translate-google.js&amp;#34;&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#ff79c6">script&lt;/span>&amp;gt;
 &amp;lt;&lt;span style="color:#ff79c6">script&lt;/span> &lt;span style="color:#50fa7b">type&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;text/javascript&amp;#34;&lt;/span>&amp;gt;
 &lt;span style="color:#8be9fd;font-style:italic">function&lt;/span> googleTranslateElementInit(){
 &lt;span style="color:#ff79c6">new&lt;/span> google.translate.TranslateElement({
