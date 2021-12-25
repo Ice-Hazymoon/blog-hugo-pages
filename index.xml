@@ -1,4 +1,1086 @@
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>Ice-Hazymoon 的博客</title><atom:link href="%7balternate%20%7bRSS%20application/rss+xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/index.xml%20https://imiku.me/index.xml%7d" rel="self" type="application/rss+xml"/><link>https://imiku.me/</link><managingEditor>Ice-Hazymoon</managingEditor><description>向着现充的生活拼命咸鱼中</description><lastBuildDate>Wed, 10 Nov 2021 11:15:02 +0800</lastBuildDate><language>zh-cn</language><generator>Hugo -- gohugo.io</generator><item><title>圆通快递丢件后续处理过程（全额赔付）</title><link>https://imiku.me/2021/11/10/complaint-against-yto-express.html/</link><pubDate>Wed, 10 Nov 2021 11:15:02 +0800</pubDate><guid>https://imiku.me/2021/11/10/complaint-against-yto-express.html/</guid><description>&lt;p>淘宝买的几件衣服部分需要退货，去驿站寄快递以后快递迟迟未更新，直到客服联系我，问我快递是不是丢件了，让我问一下快递那边&lt;/p>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>Ice-Hazymoon 的博客</title><atom:link href="%7balternate%20%7bRSS%20application/rss+xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/index.xml%20https://imiku.me/index.xml%7d" rel="self" type="application/rss+xml"/><link>https://imiku.me/</link><managingEditor>Ice-Hazymoon</managingEditor><description>向着现充的生活拼命咸鱼中</description><lastBuildDate>Sat, 25 Dec 2021 23:19:11 +0800</lastBuildDate><language>zh-cn</language><generator>Hugo -- gohugo.io</generator><item><title>R语言多元线性回归</title><link>https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/</link><pubDate>Sat, 25 Dec 2021 23:19:11 +0800</pubDate><guid>https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/</guid><description>&lt;p>简单看一下作业的介绍：&lt;/p>
+&lt;hr>
+&lt;blockquote>
+&lt;p>案例 1. 多重线性回归&lt;/p>
+&lt;p>活动类型: 团体&lt;/p>
+&lt;p>交割日期：2021年12月12 日西班牙时间截止时间 23:59&lt;/p>
+&lt;p>最大长度： 20 张幻灯片（每个团队成员至少一张）&lt;/p>
+&lt;p>目标：开发一个多元线性回归模型，该模型将小组选择的数据库中的三个变量（一个因变量和两个自变量）联系起来。最少 20 次观察。我建议您留下两个观察结果来进行预测。使用 R。&lt;/p>
+&lt;p>结构和内容：&lt;/p>
+&lt;ol>
+&lt;li>简介：数据库的目标和简要说明（来源和选择数据库的原因）&lt;/li>
+&lt;li>规格。所选主题的简要理论发展。变量和数学函数&lt;/li>
+&lt;li>基础数据处理（即，它将允许回答：是否存在非典型数据？是否存在缺失数据？变量之间是否存在关系？是否需要消除任何变量？）以及对所提出模型的估计和估计参数的解释&lt;/li>
+&lt;li>模型的验证或确认&lt;/li>
+&lt;li>预测&lt;/li>
+&lt;li>脚本&lt;/li>
+&lt;/ol>
+&lt;p>要开展这项活动，我建议您遵循已解决的【销售广告费用模型】的步骤。&lt;/p>
+&lt;p>最高评分 10 分，分配如下：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>内容&lt;/th>
+&lt;th>最高评价&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>介绍&lt;/td>
+&lt;td>1 分&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>规格&lt;/td>
+&lt;td>1 分&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>基本处理、估计和解释&lt;/td>
+&lt;td>3分&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>查看&lt;/td>
+&lt;td>2.5分&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>预言&lt;/td>
+&lt;td>1 分&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>脚本&lt;/td>
+&lt;td>1.5分&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/blockquote>
+&lt;hr>
+&lt;p>数据来自：&lt;a class="link" href="https://www.kaggle.com/econdata/climate-change"target="_blank" rel="noopener">https://www.kaggle.com/econdata/climate-change&lt;/a>&lt;/p>
+&lt;p>设置程序内的语言：&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-R" data-lang="R">&lt;span style="color:#50fa7b">Sys.setlocale&lt;/span>(&lt;span style="color:#f1fa8c">&amp;#34;LC_TIME&amp;#34;&lt;/span>, &lt;span style="color:#f1fa8c">&amp;#34;English&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">options&lt;/span>(stringsAsFactors &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#ff79c6">FALSE&lt;/span>)
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>导入所需要的包&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-R" data-lang="R">&lt;span style="color:#50fa7b">library&lt;/span>(xts)
+&lt;span style="color:#50fa7b">library&lt;/span>(ggplot2)
+&lt;span style="color:#50fa7b">library&lt;/span>(reshape2)
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>读取数据并进行预览和检查数据类型&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-R" data-lang="R">csv_data &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">read.csv&lt;/span>(&lt;span style="color:#f1fa8c">&amp;#34;./climate_change.csv&amp;#34;&lt;/span>, header&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#ff79c6">TRUE&lt;/span>, sep&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;,&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">head&lt;/span>(csv_data, &lt;span style="color:#bd93f9">20&lt;/span>)
+&lt;span style="color:#50fa7b">str&lt;/span>(csv_data)
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback"> Date CO2 CH4 Temp N2O
+1 1983-05 345.96 1638.59 0.109 303.677
+2 1983-06 345.52 1633.71 0.118 303.746
+3 1983-07 344.15 1633.22 0.137 303.795
+4 1983-08 342.25 1631.35 0.176 303.839
+5 1983-09 340.17 1648.40 0.149 303.901
+6 1983-10 340.30 1663.79 0.093 303.970
+7 1983-11 341.53 1658.23 0.232 304.032
+8 1983-12 343.07 1654.31 0.078 304.082
+9 1984-01 344.05 1658.98 0.089 304.130
+10 1984-02 344.77 1656.48 0.013 304.194
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>创建一些变量&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-R" data-lang="R">Date &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> csv_data&lt;span style="color:#ff79c6">$&lt;/span>Date
+Temp &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> csv_data&lt;span style="color:#ff79c6">$&lt;/span>Temp
+CH4 &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> csv_data&lt;span style="color:#ff79c6">$&lt;/span>CH4
+CO2 &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> csv_data&lt;span style="color:#ff79c6">$&lt;/span>CO2
+N2O &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> csv_data&lt;span style="color:#ff79c6">$&lt;/span>N2O
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>设置日期为索引和没有日期的 datafram，并查看最大值、最小值、方差等等&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-R" data-lang="R">format_date &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">as.Date&lt;/span>(&lt;span style="color:#50fa7b">paste0&lt;/span>(&lt;span style="color:#50fa7b">as.character&lt;/span>(csv_data[,&lt;span style="color:#bd93f9">1&lt;/span>]), &lt;span style="color:#f1fa8c">&amp;#34;-01&amp;#34;&lt;/span>), format&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#39;%Y-%m-%d&amp;#39;&lt;/span>)
+data &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">xts&lt;/span>(csv_data[,&lt;span style="color:#bd93f9">-1&lt;/span>], order.by &lt;span style="color:#ff79c6">=&lt;/span> format_date)
+&lt;span style="color:#50fa7b">head&lt;/span>(data, &lt;span style="color:#bd93f9">10&lt;/span>)
+mdata &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">data.frame&lt;/span>(Temp, CH4, CO2, N2O)
+&lt;span style="color:#50fa7b">summary&lt;/span>(mdata)
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback"> CO2 CH4 Temp N2O
+1983-05-01 345.96 1638.59 0.109 303.677
+1983-06-01 345.52 1633.71 0.118 303.746
+1983-07-01 344.15 1633.22 0.137 303.795
+1983-08-01 342.25 1631.35 0.176 303.839
+1983-09-01 340.17 1648.40 0.149 303.901
+1983-10-01 340.30 1663.79 0.093 303.970
+1983-11-01 341.53 1658.23 0.232 304.032
+1983-12-01 343.07 1654.31 0.078 304.082
+1984-01-01 344.05 1658.98 0.089 304.130
+1984-02-01 344.77 1656.48 0.013 304.194
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback"> Temp CH4 CO2 N2O
+Min. :-0.2820 Min. :1630 Min. :340.2 Min. :303.7
+1st Qu.: 0.1217 1st Qu.:1722 1st Qu.:353.0 1st Qu.:308.1
+Median : 0.2480 Median :1764 Median :361.7 Median :311.5
+Mean : 0.2568 Mean :1750 Mean :363.2 Mean :312.4
+3rd Qu.: 0.4073 3rd Qu.:1787 3rd Qu.:373.5 3rd Qu.:317.0
+Max. : 0.7390 Max. :1814 Max. :388.5 Max. :322.2
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>创建每个变量的时间序列，这里的 &lt;code>png()&lt;/code> 和 &lt;code>dev.off()&lt;/code> 用于将生成的图片保存到本地，你也可以删除它直接在 R 语言程序中预览&lt;/p>
+&lt;p>由于作业需要，我创建了四张图片，你也可以将四张表格放在一张图片上。&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-R" data-lang="R">&lt;span style="color:#6272a4"># 温度时间序列&lt;/span>
+&lt;span style="color:#50fa7b">png&lt;/span>(file &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;./images/time_series_Temp.png&amp;#34;&lt;/span>, width &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">800&lt;/span>, height &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">525&lt;/span>, res &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">100&lt;/span>)
+&lt;span style="color:#50fa7b">par&lt;/span>(oma&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#50fa7b">c&lt;/span>(&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>))
+time_series_Temp &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">xts&lt;/span>(Temp, order.by &lt;span style="color:#ff79c6">=&lt;/span> format_date)
+(time_series_Temp, main&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Series temporales de temperatura&amp;#34;&lt;/span>, xlab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Date&amp;#34;&lt;/span>, ylab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Temp&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">dev.off&lt;/span>()
+&lt;span style="color:#6272a4"># CO2时间序列&lt;/span>
+&lt;span style="color:#50fa7b">png&lt;/span>(file &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;./images/time_series_CO2.png&amp;#34;&lt;/span>, width &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">800&lt;/span>, height &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">525&lt;/span>, res &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">100&lt;/span>)
+&lt;span style="color:#50fa7b">par&lt;/span>(oma&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#50fa7b">c&lt;/span>(&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>))
+time_series_CO2 &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">xts&lt;/span>(CO2, order.by &lt;span style="color:#ff79c6">=&lt;/span> format_date)
+&lt;span style="color:#50fa7b">plot&lt;/span>(time_series_CO2, main&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Series temporales de CO2&amp;#34;&lt;/span>, xlab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Date&amp;#34;&lt;/span>, ylab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;CO2&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">dev.off&lt;/span>()
+&lt;span style="color:#6272a4"># CH4时间序列&lt;/span>
+&lt;span style="color:#50fa7b">png&lt;/span>(file &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;./images/time_series_CH4.png&amp;#34;&lt;/span>, width &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">800&lt;/span>, height &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">525&lt;/span>, res &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">100&lt;/span>)
+&lt;span style="color:#50fa7b">par&lt;/span>(oma&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#50fa7b">c&lt;/span>(&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>))
+time_series_CH4 &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">xts&lt;/span>(CH4, order.by &lt;span style="color:#ff79c6">=&lt;/span> format_date)
+&lt;span style="color:#50fa7b">plot&lt;/span>(time_series_CH4, main&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Series temporales de CH4&amp;#34;&lt;/span>, xlab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Date&amp;#34;&lt;/span>, ylab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;CH4&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">dev.off&lt;/span>()
+&lt;span style="color:#6272a4"># N2O时间序列&lt;/span>
+&lt;span style="color:#50fa7b">png&lt;/span>(file &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;./images/time_series_N2O.png&amp;#34;&lt;/span>, width &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">800&lt;/span>, height &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">525&lt;/span>, res &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">100&lt;/span>)
+&lt;span style="color:#50fa7b">par&lt;/span>(oma&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#50fa7b">c&lt;/span>(&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>))
+time_series_N2O &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">xts&lt;/span>(N2O, order.by &lt;span style="color:#ff79c6">=&lt;/span> format_date)
+&lt;span style="color:#50fa7b">plot&lt;/span>(time_series_N2O, main&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Series temporales de N2O&amp;#34;&lt;/span>, xlab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Date&amp;#34;&lt;/span>, ylab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;N2O&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">dev.off&lt;/span>()
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow:152;
+flex-basis:365px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_CH4_hu089112eb5def8a67284c9c4662d2bc23_19116_640x0_resize_q98_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_CH4_hu089112eb5def8a67284c9c4662d2bc23_19116_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_CH4.png"src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_CH4_hu089112eb5def8a67284c9c4662d2bc23_19116_50x0_resize_catmullrom_3.png"width="800"height="525"data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_CH4_hu089112eb5def8a67284c9c4662d2bc23_19116_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_CH4_hu089112eb5def8a67284c9c4662d2bc23_19116_1080x0_resize_catmullrom_3.png 1080w"alt="time_series_CH4"data-zoomable
+data-lazyload
+>
+&lt;/picture>&lt;figcaption>time_series_CH4&lt;/figcaption>&lt;/figure>
+&lt;figure
+class="gallery-image"
+style="
+flex-grow:152;
+flex-basis:365px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_CO2_hu77f862d85164e7b1aec4350b3c388b09_19456_640x0_resize_q98_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_CO2_hu77f862d85164e7b1aec4350b3c388b09_19456_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_CO2.png"src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_CO2_hu77f862d85164e7b1aec4350b3c388b09_19456_50x0_resize_catmullrom_3.png"width="800"height="525"data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_CO2_hu77f862d85164e7b1aec4350b3c388b09_19456_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_CO2_hu77f862d85164e7b1aec4350b3c388b09_19456_1080x0_resize_catmullrom_3.png 1080w"alt="time_series_CO2"data-zoomable
+data-lazyload
+>
+&lt;/picture>&lt;figcaption>time_series_CO2&lt;/figcaption>&lt;/figure>&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow:152;
+flex-basis:365px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_N2O_hu677954a11bba0e4f9e81d96fe9ea0283_18430_640x0_resize_q98_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_N2O_hu677954a11bba0e4f9e81d96fe9ea0283_18430_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_N2O.png"src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_N2O_hu677954a11bba0e4f9e81d96fe9ea0283_18430_50x0_resize_catmullrom_3.png"width="800"height="525"data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_N2O_hu677954a11bba0e4f9e81d96fe9ea0283_18430_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_N2O_hu677954a11bba0e4f9e81d96fe9ea0283_18430_1080x0_resize_catmullrom_3.png 1080w"alt="time_series_N2O"data-zoomable
+data-lazyload
+>
+&lt;/picture>&lt;figcaption>time_series_N2O&lt;/figcaption>&lt;/figure>
+&lt;figure
+class="gallery-image"
+style="
+flex-grow:152;
+flex-basis:365px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_Temp_hud87d154a50733849de04b1d2bc0b3bd2_18731_640x0_resize_q98_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_Temp_hud87d154a50733849de04b1d2bc0b3bd2_18731_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_Temp.png"src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_Temp_hud87d154a50733849de04b1d2bc0b3bd2_18731_50x0_resize_catmullrom_3.png"width="800"height="525"data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_Temp_hud87d154a50733849de04b1d2bc0b3bd2_18731_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/time_series_Temp_hud87d154a50733849de04b1d2bc0b3bd2_18731_1080x0_resize_catmullrom_3.png 1080w"alt="time_series_Temp"data-zoomable
+data-lazyload
+>
+&lt;/picture>&lt;figcaption>time_series_Temp&lt;/figcaption>&lt;/figure>&lt;/p>
+&lt;p>创建所有变量之间的关系图&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-R" data-lang="R">&lt;span style="color:#50fa7b">png&lt;/span>(file &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;./images/correlation_all.png&amp;#34;&lt;/span>, width &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">800&lt;/span>, height &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">525&lt;/span>, res &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">100&lt;/span>)
+&lt;span style="color:#50fa7b">par&lt;/span>(oma&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#50fa7b">c&lt;/span>(&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>))
+&lt;span style="color:#50fa7b">plot&lt;/span>(mdata)
+&lt;span style="color:#50fa7b">dev.off&lt;/span>()
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow:152;
+flex-basis:365px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/correlation_all_hu6ebb71033f42ecfbbae3e35fa45db8df_34074_640x0_resize_q98_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/correlation_all_hu6ebb71033f42ecfbbae3e35fa45db8df_34074_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/correlation_all.png"src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/correlation_all_hu6ebb71033f42ecfbbae3e35fa45db8df_34074_50x0_resize_catmullrom_3.png"width="800"height="525"data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/correlation_all_hu6ebb71033f42ecfbbae3e35fa45db8df_34074_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/correlation_all_hu6ebb71033f42ecfbbae3e35fa45db8df_34074_1080x0_resize_catmullrom_3.png 1080w"alt="correlation_all"data-zoomable
+data-lazyload
+>
+&lt;/picture>&lt;figcaption>correlation_all&lt;/figcaption>&lt;/figure>&lt;/p>
+&lt;p>创建每个变量之间的散点图&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-R" data-lang="R">&lt;span style="color:#6272a4"># 散点图 温度-N2O&lt;/span>
+&lt;span style="color:#50fa7b">png&lt;/span>(file &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;./images/scatter_Temp_N2O.png&amp;#34;&lt;/span>, width &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">600&lt;/span>, height &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">525&lt;/span>, res &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">100&lt;/span>)
+&lt;span style="color:#50fa7b">par&lt;/span>(oma&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#50fa7b">c&lt;/span>(&lt;span style="color:#bd93f9">1&lt;/span>,&lt;span style="color:#bd93f9">1&lt;/span>,&lt;span style="color:#bd93f9">1&lt;/span>,&lt;span style="color:#bd93f9">1&lt;/span>))
+model_Temp_y_N2O &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">lm&lt;/span>(Temp&lt;span style="color:#ff79c6">~&lt;/span>N2O, data&lt;span style="color:#ff79c6">=&lt;/span>mdata)
+coef &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">coef&lt;/span>(model_Temp_y_N2O)
+eq &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#50fa7b">paste&lt;/span>(&lt;span style="color:#f1fa8c">&amp;#39;y =&amp;#39;&lt;/span>, &lt;span style="color:#50fa7b">round&lt;/span>(&lt;span style="color:#50fa7b">coef&lt;/span>(model_Temp_y_N2O)[[2]], &lt;span style="color:#bd93f9">3&lt;/span>), &lt;span style="color:#f1fa8c">&amp;#39;x&amp;#39;&lt;/span>, &lt;span style="color:#f1fa8c">&amp;#39;+&amp;#39;&lt;/span>, &lt;span style="color:#50fa7b">round&lt;/span>(&lt;span style="color:#50fa7b">coef&lt;/span>(model_Temp_y_N2O)[[1]], &lt;span style="color:#bd93f9">3&lt;/span>))
+&lt;span style="color:#50fa7b">plot&lt;/span>(N2O, Temp, xlab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;N2O&amp;#34;&lt;/span>, ylab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Temperatura&amp;#34;&lt;/span>, pch&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#bd93f9">20&lt;/span>, main&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;N2O y Temperatura&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">abline&lt;/span>(model_Temp_y_N2O, col&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;red&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">mtext&lt;/span>(eq, side &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">3&lt;/span>, line&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#bd93f9">1&lt;/span>, adj &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0&lt;/span>, padj &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">1&lt;/span>, col&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;blue&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">dev.off&lt;/span>()
+&lt;span style="color:#6272a4"># 散点图 温度-CH4&lt;/span>
+&lt;span style="color:#50fa7b">png&lt;/span>(file &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;./images/scatter_Temp_CH4.png&amp;#34;&lt;/span>, width &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">600&lt;/span>, height &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">525&lt;/span>, res &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">100&lt;/span>)
+&lt;span style="color:#50fa7b">par&lt;/span>(oma&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#50fa7b">c&lt;/span>(&lt;span style="color:#bd93f9">1&lt;/span>,&lt;span style="color:#bd93f9">1&lt;/span>,&lt;span style="color:#bd93f9">1&lt;/span>,&lt;span style="color:#bd93f9">1&lt;/span>))
+model_Temp_y_CH4 &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">lm&lt;/span>(Temp&lt;span style="color:#ff79c6">~&lt;/span>CH4, data&lt;span style="color:#ff79c6">=&lt;/span>mdata)
+coef &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">coef&lt;/span>(model_Temp_y_CH4)
+eq &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#50fa7b">paste&lt;/span>(&lt;span style="color:#f1fa8c">&amp;#39;y =&amp;#39;&lt;/span>, &lt;span style="color:#50fa7b">round&lt;/span>(&lt;span style="color:#50fa7b">coef&lt;/span>(model_Temp_y_CH4)[[2]], &lt;span style="color:#bd93f9">3&lt;/span>), &lt;span style="color:#f1fa8c">&amp;#39;x&amp;#39;&lt;/span>, &lt;span style="color:#f1fa8c">&amp;#39;+&amp;#39;&lt;/span>, &lt;span style="color:#50fa7b">round&lt;/span>(&lt;span style="color:#50fa7b">coef&lt;/span>(model_Temp_y_CH4)[[1]], &lt;span style="color:#bd93f9">3&lt;/span>))
+&lt;span style="color:#50fa7b">plot&lt;/span>(CH4, Temp, xlab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;CH4&amp;#34;&lt;/span>, ylab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Temperatura&amp;#34;&lt;/span>, pch&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#bd93f9">20&lt;/span>, main&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;CH4 y Temperatura&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">abline&lt;/span>(model_Temp_y_CH4, col&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;red&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">mtext&lt;/span>(eq, side &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">3&lt;/span>, line&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#bd93f9">1&lt;/span>, adj &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0&lt;/span>, padj &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">1&lt;/span>, col&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;blue&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">dev.off&lt;/span>()
+&lt;span style="color:#6272a4"># 散点图 温度-CO2&lt;/span>
+&lt;span style="color:#50fa7b">png&lt;/span>(file &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;./images/scatter_Temp_CO2.png&amp;#34;&lt;/span>, width &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">600&lt;/span>, height &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">525&lt;/span>, res &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">100&lt;/span>)
+&lt;span style="color:#50fa7b">par&lt;/span>(oma&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#50fa7b">c&lt;/span>(&lt;span style="color:#bd93f9">1&lt;/span>,&lt;span style="color:#bd93f9">1&lt;/span>,&lt;span style="color:#bd93f9">1&lt;/span>,&lt;span style="color:#bd93f9">1&lt;/span>))
+model_Temp_y_CO2 &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">lm&lt;/span>(Temp&lt;span style="color:#ff79c6">~&lt;/span>CO2, data&lt;span style="color:#ff79c6">=&lt;/span>mdata)
+coef &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">coef&lt;/span>(model_Temp_y_CO2)
+eq &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#50fa7b">paste&lt;/span>(&lt;span style="color:#f1fa8c">&amp;#39;y =&amp;#39;&lt;/span>, &lt;span style="color:#50fa7b">round&lt;/span>(&lt;span style="color:#50fa7b">coef&lt;/span>(model_Temp_y_CO2)[[2]], &lt;span style="color:#bd93f9">3&lt;/span>), &lt;span style="color:#f1fa8c">&amp;#39;x&amp;#39;&lt;/span>, &lt;span style="color:#f1fa8c">&amp;#39;+&amp;#39;&lt;/span>, &lt;span style="color:#50fa7b">round&lt;/span>(&lt;span style="color:#50fa7b">coef&lt;/span>(model_Temp_y_CO2)[[1]], &lt;span style="color:#bd93f9">3&lt;/span>))
+&lt;span style="color:#50fa7b">plot&lt;/span>(CO2, Temp, xlab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;CO2&amp;#34;&lt;/span>, ylab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Temperatura&amp;#34;&lt;/span>, pch&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#bd93f9">20&lt;/span>, main&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;CO2 y Temperatura&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">abline&lt;/span>(model_Temp_y_CO2, col&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;red&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">mtext&lt;/span>(eq, side &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">3&lt;/span>, line&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#bd93f9">1&lt;/span>, adj &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0&lt;/span>, padj &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">1&lt;/span>, col&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;blue&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">dev.off&lt;/span>()
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow:114;
+flex-basis:274px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_N2O_hu12f651cbf35ad75e342117fab478d896_17007_640x0_resize_q98_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_N2O_hu12f651cbf35ad75e342117fab478d896_17007_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_N2O.png"src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_N2O_hu12f651cbf35ad75e342117fab478d896_17007_50x0_resize_catmullrom_3.png"width="600"height="525"data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_N2O_hu12f651cbf35ad75e342117fab478d896_17007_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_N2O_hu12f651cbf35ad75e342117fab478d896_17007_1080x0_resize_catmullrom_3.png 1080w"alt="scatter_Temp_N2O"data-zoomable
+data-lazyload
+>
+&lt;/picture>&lt;figcaption>scatter_Temp_N2O&lt;/figcaption>&lt;/figure>
+&lt;figure
+class="gallery-image"
+style="
+flex-grow:114;
+flex-basis:274px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_CO2_hub6d39bc3efa9c2de07980905a2ce24eb_18628_640x0_resize_q98_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_CO2_hub6d39bc3efa9c2de07980905a2ce24eb_18628_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_CO2.png"src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_CO2_hub6d39bc3efa9c2de07980905a2ce24eb_18628_50x0_resize_catmullrom_3.png"width="600"height="525"data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_CO2_hub6d39bc3efa9c2de07980905a2ce24eb_18628_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_CO2_hub6d39bc3efa9c2de07980905a2ce24eb_18628_1080x0_resize_catmullrom_3.png 1080w"alt="scatter_Temp_CO2"data-zoomable
+data-lazyload
+>
+&lt;/picture>&lt;figcaption>scatter_Temp_CO2&lt;/figcaption>&lt;/figure>
+&lt;figure
+class="gallery-image"
+style="
+flex-grow:114;
+flex-basis:274px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_N2O_hu12f651cbf35ad75e342117fab478d896_17007_640x0_resize_q98_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_N2O_hu12f651cbf35ad75e342117fab478d896_17007_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_N2O.png"src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_N2O_hu12f651cbf35ad75e342117fab478d896_17007_50x0_resize_catmullrom_3.png"width="600"height="525"data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_N2O_hu12f651cbf35ad75e342117fab478d896_17007_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_N2O_hu12f651cbf35ad75e342117fab478d896_17007_1080x0_resize_catmullrom_3.png 1080w"alt="scatter_Temp_N2O"data-zoomable
+data-lazyload
+>
+&lt;/picture>&lt;figcaption>scatter_Temp_N2O&lt;/figcaption>&lt;/figure>&lt;/p>
+&lt;p>创建直方图&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-R" data-lang="R">&lt;span style="color:#6272a4"># 因变量(温度)直方图&lt;/span>
+&lt;span style="color:#50fa7b">png&lt;/span>(file &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;./images/hist_Temp.png&amp;#34;&lt;/span>, width &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">800&lt;/span>, height &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">525&lt;/span>, res &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">100&lt;/span>)
+&lt;span style="color:#50fa7b">par&lt;/span>(oma&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#50fa7b">c&lt;/span>(&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>))
+&lt;span style="color:#50fa7b">hist&lt;/span>(Temp, breaks&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#bd93f9">100&lt;/span>, col&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;pink&amp;#34;&lt;/span>, main&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Histograma de Temperatura&amp;#34;&lt;/span>, xlab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Temperatura&amp;#34;&lt;/span>, ylab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Frecuencia&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">dev.off&lt;/span>()
+&lt;span style="color:#6272a4"># 自变量(CH4)直方图&lt;/span>
+&lt;span style="color:#50fa7b">png&lt;/span>(file &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;./images/hist_CH4.png&amp;#34;&lt;/span>, width &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">800&lt;/span>, height &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">525&lt;/span>, res &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">100&lt;/span>)
+&lt;span style="color:#50fa7b">par&lt;/span>(oma&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#50fa7b">c&lt;/span>(&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>))
+&lt;span style="color:#50fa7b">hist&lt;/span>(CH4, breaks&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#bd93f9">100&lt;/span>, col&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;pink&amp;#34;&lt;/span>, main&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Histograma de CH4&amp;#34;&lt;/span>, xlab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;CH4&amp;#34;&lt;/span>, ylab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Frecuencia&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">dev.off&lt;/span>()
+&lt;span style="color:#6272a4"># 自变量(CO2)直方图&lt;/span>
+&lt;span style="color:#50fa7b">png&lt;/span>(file &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;./images/hist_CO2.png&amp;#34;&lt;/span>, width &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">800&lt;/span>, height &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">525&lt;/span>, res &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">100&lt;/span>)
+&lt;span style="color:#50fa7b">par&lt;/span>(oma&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#50fa7b">c&lt;/span>(&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>))
+&lt;span style="color:#50fa7b">hist&lt;/span>(CO2, breaks&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#bd93f9">100&lt;/span>, col&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;pink&amp;#34;&lt;/span>, main&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Histograma de CO2&amp;#34;&lt;/span>, xlab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;CO2&amp;#34;&lt;/span>, ylab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Frecuencia&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">dev.off&lt;/span>()
+&lt;span style="color:#6272a4"># 自变量(N2O)直方图&lt;/span>
+&lt;span style="color:#50fa7b">png&lt;/span>(file &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;./images/hist_N2O.png&amp;#34;&lt;/span>, width &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">800&lt;/span>, height &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">525&lt;/span>, res &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">100&lt;/span>)
+&lt;span style="color:#50fa7b">par&lt;/span>(oma&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#50fa7b">c&lt;/span>(&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>))
+&lt;span style="color:#50fa7b">hist&lt;/span>(N2O, breaks&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#bd93f9">100&lt;/span>, col&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;pink&amp;#34;&lt;/span>, main&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Histograma de N2O&amp;#34;&lt;/span>, xlab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;N2O&amp;#34;&lt;/span>, ylab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Frecuencia&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">dev.off&lt;/span>()
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow:152;
+flex-basis:365px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_CH4_hu154aa4296d05094929ea2b33a649c361_12069_640x0_resize_q98_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_CH4_hu154aa4296d05094929ea2b33a649c361_12069_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_CH4.png"src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_CH4_hu154aa4296d05094929ea2b33a649c361_12069_50x0_resize_catmullrom_3.png"width="800"height="525"data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_CH4_hu154aa4296d05094929ea2b33a649c361_12069_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_CH4_hu154aa4296d05094929ea2b33a649c361_12069_1080x0_resize_catmullrom_3.png 1080w"alt="hist_CH4"data-zoomable
+data-lazyload
+>
+&lt;/picture>&lt;figcaption>hist_CH4&lt;/figcaption>&lt;/figure>
+&lt;figure
+class="gallery-image"
+style="
+flex-grow:152;
+flex-basis:365px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_CO2_hu242f993ae27f559bbe85ec50a200124f_13716_640x0_resize_q98_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_CO2_hu242f993ae27f559bbe85ec50a200124f_13716_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_CO2.png"src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_CO2_hu242f993ae27f559bbe85ec50a200124f_13716_50x0_resize_catmullrom_3.png"width="800"height="525"data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_CO2_hu242f993ae27f559bbe85ec50a200124f_13716_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_CO2_hu242f993ae27f559bbe85ec50a200124f_13716_1080x0_resize_catmullrom_3.png 1080w"alt="hist_CO2"data-zoomable
+data-lazyload
+>
+&lt;/picture>&lt;figcaption>hist_CO2&lt;/figcaption>&lt;/figure>&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow:152;
+flex-basis:365px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_N2O_hu464c9133aece86416cb98c2a994ccb79_12464_640x0_resize_q98_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_N2O_hu464c9133aece86416cb98c2a994ccb79_12464_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_N2O.png"src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_N2O_hu464c9133aece86416cb98c2a994ccb79_12464_50x0_resize_catmullrom_3.png"width="800"height="525"data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_N2O_hu464c9133aece86416cb98c2a994ccb79_12464_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_N2O_hu464c9133aece86416cb98c2a994ccb79_12464_1080x0_resize_catmullrom_3.png 1080w"alt="hist_N2O"data-zoomable
+data-lazyload
+>
+&lt;/picture>&lt;figcaption>hist_N2O&lt;/figcaption>&lt;/figure>
+&lt;figure
+class="gallery-image"
+style="
+flex-grow:152;
+flex-basis:365px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_N2O_hu464c9133aece86416cb98c2a994ccb79_12464_640x0_resize_q98_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_N2O_hu464c9133aece86416cb98c2a994ccb79_12464_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_N2O.png"src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_N2O_hu464c9133aece86416cb98c2a994ccb79_12464_50x0_resize_catmullrom_3.png"width="800"height="525"data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_N2O_hu464c9133aece86416cb98c2a994ccb79_12464_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/hist_N2O_hu464c9133aece86416cb98c2a994ccb79_12464_1080x0_resize_catmullrom_3.png 1080w"alt="hist_N2O"data-zoomable
+data-lazyload
+>
+&lt;/picture>&lt;figcaption>hist_N2O&lt;/figcaption>&lt;/figure>&lt;/p>
+&lt;p>创建箱线图来检测异常值&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-R" data-lang="R">&lt;span style="color:#6272a4"># 检测异常值(Temp)&lt;/span>
+&lt;span style="color:#50fa7b">png&lt;/span>(file &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;./images/boxplot_Temp.png&amp;#34;&lt;/span>, width &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">800&lt;/span>, height &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">525&lt;/span>, res &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">100&lt;/span>)
+&lt;span style="color:#50fa7b">par&lt;/span>(oma&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#50fa7b">c&lt;/span>(&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>))
+&lt;span style="color:#50fa7b">boxplot&lt;/span>(CO2, main&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Boxplot de CO2&amp;#34;&lt;/span>, xlab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;CO2&amp;#34;&lt;/span>, ylab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Frecuencia&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">dev.off&lt;/span>()
+&lt;span style="color:#6272a4"># 检测异常值(CH4)&lt;/span>
+&lt;span style="color:#50fa7b">png&lt;/span>(file &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;./images/boxplot_CH4.png&amp;#34;&lt;/span>, width &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">800&lt;/span>, height &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">525&lt;/span>, res &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">100&lt;/span>)
+&lt;span style="color:#50fa7b">par&lt;/span>(oma&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#50fa7b">c&lt;/span>(&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>))
+&lt;span style="color:#50fa7b">boxplot&lt;/span>(CH4, main&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Boxplot de CH4&amp;#34;&lt;/span>, xlab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;CH4&amp;#34;&lt;/span>, ylab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Frecuencia&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">dev.off&lt;/span>()
+&lt;span style="color:#6272a4"># 检测异常值(CO2)&lt;/span>
+&lt;span style="color:#50fa7b">png&lt;/span>(file &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;./images/boxplot_N2O.png&amp;#34;&lt;/span>, width &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">800&lt;/span>, height &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">525&lt;/span>, res &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">100&lt;/span>)
+&lt;span style="color:#50fa7b">par&lt;/span>(oma&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#50fa7b">c&lt;/span>(&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>))
+&lt;span style="color:#50fa7b">boxplot&lt;/span>(N2O, main&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Boxplot de N2O&amp;#34;&lt;/span>, xlab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;N2O&amp;#34;&lt;/span>, ylab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Frecuencia&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">dev.off&lt;/span>()
+&lt;span style="color:#6272a4"># 检测异常值(CO2)&lt;/span>
+&lt;span style="color:#50fa7b">png&lt;/span>(file &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;./images/boxplot_CO2.png&amp;#34;&lt;/span>, width &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">800&lt;/span>, height &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">525&lt;/span>, res &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">100&lt;/span>)
+&lt;span style="color:#50fa7b">par&lt;/span>(oma&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#50fa7b">c&lt;/span>(&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>))
+&lt;span style="color:#50fa7b">boxplot&lt;/span>(Temp, main&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Boxplot de Temperatura&amp;#34;&lt;/span>, xlab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Temperatura&amp;#34;&lt;/span>, ylab&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Frecuencia&amp;#34;&lt;/span>)
+&lt;span style="color:#50fa7b">dev.off&lt;/span>()
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow:152;
+flex-basis:365px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_CH4_hua592f4a0f42b0cd0e06b3fe0d2b984b4_9716_640x0_resize_q98_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_CH4_hua592f4a0f42b0cd0e06b3fe0d2b984b4_9716_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_CH4.png"src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_CH4_hua592f4a0f42b0cd0e06b3fe0d2b984b4_9716_50x0_resize_catmullrom_3.png"width="800"height="525"data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_CH4_hua592f4a0f42b0cd0e06b3fe0d2b984b4_9716_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_CH4_hua592f4a0f42b0cd0e06b3fe0d2b984b4_9716_1080x0_resize_catmullrom_3.png 1080w"alt="boxplot_CH4"data-zoomable
+data-lazyload
+>
+&lt;/picture>&lt;figcaption>boxplot_CH4&lt;/figcaption>&lt;/figure>
+&lt;figure
+class="gallery-image"
+style="
+flex-grow:152;
+flex-basis:365px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_CO2_hua90a75f903523a9a2b06474d78c5f4c0_11087_640x0_resize_q98_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_CO2_hua90a75f903523a9a2b06474d78c5f4c0_11087_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_CO2.png"src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_CO2_hua90a75f903523a9a2b06474d78c5f4c0_11087_50x0_resize_catmullrom_3.png"width="800"height="525"data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_CO2_hua90a75f903523a9a2b06474d78c5f4c0_11087_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_CO2_hua90a75f903523a9a2b06474d78c5f4c0_11087_1080x0_resize_catmullrom_3.png 1080w"alt="boxplot_CO2"data-zoomable
+data-lazyload
+>
+&lt;/picture>&lt;figcaption>boxplot_CO2&lt;/figcaption>&lt;/figure>&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow:152;
+flex-basis:365px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_N2O_huf2f610792bc7fb3f5035681dcf7578a7_10005_640x0_resize_q98_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_N2O_huf2f610792bc7fb3f5035681dcf7578a7_10005_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_N2O.png"src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_N2O_huf2f610792bc7fb3f5035681dcf7578a7_10005_50x0_resize_catmullrom_3.png"width="800"height="525"data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_N2O_huf2f610792bc7fb3f5035681dcf7578a7_10005_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_N2O_huf2f610792bc7fb3f5035681dcf7578a7_10005_1080x0_resize_catmullrom_3.png 1080w"alt="boxplot_N2O"data-zoomable
+data-lazyload
+>
+&lt;/picture>&lt;figcaption>boxplot_N2O&lt;/figcaption>&lt;/figure>
+&lt;figure
+class="gallery-image"
+style="
+flex-grow:152;
+flex-basis:365px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_Temp_hu25e55b4848c5ff57396115d9044f46bd_11142_640x0_resize_q98_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_Temp_hu25e55b4848c5ff57396115d9044f46bd_11142_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_Temp.png"src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_Temp_hu25e55b4848c5ff57396115d9044f46bd_11142_50x0_resize_catmullrom_3.png"width="800"height="525"data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_Temp_hu25e55b4848c5ff57396115d9044f46bd_11142_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/boxplot_Temp_hu25e55b4848c5ff57396115d9044f46bd_11142_1080x0_resize_catmullrom_3.png 1080w"alt="boxplot_Temp"data-zoomable
+data-lazyload
+>
+&lt;/picture>&lt;figcaption>boxplot_Temp&lt;/figcaption>&lt;/figure>&lt;/p>
+&lt;p>查看相关系数&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-R" data-lang="R">&lt;span style="color:#6272a4"># 相关系数&lt;/span>
+&lt;span style="color:#50fa7b">cor&lt;/span>(mdata)
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback"> Temp CH4 CO2 N2O
+Temp 1.0000000 0.6996966 0.7485046 0.7432418
+CH4 0.6996966 1.0000000 0.8722531 0.8944092
+CO2 0.7485046 0.8722531 1.0000000 0.9811354
+N2O 0.7432418 0.8944092 0.9811354 1.0000000
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>建立线性模型，并打印参数估计的结果，然后进行回归方程的显著性检验&lt;/p>
+&lt;ul>
+&lt;li>T检验&lt;/li>
+&lt;li>F检验&lt;/li>
+&lt;li>调整后的 Adjusted R²&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-R" data-lang="R">&lt;span style="color:#6272a4"># 建立线形模型&lt;/span>
+modelo &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">lm&lt;/span>(formula&lt;span style="color:#ff79c6">=&lt;/span>Temp&lt;span style="color:#ff79c6">~&lt;/span>CO2&lt;span style="color:#ff79c6">+&lt;/span>CH4&lt;span style="color:#ff79c6">+&lt;/span>N2O,data&lt;span style="color:#ff79c6">=&lt;/span>data)
+modelo
+&lt;span style="color:#50fa7b">summary&lt;/span>(modelo)
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>最后，我们通过的回归参数的检验与回归方程的检验，得到最后多元线性回归方程为：&lt;/p>
+&lt;p>&lt;code>Temp = -4.2676862 + 0.0076848 * CO2 + 0.0007349 * CH4 + 0.0014314 * N2O&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">Call:
+lm(formula = Temp ~ CO2 + CH4 + N2O, data = data)
+Residuals:
+Min 1Q Median 3Q Max
+-0.41044 -0.07476 0.00139 0.07208 0.44757
+Coefficients:
+Estimate Std. Error t value Pr(&amp;gt;|t|)
+(Intercept) -4.2676862 1.1577046 -3.686 0.000269 ***
+CO2 0.0076848 0.0027617 2.783 0.005729 **
+CH4 0.0007349 0.0003278 2.242 0.025699 *
+N2O 0.0014314 0.0073093 0.196 0.844868
+---
+Signif. codes: 0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+Residual standard error: 0.1181 on 304 degrees of freedom
+Multiple R-squared: 0.5695, Adjusted R-squared: 0.5652
+F-statistic: 134 on 3 and 304 DF, p-value: &amp;lt; 2.2e-16
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在得到的回归模型进行显著性检验后，还要在做残差分析(预测值和实际值之间的差)，检验模型的正确性，残差必须服从正态分布N(0,σ^2)。直接用plot()函数生成4种用于模型诊断的图形，进行直观地分析。&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-R" data-lang="R">&lt;span style="color:#50fa7b">png&lt;/span>(file &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;./images/residual_analysis.png&amp;#34;&lt;/span>, width &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">1000&lt;/span>, height &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">625&lt;/span>, res &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">90&lt;/span>)
+&lt;span style="color:#50fa7b">par&lt;/span>(mfrow&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#50fa7b">c&lt;/span>(&lt;span style="color:#bd93f9">2&lt;/span>,&lt;span style="color:#bd93f9">2&lt;/span>))
+&lt;span style="color:#50fa7b">plot&lt;/span>(modelo)
+&lt;span style="color:#50fa7b">dev.off&lt;/span>()
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow:160;
+flex-basis:384px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/residual_analysis_hu5aac9bec39b0268be6d2aee9f2ae3ac4_48771_640x0_resize_q98_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/residual_analysis_hu5aac9bec39b0268be6d2aee9f2ae3ac4_48771_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/residual_analysis.png"src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/residual_analysis_hu5aac9bec39b0268be6d2aee9f2ae3ac4_48771_50x0_resize_catmullrom_3.png"width="1000"height="625"data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/residual_analysis_hu5aac9bec39b0268be6d2aee9f2ae3ac4_48771_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/residual_analysis_hu5aac9bec39b0268be6d2aee9f2ae3ac4_48771_1080x0_resize_catmullrom_3.png 1080w"alt="residual_analysis"data-zoomable
+data-lazyload
+>
+&lt;/picture>&lt;figcaption>residual_analysis&lt;/figcaption>&lt;/figure>&lt;/p>
+&lt;p>逐步回归分析&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-R" data-lang="R">&lt;span style="color:#50fa7b">step&lt;/span>(modelo)
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">Start: AIC=-1312.01
+Temp ~ CO2 + CH4 + N2O
+Df Sum of Sq RSS AIC
+- N2O 1 0.000535 4.2397 -1314.0
+&amp;lt;none&amp;gt; 4.2391 -1312.0
+- CH4 1 0.070077 4.3092 -1309.0
+- CO2 1 0.107975 4.3471 -1306.3
+Step: AIC=-1313.97
+Temp ~ CO2 + CH4
+Df Sum of Sq RSS AIC
+&amp;lt;none&amp;gt; 4.2397 -1314.0
+- CH4 1 0.09021 4.3299 -1309.5
+- CO2 1 0.78620 5.0259 -1263.6
+Call:
+lm(formula = Temp ~ CO2 + CH4, data = data)
+Coefficients:
+(Intercept) CO2 CH4
+-4.0469071 0.0081818 0.0007611
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>计算 R²&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-R" data-lang="R">&lt;span style="color:#6272a4"># 计算去除 CO2 后的R²&lt;/span>
+modelo_del_CO2 &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">lm&lt;/span>(formula&lt;span style="color:#ff79c6">=&lt;/span>Temp&lt;span style="color:#ff79c6">~&lt;/span>CH4&lt;span style="color:#ff79c6">+&lt;/span>N2O,data&lt;span style="color:#ff79c6">=&lt;/span>mdata)
+&lt;span style="color:#50fa7b">summary&lt;/span>(modelo_del_CO2)
+&lt;span style="color:#6272a4"># 计算去除 CH4 后的R²&lt;/span>
+modelo_del_CH4 &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">lm&lt;/span>(formula&lt;span style="color:#ff79c6">=&lt;/span>Temp&lt;span style="color:#ff79c6">~&lt;/span>CO2&lt;span style="color:#ff79c6">+&lt;/span>N2O,data&lt;span style="color:#ff79c6">=&lt;/span>mdata)
+&lt;span style="color:#50fa7b">summary&lt;/span>(modelo_del_CH4)
+&lt;span style="color:#6272a4"># 计算去除 N2O 后的R²&lt;/span>
+modelo_del_N2O &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">lm&lt;/span>(formula&lt;span style="color:#ff79c6">=&lt;/span>Temp&lt;span style="color:#ff79c6">~&lt;/span>CO2&lt;span style="color:#ff79c6">+&lt;/span>CH4,data&lt;span style="color:#ff79c6">=&lt;/span>mdata)
+&lt;span style="color:#50fa7b">summary&lt;/span>(modelo_del_N2O)
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">Call:
+lm(formula = Temp ~ CH4 + N2O, data = mdata)
+Residuals:
+Min 1Q Median 3Q Max
+-0.40339 -0.06894 -0.00508 0.07248 0.44869
+Coefficients:
+Estimate Std. Error t value Pr(&amp;gt;|t|)
+(Intercept) -7.2171582 0.4707278 -15.332 &amp;lt;2e-16 ***
+CH4 0.0006792 0.0003308 2.053 0.0409 *
+N2O 0.0201206 0.0029156 6.901 3e-11 ***
+---
+Signif. codes: 0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+Residual standard error: 0.1194 on 305 degrees of freedom
+Multiple R-squared: 0.5585, Adjusted R-squared: 0.5556
+F-statistic: 192.9 on 2 and 305 DF, p-value: &amp;lt; 2.2e-16
+Call:
+lm(formula = Temp ~ CO2 + N2O, data = mdata)
+Residuals:
+Min 1Q Median 3Q Max
+-0.41767 -0.07982 -0.00245 0.06403 0.45301
+Coefficients:
+Estimate Std. Error t value Pr(&amp;gt;|t|)
+(Intercept) -4.934714 1.126173 -4.382 1.62e-05 ***
+CO2 0.007307 0.002775 2.633 0.00889 **
+N2O 0.008123 0.006716 1.210 0.22740
+---
+Signif. codes: 0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+Residual standard error: 0.1189 on 305 degrees of freedom
+Multiple R-squared: 0.5624, Adjusted R-squared: 0.5595
+F-statistic: 196 on 2 and 305 DF, p-value: &amp;lt; 2.2e-16
+Call:
+lm(formula = Temp ~ CO2 + CH4, data = mdata)
+Residuals:
+Min 1Q Median 3Q Max
+-0.41026 -0.07505 0.00251 0.07367 0.44738
+Coefficients:
+Estimate Std. Error t value Pr(&amp;gt;|t|)
+(Intercept) -4.0469071 0.2629079 -15.393 &amp;lt; 2e-16 ***
+CO2 0.0081818 0.0010879 7.521 6.14e-13 ***
+CH4 0.0007611 0.0002988 2.548 0.0113 *
+---
+Signif. codes: 0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+Residual standard error: 0.1179 on 305 degrees of freedom
+Multiple R-squared: 0.5694, Adjusted R-squared: 0.5666
+F-statistic: 201.7 on 2 and 305 DF, p-value: &amp;lt; 2.2e-16
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>进行预测&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-R" data-lang="R">nuevos_datos &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">data.frame&lt;/span>(CH4&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#bd93f9">1700&lt;/span>,CO2&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#bd93f9">350&lt;/span>)
+nuevos_datos
+pred &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">predict&lt;/span>(object&lt;span style="color:#ff79c6">=&lt;/span>modelo_del_N2O, data&lt;span style="color:#ff79c6">=&lt;/span>nuevos_datos, interval&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;prediction&amp;#34;&lt;/span>,level&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#bd93f9">0.95&lt;/span>)
+pred
+&lt;span style="color:#50fa7b">head&lt;/span>(pred,&lt;span style="color:#bd93f9">10&lt;/span>)
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback"> fit lwr upr
+1 0.030839372 -2.045871e-01 0.2662658
+2 0.023525076 -2.122342e-01 0.2592844
+3 0.011943094 -2.236052e-01 0.2474914
+4 -0.005025586 -2.404213e-01 0.2303702
+5 -0.009066399 -2.432822e-01 0.2251494
+6 0.003711027 -2.300327e-01 0.2374547
+7 0.009542722 -2.243235e-01 0.2434090
+8 0.019159020 -2.149089e-01 0.2532269
+9 0.030731635 -2.031753e-01 0.2646386
+10 0.034719685 -1.993524e-01 0.2687918
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>我们得到了多元线性回归方程的公式，就可以对数据进行预测了。我们可以用R语言的predict()函数来计算预测值y0和相应的预测区间，并把实际值和预测值一起可视化化展示。&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-R" data-lang="R">&lt;span style="color:#50fa7b">png&lt;/span>(file &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;./images/prediction.png&amp;#34;&lt;/span>, width &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">1000&lt;/span>, height &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">625&lt;/span>, res &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">90&lt;/span>)
+&lt;span style="color:#50fa7b">par&lt;/span>(mfrow&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#50fa7b">c&lt;/span>(&lt;span style="color:#bd93f9">1&lt;/span>,&lt;span style="color:#bd93f9">1&lt;/span>))
+dfp &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">data.frame&lt;/span>(pred)
+&lt;span style="color:#50fa7b">head&lt;/span>(dfp, &lt;span style="color:#bd93f9">10&lt;/span>)
+&lt;span style="color:#50fa7b">mode&lt;/span>(dfp)
+mdf&lt;span style="color:#ff79c6">&amp;lt;-&lt;/span>&lt;span style="color:#50fa7b">merge&lt;/span>(data&lt;span style="color:#ff79c6">$&lt;/span>Temp, fit&lt;span style="color:#ff79c6">=&lt;/span>dfp&lt;span style="color:#ff79c6">$&lt;/span>fit, lwr&lt;span style="color:#ff79c6">=&lt;/span>dfp&lt;span style="color:#ff79c6">$&lt;/span>lwr, upr&lt;span style="color:#ff79c6">=&lt;/span>dfp&lt;span style="color:#ff79c6">$&lt;/span>upr)
+mdf
+&lt;span style="color:#6272a4"># 画图函数&lt;/span>
+draw &lt;span style="color:#ff79c6">&amp;lt;-&lt;/span> &lt;span style="color:#50fa7b">function&lt;/span>(df){
+df2&lt;span style="color:#ff79c6">&amp;lt;-&lt;/span>&lt;span style="color:#50fa7b">data.frame&lt;/span>(df)
+df2&lt;span style="color:#ff79c6">$&lt;/span>id&lt;span style="color:#ff79c6">&amp;lt;-&lt;/span>&lt;span style="color:#50fa7b">index&lt;/span>(df2)
+df2&lt;span style="color:#ff79c6">$&lt;/span>date&lt;span style="color:#ff79c6">&amp;lt;-&lt;/span>&lt;span style="color:#50fa7b">index&lt;/span>(df)
+df3&lt;span style="color:#ff79c6">&amp;lt;-&lt;/span>&lt;span style="color:#50fa7b">melt&lt;/span>(df2,id&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#50fa7b">c&lt;/span>(&lt;span style="color:#f1fa8c">&amp;#34;id&amp;#34;&lt;/span>,&lt;span style="color:#f1fa8c">&amp;#34;date&amp;#34;&lt;/span>))
+g&lt;span style="color:#ff79c6">&amp;lt;-&lt;/span>&lt;span style="color:#50fa7b">ggplot&lt;/span>(data&lt;span style="color:#ff79c6">=&lt;/span>df3,&lt;span style="color:#50fa7b">aes_string&lt;/span>(x&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#39;id&amp;#39;&lt;/span>,y&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#39;value&amp;#39;&lt;/span>,colour&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#39;variable&amp;#39;&lt;/span>))
+g&lt;span style="color:#ff79c6">&amp;lt;-&lt;/span>g&lt;span style="color:#ff79c6">+&lt;/span>&lt;span style="color:#50fa7b">geom_line&lt;/span>()
+g
+}
+&lt;span style="color:#50fa7b">draw&lt;/span>(mdf)
+&lt;span style="color:#50fa7b">dev.off&lt;/span>()
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback"> Temp fit lwr upr
+1983-05-01 0.109 0.030839372 -2.045871e-01 0.2662658
+1983-06-01 0.118 0.023525076 -2.122342e-01 0.2592844
+1983-07-01 0.137 0.011943094 -2.236052e-01 0.2474914
+1983-08-01 0.176 -0.005025586 -2.404213e-01 0.2303702
+1983-09-01 0.149 -0.009066399 -2.432822e-01 0.2251494
+1983-10-01 0.093 0.003711027 -2.300327e-01 0.2374547
+1983-11-01 0.232 0.009542722 -2.243235e-01 0.2434090
+1983-12-01 0.078 0.019159020 -2.149089e-01 0.2532269
+1984-01-01 0.089 0.030731635 -2.031753e-01 0.2646386
+1984-02-01 0.013 0.034719685 -1.993524e-01 0.2687918
+1984-03-01 0.049 0.039824705 -1.943438e-01 0.2739932
+1984-04-01 -0.019 0.051996586 -1.821958e-01 0.2861889
+1984-05-01 0.065 0.052022929 -1.828336e-01 0.2868794
+1984-06-01 -0.016 0.035790138 -2.002370e-01 0.2718173
+1984-07-01 -0.024 0.020863011 -2.152485e-01 0.2569745
+1984-08-01 0.034 0.012124223 -2.225349e-01 0.2467834
+1984-09-01 0.025 0.012157273 -2.215542e-01 0.2458687
+1984-10-01 -0.035 0.023267748 -2.102364e-01 0.2567719
+1984-11-01 -0.123 0.036423363 -1.969677e-01 0.2698144
+1984-12-01 -0.282 0.044764790 -1.886841e-01 0.2782137
+1985-01-01 -0.001 0.043929180 -1.898457e-01 0.2777041
+1985-02-01 -0.155 0.052679969 -1.810188e-01 0.2863788
+1985-03-01 -0.032 0.075003316 -1.583058e-01 0.3083124
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow:160;
+flex-basis:384px"
+>
+&lt;picture>&lt;source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/prediction_hua84a3faf81f28fe4f9a32d878a8d61e3_24092_640x0_resize_q98_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/prediction_hua84a3faf81f28fe4f9a32d878a8d61e3_24092_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type="image/webp" />&lt;img data-src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/prediction.png"src="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/prediction_hua84a3faf81f28fe4f9a32d878a8d61e3_24092_50x0_resize_catmullrom_3.png"width="1000"height="625"data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/prediction_hua84a3faf81f28fe4f9a32d878a8d61e3_24092_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2021/12/25/multiple-linear-regression-in-r.html/prediction_hua84a3faf81f28fe4f9a32d878a8d61e3_24092_1080x0_resize_catmullrom_3.png 1080w"alt="prediction"data-zoomable
+data-lazyload
+>
+&lt;/picture>&lt;figcaption>prediction&lt;/figcaption>&lt;/figure>&lt;/p>
+&lt;p>至此，一份简单的多重线性回归就做完了，可以看到我们预测的结果非常的垃圾，模型需要进一步优化，但是我不会，所以就这样凑合交了&lt;/p>
+&lt;p>至于结果，脚本部分当然是满分啦，其他介绍部分不是我完成的，所以我就不放上来了&lt;/p>
+&lt;blockquote>
+&lt;p>El trabajo está bastante bien. Os sugiero para otros trabajos que: numeréis las páginas, pongáis título y número a las tablas y gráficas, mejorar redacción y ser más explícitos en la redacción. (por favor revisad comentarios dentro del texto). Puntuación según apartados:&lt;/p>
+&lt;p>Introducción (0.25/1)&lt;/p>
+&lt;p>Especificación (1/1)&lt;/p>
+&lt;p>Tratamiento, estimación e inter. (2.5/3)&lt;/p>
+&lt;p>Verificación (2/2.5)&lt;/p>
+&lt;p>Predicción (1/1)&lt;/p>
+&lt;p>Script(1.5/1.5)&lt;/p>
+&lt;/blockquote></description></item><item><title>圆通快递丢件后续处理过程（全额赔付）</title><link>https://imiku.me/2021/11/10/complaint-against-yto-express.html/</link><pubDate>Wed, 10 Nov 2021 11:15:02 +0800</pubDate><guid>https://imiku.me/2021/11/10/complaint-against-yto-express.html/</guid><description>&lt;p>淘宝买的几件衣服部分需要退货，去驿站寄快递以后快递迟迟未更新，直到客服联系我，问我快递是不是丢件了，让我问一下快递那边&lt;/p>
 &lt;p>&lt;figure
 class="gallery-image"
 style="
@@ -1667,4 +2749,4 @@ Your browser doesn't support HTML5 video. Here is a
 &lt;li>输入西语单词或短文，将显示每个单词的分音节和音节的重读&lt;/li>
 &lt;li>点击单词可以发音&lt;/li>
 &lt;li>如果无法使用，请更换 PC 的 Chrome 浏览器&lt;/li>
-&lt;/ul></description></item><item><title/><link>https://imiku.me/2020/12/05/1385.html/</link><pubDate>Sat, 05 Dec 2020 18:49:27 +0000</pubDate><guid>https://imiku.me/2020/12/05/1385.html/</guid><description>&lt;p>网站增加了多语言支持，正在逐渐完善翻译中，目前仅支持日语，中文和英语，未来会增加多语言文章功能~&lt;/p></description></item></channel></rss>
+&lt;/ul></description></item></channel></rss>
