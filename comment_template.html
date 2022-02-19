@@ -44,7 +44,7 @@
                 <label class=" text-base mr-3 owo-btn border rounded cursor-pointer md:inline-block hidden px-2 py-1 items-center justify-center" :for="`owo-btn-input-${data.ID}`">
                     表情包
                 </label>
-                <div class="owo-box z-10 pointer-events-none rounded absolute md:left-20 left-0 md:bottom-0 md:top-auto top-10 max-w-full w-80 overflow-hidden text-base bg-white ts-3-ease transform translate-x-5 opacity-0" id="owo-box">
+                <div class="owo-box z-10 pointer-events-none rounded absolute md:left-20 left-0 md:bottom-0 md:top-auto top-10 max-w-full w-80 overflow-hidden text-base bg-white transition duration-300 ease-[ease] translate-x-5 opacity-0" id="owo-box">
                     <div class=" border-b p-3 h-40 overflow-y-scroll" id="owo-face">
                         <div @click="addOwo(item)" v-for="(item, index) in owoData[currentOwo].container" :key="index" :title="item.text || item" class="m-1 p-1 rounded border inline-block text-sm cursor-pointer" v-html="item.icon || item"></div>
                     </div>
