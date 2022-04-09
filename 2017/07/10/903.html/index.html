@@ -2,23 +2,23 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=keywords content="Ghost,树莓派,教程,Ice-Hazymoon,冰凌胧月,Hazymoon,MikuTools,">
-<meta name=description content="最近准备开始写日记，可是又不知道用什么样的程序好，Wordpress用的都想吐了，hexo等又不习惯，于是盯上了我一直很青睐的Ghost，刚...">
-<meta itemprop=description content="最近准备开始写日记，可是又不知道用什么样的程序好，Wordpress用的都想吐了，hexo等又不习惯，于是盯上了我一直很青睐的Ghost，刚...">
+<meta name=description content="最近准备开始写日记，可是又不知道用什么样的程序好，Wordpress用的都想吐了，hexo等又不习惯，于是盯上了我一直很青睐的Ghost，刚 …">
+<meta itemprop=description content="最近准备开始写日记，可是又不知道用什么样的程序好，Wordpress用的都想吐了，hexo等又不习惯，于是盯上了我一直很青睐的Ghost，刚 …">
 <meta http-equiv=x-ua-compatible content="ie=edge">
 <meta itemprop=name content="Respbian 安装 NodeJs 并搭建 Ghost">
 <link href=https://imiku.me/index.xml title="Respbian 安装 NodeJs 并搭建 Ghost" type=application/rss+xml rel=alternate>
 <title>Respbian 安装 NodeJs 并搭建 Ghost</title>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main_6d4e89c486cd5bf179542bb8bc64211c46585fef.css>
+<link rel=stylesheet href=/main_.css>
 <meta property="og:site_name" content="Respbian 安装 NodeJs 并搭建 Ghost">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Respbian 安装 NodeJs 并搭建 Ghost">
-<meta property="og:description" content="最近准备开始写日记，可是又不知道用什么样的程序好，Wordpress用的都想吐了，hexo等又不习惯，于是盯上了我一直很青睐的Ghost，刚...">
+<meta property="og:description" content="最近准备开始写日记，可是又不知道用什么样的程序好，Wordpress用的都想吐了，hexo等又不习惯，于是盯上了我一直很青睐的Ghost，刚 …">
 <meta property="og:url" content="https://imiku.me/2017/07/10/903.html/">
 <meta property="og:image" content="https://imiku.me/2017/07/10/903.html/1630060151372767.jpg">
 <meta property="article:publisher" content="https://imiku.me/2017/07/10/903.html/">
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:title content="Respbian 安装 NodeJs 并搭建 Ghost">
-<meta name=twitter:description content="最近准备开始写日记，可是又不知道用什么样的程序好，Wordpress用的都想吐了，hexo等又不习惯，于是盯上了我一直很青睐的Ghost，刚...">
+<meta name=twitter:description content="最近准备开始写日记，可是又不知道用什么样的程序好，Wordpress用的都想吐了，hexo等又不习惯，于是盯上了我一直很青睐的Ghost，刚 …">
 <meta name=twitter:url content="https://imiku.me/2017/07/10/903.html/">
 <meta name=twitter:image content="https://imiku.me/2017/07/10/903.html/1630060151372767.jpg">
 <meta name=twitter:site content="@Ice-Hazymoon">
@@ -27,9 +27,9 @@
 <meta name=theme-color content="#ff80b0"></meta>
 <link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
 <link rel=manifest href=/manifest.json>
-<link href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/icon.png rel="shortcut icon">
-<link href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/icon.png rel=bookmark>
-<link rel=apple-touch-icon href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/icon.png><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Respbian 安装 NodeJs 并搭建 Ghost","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/07\/10\/903.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"Ghost, 树莓派","wordcount":980,"url":"https:\/\/imiku.me\/2017\/07\/10\/903.html\/","datePublished":"2017-07-10T06:54:18\u002b00:00","dateModified":"2022-04-06T23:42:45\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
+<link href=/icon.png rel="shortcut icon">
+<link href=/icon.png rel=bookmark>
+<link rel=apple-touch-icon href=/icon.png><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Respbian 安装 NodeJs 并搭建 Ghost","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/07\/10\/903.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"Ghost, 树莓派","wordcount":980,"url":"https:\/\/imiku.me\/2017\/07\/10\/903.html\/","datePublished":"2017-07-10T06:54:18\u002b00:00","dateModified":"2022-04-09T14:38:35\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script>
 </head><body class="dark:bg-darkBg dark:text-darkText">
 <div class="mx-auto relative shadow-lg">
 <div class="bg-white dark:bg-darkFg main md:max-w-4xl mx-auto relative xl:max-w-4xl flex flex-col justify-between">
@@ -84,7 +84,7 @@
 <div class="h-full relative">
 <div class="bg-white dark:bg-darkFg h-full overflow-auto page-view-article">
 <div class=relative><div class="article-cover h-0 relative w-full">
-<picture><source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/10/903.html/1630060151372767_hu8427cd8f84b3d710ffce4177e40fce12_11678_800x0_resize_q98_h2_catmullrom.webp 800w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/10/903.html/1630060151372767_hu8427cd8f84b3d710ffce4177e40fce12_11678_1200x0_resize_q98_h2_catmullrom.webp 1200w" type=image/webp><img src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/10/903.html/1630060151372767_hu8427cd8f84b3d710ffce4177e40fce12_11678_50x0_resize_q98_catmullrom.jpg data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/10/903.html/1630060151372767.jpg data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/10/903.html/1630060151372767_hu8427cd8f84b3d710ffce4177e40fce12_11678_800x0_resize_q98_catmullrom.jpg 800w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/10/903.html/1630060151372767_hu8427cd8f84b3d710ffce4177e40fce12_11678_1200x0_resize_q98_catmullrom.jpg 1200w" alt="Respbian 安装 NodeJs 并搭建 Ghost" data-lazyload width=1000 height=500 class="absolute h-full left-0 object-center object-cover top-0 w-full">
+<picture><source data-srcset="/2017/07/10/903.html/1630060151372767_hu8427cd8f84b3d710ffce4177e40fce12_11678_800x0_resize_q98_h2_catmullrom.webp 800w, /2017/07/10/903.html/1630060151372767_hu8427cd8f84b3d710ffce4177e40fce12_11678_1200x0_resize_q98_h2_catmullrom.webp 1200w" type=image/webp><img src=/2017/07/10/903.html/1630060151372767_hu8427cd8f84b3d710ffce4177e40fce12_11678_50x0_resize_q98_catmullrom.jpg data-src=1630060151372767.jpg data-srcset="/2017/07/10/903.html/1630060151372767_hu8427cd8f84b3d710ffce4177e40fce12_11678_800x0_resize_q98_catmullrom.jpg 800w, /2017/07/10/903.html/1630060151372767_hu8427cd8f84b3d710ffce4177e40fce12_11678_1200x0_resize_q98_catmullrom.jpg 1200w" alt="Respbian 安装 NodeJs 并搭建 Ghost" data-lazyload width=1000 height=500 class="absolute h-full left-0 object-center object-cover top-0 w-full">
 </picture>
 </div>
 <h1 class="absolute article-title bottom-0 left-0 md:text-4xl pb-8 pt-32 px-6 text-3xl text-white w-full">
@@ -119,7 +119,12 @@ Respbian 安装 NodeJs 并搭建 Ghost
 <span class=mr-2>分类</span><a href=/categories/%E6%95%99%E7%A8%8B title=教程 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
 <i class="eva eva-book-outline"></i>
 <span>教程</span>
-</a></div></div><section class="article-content px-6 md:px-10 py-5 typo"><p>最近准备开始写日记，可是又不知道用什么样的程序好，Wordpress用的都想吐了，hexo等又不习惯，于是盯上了我一直很青睐的Ghost，刚好树莓派还在那一直挂着，不如拿来利用一下 😎<br>
+</a></div></div><aside class=toc>
+<header>
+<h1 class="text-2xl font-bold mb-3">文章目录</h1>
+</header>
+<nav id=TableOfContents></nav>
+</aside><section class="article-content px-6 md:px-10 py-5 typo"><p>最近准备开始写日记，可是又不知道用什么样的程序好，Wordpress用的都想吐了，hexo等又不习惯，于是盯上了我一直很青睐的Ghost，刚好树莓派还在那一直挂着，不如拿来利用一下 😎<br>
 PS：如果你的脸不是太黑的话，顺着敲代码肯定能搭建出来的</p>
 <p>环境：Debian8<br>
 设备：树莓派3B</p>
@@ -145,7 +150,7 @@ PS：如果你的脸不是太黑的话，顺着敲代码肯定能搭建出来的
 <code>node -v && npm -v</code></p>
 <p>如果有输出版本信息则表示安装完成,如下图：</p>
 <p><figure class=gallery-image style=flex-grow:1308;flex-basis:3139px>
-<picture><source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/10/903.html/1630060151372749_hucd485a17aa23bef791f68c05f16c3220_13316_640x0_resize_q98_h2_catmullrom_3.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/10/903.html/1630060151372749_hucd485a17aa23bef791f68c05f16c3220_13316_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type=image/webp><img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/10/903.html/1630060151372749.png src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/10/903.html/1630060151372749_hucd485a17aa23bef791f68c05f16c3220_13316_50x0_resize_catmullrom_3.png width=811 height=62 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/10/903.html/1630060151372749_hucd485a17aa23bef791f68c05f16c3220_13316_640x0_resize_catmullrom_3.png 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/07/10/903.html/1630060151372749_hucd485a17aa23bef791f68c05f16c3220_13316_1080x0_resize_catmullrom_3.png 1080w" alt=Respbian安装NodeJs并搭建Ghost data-zoomable data-lazyload>
+<picture><source data-srcset="/2017/07/10/903.html/1630060151372749_hucd485a17aa23bef791f68c05f16c3220_13316_640x0_resize_q98_h2_catmullrom_3.webp 640w, /2017/07/10/903.html/1630060151372749_hucd485a17aa23bef791f68c05f16c3220_13316_1080x0_resize_q98_h2_catmullrom_3.webp 1080w" type=image/webp><img data-src=/2017/07/10/903.html/1630060151372749.png src=/2017/07/10/903.html/1630060151372749_hucd485a17aa23bef791f68c05f16c3220_13316_50x0_resize_catmullrom_3.png width=811 height=62 data-srcset="/2017/07/10/903.html/1630060151372749_hucd485a17aa23bef791f68c05f16c3220_13316_640x0_resize_catmullrom_3.png 640w, /2017/07/10/903.html/1630060151372749_hucd485a17aa23bef791f68c05f16c3220_13316_1080x0_resize_catmullrom_3.png 1080w" alt=Respbian安装NodeJs并搭建Ghost data-zoomable data-lazyload>
 </picture><figcaption>Respbian安装NodeJs并搭建Ghost</figcaption></figure></p>
 <p>更改npm源<br>
 如果你的服务器是在国外，请忽略此步骤；但如果服务器在国内的话想都不用想继续往下看：<br>
@@ -253,7 +258,7 @@ PS：如果你的脸不是太黑的话，顺着敲代码肯定能搭建出来的
 <code>pm2 startup</code><br>
 <code>pm2 save</code></p>
 </section><div class="px-6 pb-5 pt-4 md:pb-10 md:pt-14 text-center md:px-10 text-xl text-gray-500">
-<a class="mr-4 w-5 h-5 inline-flex items-center" title="分享到 Twitter" href="https://twitter.com/share?&text=%e6%9c%80%e8%bf%91%e5%87%86%e5%a4%87%e5%bc%80%e5%a7%8b%e5%86%99%e6%97%a5%e8%ae%b0%ef%bc%8c%e5%8f%af%e6%98%af%e5%8f%88%e4%b8%8d%e7%9f%a5%e9%81%93%e7%94%a8%e4%bb%80%e4%b9%88%e6%a0%b7%e7%9a%84%e7%a8%8b%e5%ba%8f%e5%a5%bd%ef%bc%8cWordpress%e7%94%a8%e7%9a%84%e9%83%bd%e6%83%b3%e5%90%90%e4%ba%86%ef%bc%8chexo%e7%ad%89%e5%8f%88%e4%b8%8d%e4%b9%a0%e6%83%af%ef%bc%8c%e4%ba%8e%e6%98%af%e7%9b%af%e4%b8%8a%e4%ba%86%e6%88%91%e4%b8%80%e7%9b%b4%e5%be%88%e9%9d%92%e7%9d%90%e7%9a%84Ghost%ef%bc%8c%e5%88%9a......&url=https://imiku.me/2017/07/10/903.html/" target=_blank rel="noopener noreferrer"><i class="eva hover:text-theme eva-twitter"></i></a>
+<a class="mr-4 w-5 h-5 inline-flex items-center" title="分享到 Twitter" href="https://twitter.com/share?&text=%e6%9c%80%e8%bf%91%e5%87%86%e5%a4%87%e5%bc%80%e5%a7%8b%e5%86%99%e6%97%a5%e8%ae%b0%ef%bc%8c%e5%8f%af%e6%98%af%e5%8f%88%e4%b8%8d%e7%9f%a5%e9%81%93%e7%94%a8%e4%bb%80%e4%b9%88%e6%a0%b7%e7%9a%84%e7%a8%8b%e5%ba%8f%e5%a5%bd%ef%bc%8cWordpress%e7%94%a8%e7%9a%84%e9%83%bd%e6%83%b3%e5%90%90%e4%ba%86%ef%bc%8chexo%e7%ad%89%e5%8f%88%e4%b8%8d%e4%b9%a0%e6%83%af%ef%bc%8c%e4%ba%8e%e6%98%af%e7%9b%af%e4%b8%8a%e4%ba%86%e6%88%91%e4%b8%80%e7%9b%b4%e5%be%88%e9%9d%92%e7%9d%90%e7%9a%84Ghost%ef%bc%8c%e5%88%9a%20%e2%80%a6&url=https://imiku.me/2017/07/10/903.html/" target=_blank rel="noopener noreferrer"><i class="eva hover:text-theme eva-twitter"></i></a>
 <a class="mr-4 w-5 h-5 inline-flex items-center" title="分享到 Facebook" href="https://www.facebook.com/sharer.php?u=https://imiku.me/2017/07/10/903.html/" target=_blank rel="noopener noreferrer"><i class="eva hover:text-theme eva-facebook"></i></a>
 <a class="mr-4 w-5 h-5 inline-flex items-center" title=分享到微博 href="https://service.weibo.com/share/share.php?url=https://imiku.me/2017/07/10/903.html/&title=Respbian%20%e5%ae%89%e8%a3%85%20NodeJs%20%e5%b9%b6%e6%90%ad%e5%bb%ba%20Ghost&sudaref=imiku.me" target=_blank rel="noopener noreferrer"><svg class="w-5 h-5 inline-block fill-current hover:text-theme" viewBox="0 0 1193 1024" xmlns="http://www.w3.org/2000/svg" p-id="2681" width="200" height="200"><path d="M456.991736 557.336482c-107.598583.0-194.644628 74.956316-194.644629 166.838252s87.046045 166.838253 194.644629 166.838253c107.598583.0 194.644628-74.956316 194.644628-166.838253s-87.046045-166.838253-194.644628-166.838252zM391.707202 822.101535c-36.269185.0-66.493506-27.806375-66.493507-62.866588s29.015348-62.866588 66.493507-62.866588c36.269185.0 66.493506 27.806375 66.493506 62.866588S427.976387 822.101535 391.707202 822.101535zm93.090909-91.881936c-14.507674.0-26.597403-12.089728-26.597403-26.597403s12.089728-26.597403 26.597403-26.597403 26.597403 12.089728 26.597403 26.597403-12.089728 26.597403-26.597403 26.597403zM239.376623 281.690673C97.9268 394.125148-18.134593 600.859504 30.224321 661.308146c32.642267 41.105077 59.239669-19.343566 124.524203-89.46399 30.224321-32.642267 77.374262-54.403778 122.106258-90.672964 20.552538-16.92562 197.062574-35.060213 230.913813-35.060212 97.9268-99.135773 114.85242-207.943329 74.956316-258.720189-48.358914-59.239669-201.898465-16.92562-343.348288 94.299882z" p-id="2682"/><path d="M808.802834 560.9634C906.729634 461.827627 911.565525 377.199528 870.460449 326.422668c-47.149941-60.448642-211.570248-32.642267-351.811098 78.583235" p-id="2683"/><path d="M605.695396 353.020071c-14.507674 8.46281-25.38843 12.089728-29.015349 7.253837-1.208973-2.417946-1.208973-6.044864 1.208973-9.671783-16.92562-1.208973-33.85124-1.208973-50.776859-1.208973C235.749705 349.393152.0 500.514758.0 686.696576S235.749705 1024 527.112161 1024s527.112161-151.121606 527.11216-337.303424c0-170.465171-194.644628-309.497048-448.528925-333.676505zM481.171192 959.924439c-205.525383.0-372.363636-112.434474-372.363636-251.466352s166.838253-251.466352 372.363636-251.466351 372.363636 112.434475 372.363637 251.466351-166.838253 251.466352-372.363637 251.466352z" p-id="2684"/><path d="M1021.582054 423.140496c-3.626919.0-6.044864.0-9.671782-1.208973-18.134593-4.835891-29.015348-24.179457-22.970485-42.31405 2.417946-7.253837 3.626919-16.92562 3.626919-29.015348.0-65.284534-53.194805-119.688312-119.688312-119.688312-19.343566.0-33.85124-15.716647-33.851239-33.851239s15.716647-33.85124 33.851239-33.85124c103.971665.0 187.390791 84.628099 187.390791 187.390791.0 18.134593-2.417946 33.85124-6.044864 48.358914-4.835891 14.507674-18.134593 24.179457-32.642267 24.179457z" p-id="2685"/><path d="M1146.106257 473.917355c-2.417946.0-6.044864.0-8.46281-1.208972-20.552538-4.835891-32.642267-25.38843-27.806375-45.940969 6.044864-24.179457 8.46281-47.149941 8.46281-71.329397.0-153.539552-126.942149-280.481701-281.690673-280.481701-20.552538.0-37.478158-16.92562-37.478158-37.478158S816.056671.0 836.609209.0c197.062574.0 356.646989 159.584416 356.646989 356.646989.0 29.015348-3.626919 59.239669-10.880755 88.255018-3.626919 18.134593-19.343566 29.015348-36.269186 29.015348z" p-id="2686"/></svg>
 </a>
@@ -289,10 +294,7 @@ PS：如果你的脸不是太黑的话，顺着敲代码肯定能搭建出来的
 <i class="eva eva-chevron-right-outline"></i>
 </span>
 </a>
-</div><div class="border-t py-6 px-6 md:px-8 dark:border-darkBorder">
-<div id=cusdis_thread data-host=https://cusdis.com data-app-id=08bf7804-1695-4cba-a508-f60e353736ad data-page-id=47a6a44fe63f5b887c9e5104347d66adzh-hans data-page-url=/2017/07/10/903.html/ data-page-title="Respbian 安装 NodeJs 并搭建 Ghost" class=text-center>评论系统加载中···</div>
-</div>
-</div>
+</div><div class="border-t py-6 px-6 md:px-8 dark:border-darkBorder"><div id=cusdis_thread data-host=https://cusdis.com data-app-id=08bf7804-1695-4cba-a508-f60e353736ad data-page-id=47a6a44fe63f5b887c9e5104347d66adzh-cn data-page-url=/2017/07/10/903.html/ data-page-title="Respbian 安装 NodeJs 并搭建 Ghost" class=text-center>评论系统加载中···</div></div></div>
 </div>
 </div>
 </main><footer>
@@ -314,15 +316,12 @@ PS：如果你的脸不是太黑的话，顺着敲代码肯定能搭建出来的
 <b id=run-time-s>0</b>
 <span> 秒</span>
 </div>
-</div>
+</div><script>window.__theme={cdn:'',pjax:!0,isServer:!1,$version:"9801e8dd0f82379fc52d597cd657b657810660c1",hugoEncrypt:{wrongPasswordText:'密码错误',userStorage:window.sessionStorage}}</script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
-<script async src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app_6d4e89c486cd5bf179542bb8bc64211c46585fef.js></script>
-<script>'serviceWorker'in navigator&&window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')})</script><script async src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/translate-google_.js></script>
-<script type=text/javascript>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'zh-CN',includedLanguages:'af,ga,sq,it,ar,ja,az,kn,eu,ko,bn,la,be,lv,bg,lt,ca,mk,zh-CN,ms,zh-TW,mt,hr,no,cs,fa,da,pl,nl,pt,en,ro,eo,ru,et,sr,tl,sk,fi,sl,fr,es,gl,sw,ka,sv,de,ta,el,te,gu,th,ht,tr,iw,uk,hi,ur,hu,vi,is,cy,id,yi',autoDisplay:!1},'google_translate_element')}</script>
-<script>window.CUSDIS_LOCALE={powered_by:'评论由 Cusdis 提供',post_comment:'发送',loading:'加载中',email:'邮箱地址 (可选)',nickname:'昵称',reply_placeholder:'回复内容...',reply_btn:'回复',sending:'发送中...',mod_badge:'管理员',content_is_required:'内容不能为空',nickname_is_required:'昵称不能为空',comment_has_been_sent:'评论已发送，管理员审核通过后会展示'}</script>
-<script async defer src=https://cusdis.com/js/cusdis.es.js></script>
-</footer></div>
+<script defer src=/app_9801e8dd0f82379fc52d597cd657b657810660c1.js></script><script defer src=/pjax_9801e8dd0f82379fc52d597cd657b657810660c1.js></script><script>'serviceWorker'in navigator&&window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')})</script><script async src=/translate-google_.js></script>
+<script type=text/javascript>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'zh-CN',includedLanguages:'af,ga,sq,it,ar,ja,az,kn,eu,ko,bn,la,be,lv,bg,lt,ca,mk,zh-CN,ms,zh-TW,mt,hr,no,cs,fa,da,pl,nl,pt,en,ro,eo,ru,et,sr,tl,sk,fi,sl,fr,es,gl,sw,ka,sv,de,ta,el,te,gu,th,ht,tr,iw,uk,hi,ur,hu,vi,is,cy,id,yi',autoDisplay:!1},'google_translate_element')}</script><script>window.CUSDIS_LOCALE={powered_by:'评论由 Cusdis 提供',post_comment:'发送',loading:'加载中',email:'邮箱地址 (可选)',nickname:'昵称',reply_placeholder:'回复内容...',reply_btn:'回复',sending:'发送中...',mod_badge:'管理员',content_is_required:'内容不能为空',nickname_is_required:'昵称不能为空',comment_has_been_sent:'评论已发送，管理员审核通过后会展示'}</script>
+<script async src=/cusdis_9801e8dd0f82379fc52d597cd657b657810660c1.js></script></footer></div>
 </div>
 <div onclick=window.backTop() title=返回顶部 class="back-top translate-y-3 opacity-0 sm:scale-100 scale-90 transition duration-300 ease-[ease] z-10 cursor-pointer fixed right-6 bottom-9 bg-white dark:bg-darkBgAccent rounded-full">
 <div class=relative>
