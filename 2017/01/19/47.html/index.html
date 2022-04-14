@@ -1,312 +1,64 @@
-<!doctype html><html lang=zh-cn><head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=keywords content="Linux,树莓派,watchdog,教程,Ice-Hazymoon,冰凌胧月,Hazymoon,MikuTools,">
-<meta name=description content="今天在折腾树莓派时不小心把树莓派弄死机了，VNC一直卡着，狂输命令也没用，只好强制拔电源重启，可如果以后经常死机，每次都强行拔电源，别说树莓 …">
-<meta itemprop=description content="今天在折腾树莓派时不小心把树莓派弄死机了，VNC一直卡着，狂输命令也没用，只好强制拔电源重启，可如果以后经常死机，每次都强行拔电源，别说树莓 …">
-<meta http-equiv=x-ua-compatible content="ie=edge">
-<meta itemprop=name content="在树莓派上安装使用硬件看门狗防止树莓派死机">
-<link href=https://imiku.me/index.xml title=在树莓派上安装使用硬件看门狗防止树莓派死机 type=application/rss+xml rel=alternate>
-<title>在树莓派上安装使用硬件看门狗防止树莓派死机</title>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main_bcc33370a0ffd7486a7264ff4bd6107d6430c5bc.css>
-<meta property="og:site_name" content="在树莓派上安装使用硬件看门狗防止树莓派死机">
-<meta property="og:type" content="article">
-<meta property="og:title" content="在树莓派上安装使用硬件看门狗防止树莓派死机">
-<meta property="og:description" content="今天在折腾树莓派时不小心把树莓派弄死机了，VNC一直卡着，狂输命令也没用，只好强制拔电源重启，可如果以后经常死机，每次都强行拔电源，别说树莓 …">
-<meta property="og:url" content="https://imiku.me/2017/01/19/47.html/">
-<meta property="og:image" content="https://imiku.me/2017/01/19/47.html/1630060151348213.jpg">
-<meta property="article:publisher" content="https://imiku.me/2017/01/19/47.html/">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:title content="在树莓派上安装使用硬件看门狗防止树莓派死机">
-<meta name=twitter:description content="今天在折腾树莓派时不小心把树莓派弄死机了，VNC一直卡着，狂输命令也没用，只好强制拔电源重启，可如果以后经常死机，每次都强行拔电源，别说树莓 …">
-<meta name=twitter:url content="https://imiku.me/2017/01/19/47.html/">
-<meta name=twitter:image content="https://imiku.me/2017/01/19/47.html/1630060151348213.jpg">
-<meta name=twitter:site content="@Ice-Hazymoon">
-<meta property="og:image:width" content="1920">
-<meta property="og:image:height" content="1280">
-<meta name=theme-color content="#ff80b0"></meta>
-<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
-<link rel=manifest href=/manifest.json>
-<link href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/icon.png rel="shortcut icon">
-<link href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/icon.png rel=bookmark>
-<link rel=apple-touch-icon href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/icon.png><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"在树莓派上安装使用硬件看门狗防止树莓派死机","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/01\/19\/47.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"Linux, 树莓派, watchdog","wordcount":666,"url":"https:\/\/imiku.me\/2017\/01\/19\/47.html\/","datePublished":"2017-01-19T11:25:16\u002b00:00","dateModified":"2022-04-14T16:08:55\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script></head><body class="dark:bg-darkBg dark:text-darkText">
-<div class="mx-auto relative shadow-lg">
-<div class="bg-white dark:bg-darkFg main md:max-w-4xl mx-auto relative xl:max-w-4xl flex flex-col justify-between">
-<header class="relative z-40">
-<nav class="border-b dark:border-darkBorder flex items-center md:px-10 navbar px-5 py-6 top-0 z-10">
-<div class="flex items-center justify-around route-items w-full">
-<div class="flex flex-col items-center">
-<a data-active-link=/ href=/ class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]">
-<i class="eva eva-home flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i>
-</a>
-<span class="block md:hidden mt-2 text-xs">首页</span>
-</div>
-<div class="flex flex-col items-center">
-<a data-active-link=/about href=/about class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]">
-<i class="eva eva-heart flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i>
-</a>
-<span class="block md:hidden mt-2 text-xs">关于我</span>
-</div>
-<div class="flex flex-col items-center">
-<a data-active-link=/links href=/links class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]">
-<i class="eva eva-people flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i>
-</a>
-<span class="block md:hidden mt-2 text-xs">朋友们</span>
-</div>
-<div class="flex flex-col items-center">
-<a data-active-link=/twitter href=/twitter class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]">
-<i class="eva eva-twitter flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i>
-</a>
-<span class="block md:hidden mt-2 text-xs">推特动态</span>
-</div>
-<div class="flex flex-col items-center">
-<a data-active-link=/archives href=/archives class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]">
-<i class="eva eva-bar-chart flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i>
-</a>
-<span class="block md:hidden mt-2 text-xs">归档</span>
-</div>
-<div class="flex flex-col items-center">
-<a data-active-link=/github href=/github class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]">
-<i class="eva eva-github flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i>
-</a>
-<span class="block md:hidden mt-2 text-xs">GitHub</span>
-</div>
-<div class="flex flex-col items-center">
-<a data-active-link=/search href=/search class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]">
-<i class="eva eva-search flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i>
-</a>
-<span class="block md:hidden mt-2 text-xs">搜索</span>
-</div>
-</div>
-</nav>
-</header><main class="relative flex-grow" id=swup><div class="h-full relative">
-<div class="h-full relative">
-<div class="bg-white dark:bg-darkFg h-full overflow-auto page-view-article">
-<div class=relative><div class="article-cover h-0 relative w-full">
-<picture><source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348213_hu08abcc46750dabdc1a7adf4dc19019f0_28622_800x0_resize_q98_h2_catmullrom.webp 800w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348213_hu08abcc46750dabdc1a7adf4dc19019f0_28622_1200x0_resize_q98_h2_catmullrom.webp 1200w" type=image/webp><img src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348213_hu08abcc46750dabdc1a7adf4dc19019f0_28622_50x0_resize_q98_catmullrom.jpg data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348213.jpg data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348213_hu08abcc46750dabdc1a7adf4dc19019f0_28622_800x0_resize_q98_catmullrom.jpg 800w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348213_hu08abcc46750dabdc1a7adf4dc19019f0_28622_1200x0_resize_q98_catmullrom.jpg 1200w" alt=在树莓派上安装使用硬件看门狗防止树莓派死机 data-lazyload width=640 height=380 class="absolute h-full left-0 object-center object-cover top-0 w-full">
-</picture>
-</div>
-<h1 class="absolute article-title bottom-0 left-0 md:text-4xl pb-8 pt-32 px-6 text-3xl text-white w-full">
-在树莓派上安装使用硬件看门狗防止树莓派死机
-</h1></div>
-<div class="article-info p-6 pb-2">
-<div class="bg-red-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
-<i class="eva eva-clock-outline mr-1"></i>
-<span>
-<time title="发布于：2017年01月19日 11:25:16" datetime=2017-01-19T11:25:16Z>2017-01-19 11:25:16</time>
-</span>
-</div>
-<div class="bg-indigo-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
-<i class="eva eva-flag-outline mr-1"></i>
-<span>阅读约2 分钟</span>
-</div>
-<div class="bg-blue-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
-<i class="eva eva-bar-chart-outline mr-1"></i>
-<span>666 字</span>
-</div>
-</div>
-<div class="border-b dark:border-darkBorder border-gray-300 pb-6 px-6"><div class="flex items-center mb-2">
-<i class="eva eva-pricetags-outline mr-1"></i>
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=keywords content="Linux,树莓派,watchdog,教程,Ice-Hazymoon,冰凌胧月,Hazymoon,MikuTools,"><meta name=description content="今天在折腾树莓派时不小心把树莓派弄死机了，VNC一直卡着，狂输命令也没用，只好强制拔电源重启，可如果以后经常死机，每次都强行拔电源，别说树莓 …"><meta itemprop=description content="今天在折腾树莓派时不小心把树莓派弄死机了，VNC一直卡着，狂输命令也没用，只好强制拔电源重启，可如果以后经常死机，每次都强行拔电源，别说树莓 …"><meta http-equiv=x-ua-compatible content="ie=edge"><meta itemprop=name content="Ice-Hazymoon 的博客"><link href=https://imiku.me/index.xml title="Ice-Hazymoon 的博客" type=application/rss+xml rel=alternate><title>Ice-Hazymoon 的博客</title><link rel=stylesheet href="/sass/main.8f765bf52d1f536ea1b1c09d811e21b21c2fc6c833314b11fb6893a0ff44e601.css" integrity="sha256-j3Zb9S0fU26hscCdgR4hshwvxsgzMUsR+2iToP9E5gE="><meta property="og:site_name" content="Ice-Hazymoon 的博客"><meta property="og:type" content="article"><meta property="og:title" content="在树莓派上安装使用硬件看门狗防止树莓派死机"><meta property="og:description" content="今天在折腾树莓派时不小心把树莓派弄死机了，VNC一直卡着，狂输命令也没用，只好强制拔电源重启，可如果以后经常死机，每次都强行拔电源，别说树莓 …"><meta property="og:url" content="https://imiku.me/2017/01/19/47.html/"><meta property="og:image" content="https://imiku.me/avatar.jpg"><meta property="article:publisher" content="https://imiku.me/2017/01/19/47.html/"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="Ice-Hazymoon 的博客"><meta name=twitter:description content="今天在折腾树莓派时不小心把树莓派弄死机了，VNC一直卡着，狂输命令也没用，只好强制拔电源重启，可如果以后经常死机，每次都强行拔电源，别说树莓 …"><meta name=twitter:url content="https://imiku.me/2017/01/19/47.html/"><meta name=twitter:image content="https://imiku.me/avatar.jpg"><meta name=twitter:site content="@Ice-Hazymoon"><meta property="og:image:width" content="1920"><meta property="og:image:height" content="1280"><meta name=theme-color content></meta><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><link rel=manifest href=/manifest.json><link href=/icon.png rel="shortcut icon"><link href=/icon.png rel=bookmark><link rel=apple-touch-icon href=/icon.png><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"在树莓派上安装使用硬件看门狗防止树莓派死机","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/01\/19\/47.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"Linux, 树莓派, watchdog","wordcount":666,"url":"https:\/\/imiku.me\/2017\/01\/19\/47.html\/","datePublished":"2017-01-19T11:25:16\u002b00:00","dateModified":"2022-04-14T23:22:03\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script></head><body class="dark:bg-darkBg dark:text-darkText"><div class="mx-auto relative shadow-lg"><div class="bg-white dark:bg-darkFg main md:max-w-4xl mx-auto relative xl:max-w-4xl flex flex-col justify-between"><header class="relative z-40"><nav class="border-b dark:border-darkBorder flex items-center md:px-10 navbar px-5 py-6 top-0 z-10"><div class="flex items-center justify-around route-items w-full"><div class="hidden eva-home eva-twitter eva-hash eva-folder eva-heart eva-people eva-bar-chart eva-search eva-github"></div><div class="flex flex-col items-center"><a title=首页 data-active-link=/ href=/ class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]"><i class="eva eva-home flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i></a>
+<span class="block md:hidden mt-2 text-xs">首页</span></div><div class="flex flex-col items-center"><a title=关于我 data-active-link=/about/ href=/about/ class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]"><i class="eva eva-heart flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i></a>
+<span class="block md:hidden mt-2 text-xs">关于我</span></div><div class="flex flex-col items-center"><a title=朋友们 data-active-link=/links/ href=/links/ class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]"><i class="eva eva-people flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i></a>
+<span class="block md:hidden mt-2 text-xs">朋友们</span></div><div class="flex flex-col items-center"><a title=归档 data-active-link=/archives/ href=/archives/ class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]"><i class="eva eva-bar-chart flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i></a>
+<span class="block md:hidden mt-2 text-xs">归档</span></div><div class="flex flex-col items-center"><a title=近期动态 data-active-link=/twitter/ href=/twitter/ class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]"><i class="eva eva-twitter flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i></a>
+<span class="block md:hidden mt-2 text-xs">近期动态</span></div><div class="flex flex-col items-center"><a title=GitHub data-active-link=/github/ href=/github/ class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]"><i class="eva eva-github flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i></a>
+<span class="block md:hidden mt-2 text-xs">GitHub</span></div><div class="flex flex-col items-center"><a title=搜索 data-active-link=/search/ href=/search/ class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]"><i class="eva eva-search flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i></a>
+<span class="block md:hidden mt-2 text-xs">搜索</span></div></div></nav></header><main class="relative flex-grow" id=swup><div class="h-full relative"><div class="h-full relative"><div class="bg-white dark:bg-darkFg h-full overflow-auto page-view-article"><div class=relative><div class="article-cover h-0 relative w-full"><picture><source data-srcset="/2017/01/19/47.html/1630060151348213_hu08abcc46750dabdc1a7adf4dc19019f0_28622_800x0_resize_q98_h2_catmullrom.webp 800w, /2017/01/19/47.html/1630060151348213_hu08abcc46750dabdc1a7adf4dc19019f0_28622_1200x0_resize_q98_h2_catmullrom.webp 1200w" type=image/webp><img src=/2017/01/19/47.html/1630060151348213_hu08abcc46750dabdc1a7adf4dc19019f0_28622_50x0_resize_q98_catmullrom.jpg data-src=1630060151348213.jpg data-srcset="/2017/01/19/47.html/1630060151348213_hu08abcc46750dabdc1a7adf4dc19019f0_28622_800x0_resize_q98_catmullrom.jpg 800w, /2017/01/19/47.html/1630060151348213_hu08abcc46750dabdc1a7adf4dc19019f0_28622_1200x0_resize_q98_catmullrom.jpg 1200w" alt=在树莓派上安装使用硬件看门狗防止树莓派死机 data-lazyload width=640 height=380 class="absolute h-full left-0 object-center object-cover top-0 w-full"></picture></div><h1 class="absolute article-title bottom-0 left-0 md:text-4xl pb-8 pt-32 px-6 text-3xl text-white w-full">在树莓派上安装使用硬件看门狗防止树莓派死机</h1></div><div class="article-info p-6 pb-2"><div class="bg-red-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs"><i class="eva eva-clock-outline mr-1"></i>
+<span><time title="发布于：2017年01月19日 11:25:16" datetime=2017-01-19T11:25:16Z>2017-01-19 11:25:16</time></span></div><div class="bg-indigo-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs"><i class="eva eva-flag-outline mr-1"></i>
+<span>阅读约 2 分钟</span></div><div class="bg-blue-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs"><i class="eva eva-bar-chart-outline mr-1"></i>
+<span>666 字</span></div></div><div class="border-b dark:border-darkBorder border-gray-300 pb-6 px-6"><div class="flex items-center mb-2"><i class="eva eva-pricetags-outline mr-1"></i>
 <span class=mr-2>标签</span><a href=/tags/linux title=Linux class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
 <i class="eva eva-hash-outline"></i>
 <span>Linux</span>
-</a><a href=/tags/%E6%A0%91%E8%8E%93%E6%B4%BE title=树莓派 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
-<i class="eva eva-hash-outline"></i>
+</a><a href=/tags/%E6%A0%91%E8%8E%93%E6%B4%BE title=树莓派 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs"><i class="eva eva-hash-outline"></i>
 <span>树莓派</span>
-</a><a href=/tags/watchdog title=watchdog class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
-<i class="eva eva-hash-outline"></i>
-<span>watchdog</span>
-</a></div><div class="flex items-center mb-2">
-<i class="eva eva-folder-outline mr-1"></i>
+</a><a href=/tags/watchdog title=watchdog class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs"><i class="eva eva-hash-outline"></i>
+<span>watchdog</span></a></div><div class="flex items-center mb-2"><i class="eva eva-folder-outline mr-1"></i>
 <span class=mr-2>分类</span><a href=/categories/%E6%95%99%E7%A8%8B title=教程 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
 <i class="eva eva-book-outline"></i>
-<span>教程</span>
-</a></div></div><aside class=toc>
-<header>
-<h1 class="text-2xl font-bold mb-3">文章目录</h1>
-</header>
-<nav id=TableOfContents></nav>
-</aside><section class="article-content px-6 md:px-10 py-5 typo"><p>今天在折腾树莓派时不小心把树莓派弄死机了，VNC一直卡着，狂输命令也没用，只好强制拔电源重启，可如果以后经常死机，每次都强行拔电源，别说树莓派了，连电脑都受不了啊，于是抱着试一试的心态谷歌了下相关内容，原来，的CPU是保护有硬件看门狗的,可以通过安装模块和值守程序来实现看门狗,防止树莓派死机，每次内存或cpu跑满时会自动重启，虽说不能防止死机，但总比直接拔电源重启好点。。。</p>
-<hr>
-<p>设备：树莓派3B+</p>
-<p>系统：Debian</p>
-<p>安装看门狗:</p>
-<p>1.加载看门狗模块,编辑/etc/modules文件,添加一行”bcm2708_wdog”</p>
-<div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo modprobe bcm2708_wdog
-sudo nano /etc/modules
-</code></pre></td></tr></table>
-</div>
-</div><p><figure class=gallery-image style=flex-grow:450;flex-basis:1081px>
-<picture><source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348497_hu2c63e7465b3c5b60d0b8e7b26903d74f_31572_640x0_resize_q98_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348497_hu2c63e7465b3c5b60d0b8e7b26903d74f_31572_1080x0_resize_q98_h2_catmullrom.webp 1080w" type=image/webp><img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348497.jpg src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348497_hu2c63e7465b3c5b60d0b8e7b26903d74f_31572_50x0_resize_q98_catmullrom.jpg width=775 height=172 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348497_hu2c63e7465b3c5b60d0b8e7b26903d74f_31572_640x0_resize_q98_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348497_hu2c63e7465b3c5b60d0b8e7b26903d74f_31572_1080x0_resize_q98_catmullrom.jpg 1080w" alt=在树莓派上安装使用硬件看门狗防止树莓派死机 data-zoomable data-lazyload>
-</picture></figure></p>
-<p>2.安装系统配置软件和看门狗程序</p>
-<div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo apt-get install chkconfig
-sudo apt-get install watchdog
-</code></pre></td></tr></table>
-</div>
-</div><p><figure class=gallery-image style=flex-grow:310;flex-basis:744px>
-<picture><source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348689_hu3f851d3d4998c6b92810d05e79aaa7a7_76037_640x0_resize_q98_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348689_hu3f851d3d4998c6b92810d05e79aaa7a7_76037_1080x0_resize_q98_h2_catmullrom.webp 1080w" type=image/webp><img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348689.jpg src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348689_hu3f851d3d4998c6b92810d05e79aaa7a7_76037_50x0_resize_q98_catmullrom.jpg width=785 height=253 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348689_hu3f851d3d4998c6b92810d05e79aaa7a7_76037_640x0_resize_q98_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348689_hu3f851d3d4998c6b92810d05e79aaa7a7_76037_1080x0_resize_q98_catmullrom.jpg 1080w" alt=在树莓派上安装使用硬件看门狗防止树莓派死机 data-zoomable data-lazyload>
-</picture></figure></p>
-<p>3.配置看门狗程序，编辑“/etc/watchdog.conf”文件</p>
-<div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo nano /etc/watchdog.conf
-</code></pre></td></tr></table>
-</div>
-</div><p>去掉 watchdog-device = /dev/watchdog 前的#号，让看门狗设备对应树莓派的硬件看门狗</p>
-<p><figure class=gallery-image style=flex-grow:786;flex-basis:1886px>
-<picture><source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348350_hu4f32e4e07f3bcbfedbc2391621a39adb_3756_640x0_resize_q98_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348350_hu4f32e4e07f3bcbfedbc2391621a39adb_3756_1080x0_resize_q98_h2_catmullrom.webp 1080w" type=image/webp><img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348350.jpg src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348350_hu4f32e4e07f3bcbfedbc2391621a39adb_3756_50x0_resize_q98_catmullrom.jpg width=283 height=36 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348350_hu4f32e4e07f3bcbfedbc2391621a39adb_3756_640x0_resize_q98_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348350_hu4f32e4e07f3bcbfedbc2391621a39adb_3756_1080x0_resize_q98_catmullrom.jpg 1080w" alt=在树莓派上安装使用硬件看门狗防止树莓派死机 data-zoomable data-lazyload>
-</picture></figure></p>
-<p>去掉 max-load-1 = 24 前的#号，当1分钟load进程超过24个的时候（一般5个就是超高负载了，再高可以认为是死机，这在遭遇DDOS攻击的时候很容易遇到）就会触发重启</p>
-<p><figure class=gallery-image style=flex-grow:662;flex-basis:1590px>
-<picture><source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348325_hu841c801e0e7474d5df24a3812f47e604_20921_640x0_resize_q98_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348325_hu841c801e0e7474d5df24a3812f47e604_20921_1080x0_resize_q98_h2_catmullrom.webp 1080w" type=image/webp><img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348325.jpg src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348325_hu841c801e0e7474d5df24a3812f47e604_20921_50x0_resize_q98_catmullrom.jpg width=623 height=94 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348325_hu841c801e0e7474d5df24a3812f47e604_20921_640x0_resize_q98_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348325_hu841c801e0e7474d5df24a3812f47e604_20921_1080x0_resize_q98_catmullrom.jpg 1080w" alt=在树莓派上安装使用硬件看门狗防止树莓派死机 data-zoomable data-lazyload>
-</picture></figure></p>
-<p>还可以设置高温复位：
-去掉</p>
-<div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>temperature-device <span style=color:#ff79c6>=</span>  
-max-temperature <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>120</span>  
-</code></pre></td></tr></table>
-</div>
-</div><p>前的#号，改为</p>
-<div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>temperature-device <span style=color:#ff79c6>=</span> /sys/class/thermal/thermal_zone0/temp  
-max-temperature <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>80000</span>  
-</code></pre></td></tr></table>
-</div>
-</div><p>温度超过80度就会引起重启，保护CPU</p>
-<p><figure class=gallery-image style=flex-grow:1215;flex-basis:2916px>
-<picture><source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348114_hu57f25ed9bc562d5f1bf5b172ff0647bd_10983_640x0_resize_q98_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348114_hu57f25ed9bc562d5f1bf5b172ff0647bd_10983_1080x0_resize_q98_h2_catmullrom.webp 1080w" type=image/webp><img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348114.jpg src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348114_hu57f25ed9bc562d5f1bf5b172ff0647bd_10983_50x0_resize_q98_catmullrom.jpg width=559 height=46 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348114_hu57f25ed9bc562d5f1bf5b172ff0647bd_10983_640x0_resize_q98_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/01/19/47.html/1630060151348114_hu57f25ed9bc562d5f1bf5b172ff0647bd_10983_1080x0_resize_q98_catmullrom.jpg 1080w" alt=在树莓派上安装使用硬件看门狗防止树莓派死机 data-zoomable data-lazyload>
-</picture></figure></p>
-<p>配置完后，保存（Ctrl+O），退出（ctrl+x）</p>
-<p>4.配置看门狗程序，开机自动运行</p>
-<div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>chkconfig watchdog on
-</code></pre></td></tr></table>
-</div>
-</div><p>5.启动看门狗</p>
-<div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo /etc/init.d/watchdog start
-</code></pre></td></tr></table>
-</div>
-</div><p>到这里就配置完成看门狗了，大家可以试试输入下面的符号，这个符号可以引起树莓派死机，如果看门狗正常的话，等一会就能复位了</p>
-<div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>:<span style=color:#ff79c6>(){</span>:|:&amp;<span style=color:#ff79c6>}</span>;:
-</code></pre></td></tr></table>
-</div>
-</div><p>详情请参考原文：<a class=link href=http://pi.gadgetoid.com/article/who-watches-the-watcher target=_blank rel=noopener>http://pi.gadgetoid.com/article/who-watches-the-watcher</a></p>
-</section><div class="px-6 pb-5 pt-4 md:pb-10 md:pt-14 text-center md:px-10 text-xl text-gray-500">
-<a class="mr-4 w-5 h-5 inline-flex items-center" title="分享到 Twitter" href="https://twitter.com/share?&text=%e4%bb%8a%e5%a4%a9%e5%9c%a8%e6%8a%98%e8%85%be%e6%a0%91%e8%8e%93%e6%b4%be%e6%97%b6%e4%b8%8d%e5%b0%8f%e5%bf%83%e6%8a%8a%e6%a0%91%e8%8e%93%e6%b4%be%e5%bc%84%e6%ad%bb%e6%9c%ba%e4%ba%86%ef%bc%8cVNC%e4%b8%80%e7%9b%b4%e5%8d%a1%e7%9d%80%ef%bc%8c%e7%8b%82%e8%be%93%e5%91%bd%e4%bb%a4%e4%b9%9f%e6%b2%a1%e7%94%a8%ef%bc%8c%e5%8f%aa%e5%a5%bd%e5%bc%ba%e5%88%b6%e6%8b%94%e7%94%b5%e6%ba%90%e9%87%8d%e5%90%af%ef%bc%8c%e5%8f%af%e5%a6%82%e6%9e%9c%e4%bb%a5%e5%90%8e%e7%bb%8f%e5%b8%b8%e6%ad%bb%e6%9c%ba%ef%bc%8c%e6%af%8f%e6%ac%a1%e9%83%bd%e5%bc%ba%e8%a1%8c%e6%8b%94%e7%94%b5%e6%ba%90%ef%bc%8c%e5%88%ab%e8%af%b4%e6%a0%91%e8%8e%93%20%e2%80%a6&url=https://imiku.me/2017/01/19/47.html/" target=_blank rel="noopener noreferrer"><i class="eva hover:text-theme eva-twitter"></i></a>
+<span>教程</span></a></div></div><aside class=toc><header><h1 class="text-2xl font-bold mb-3">文章目录</h1></header><nav id=TableOfContents></nav></aside><section class="article-content px-6 md:px-10 py-5 typo"><p>今天在折腾树莓派时不小心把树莓派弄死机了，VNC一直卡着，狂输命令也没用，只好强制拔电源重启，可如果以后经常死机，每次都强行拔电源，别说树莓派了，连电脑都受不了啊，于是抱着试一试的心态谷歌了下相关内容，原来，的CPU是保护有硬件看门狗的,可以通过安装模块和值守程序来实现看门狗,防止树莓派死机，每次内存或cpu跑满时会自动重启，虽说不能防止死机，但总比直接拔电源重启好点。。。</p><hr><p>设备：树莓派3B+</p><p>系统：Debian</p><p>安装看门狗:</p><p>1.加载看门狗模块,编辑/etc/modules文件,添加一行”bcm2708_wdog”</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo modprobe bcm2708_wdog
+</span></span><span style=display:flex><span>sudo nano /etc/modules
+</span></span></code></pre></td></tr></table></div></div><p><figure class=gallery-image style=flex-grow:450;flex-basis:1081px><picture><source data-srcset="/2017/01/19/47.html/1630060151348497_hu2c63e7465b3c5b60d0b8e7b26903d74f_31572_640x0_resize_q98_h2_catmullrom.webp 640w, /2017/01/19/47.html/1630060151348497_hu2c63e7465b3c5b60d0b8e7b26903d74f_31572_1080x0_resize_q98_h2_catmullrom.webp 1080w" type=image/webp><img data-src=/2017/01/19/47.html/1630060151348497.jpg src=/2017/01/19/47.html/1630060151348497_hu2c63e7465b3c5b60d0b8e7b26903d74f_31572_50x0_resize_q98_catmullrom.jpg width=775 height=172 data-srcset="/2017/01/19/47.html/1630060151348497_hu2c63e7465b3c5b60d0b8e7b26903d74f_31572_640x0_resize_q98_catmullrom.jpg 640w, /2017/01/19/47.html/1630060151348497_hu2c63e7465b3c5b60d0b8e7b26903d74f_31572_1080x0_resize_q98_catmullrom.jpg 1080w" alt=在树莓派上安装使用硬件看门狗防止树莓派死机 data-zoomable data-lazyload></picture></figure><noscript data-lazyload-noscript><img src=/2017/01/19/47.html/1630060151348497.jpg alt=在树莓派上安装使用硬件看门狗防止树莓派死机></noscript></p><p>2.安装系统配置软件和看门狗程序</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo apt-get install chkconfig
+</span></span><span style=display:flex><span>sudo apt-get install watchdog
+</span></span></code></pre></td></tr></table></div></div><p><figure class=gallery-image style=flex-grow:310;flex-basis:744px><picture><source data-srcset="/2017/01/19/47.html/1630060151348689_hu3f851d3d4998c6b92810d05e79aaa7a7_76037_640x0_resize_q98_h2_catmullrom.webp 640w, /2017/01/19/47.html/1630060151348689_hu3f851d3d4998c6b92810d05e79aaa7a7_76037_1080x0_resize_q98_h2_catmullrom.webp 1080w" type=image/webp><img data-src=/2017/01/19/47.html/1630060151348689.jpg src=/2017/01/19/47.html/1630060151348689_hu3f851d3d4998c6b92810d05e79aaa7a7_76037_50x0_resize_q98_catmullrom.jpg width=785 height=253 data-srcset="/2017/01/19/47.html/1630060151348689_hu3f851d3d4998c6b92810d05e79aaa7a7_76037_640x0_resize_q98_catmullrom.jpg 640w, /2017/01/19/47.html/1630060151348689_hu3f851d3d4998c6b92810d05e79aaa7a7_76037_1080x0_resize_q98_catmullrom.jpg 1080w" alt=在树莓派上安装使用硬件看门狗防止树莓派死机 data-zoomable data-lazyload></picture></figure><noscript data-lazyload-noscript><img src=/2017/01/19/47.html/1630060151348689.jpg alt=在树莓派上安装使用硬件看门狗防止树莓派死机></noscript></p><p>3.配置看门狗程序，编辑“/etc/watchdog.conf”文件</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo nano /etc/watchdog.conf
+</span></span></code></pre></td></tr></table></div></div><p>去掉 watchdog-device = /dev/watchdog 前的#号，让看门狗设备对应树莓派的硬件看门狗</p><p><figure class=gallery-image style=flex-grow:786;flex-basis:1886px><picture><source data-srcset="/2017/01/19/47.html/1630060151348350_hu4f32e4e07f3bcbfedbc2391621a39adb_3756_640x0_resize_q98_h2_catmullrom.webp 640w, /2017/01/19/47.html/1630060151348350_hu4f32e4e07f3bcbfedbc2391621a39adb_3756_1080x0_resize_q98_h2_catmullrom.webp 1080w" type=image/webp><img data-src=/2017/01/19/47.html/1630060151348350.jpg src=/2017/01/19/47.html/1630060151348350_hu4f32e4e07f3bcbfedbc2391621a39adb_3756_50x0_resize_q98_catmullrom.jpg width=283 height=36 data-srcset="/2017/01/19/47.html/1630060151348350_hu4f32e4e07f3bcbfedbc2391621a39adb_3756_640x0_resize_q98_catmullrom.jpg 640w, /2017/01/19/47.html/1630060151348350_hu4f32e4e07f3bcbfedbc2391621a39adb_3756_1080x0_resize_q98_catmullrom.jpg 1080w" alt=在树莓派上安装使用硬件看门狗防止树莓派死机 data-zoomable data-lazyload></picture></figure><noscript data-lazyload-noscript><img src=/2017/01/19/47.html/1630060151348350.jpg alt=在树莓派上安装使用硬件看门狗防止树莓派死机></noscript></p><p>去掉 max-load-1 = 24 前的#号，当1分钟load进程超过24个的时候（一般5个就是超高负载了，再高可以认为是死机，这在遭遇DDOS攻击的时候很容易遇到）就会触发重启</p><p><figure class=gallery-image style=flex-grow:662;flex-basis:1590px><picture><source data-srcset="/2017/01/19/47.html/1630060151348325_hu841c801e0e7474d5df24a3812f47e604_20921_640x0_resize_q98_h2_catmullrom.webp 640w, /2017/01/19/47.html/1630060151348325_hu841c801e0e7474d5df24a3812f47e604_20921_1080x0_resize_q98_h2_catmullrom.webp 1080w" type=image/webp><img data-src=/2017/01/19/47.html/1630060151348325.jpg src=/2017/01/19/47.html/1630060151348325_hu841c801e0e7474d5df24a3812f47e604_20921_50x0_resize_q98_catmullrom.jpg width=623 height=94 data-srcset="/2017/01/19/47.html/1630060151348325_hu841c801e0e7474d5df24a3812f47e604_20921_640x0_resize_q98_catmullrom.jpg 640w, /2017/01/19/47.html/1630060151348325_hu841c801e0e7474d5df24a3812f47e604_20921_1080x0_resize_q98_catmullrom.jpg 1080w" alt=在树莓派上安装使用硬件看门狗防止树莓派死机 data-zoomable data-lazyload></picture></figure><noscript data-lazyload-noscript><img src=/2017/01/19/47.html/1630060151348325.jpg alt=在树莓派上安装使用硬件看门狗防止树莓派死机></noscript></p><p>还可以设置高温复位：
+去掉</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>temperature-device <span style=color:#ff79c6>=</span>  
+</span></span><span style=display:flex><span>max-temperature <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>120</span>  
+</span></span></code></pre></td></tr></table></div></div><p>前的#号，改为</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>temperature-device <span style=color:#ff79c6>=</span> /sys/class/thermal/thermal_zone0/temp  
+</span></span><span style=display:flex><span>max-temperature <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>80000</span>  
+</span></span></code></pre></td></tr></table></div></div><p>温度超过80度就会引起重启，保护CPU</p><p><figure class=gallery-image style=flex-grow:1215;flex-basis:2916px><picture><source data-srcset="/2017/01/19/47.html/1630060151348114_hu57f25ed9bc562d5f1bf5b172ff0647bd_10983_640x0_resize_q98_h2_catmullrom.webp 640w, /2017/01/19/47.html/1630060151348114_hu57f25ed9bc562d5f1bf5b172ff0647bd_10983_1080x0_resize_q98_h2_catmullrom.webp 1080w" type=image/webp><img data-src=/2017/01/19/47.html/1630060151348114.jpg src=/2017/01/19/47.html/1630060151348114_hu57f25ed9bc562d5f1bf5b172ff0647bd_10983_50x0_resize_q98_catmullrom.jpg width=559 height=46 data-srcset="/2017/01/19/47.html/1630060151348114_hu57f25ed9bc562d5f1bf5b172ff0647bd_10983_640x0_resize_q98_catmullrom.jpg 640w, /2017/01/19/47.html/1630060151348114_hu57f25ed9bc562d5f1bf5b172ff0647bd_10983_1080x0_resize_q98_catmullrom.jpg 1080w" alt=在树莓派上安装使用硬件看门狗防止树莓派死机 data-zoomable data-lazyload></picture></figure><noscript data-lazyload-noscript><img src=/2017/01/19/47.html/1630060151348114.jpg alt=在树莓派上安装使用硬件看门狗防止树莓派死机></noscript></p><p>配置完后，保存（Ctrl+O），退出（ctrl+x）</p><p>4.配置看门狗程序，开机自动运行</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>chkconfig watchdog on
+</span></span></code></pre></td></tr></table></div></div><p>5.启动看门狗</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo /etc/init.d/watchdog start
+</span></span></code></pre></td></tr></table></div></div><p>到这里就配置完成看门狗了，大家可以试试输入下面的符号，这个符号可以引起树莓派死机，如果看门狗正常的话，等一会就能复位了</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>:<span style=color:#ff79c6>(){</span>:|:&amp;<span style=color:#ff79c6>}</span>;:
+</span></span></code></pre></td></tr></table></div></div><p>详情请参考原文：<a class=link href=http://pi.gadgetoid.com/article/who-watches-the-watcher target=_blank rel=noopener>http://pi.gadgetoid.com/article/who-watches-the-watcher</a></p></section><div class="px-6 pb-5 pt-4 md:pb-10 md:pt-14 text-center md:px-10 text-xl text-gray-500"><a class="mr-4 w-5 h-5 inline-flex items-center" title="分享到 Twitter" href="https://twitter.com/share?&text=%e4%bb%8a%e5%a4%a9%e5%9c%a8%e6%8a%98%e8%85%be%e6%a0%91%e8%8e%93%e6%b4%be%e6%97%b6%e4%b8%8d%e5%b0%8f%e5%bf%83%e6%8a%8a%e6%a0%91%e8%8e%93%e6%b4%be%e5%bc%84%e6%ad%bb%e6%9c%ba%e4%ba%86%ef%bc%8cVNC%e4%b8%80%e7%9b%b4%e5%8d%a1%e7%9d%80%ef%bc%8c%e7%8b%82%e8%be%93%e5%91%bd%e4%bb%a4%e4%b9%9f%e6%b2%a1%e7%94%a8%ef%bc%8c%e5%8f%aa%e5%a5%bd%e5%bc%ba%e5%88%b6%e6%8b%94%e7%94%b5%e6%ba%90%e9%87%8d%e5%90%af%ef%bc%8c%e5%8f%af%e5%a6%82%e6%9e%9c%e4%bb%a5%e5%90%8e%e7%bb%8f%e5%b8%b8%e6%ad%bb%e6%9c%ba%ef%bc%8c%e6%af%8f%e6%ac%a1%e9%83%bd%e5%bc%ba%e8%a1%8c%e6%8b%94%e7%94%b5%e6%ba%90%ef%bc%8c%e5%88%ab%e8%af%b4%e6%a0%91%e8%8e%93%20%e2%80%a6&url=https://imiku.me/2017/01/19/47.html/" target=_blank rel="noopener noreferrer"><i class="eva hover:text-theme eva-twitter"></i></a>
 <a class="mr-4 w-5 h-5 inline-flex items-center" title="分享到 Facebook" href="https://www.facebook.com/sharer.php?u=https://imiku.me/2017/01/19/47.html/" target=_blank rel="noopener noreferrer"><i class="eva hover:text-theme eva-facebook"></i></a>
-<a class="mr-4 w-5 h-5 inline-flex items-center" title=分享到微博 href="https://service.weibo.com/share/share.php?url=https://imiku.me/2017/01/19/47.html/&title=%e5%9c%a8%e6%a0%91%e8%8e%93%e6%b4%be%e4%b8%8a%e5%ae%89%e8%a3%85%e4%bd%bf%e7%94%a8%e7%a1%ac%e4%bb%b6%e7%9c%8b%e9%97%a8%e7%8b%97%e9%98%b2%e6%ad%a2%e6%a0%91%e8%8e%93%e6%b4%be%e6%ad%bb%e6%9c%ba&sudaref=imiku.me" target=_blank rel="noopener noreferrer"><svg class="w-5 h-5 inline-block fill-current hover:text-theme" viewBox="0 0 1193 1024" xmlns="http://www.w3.org/2000/svg" p-id="2681" width="200" height="200"><path d="M456.991736 557.336482c-107.598583.0-194.644628 74.956316-194.644629 166.838252s87.046045 166.838253 194.644629 166.838253c107.598583.0 194.644628-74.956316 194.644628-166.838253s-87.046045-166.838253-194.644628-166.838252zM391.707202 822.101535c-36.269185.0-66.493506-27.806375-66.493507-62.866588s29.015348-62.866588 66.493507-62.866588c36.269185.0 66.493506 27.806375 66.493506 62.866588S427.976387 822.101535 391.707202 822.101535zm93.090909-91.881936c-14.507674.0-26.597403-12.089728-26.597403-26.597403s12.089728-26.597403 26.597403-26.597403 26.597403 12.089728 26.597403 26.597403-12.089728 26.597403-26.597403 26.597403zM239.376623 281.690673C97.9268 394.125148-18.134593 600.859504 30.224321 661.308146c32.642267 41.105077 59.239669-19.343566 124.524203-89.46399 30.224321-32.642267 77.374262-54.403778 122.106258-90.672964 20.552538-16.92562 197.062574-35.060213 230.913813-35.060212 97.9268-99.135773 114.85242-207.943329 74.956316-258.720189-48.358914-59.239669-201.898465-16.92562-343.348288 94.299882z" p-id="2682"/><path d="M808.802834 560.9634C906.729634 461.827627 911.565525 377.199528 870.460449 326.422668c-47.149941-60.448642-211.570248-32.642267-351.811098 78.583235" p-id="2683"/><path d="M605.695396 353.020071c-14.507674 8.46281-25.38843 12.089728-29.015349 7.253837-1.208973-2.417946-1.208973-6.044864 1.208973-9.671783-16.92562-1.208973-33.85124-1.208973-50.776859-1.208973C235.749705 349.393152.0 500.514758.0 686.696576S235.749705 1024 527.112161 1024s527.112161-151.121606 527.11216-337.303424c0-170.465171-194.644628-309.497048-448.528925-333.676505zM481.171192 959.924439c-205.525383.0-372.363636-112.434474-372.363636-251.466352s166.838253-251.466352 372.363636-251.466351 372.363636 112.434475 372.363637 251.466351-166.838253 251.466352-372.363637 251.466352z" p-id="2684"/><path d="M1021.582054 423.140496c-3.626919.0-6.044864.0-9.671782-1.208973-18.134593-4.835891-29.015348-24.179457-22.970485-42.31405 2.417946-7.253837 3.626919-16.92562 3.626919-29.015348.0-65.284534-53.194805-119.688312-119.688312-119.688312-19.343566.0-33.85124-15.716647-33.851239-33.851239s15.716647-33.85124 33.851239-33.85124c103.971665.0 187.390791 84.628099 187.390791 187.390791.0 18.134593-2.417946 33.85124-6.044864 48.358914-4.835891 14.507674-18.134593 24.179457-32.642267 24.179457z" p-id="2685"/><path d="M1146.106257 473.917355c-2.417946.0-6.044864.0-8.46281-1.208972-20.552538-4.835891-32.642267-25.38843-27.806375-45.940969 6.044864-24.179457 8.46281-47.149941 8.46281-71.329397.0-153.539552-126.942149-280.481701-281.690673-280.481701-20.552538.0-37.478158-16.92562-37.478158-37.478158S816.056671.0 836.609209.0c197.062574.0 356.646989 159.584416 356.646989 356.646989.0 29.015348-3.626919 59.239669-10.880755 88.255018-3.626919 18.134593-19.343566 29.015348-36.269186 29.015348z" p-id="2686"/></svg>
-</a>
-<i class="mr-4 eva cursor-pointer hover:text-theme eva-copy" title=复制链接 data-clipboard-text=https://imiku.me/2017/01/19/47.html/></i>
-<div class="hidden sm:inline-block relative group cursor-pointer">
-<i class="eva show-qrcode hover:text-theme eva-smartphone"></i>
-<div class="qrcode-wrapper p-1 absolute group-hover:opacity-100 pointer-events-none transition duration-300 ease-[ease] opacity-0 w-32 h-32 left-2/4 -translate-x-1/2 bottom-10 border border-gray-300 rounded overflow-hidden bg-white">
-<img class="w-full h-full" src="https://www.lofter.com/genBitmaxImage?url=https://imiku.me/2017/01/19/47.html/" alt=二维码>
-</div>
-</div>
-</div>
-<div class="border-b dark:border-darkBorder"></div>
-<div class="flex justify-between md:text-2xl p-4 text-xl">
-<a href title class="cursor-pointer flex hover:text-theme items-center text-gray-500 transition duration-300 ease-[ease] invisible dark:text-darkTextPlaceholder dark:hover:text-darkText">
-<span class="flex items-center text-5xl opacity-70 dark:bg-opacity-100">
-<i class="eva eva-chevron-left-outline"></i>
-</span>
-<span>上一篇</span>
-</a>
-<div class="hidden items-center text-xs xl:flex">
-除特殊声明外，本博客一律使用 「
-<a href=/creativecommons target=_blank rel="noopener noreferrer" class=text-theme>署名 - 非商业性使用 - 禁止演绎 4.0</a>
-」许可协议进行授权
-</div>
-<div class="flex items-center text-sm xl:hidden">
-<a href=/creativecommons target=_blank rel="noopener noreferrer" class=text-theme>
-<img src=/images/Cc-by-nc-nd.svg alt="署名-非商业性使用-禁止演绎 4.0 国际" title="署名-非商业性使用-禁止演绎 4.0 国际" class=w-24>
-</a>
-</div>
-<a href=/2017/02/08/183.html/ title="神级桌面美化软件——SAO Utils" class="cursor-pointer flex hover:text-theme items-center text-gray-500 transition duration-300 ease-[ease] invisible dark:text-darkTextPlaceholder dark:hover:text-darkText" style=visibility:visible>
-<span>下一篇</span>
-<span class="flex items-center text-5xl opacity-70 dark:bg-opacity-100">
-<i class="eva eva-chevron-right-outline"></i>
-</span>
-</a>
-</div><div class="border-t py-6 px-6 md:px-8 dark:border-darkBorder"><div id=cusdis_thread data-host=https://cusdis.com data-app-id=08bf7804-1695-4cba-a508-f60e353736ad data-page-id=553fe284bfc3d2731119c8ace2aeecd1zh-cn data-page-url=/2017/01/19/47.html/ data-page-title=在树莓派上安装使用硬件看门狗防止树莓派死机 class=text-center>评论系统加载中···</div></div></div>
-</div>
-</div>
-</main><footer>
-<div class="com-footer leading-none py-4 px-6 text-sm flex flex-col md:flex-row md:justify-between items-center border-t dark:border-darkBorder text-gray-600 dark:text-darkTextPlaceholder">
-<div class="text-center mb-2 md:mb-0 flex items-center">
-<span>Copyright © 2016 - 2077 | </span>
+<a class="mr-4 w-5 h-5 inline-flex items-center" title="分享到 微博" href="https://service.weibo.com/share/share.php?url=https://imiku.me/2017/01/19/47.html/&title=%e5%9c%a8%e6%a0%91%e8%8e%93%e6%b4%be%e4%b8%8a%e5%ae%89%e8%a3%85%e4%bd%bf%e7%94%a8%e7%a1%ac%e4%bb%b6%e7%9c%8b%e9%97%a8%e7%8b%97%e9%98%b2%e6%ad%a2%e6%a0%91%e8%8e%93%e6%b4%be%e6%ad%bb%e6%9c%ba&sudaref=imiku.me" target=_blank rel="noopener noreferrer"><svg class="w-5 h-5 inline-block fill-current hover:text-theme" viewBox="0 0 1193 1024" xmlns="http://www.w3.org/2000/svg" p-id="2681" width="200" height="200"><path d="M456.991736 557.336482c-107.598583.0-194.644628 74.956316-194.644629 166.838252s87.046045 166.838253 194.644629 166.838253c107.598583.0 194.644628-74.956316 194.644628-166.838253s-87.046045-166.838253-194.644628-166.838252zM391.707202 822.101535c-36.269185.0-66.493506-27.806375-66.493507-62.866588s29.015348-62.866588 66.493507-62.866588c36.269185.0 66.493506 27.806375 66.493506 62.866588S427.976387 822.101535 391.707202 822.101535zm93.090909-91.881936c-14.507674.0-26.597403-12.089728-26.597403-26.597403s12.089728-26.597403 26.597403-26.597403 26.597403 12.089728 26.597403 26.597403-12.089728 26.597403-26.597403 26.597403zM239.376623 281.690673C97.9268 394.125148-18.134593 600.859504 30.224321 661.308146c32.642267 41.105077 59.239669-19.343566 124.524203-89.46399 30.224321-32.642267 77.374262-54.403778 122.106258-90.672964 20.552538-16.92562 197.062574-35.060213 230.913813-35.060212 97.9268-99.135773 114.85242-207.943329 74.956316-258.720189-48.358914-59.239669-201.898465-16.92562-343.348288 94.299882z" p-id="2682"/><path d="M808.802834 560.9634C906.729634 461.827627 911.565525 377.199528 870.460449 326.422668c-47.149941-60.448642-211.570248-32.642267-351.811098 78.583235" p-id="2683"/><path d="M605.695396 353.020071c-14.507674 8.46281-25.38843 12.089728-29.015349 7.253837-1.208973-2.417946-1.208973-6.044864 1.208973-9.671783-16.92562-1.208973-33.85124-1.208973-50.776859-1.208973C235.749705 349.393152.0 500.514758.0 686.696576S235.749705 1024 527.112161 1024s527.112161-151.121606 527.11216-337.303424c0-170.465171-194.644628-309.497048-448.528925-333.676505zM481.171192 959.924439c-205.525383.0-372.363636-112.434474-372.363636-251.466352s166.838253-251.466352 372.363636-251.466351 372.363636 112.434475 372.363637 251.466351-166.838253 251.466352-372.363637 251.466352z" p-id="2684"/><path d="M1021.582054 423.140496c-3.626919.0-6.044864.0-9.671782-1.208973-18.134593-4.835891-29.015348-24.179457-22.970485-42.31405 2.417946-7.253837 3.626919-16.92562 3.626919-29.015348.0-65.284534-53.194805-119.688312-119.688312-119.688312-19.343566.0-33.85124-15.716647-33.851239-33.851239s15.716647-33.85124 33.851239-33.85124c103.971665.0 187.390791 84.628099 187.390791 187.390791.0 18.134593-2.417946 33.85124-6.044864 48.358914-4.835891 14.507674-18.134593 24.179457-32.642267 24.179457z" p-id="2685"/><path d="M1146.106257 473.917355c-2.417946.0-6.044864.0-8.46281-1.208972-20.552538-4.835891-32.642267-25.38843-27.806375-45.940969 6.044864-24.179457 8.46281-47.149941 8.46281-71.329397.0-153.539552-126.942149-280.481701-281.690673-280.481701-20.552538.0-37.478158-16.92562-37.478158-37.478158S816.056671.0 836.609209.0c197.062574.0 356.646989 159.584416 356.646989 356.646989.0 29.015348-3.626919 59.239669-10.880755 88.255018-3.626919 18.134593-19.343566 29.015348-36.269186 29.015348z" p-id="2686"/></svg></a><i class="mr-4 eva cursor-pointer hover:text-theme eva-copy" title=复制链接 data-clipboard-text=https://imiku.me/2017/01/19/47.html/></i><div class="hidden sm:inline-block relative group cursor-pointer"><i title=二维码 class="eva show-qrcode hover:text-theme eva-smartphone"></i><div class="qrcode-wrapper absolute group-hover:opacity-100 pointer-events-none transition duration-300 ease-[ease] opacity-0 w-32 h-32 left-2/4 -translate-x-1/2 bottom-10 border border-gray-300 rounded overflow-hidden bg-white"><img class="w-full h-full" src="https://www.lofter.com/genBitmaxImage?url=https://imiku.me/2017/01/19/47.html/" alt=二维码></div></div></div><div class="border-b dark:border-darkBorder"></div><div class="flex justify-between md:text-2xl p-4 text-xl"><a href title class="cursor-pointer flex hover:text-theme items-center text-gray-500 transition duration-300 ease-[ease] invisible dark:text-darkTextPlaceholder dark:hover:text-darkText"><span class="flex items-center text-5xl opacity-70 dark:bg-opacity-100"><i class="eva eva-chevron-left-outline"></i></span>
+<span>上一篇</span></a><div class="hidden items-center text-xs xl:flex">除特殊声明外，本博客一律使用以下协议进行授权 「
+<a href=/license target=_blank rel="noopener noreferrer" class=text-theme>署名 - 非商业性使用 - 禁止演绎 4.0</a>
+」</div><div class="flex items-center text-sm xl:hidden"><a href=/license target=_blank rel="noopener noreferrer" class=text-theme><img src=/images/Cc-by-nc-nd.svg alt="署名 - 非商业性使用 - 禁止演绎 4.0" title="署名 - 非商业性使用 - 禁止演绎 4.0" class=w-24></a></div><a href=/2017/02/08/183.html/ title="神级桌面美化软件——SAO Utils" class="cursor-pointer flex hover:text-theme items-center text-gray-500 transition duration-300 ease-[ease] invisible dark:text-darkTextPlaceholder dark:hover:text-darkText" style=visibility:visible><span>下一篇</span>
+<span class="flex items-center text-5xl opacity-70 dark:bg-opacity-100"><i class="eva eva-chevron-right-outline"></i></span></a></div><div class="border-t py-6 px-6 md:px-8 dark:border-darkBorder"><div id=cusdis_thread data-host=https://cusdis.com data-app-id=08bf7804-1695-4cba-a508-f60e353736ad data-page-id=553fe284bfc3d2731119c8ace2aeecd1zh-cn data-page-url=/2017/01/19/47.html/ data-page-title=在树莓派上安装使用硬件看门狗防止树莓派死机 class=text-center>评论系统加载中···</div></div></div></div></div></main><footer><div class="com-footer leading-none py-4 px-6 text-sm flex flex-col md:flex-row md:justify-between items-center border-t dark:border-darkBorder text-gray-600 dark:text-darkTextPlaceholder"><div class="text-center mb-2 md:mb-0 flex items-center"><span>Copyright © 2016 - 2077 |</span>
 <a href=/index.xml target=_blank class="hover:text-theme ml-2">RSS</a>
-<a href=/sitemap.xml target=_blank class="hover:text-theme ml-2">Sitemap</a>
-<div id=google_translate_element class="ml-2 rounded border dark:border-darkBorder overflow-hidden"></div>
-</div>
-<div id=run-time>
-<span>本博客已低调存活：</span>
+<a href=/sitemap.xml target=_blank class="hover:text-theme ml-2">Sitemap</a><div id=google_translate_element class="ml-2 rounded border dark:border-darkBorder overflow-hidden"></div></div><div id=run-time><span>运行时间：</span>
 <b id=run-time-d>0</b>
-<span> 天 </span>
+<span>天</span>
 <b id=run-time-h>0</b>
-<span> 小时 </span>
+<span>小时</span>
 <b id=run-time-m>0</b>
-<span> 分 </span>
+<span>分钟</span>
 <b id=run-time-s>0</b>
-<span> 秒</span>
-</div>
-</div><script>window.__theme={cdn:'https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest',pjax:!0,isServer:!1,$version:"bcc33370a0ffd7486a7264ff4bd6107d6430c5bc",hugoEncrypt:{wrongPasswordText:'密码错误',userStorage:window.sessionStorage}}</script>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
-<script async src=https://www.google-analytics.com/analytics.js></script>
-<script defer src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app_bcc33370a0ffd7486a7264ff4bd6107d6430c5bc.js></script><script defer src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/pjax_bcc33370a0ffd7486a7264ff4bd6107d6430c5bc.js></script><script>'serviceWorker'in navigator&&window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')})</script><script async src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/translate-google_.js></script>
-<script type=text/javascript>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'zh-CN',includedLanguages:'af,ga,sq,it,ar,ja,az,kn,eu,ko,bn,la,be,lv,bg,lt,ca,mk,zh-CN,ms,zh-TW,mt,hr,no,cs,fa,da,pl,nl,pt,en,ro,eo,ru,et,sr,tl,sk,fi,sl,fr,es,gl,sw,ka,sv,de,ta,el,te,gu,th,ht,tr,iw,uk,hi,ur,hu,vi,is,cy,id,yi',autoDisplay:!1},'google_translate_element')}</script><script>window.CUSDIS_LOCALE={powered_by:'评论由 Cusdis 提供',post_comment:'发送',loading:'加载中',email:'邮箱地址 (可选)',nickname:'昵称',reply_placeholder:'回复内容...',reply_btn:'回复',sending:'发送中...',mod_badge:'管理员',content_is_required:'内容不能为空',nickname_is_required:'昵称不能为空',comment_has_been_sent:'评论已发送，管理员审核通过后会展示'}</script>
-<script async src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/cusdis_bcc33370a0ffd7486a7264ff4bd6107d6430c5bc.js></script></footer></div>
-</div>
-<div onclick=window.backTop() title=返回顶部 class="back-top translate-y-3 opacity-0 sm:scale-100 scale-90 transition duration-300 ease-[ease] z-10 cursor-pointer fixed right-6 bottom-9 bg-white dark:bg-darkBgAccent rounded-full">
-<div class=relative>
-<div class="w-full h-full absolute left-0 top-0 text-xl flex justify-center items-center">
-<i class="eva eva-arrow-upward-outline"></i>
-</div><svg id="svg" width="54" height="54" viewBox="0 0 54 54" preserveAspectRatio="xMinYMin meet"><circle transform="rotate(-90, 27 , 27)" style="stroke-dasharray:157,157;stroke-dashoffset:157" cx="27" cy="27" r="25" fill="none" stroke-width="4" stroke-linecap="round" stroke="var(--theme)"/></svg>
-</div>
-</div>
-<div class="dark-mode-switch z-40 fixed right-6 md:top-8 top-12 w-12 h-12 cursor-pointer bg-white dark:bg-darkBgAccent border dark:border-darkBorder rounded-full flex justify-center items-center text-xl">
-<i class="eva eva-moon"></i>
-</div>
-</body>
-</html>
+<span>秒</span></div></div><script type=text/javascript>window.__theme={cdn:'',pjax:!0,isServer:!1,$version:"9e02ff00253e717699371551e16045b40fdb6ad1",hugoEncrypt:{wrongPasswordText:"密码错误",userStorage:window.sessionStorage},i18n:{copySuccess:"复制成功",copyFailed:"复制失败，请手动复制",copyCode:"复制代码",searchLoadFailure:"初始化搜索引擎失败",searchInput:"请输入内容",searchResults:(e,t)=>`关键字 <span class="text-theme">${t}</span> 中共找到 <span class="text-theme">${e}</span> 条结果`}}</script><script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-98634098-1","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script>
+<script type=text/javascript src=/js/main.08d4bb1c42c7cdf144ddc4ec62f95b0d8b89c415bfe89c22640465ae222a482c.js defer integrity="sha256-CNS7HELHzfFE3cTsYvlbDYuJxBW/6JwiZARlriIqSCw="></script><script type=text/javascript src=/js/pjax.81becdcc17bf770acd9a2b7dd20094d8f3cf46572f2885e132be9ec59c03d6ac.js defer integrity="sha256-gb7NzBe/dwrNmit90gCU2PPPRlcvKIXhMr6exZwD1qw="></script><script>"serviceWorker"in navigator&&window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js")})</script><script type=text/javascript src=/js/translate-google.62d8577460d8cbba050e5fdd4705f0630b240c421d78e39443db0eee9e0591fc.js defer integrity="sha256-YthXdGDYy7oFDl/dRwXwYwskDEIdeOOUQ9sO7p4Fkfw="></script><script type=text/javascript>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:"zh-cn",includedLanguages:"af,ga,sq,it,ar,ja,az,kn,eu,ko,bn,la,be,lv,bg,lt,ca,mk,zh-CN,ms,zh-TW,mt,hr,no,cs,fa,da,pl,nl,pt,en,ro,eo,ru,et,sr,tl,sk,fi,sl,fr,es,gl,sw,ka,sv,de,ta,el,te,gu,th,ht,tr,iw,uk,hi,ur,hu,vi,is,cy,id,yi",autoDisplay:!1},"google_translate_element")}</script><script>window.CUSDIS_LOCALE={powered_by:"评论由 Cusdis 提供",post_comment:"发送",loading:"加载中",email:"邮箱地址 (可选)",nickname:"昵称",reply_placeholder:"回复内容...",reply_btn:"回复",sending:"发送中...",mod_badge:"管理员",content_is_required:"内容不能为空",nickname_is_required:"昵称不能为空",comment_has_been_sent:"评论已发送，管理员审核通过后会展示"}</script>
+<script type=text/javascript src=/js/cusdis.eb2741dcc2c76fb911843f85a0643205ab5e00d1a5b652f2cc503a8a0e6e77ea.js defer integrity="sha256-6ydB3MLHb7kRhD+FoGQyBateANGltlLyzFA6ig5ud+o="></script></footer></div></div><div onclick=window.backTop() title=返回顶部 class="back-top translate-y-3 opacity-0 sm:scale-100 scale-90 transition duration-300 ease-[ease] z-10 cursor-pointer fixed right-6 bottom-9 bg-white dark:bg-darkBgAccent rounded-full"><div class=relative><div class="w-full h-full absolute left-0 top-0 text-xl flex justify-center items-center"><i class="eva eva-arrow-upward-outline"></i></div><svg id="svg" width="54" height="54" viewBox="0 0 54 54" preserveAspectRatio="xMinYMin meet"><circle transform="rotate(-90, 27 , 27)" style="stroke-dasharray:157,157;stroke-dashoffset:157" cx="27" cy="27" r="25" fill="none" stroke-width="4" stroke-linecap="round" stroke="var(--theme)"/></svg></div></div><div class="dark-mode-switch z-40 fixed right-6 md:top-8 top-12 w-12 h-12 cursor-pointer bg-white dark:bg-darkBgAccent border dark:border-darkBorder rounded-full flex justify-center items-center text-xl"><i class="eva eva-moon"></i></div></body></html>

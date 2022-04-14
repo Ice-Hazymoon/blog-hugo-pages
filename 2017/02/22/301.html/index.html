@@ -1,689 +1,428 @@
-<!doctype html><html lang=zh-cn><head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=keywords content="树莓派,教程,Ice-Hazymoon,冰凌胧月,Hazymoon,MikuTools,">
-<meta name=description content="文章转载自：woodenrobot.me很早之前就想用树莓派当闹钟了，尝试过许多方法，比如用谷歌日历，PHP脚本等，但最后尝试下来效果都不是 …">
-<meta itemprop=description content="文章转载自：woodenrobot.me很早之前就想用树莓派当闹钟了，尝试过许多方法，比如用谷歌日历，PHP脚本等，但最后尝试下来效果都不是 …">
-<meta http-equiv=x-ua-compatible content="ie=edge">
-<meta itemprop=name content="用树莓派打造你的私人闹钟~">
-<link href=https://imiku.me/index.xml title=用树莓派打造你的私人闹钟~ type=application/rss+xml rel=alternate>
-<title>用树莓派打造你的私人闹钟~</title>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main_bcc33370a0ffd7486a7264ff4bd6107d6430c5bc.css>
-<meta property="og:site_name" content="用树莓派打造你的私人闹钟~">
-<meta property="og:type" content="article">
-<meta property="og:title" content="用树莓派打造你的私人闹钟~">
-<meta property="og:description" content="文章转载自：woodenrobot.me很早之前就想用树莓派当闹钟了，尝试过许多方法，比如用谷歌日历，PHP脚本等，但最后尝试下来效果都不是 …">
-<meta property="og:url" content="https://imiku.me/2017/02/22/301.html/">
-<meta property="og:image" content="https://imiku.me/2017/02/22/301.html/1630060151353669.jpg">
-<meta property="article:publisher" content="https://imiku.me/2017/02/22/301.html/">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:title content="用树莓派打造你的私人闹钟~">
-<meta name=twitter:description content="文章转载自：woodenrobot.me很早之前就想用树莓派当闹钟了，尝试过许多方法，比如用谷歌日历，PHP脚本等，但最后尝试下来效果都不是 …">
-<meta name=twitter:url content="https://imiku.me/2017/02/22/301.html/">
-<meta name=twitter:image content="https://imiku.me/2017/02/22/301.html/1630060151353669.jpg">
-<meta name=twitter:site content="@Ice-Hazymoon">
-<meta property="og:image:width" content="1920">
-<meta property="og:image:height" content="1280">
-<meta name=theme-color content="#ff80b0"></meta>
-<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
-<link rel=manifest href=/manifest.json>
-<link href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/icon.png rel="shortcut icon">
-<link href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/icon.png rel=bookmark>
-<link rel=apple-touch-icon href=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/icon.png><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"用树莓派打造你的私人闹钟~","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/02\/22\/301.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"树莓派","wordcount":2882,"url":"https:\/\/imiku.me\/2017\/02\/22\/301.html\/","datePublished":"2017-02-22T14:27:47\u002b00:00","dateModified":"2022-04-14T16:08:56\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script></head><body class="dark:bg-darkBg dark:text-darkText">
-<div class="mx-auto relative shadow-lg">
-<div class="bg-white dark:bg-darkFg main md:max-w-4xl mx-auto relative xl:max-w-4xl flex flex-col justify-between">
-<header class="relative z-40">
-<nav class="border-b dark:border-darkBorder flex items-center md:px-10 navbar px-5 py-6 top-0 z-10">
-<div class="flex items-center justify-around route-items w-full">
-<div class="flex flex-col items-center">
-<a data-active-link=/ href=/ class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]">
-<i class="eva eva-home flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i>
-</a>
-<span class="block md:hidden mt-2 text-xs">首页</span>
-</div>
-<div class="flex flex-col items-center">
-<a data-active-link=/about href=/about class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]">
-<i class="eva eva-heart flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i>
-</a>
-<span class="block md:hidden mt-2 text-xs">关于我</span>
-</div>
-<div class="flex flex-col items-center">
-<a data-active-link=/links href=/links class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]">
-<i class="eva eva-people flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i>
-</a>
-<span class="block md:hidden mt-2 text-xs">朋友们</span>
-</div>
-<div class="flex flex-col items-center">
-<a data-active-link=/twitter href=/twitter class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]">
-<i class="eva eva-twitter flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i>
-</a>
-<span class="block md:hidden mt-2 text-xs">推特动态</span>
-</div>
-<div class="flex flex-col items-center">
-<a data-active-link=/archives href=/archives class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]">
-<i class="eva eva-bar-chart flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i>
-</a>
-<span class="block md:hidden mt-2 text-xs">归档</span>
-</div>
-<div class="flex flex-col items-center">
-<a data-active-link=/github href=/github class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]">
-<i class="eva eva-github flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i>
-</a>
-<span class="block md:hidden mt-2 text-xs">GitHub</span>
-</div>
-<div class="flex flex-col items-center">
-<a data-active-link=/search href=/search class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]">
-<i class="eva eva-search flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i>
-</a>
-<span class="block md:hidden mt-2 text-xs">搜索</span>
-</div>
-</div>
-</nav>
-</header><main class="relative flex-grow" id=swup><div class="h-full relative">
-<div class="h-full relative">
-<div class="bg-white dark:bg-darkFg h-full overflow-auto page-view-article">
-<div class=relative><div class="article-cover h-0 relative w-full">
-<picture><source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353669_hu08abcc46750dabdc1a7adf4dc19019f0_28622_800x0_resize_q98_h2_catmullrom.webp 800w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353669_hu08abcc46750dabdc1a7adf4dc19019f0_28622_1200x0_resize_q98_h2_catmullrom.webp 1200w" type=image/webp><img src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353669_hu08abcc46750dabdc1a7adf4dc19019f0_28622_50x0_resize_q98_catmullrom.jpg data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353669.jpg data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353669_hu08abcc46750dabdc1a7adf4dc19019f0_28622_800x0_resize_q98_catmullrom.jpg 800w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353669_hu08abcc46750dabdc1a7adf4dc19019f0_28622_1200x0_resize_q98_catmullrom.jpg 1200w" alt=用树莓派打造你的私人闹钟~ data-lazyload width=640 height=380 class="absolute h-full left-0 object-center object-cover top-0 w-full">
-</picture>
-</div>
-<h1 class="absolute article-title bottom-0 left-0 md:text-4xl pb-8 pt-32 px-6 text-3xl text-white w-full">
-用树莓派打造你的私人闹钟~
-</h1></div>
-<div class="article-info p-6 pb-2">
-<div class="bg-red-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
-<i class="eva eva-clock-outline mr-1"></i>
-<span>
-<time title="发布于：2017年02月22日 14:27:47" datetime=2017-02-22T14:27:47Z>2017-02-22 14:27:47</time>
-</span>
-</div>
-<div class="bg-indigo-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
-<i class="eva eva-flag-outline mr-1"></i>
-<span>阅读约6 分钟</span>
-</div>
-<div class="bg-blue-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs">
-<i class="eva eva-bar-chart-outline mr-1"></i>
-<span>2882 字</span>
-</div>
-</div>
-<div class="border-b dark:border-darkBorder border-gray-300 pb-6 px-6"><div class="flex items-center mb-2">
-<i class="eva eva-pricetags-outline mr-1"></i>
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=keywords content="树莓派,教程,Ice-Hazymoon,冰凌胧月,Hazymoon,MikuTools,"><meta name=description content="文章转载自：woodenrobot.me很早之前就想用树莓派当闹钟了，尝试过许多方法，比如用谷歌日历，PHP脚本等，但最后尝试下来效果都不是 …"><meta itemprop=description content="文章转载自：woodenrobot.me很早之前就想用树莓派当闹钟了，尝试过许多方法，比如用谷歌日历，PHP脚本等，但最后尝试下来效果都不是 …"><meta http-equiv=x-ua-compatible content="ie=edge"><meta itemprop=name content="Ice-Hazymoon 的博客"><link href=https://imiku.me/index.xml title="Ice-Hazymoon 的博客" type=application/rss+xml rel=alternate><title>Ice-Hazymoon 的博客</title><link rel=stylesheet href="/sass/main.8f765bf52d1f536ea1b1c09d811e21b21c2fc6c833314b11fb6893a0ff44e601.css" integrity="sha256-j3Zb9S0fU26hscCdgR4hshwvxsgzMUsR+2iToP9E5gE="><meta property="og:site_name" content="Ice-Hazymoon 的博客"><meta property="og:type" content="article"><meta property="og:title" content="用树莓派打造你的私人闹钟~"><meta property="og:description" content="文章转载自：woodenrobot.me很早之前就想用树莓派当闹钟了，尝试过许多方法，比如用谷歌日历，PHP脚本等，但最后尝试下来效果都不是 …"><meta property="og:url" content="https://imiku.me/2017/02/22/301.html/"><meta property="og:image" content="https://imiku.me/avatar.jpg"><meta property="article:publisher" content="https://imiku.me/2017/02/22/301.html/"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="Ice-Hazymoon 的博客"><meta name=twitter:description content="文章转载自：woodenrobot.me很早之前就想用树莓派当闹钟了，尝试过许多方法，比如用谷歌日历，PHP脚本等，但最后尝试下来效果都不是 …"><meta name=twitter:url content="https://imiku.me/2017/02/22/301.html/"><meta name=twitter:image content="https://imiku.me/avatar.jpg"><meta name=twitter:site content="@Ice-Hazymoon"><meta property="og:image:width" content="1920"><meta property="og:image:height" content="1280"><meta name=theme-color content></meta><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><link rel=manifest href=/manifest.json><link href=/icon.png rel="shortcut icon"><link href=/icon.png rel=bookmark><link rel=apple-touch-icon href=/icon.png><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"用树莓派打造你的私人闹钟~","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/imiku.me\/2017\/02\/22\/301.html\/"},"image":{"@type":"ImageObject","url":"https:\/\/imiku.me\/cover.png","width":1e3,"height":519},"genre":"post","keywords":"树莓派","wordcount":2881,"url":"https:\/\/imiku.me\/2017\/02\/22\/301.html\/","datePublished":"2017-02-22T14:27:47\u002b00:00","dateModified":"2022-04-14T23:22:03\u002b00:00","author":{"@type":"Person","name":"Ice-Hazymoon"},"description":""}</script></head><body class="dark:bg-darkBg dark:text-darkText"><div class="mx-auto relative shadow-lg"><div class="bg-white dark:bg-darkFg main md:max-w-4xl mx-auto relative xl:max-w-4xl flex flex-col justify-between"><header class="relative z-40"><nav class="border-b dark:border-darkBorder flex items-center md:px-10 navbar px-5 py-6 top-0 z-10"><div class="flex items-center justify-around route-items w-full"><div class="hidden eva-home eva-twitter eva-hash eva-folder eva-heart eva-people eva-bar-chart eva-search eva-github"></div><div class="flex flex-col items-center"><a title=首页 data-active-link=/ href=/ class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]"><i class="eva eva-home flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i></a>
+<span class="block md:hidden mt-2 text-xs">首页</span></div><div class="flex flex-col items-center"><a title=关于我 data-active-link=/about/ href=/about/ class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]"><i class="eva eva-heart flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i></a>
+<span class="block md:hidden mt-2 text-xs">关于我</span></div><div class="flex flex-col items-center"><a title=朋友们 data-active-link=/links/ href=/links/ class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]"><i class="eva eva-people flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i></a>
+<span class="block md:hidden mt-2 text-xs">朋友们</span></div><div class="flex flex-col items-center"><a title=归档 data-active-link=/archives/ href=/archives/ class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]"><i class="eva eva-bar-chart flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i></a>
+<span class="block md:hidden mt-2 text-xs">归档</span></div><div class="flex flex-col items-center"><a title=近期动态 data-active-link=/twitter/ href=/twitter/ class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]"><i class="eva eva-twitter flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i></a>
+<span class="block md:hidden mt-2 text-xs">近期动态</span></div><div class="flex flex-col items-center"><a title=GitHub data-active-link=/github/ href=/github/ class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]"><i class="eva eva-github flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i></a>
+<span class="block md:hidden mt-2 text-xs">GitHub</span></div><div class="flex flex-col items-center"><a title=搜索 data-active-link=/search/ href=/search/ class="cursor-pointer relative text-gray-700 transition duration-300 ease-[ease]"><i class="eva eva-search flex justify-center items-center h-8 text-3xl leading-none text-gray-500 dark:text-darkTextPlaceholder transition duration-300 ease-[ease] w-8"></i></a>
+<span class="block md:hidden mt-2 text-xs">搜索</span></div></div></nav></header><main class="relative flex-grow" id=swup><div class="h-full relative"><div class="h-full relative"><div class="bg-white dark:bg-darkFg h-full overflow-auto page-view-article"><div class=relative><div class="article-cover h-0 relative w-full"><picture><source data-srcset="/2017/02/22/301.html/1630060151353669_hu08abcc46750dabdc1a7adf4dc19019f0_28622_800x0_resize_q98_h2_catmullrom.webp 800w, /2017/02/22/301.html/1630060151353669_hu08abcc46750dabdc1a7adf4dc19019f0_28622_1200x0_resize_q98_h2_catmullrom.webp 1200w" type=image/webp><img src=/2017/02/22/301.html/1630060151353669_hu08abcc46750dabdc1a7adf4dc19019f0_28622_50x0_resize_q98_catmullrom.jpg data-src=1630060151353669.jpg data-srcset="/2017/02/22/301.html/1630060151353669_hu08abcc46750dabdc1a7adf4dc19019f0_28622_800x0_resize_q98_catmullrom.jpg 800w, /2017/02/22/301.html/1630060151353669_hu08abcc46750dabdc1a7adf4dc19019f0_28622_1200x0_resize_q98_catmullrom.jpg 1200w" alt=用树莓派打造你的私人闹钟~ data-lazyload width=640 height=380 class="absolute h-full left-0 object-center object-cover top-0 w-full"></picture></div><h1 class="absolute article-title bottom-0 left-0 md:text-4xl pb-8 pt-32 px-6 text-3xl text-white w-full">用树莓派打造你的私人闹钟~</h1></div><div class="article-info p-6 pb-2"><div class="bg-red-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs"><i class="eva eva-clock-outline mr-1"></i>
+<span><time title="发布于：2017年02月22日 14:27:47" datetime=2017-02-22T14:27:47Z>2017-02-22 14:27:47</time></span></div><div class="bg-indigo-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs"><i class="eva eva-flag-outline mr-1"></i>
+<span>阅读约 6 分钟</span></div><div class="bg-blue-500 inline-flex items-center mb-2 mr-2 px-2 py-1 sm:rounded-full text-white text-xs"><i class="eva eva-bar-chart-outline mr-1"></i>
+<span>2881 字</span></div></div><div class="border-b dark:border-darkBorder border-gray-300 pb-6 px-6"><div class="flex items-center mb-2"><i class="eva eva-pricetags-outline mr-1"></i>
 <span class=mr-2>标签</span><a href=/tags/%E6%A0%91%E8%8E%93%E6%B4%BE title=树莓派 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
 <i class="eva eva-hash-outline"></i>
-<span>树莓派</span>
-</a></div><div class="flex items-center mb-2">
-<i class="eva eva-folder-outline mr-1"></i>
+<span>树莓派</span></a></div><div class="flex items-center mb-2"><i class="eva eva-folder-outline mr-1"></i>
 <span class=mr-2>分类</span><a href=/categories/%E6%95%99%E7%A8%8B title=教程 class="flex hover:text-theme items-center mr-1 px-1 py-1 text-xs">
 <i class="eva eva-book-outline"></i>
-<span>教程</span>
-</a></div></div><aside class=toc>
-<header>
-<h1 class="text-2xl font-bold mb-3">文章目录</h1>
-</header>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#准备>准备</a></li>
-<li><a href=#环境>环境</a></li>
-<li><a href=#安装依赖>安装依赖</a></li>
-<li><a href=#获取所在位置天气>获取所在位置天气</a></li>
-<li><a href=#文字转语音>文字转语音</a></li>
-<li><a href=#实现定时播放语音>实现定时播放语音</a></li>
-<li><a href=#完整脚本>完整脚本</a></li>
-</ul>
-</nav>
-</aside><section class="article-content px-6 md:px-10 py-5 typo"><p><strong>文章转载自：<a class=link href="https://link.zhihu.com/?target=http%3A//woodenrobot.me/" target=_blank rel=noopener>woodenrobot.me</a></strong></p>
-<p>很早之前就想用树莓派当闹钟了，尝试过许多方法，比如用谷歌日历，PHP脚本等，但最后尝试下来效果都不是很满意。今天在<a class=link href="https://zhuanlan.zhihu.com/p/24983204?refer=woodenrobot" target=_blank rel=noopener>知乎</a>上看到了一篇用python脚本当闹钟的方法，尝试了一下，霸气的不要不要的，自带天气播放功能~所以就顺便写个教程吧</p>
-<h2 id=准备>准备</h2>
-<ul>
-<li>树莓派*1</li>
-<li>音箱*1</li>
-</ul>
-<h2 id=环境>环境</h2>
-<ul>
-<li>Python3.4</li>
-</ul>
-<h2 id=安装依赖>安装依赖</h2>
-<ul>
-<li>#树莓派自带的交易版本是2.7的，所以到最后不能正常运行，我在这里折腾了很久。。。首先把py的版本改成3.4~<br>
-<code>sudo ln -s /usr/bin/python3.4 /usr/bin/python</code> #把系统默认python命令改成python3</li>
-<li>#从 <a class=link href=https://pypi.python.org/pypi/pip#downloads target=_blank rel=noopener>https://pypi.python.org/pypi/pip#downloads</a> 下载最新版本的pip<br>
-#把刚刚下载的文件上传后解压<br>
-<code>tar -xzvf pip-9.0.1.tar.gz</code><br>
-#进入安装目录<br>
-<code>cd pip-9.0.1</code><br>
-#进行安装<br>
-<code>python setup.py install</code></li>
-<li>#安装Beautiful Soup4<br>
-#可通过系统的软件包管理来安装<br>
-<code>apt-get install Python-bs4</code><br>
-#也可以用easy_install安装<br>
-<code>easy_install beautifulsoup4</code><br>
-#也可以用pip进行安装（推荐）<br>
-<code>pip install beautifulsoup4</code></li>
-<li>#安装Requests<br>
-#通过pip安装（推荐）<br>
-<code>pip install requests</code><br>
-#也可以通过git库安装<br>
-<code>git clone git://github.com/kennethreitz/requests.git</code><br>
-<code>cd requests</code><br>
-<code>python setup.py install</code></li>
-</ul>
-<h2 id=获取所在位置天气>获取所在位置天气</h2>
-<p>这里选择墨迹天气获取实时天气信息，地址：<br>
-<a class=link href=http://tianqi.moji.com/ target=_blank rel=noopener>http://tianqi.moji.com/</a>
-进入墨迹天气的页面，墨迹天气会根据你的ip加载相应地区的天气。</p>
-<p><figure class=gallery-image style=flex-grow:255;flex-basis:612px>
-<picture><source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353902_hucf91b76d86c3966aeb56b3b89e5cf281_111714_640x0_resize_q98_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353902_hucf91b76d86c3966aeb56b3b89e5cf281_111714_1080x0_resize_q98_h2_catmullrom.webp 1080w" type=image/webp><img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353902.jpg src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353902_hucf91b76d86c3966aeb56b3b89e5cf281_111714_50x0_resize_q98_catmullrom.jpg width=1325 height=519 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353902_hucf91b76d86c3966aeb56b3b89e5cf281_111714_640x0_resize_q98_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353902_hucf91b76d86c3966aeb56b3b89e5cf281_111714_1080x0_resize_q98_catmullrom.jpg 1080w" alt=用树莓派打造你的私人闹钟~ data-zoomable data-lazyload>
-</picture></figure></p>
-<p>进入墨迹天气的页面，墨迹天气会根据你的ip加载相应地区的天气。 这次我们主要抓取温度、天气、湿度、风力、空气质量和天气提示这几个数据。<br>
-这种小爬虫我们就不用Scrap那种重型武器啦，使用requests和BeautifulSoup这两个超级好用的库可以快速实现。</p>
-<div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#ff79c6>import</span> re
-<span style=color:#ff79c6>import</span> requests
-<span style=color:#ff79c6>from</span> datetime <span style=color:#ff79c6>import</span> datetime
-<span style=color:#ff79c6>from</span> bs4 <span style=color:#ff79c6>import</span> BeautifulSoup
-headers <span style=color:#ff79c6>=</span> {
-<span style=color:#f1fa8c>&#39;User-Agent&#39;</span>: <span style=color:#f1fa8c>&#39;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#39;</span>
-<span style=color:#f1fa8c>&#39;/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safar&#39;</span>
-<span style=color:#f1fa8c>&#39;i/537.36&#39;</span>,
-}
-
-res2 <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(<span style=color:#f1fa8c>&#39;http://tianqi.moji.com/&#39;</span>, headers<span style=color:#ff79c6>=</span>headers)
-
-soup <span style=color:#ff79c6>=</span> BeautifulSoup(res2<span style=color:#ff79c6>.</span>text, <span style=color:#f1fa8c>&#34;html.parser&#34;</span>)
-temp <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
-weather <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>b<span style=color:#ff79c6>.</span>getText()
-sd <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>span<span style=color:#ff79c6>.</span>getText()
-sd_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, sd)<span style=color:#ff79c6>.</span>group()
-sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(sd_num, sd_num_zh)
-wind <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
-aqi <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_alert clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
-aqi_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, aqi)<span style=color:#ff79c6>.</span>group()
-aqi <span style=color:#ff79c6>=</span> aqi<span style=color:#ff79c6>.</span>replace(aqi_num, aqi_num_zh)
-info <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_tips clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
-sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39; &#39;</span>, <span style=color:#f1fa8c>&#39;百分之&#39;</span>)<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39;%&#39;</span>, <span style=color:#f1fa8c>&#39;&#39;</span>)
-aqi <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;aqi&#39;</span> <span style=color:#ff79c6>+</span> aqi
-
-today <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y年%m月</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>日&#39;</span>)
-text <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;早上好！今天是</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,天气</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,温度</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>摄氏度,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> \
-(today, weather, temp, sd, wind, aqi, info)
-</code></pre></td></tr></table>
-</div>
-</div><h2 id=文字转语音>文字转语音</h2>
-<p>使用百度的文字转换语音API，地址：<a class=link href=http://yuyin.baidu.com/#try target=_blank rel=noopener>百度语音-永久免费智能语音开放平台</a> 还可以选各种声音，调节语速。虽然它没有给出直接的api接口，但是我们利用Chrome浏览器的开发者模式可以找到api。 打开开发者模式，点击播放的按钮，在network里就可以找到刚刚发出的请求。</p>
-<p><figure class=gallery-image style=flex-grow:296;flex-basis:712px>
-<picture><source data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353975_hub1ac523432d6390378e314efc7a65a7a_87877_640x0_resize_q98_h2_catmullrom.webp 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353975_hub1ac523432d6390378e314efc7a65a7a_87877_1080x0_resize_q98_h2_catmullrom.webp 1080w" type=image/webp><img data-src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353975.jpg src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353975_hub1ac523432d6390378e314efc7a65a7a_87877_50x0_resize_q98_catmullrom.jpg width=1354 height=456 data-srcset="https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353975_hub1ac523432d6390378e314efc7a65a7a_87877_640x0_resize_q98_catmullrom.jpg 640w, https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/2017/02/22/301.html/1630060151353975_hub1ac523432d6390378e314efc7a65a7a_87877_1080x0_resize_q98_catmullrom.jpg 1080w" alt=用树莓派打造你的私人闹钟~ data-zoomable data-lazyload>
-</picture></figure></p>
-<p>其中 <strong><a class=link href="http://tts.baidu.com/text2audio?idx=1&tex=1&cuid=baidu_speech_demo&cod=2&lan=zh&ctp=1&pdt=1&spd=5&per=4&vol=5&pit=5" target=_blank rel=noopener>http://tts.baidu.com/text2audio?idx=1&tex=1&cuid=baidu_speech_demo&cod=2&lan=zh&ctp=1&pdt=1&spd=5&per=4&vol=5&pit=5</a></strong> 就是我们要找的百度文字转语音API,其中per是参数是语音的类型，spd是语速，vol是音量，而tex则是需要转换的文字。通过以下代码就可以实现将特定的文字转换为语音，并以mp3格式保存到本地。</p>
-<div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#ff79c6>import</span> requests
-
-headers <span style=color:#ff79c6>=</span> {
-<span style=color:#f1fa8c>&#39;User-Agent&#39;</span>: <span style=color:#f1fa8c>&#39;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#39;</span>
-<span style=color:#f1fa8c>&#39;/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safar&#39;</span>
-<span style=color:#f1fa8c>&#39;i/537.36&#39;</span>,
-}
-
-url <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;http://tts.baidu.com/text2audio?idx=1&amp;tex=</span><span style=color:#f1fa8c>{0}</span><span style=color:#f1fa8c>&amp;cuid=baidu_speech_&#39;</span> \
-<span style=color:#f1fa8c>&#39;demo&amp;cod=2&amp;lan=zh&amp;ctp=1&amp;pdt=1&amp;spd=4&amp;per=4&amp;vol=5&amp;pit=5&#39;</span><span style=color:#ff79c6>.</span>format(text)
-res <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(url, headers<span style=color:#ff79c6>=</span>headers)
-<span style=color:#ff79c6>with</span> <span style=color:#8be9fd;font-style:italic>open</span>(<span style=color:#f1fa8c>&#39;1.mp3&#39;</span>, <span style=color:#f1fa8c>&#39;wb&#39;</span>) <span style=color:#ff79c6>as</span> f:
-f<span style=color:#ff79c6>.</span>write(res<span style=color:#ff79c6>.</span>content)
-</code></pre></td></tr></table>
-</div>
-</div><h2 id=实现定时播放语音>实现定时播放语音</h2>
-<p>使用mplayer实现语音播放,通过以下命令安装mplayer:</p>
-<p><code>sudo apt-get install mplayer</code><br>
-用法很简单输入以下命令即可播放音乐：</p>
-<p><code>mplayer \xxx\xxx\xxx.mp3</code>(绝对地址)</p>
-<p>本来是用crontab来实现定时播放的，但是后来发现了一个bug。程序运行的流程是实时下载语音MP3文件到本地，然后用os.system()直接调用mplayer播放语音。程序本地运行时正常，用crontab定时运行就找不到实时下载的语音文件。没有办法就自己写了一个每天定时播放的脚本。</p>
-<div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#ff79c6>import</span> time
-<span style=color:#ff79c6>from</span> datetime <span style=color:#ff79c6>import</span> datetime
-
-<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>get_seconds</span>(h<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;07&#39;</span>, m<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;30&#39;</span>, s<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;00&#39;</span>):
-    <span style=color:#f1fa8c>&#34;&#34;&#34;获取当前时间与程序启动时间间隔秒数&#34;&#34;&#34;</span>
-
-    <span style=color:#6272a4># 设置程序启动的时分秒</span>
-    time_pre <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (h, m, s)
-    <span style=color:#6272a4># 获取当前时间</span>
-    time1 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()
-    <span style=color:#6272a4># 获取程序今天启动的时间的字符串格式</span>
-    time2 <span style=color:#ff79c6>=</span> time1<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>&#39;</span>) <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#39; &#39;</span> <span style=color:#ff79c6>+</span> time_pre
-    <span style=color:#6272a4># 转换为datetime格式</span>
-    time2 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>strptime(time2, <span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c> %H:%M:%S&#39;</span>)
-    <span style=color:#6272a4># 判断当前时间是否晚于程序今天启动时间，若晚于则程序启动时间增加一天</span>
-    <span style=color:#ff79c6>if</span> time1 <span style=color:#ff79c6>&gt;</span> time2:
-        time2 <span style=color:#ff79c6>=</span> time2 <span style=color:#ff79c6>+</span> timedelta(days<span style=color:#ff79c6>=</span><span style=color:#bd93f9>1</span>)
-
-    <span style=color:#ff79c6>return</span> time<span style=color:#ff79c6>.</span>mktime(time2<span style=color:#ff79c6>.</span>timetuple()) <span style=color:#ff79c6>-</span> time<span style=color:#ff79c6>.</span>mktime(time1<span style=color:#ff79c6>.</span>timetuple())
-</code></pre></td></tr></table>
-</div>
-</div><p>该函数默认计算当前事件距上午七点半间隔秒数，需要修改天气播报事件就自己修改三个默认参数，h是小时，m是分钟，s是秒。</p>
-<h2 id=完整脚本>完整脚本</h2>
-<div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  6
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  7
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  8
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  9
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 10
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 11
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 12
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 13
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 14
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 15
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 16
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 17
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 18
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 19
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 20
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 21
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 22
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 23
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 24
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 25
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 26
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 27
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 28
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 29
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 30
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 31
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 32
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 33
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 34
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 35
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 36
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 37
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 38
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 39
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 40
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 41
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 42
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 43
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 44
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 45
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 46
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 47
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 48
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 49
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 50
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 51
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 52
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 53
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 54
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 55
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 56
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 57
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 58
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 59
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 60
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 61
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 62
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 63
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 64
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 65
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 66
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 67
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 68
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 69
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 70
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 71
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 72
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 73
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 74
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 75
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 76
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 77
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 78
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 79
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 80
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 81
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 82
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 83
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 84
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 85
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 86
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 87
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 88
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 89
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 90
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 91
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 92
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 93
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 94
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 95
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 96
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 97
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 98
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 99
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">100
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">101
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">102
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">103
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">104
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">105
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">106
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">107
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">108
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">109
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">110
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">111
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">112
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">113
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">114
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">115
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">116
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">117
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">118
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">119
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">120
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">121
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">122
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">123
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">124
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">125
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">126
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">127
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">128
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">129
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">130
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">131
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">132
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">133
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">134
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">135
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">136
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#6272a4># -*- coding: utf-8 -*-</span>
-<span style=color:#6272a4># @Time     : 2017/1/15 15:16</span>
-<span style=color:#6272a4># @Author   : woodenrobot</span>
-
-
-<span style=color:#ff79c6>import</span> os
-<span style=color:#ff79c6>import</span> re
-<span style=color:#ff79c6>import</span> time
-<span style=color:#ff79c6>import</span> requests
-<span style=color:#ff79c6>from</span> datetime <span style=color:#ff79c6>import</span> datetime, timedelta
-<span style=color:#ff79c6>from</span> bs4 <span style=color:#ff79c6>import</span> BeautifulSoup
-
-
-headers <span style=color:#ff79c6>=</span> {
-        <span style=color:#f1fa8c>&#39;User-Agent&#39;</span>: <span style=color:#f1fa8c>&#39;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#39;</span>
-                        <span style=color:#f1fa8c>&#39;/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safar&#39;</span>
-                        <span style=color:#f1fa8c>&#39;i/537.36&#39;</span>,
-    }
-
-
-<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>numtozh</span>(num):
-    num_dict <span style=color:#ff79c6>=</span> {<span style=color:#bd93f9>1</span>: <span style=color:#f1fa8c>&#39;一&#39;</span>, <span style=color:#bd93f9>2</span>: <span style=color:#f1fa8c>&#39;二&#39;</span>, <span style=color:#bd93f9>3</span>: <span style=color:#f1fa8c>&#39;三&#39;</span>, <span style=color:#bd93f9>4</span>: <span style=color:#f1fa8c>&#39;四&#39;</span>, <span style=color:#bd93f9>5</span>: <span style=color:#f1fa8c>&#39;五&#39;</span>, <span style=color:#bd93f9>6</span>: <span style=color:#f1fa8c>&#39;六&#39;</span>, <span style=color:#bd93f9>7</span>: <span style=color:#f1fa8c>&#39;七&#39;</span>,
-                <span style=color:#bd93f9>8</span>: <span style=color:#f1fa8c>&#39;八&#39;</span>, <span style=color:#bd93f9>9</span>: <span style=color:#f1fa8c>&#39;九&#39;</span>, <span style=color:#bd93f9>0</span>: <span style=color:#f1fa8c>&#39;零&#39;</span>}
-    num <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>int</span>(num)
-    <span style=color:#ff79c6>if</span> <span style=color:#bd93f9>100</span> <span style=color:#ff79c6>&lt;=</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>1000</span>:
-        b_num <span style=color:#ff79c6>=</span> num <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>100</span>
-        s_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>b_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>100</span>) <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>10</span>
-        g_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>b_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>100</span>) <span style=color:#ff79c6>%</span> <span style=color:#bd93f9>10</span>
-        <span style=color:#ff79c6>if</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span> <span style=color:#ff79c6>and</span> s_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
-            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num])
-        <span style=color:#ff79c6>elif</span> s_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
-            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百</span><span style=color:#f1fa8c>%s%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num], num_dict<span style=color:#ff79c6>.</span>get(s_num, <span style=color:#f1fa8c>&#39;&#39;</span>), num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
-        <span style=color:#ff79c6>elif</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
-            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num], num_dict<span style=color:#ff79c6>.</span>get(s_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
-        <span style=color:#ff79c6>else</span>:
-            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num], num_dict<span style=color:#ff79c6>.</span>get(s_num, <span style=color:#f1fa8c>&#39;&#39;</span>), num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
-    <span style=color:#ff79c6>elif</span> <span style=color:#bd93f9>10</span> <span style=color:#ff79c6>&lt;=</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>100</span>:
-        s_num <span style=color:#ff79c6>=</span> num <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>10</span>
-        g_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>s_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>10</span>) <span style=color:#ff79c6>%</span> <span style=color:#bd93f9>10</span>
-        <span style=color:#ff79c6>if</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
-            g_num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;&#39;</span>
-        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[s_num], num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
-    <span style=color:#ff79c6>elif</span> <span style=color:#bd93f9>0</span> <span style=color:#ff79c6>&lt;=</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>10</span>:
-        g_num <span style=color:#ff79c6>=</span> num
-        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[g_num])
-    <span style=color:#ff79c6>elif</span> <span style=color:#ff79c6>-</span><span style=color:#bd93f9>10</span> <span style=color:#ff79c6>&lt;</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>0</span>:
-        g_num <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>-</span>num
-        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;零下</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[g_num])
-    <span style=color:#ff79c6>elif</span> <span style=color:#ff79c6>-</span><span style=color:#bd93f9>100</span> <span style=color:#ff79c6>&lt;</span> num <span style=color:#ff79c6>&lt;=</span> <span style=color:#ff79c6>-</span><span style=color:#bd93f9>10</span>:
-        num <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>-</span>num
-        s_num <span style=color:#ff79c6>=</span> num <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>10</span>
-        g_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>s_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>10</span>) <span style=color:#ff79c6>%</span> <span style=color:#bd93f9>10</span>
-        <span style=color:#ff79c6>if</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
-            g_num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;&#39;</span>
-        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;零下</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[s_num], num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
-    <span style=color:#ff79c6>return</span> num
-
-
-<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>get_seconds</span>(h<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;07&#39;</span>, m<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;30&#39;</span>, s<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;00&#39;</span>):
-    <span style=color:#f1fa8c>&#34;&#34;&#34;获取当前时间与程序启动时间间隔秒数&#34;&#34;&#34;</span>
-
-    <span style=color:#6272a4># 设置程序启动的时分秒</span>
-    time_pre <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (h, m, s)
-    <span style=color:#6272a4># 获取当前时间</span>
-    time1 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()
-    <span style=color:#6272a4># 获取程序今天启动的时间的字符串格式</span>
-    time2 <span style=color:#ff79c6>=</span> time1<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>&#39;</span>) <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#39; &#39;</span> <span style=color:#ff79c6>+</span> time_pre
-    <span style=color:#6272a4># 转换为datetime格式</span>
-    time2 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>strptime(time2, <span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c> %H:%M:%S&#39;</span>)
-    <span style=color:#6272a4># 判断当前时间是否晚于程序今天启动时间，若晚于则程序启动时间增加一天</span>
-    <span style=color:#ff79c6>if</span> time1 <span style=color:#ff79c6>&gt;</span> time2:
-        time2 <span style=color:#ff79c6>=</span> time2 <span style=color:#ff79c6>+</span> timedelta(days<span style=color:#ff79c6>=</span><span style=color:#bd93f9>1</span>)
-
-    <span style=color:#ff79c6>return</span> time<span style=color:#ff79c6>.</span>mktime(time2<span style=color:#ff79c6>.</span>timetuple()) <span style=color:#ff79c6>-</span> time<span style=color:#ff79c6>.</span>mktime(time1<span style=color:#ff79c6>.</span>timetuple())
-
-
-<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>get_weather</span>():
-    <span style=color:#6272a4># 下载墨迹天气主页源码</span>
-    res <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(<span style=color:#f1fa8c>&#39;http://tianqi.moji.com/&#39;</span>, headers<span style=color:#ff79c6>=</span>headers)
-    <span style=color:#6272a4># 用BeautifulSoup获取所需信息</span>
-    soup <span style=color:#ff79c6>=</span> BeautifulSoup(res<span style=color:#ff79c6>.</span>text, <span style=color:#f1fa8c>&#34;html.parser&#34;</span>)
-    temp <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
-    temp <span style=color:#ff79c6>=</span> numtozh(<span style=color:#8be9fd;font-style:italic>int</span>(temp))
-    weather <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>b<span style=color:#ff79c6>.</span>getText()
-    sd <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>span<span style=color:#ff79c6>.</span>getText()
-    sd_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, sd)<span style=color:#ff79c6>.</span>group()
-    sd_num_zh <span style=color:#ff79c6>=</span> numtozh(<span style=color:#8be9fd;font-style:italic>int</span>(sd_num))
-    sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(sd_num, sd_num_zh)
-    wind <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
-    aqi <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_alert clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
-    aqi_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, aqi)<span style=color:#ff79c6>.</span>group()
-    aqi_num_zh <span style=color:#ff79c6>=</span> numtozh(<span style=color:#8be9fd;font-style:italic>int</span>(aqi_num))
-    aqi <span style=color:#ff79c6>=</span> aqi<span style=color:#ff79c6>.</span>replace(aqi_num, aqi_num_zh)<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39; &#39;</span>, <span style=color:#f1fa8c>&#39;,空气质量&#39;</span>)
-    info <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_tips clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
-    sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39; &#39;</span>, <span style=color:#f1fa8c>&#39;百分之&#39;</span>)<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39;%&#39;</span>, <span style=color:#f1fa8c>&#39;&#39;</span>)
-    aqi <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;aqi&#39;</span> <span style=color:#ff79c6>+</span> aqi
-    info <span style=color:#ff79c6>=</span> info<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39;，&#39;</span>, <span style=color:#f1fa8c>&#39;,&#39;</span>)
-    <span style=color:#6272a4># 获取今天的日期</span>
-    today <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y年%m月</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>日&#39;</span>)
-    <span style=color:#6272a4># 将获取的信息拼接成一句话</span>
-    text <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;早上好！今天是</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,天气</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,温度</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>摄氏度,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> \
-            (today, weather, temp, sd, wind, aqi, info)
-    <span style=color:#ff79c6>return</span> text
-
-
-<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>text2voice</span>(text):
-    url <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;http://tts.baidu.com/text2audio?idx=1&amp;tex=</span><span style=color:#f1fa8c>{0}</span><span style=color:#f1fa8c>&amp;cuid=baidu_speech_&#39;</span> \
-            <span style=color:#f1fa8c>&#39;demo&amp;cod=2&amp;lan=zh&amp;ctp=1&amp;pdt=1&amp;spd=4&amp;per=4&amp;vol=5&amp;pit=5&#39;</span><span style=color:#ff79c6>.</span>format(text)
-    <span style=color:#6272a4># 下载转换后的mp3格式语音</span>
-    res <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(url, headers<span style=color:#ff79c6>=</span>headers)
-    <span style=color:#6272a4># 将MP3存入本地</span>
-    <span style=color:#ff79c6>with</span> <span style=color:#8be9fd;font-style:italic>open</span>(<span style=color:#f1fa8c>&#39;1.mp3&#39;</span>, <span style=color:#f1fa8c>&#39;wb&#39;</span>) <span style=color:#ff79c6>as</span> f:
-        f<span style=color:#ff79c6>.</span>write(res<span style=color:#ff79c6>.</span>content)
-
-
-<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>main</span>():
-    <span style=color:#ff79c6>while</span> <span style=color:#ff79c6>True</span>:
-        s <span style=color:#ff79c6>=</span> get_seconds()
-        time<span style=color:#ff79c6>.</span>sleep(s)
-        <span style=color:#6272a4># 获取需要转换语音的文字</span>
-        text <span style=color:#ff79c6>=</span> get_weather()
-        <span style=color:#8be9fd;font-style:italic>print</span>(text)
-        <span style=color:#6272a4># 将文字转换为语音并存入程序所在文件夹</span>
-        text2voice(text)
-        <span style=color:#6272a4># 获取音乐文件绝对地址</span>
-        mp3path2 <span style=color:#ff79c6>=</span> os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>join(os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>dirname(__file__), <span style=color:#f1fa8c>&#39;2.mp3&#39;</span>)
-        <span style=color:#6272a4># 先播放一首音乐做闹钟</span>
-        os<span style=color:#ff79c6>.</span>system(<span style=color:#f1fa8c>&#39;mplayer </span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> mp3path2)
-        <span style=color:#6272a4># 播报语音天气</span>
-        mp3path1 <span style=color:#ff79c6>=</span> os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>join(os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>dirname(__file__), <span style=color:#f1fa8c>&#39;1.mp3&#39;</span>)
-        os<span style=color:#ff79c6>.</span>system(<span style=color:#f1fa8c>&#39;mplayer </span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> mp3path1)
-        os<span style=color:#ff79c6>.</span>remove(mp3path1)
-
-<span style=color:#ff79c6>if</span> __name__ <span style=color:#ff79c6>==</span> <span style=color:#f1fa8c>&#39;__main__&#39;</span>:
-    main()
-
-</code></pre></td></tr></table>
-</div>
-</div><p>最后就尽情的享受你的专属闹钟吧~ 文章转载自：<strong><a class=link href=http://woodenrobot.me/2017/01/21/%E5%88%A9%E7%94%A8%E7%88%AC%E8%99%AB%E5%92%8C%E6%A0%91%E8%8E%93%E6%B4%BE3%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%AF%AD%E9%9F%B3%E5%A4%A9%E6%B0%94%E9%97%B9%E9%92%9F/ target=_blank rel=noopener>woodenrobot</a></strong></p>
-</section><div class="px-6 pb-5 pt-4 md:pb-10 md:pt-14 text-center md:px-10 text-xl text-gray-500">
-<a class="mr-4 w-5 h-5 inline-flex items-center" title="分享到 Twitter" href="https://twitter.com/share?&text=%e6%96%87%e7%ab%a0%e8%bd%ac%e8%bd%bd%e8%87%aa%ef%bc%9awoodenrobot.me%e5%be%88%e6%97%a9%e4%b9%8b%e5%89%8d%e5%b0%b1%e6%83%b3%e7%94%a8%e6%a0%91%e8%8e%93%e6%b4%be%e5%bd%93%e9%97%b9%e9%92%9f%e4%ba%86%ef%bc%8c%e5%b0%9d%e8%af%95%e8%bf%87%e8%ae%b8%e5%a4%9a%e6%96%b9%e6%b3%95%ef%bc%8c%e6%af%94%e5%a6%82%e7%94%a8%e8%b0%b7%e6%ad%8c%e6%97%a5%e5%8e%86%ef%bc%8cPHP%e8%84%9a%e6%9c%ac%e7%ad%89%ef%bc%8c%e4%bd%86%e6%9c%80%e5%90%8e%e5%b0%9d%e8%af%95%e4%b8%8b%e6%9d%a5%e6%95%88%e6%9e%9c%e9%83%bd%e4%b8%8d%e6%98%af%20%e2%80%a6&url=https://imiku.me/2017/02/22/301.html/" target=_blank rel="noopener noreferrer"><i class="eva hover:text-theme eva-twitter"></i></a>
+<span>教程</span></a></div></div><aside class=toc><header><h1 class="text-2xl font-bold mb-3">文章目录</h1></header><nav id=TableOfContents><ul><li><a href=#准备>准备</a></li><li><a href=#环境>环境</a></li><li><a href=#安装依赖>安装依赖</a></li><li><a href=#获取所在位置天气>获取所在位置天气</a></li><li><a href=#文字转语音>文字转语音</a></li><li><a href=#实现定时播放语音>实现定时播放语音</a></li><li><a href=#完整脚本>完整脚本</a></li></ul></nav></aside><section class="article-content px-6 md:px-10 py-5 typo"><p><strong>文章转载自：<a class=link href="https://link.zhihu.com/?target=http%3A//woodenrobot.me/" target=_blank rel=noopener>woodenrobot.me</a></strong></p><p>很早之前就想用树莓派当闹钟了，尝试过许多方法，比如用谷歌日历，PHP脚本等，但最后尝试下来效果都不是很满意。今天在<a class=link href="https://zhuanlan.zhihu.com/p/24983204?refer=woodenrobot" target=_blank rel=noopener>知乎</a>上看到了一篇用python脚本当闹钟的方法，尝试了一下，霸气的不要不要的，自带天气播放功能~所以就顺便写个教程吧</p><h2 id=准备>准备</h2><ul><li>树莓派*1</li><li>音箱*1</li></ul><h2 id=环境>环境</h2><ul><li>Python3.4</li></ul><h2 id=安装依赖>安装依赖</h2><ul><li>#树莓派自带的交易版本是2.7的，所以到最后不能正常运行，我在这里折腾了很久。。。首先把py的版本改成3.4~<br><code>sudo ln -s /usr/bin/python3.4 /usr/bin/python</code> #把系统默认python命令改成python3</li><li>#从 <a class=link href=https://pypi.python.org/pypi/pip#downloads target=_blank rel=noopener>https://pypi.python.org/pypi/pip#downloads</a> 下载最新版本的pip<br>#把刚刚下载的文件上传后解压<br><code>tar -xzvf pip-9.0.1.tar.gz</code><br>#进入安装目录<br><code>cd pip-9.0.1</code><br>#进行安装<br><code>python setup.py install</code></li><li>#安装Beautiful Soup4<br>#可通过系统的软件包管理来安装<br><code>apt-get install Python-bs4</code><br>#也可以用easy_install安装<br><code>easy_install beautifulsoup4</code><br>#也可以用pip进行安装（推荐）<br><code>pip install beautifulsoup4</code></li><li>#安装Requests<br>#通过pip安装（推荐）<br><code>pip install requests</code><br>#也可以通过git库安装<br><code>git clone git://github.com/kennethreitz/requests.git</code><br><code>cd requests</code><br><code>python setup.py install</code></li></ul><h2 id=获取所在位置天气>获取所在位置天气</h2><p>这里选择墨迹天气获取实时天气信息，地址：<br><a class=link href=http://tianqi.moji.com/ target=_blank rel=noopener>http://tianqi.moji.com/</a>
+进入墨迹天气的页面，墨迹天气会根据你的ip加载相应地区的天气。</p><p><figure class=gallery-image style=flex-grow:255;flex-basis:612px><picture><source data-srcset="/2017/02/22/301.html/1630060151353902_hucf91b76d86c3966aeb56b3b89e5cf281_111714_640x0_resize_q98_h2_catmullrom.webp 640w, /2017/02/22/301.html/1630060151353902_hucf91b76d86c3966aeb56b3b89e5cf281_111714_1080x0_resize_q98_h2_catmullrom.webp 1080w" type=image/webp><img data-src=/2017/02/22/301.html/1630060151353902.jpg src=/2017/02/22/301.html/1630060151353902_hucf91b76d86c3966aeb56b3b89e5cf281_111714_50x0_resize_q98_catmullrom.jpg width=1325 height=519 data-srcset="/2017/02/22/301.html/1630060151353902_hucf91b76d86c3966aeb56b3b89e5cf281_111714_640x0_resize_q98_catmullrom.jpg 640w, /2017/02/22/301.html/1630060151353902_hucf91b76d86c3966aeb56b3b89e5cf281_111714_1080x0_resize_q98_catmullrom.jpg 1080w" alt=用树莓派打造你的私人闹钟~ data-zoomable data-lazyload></picture></figure><noscript data-lazyload-noscript><img src=/2017/02/22/301.html/1630060151353902.jpg alt=用树莓派打造你的私人闹钟~></noscript></p><p>进入墨迹天气的页面，墨迹天气会根据你的ip加载相应地区的天气。 这次我们主要抓取温度、天气、湿度、风力、空气质量和天气提示这几个数据。<br>这种小爬虫我们就不用Scrap那种重型武器啦，使用requests和BeautifulSoup这两个超级好用的库可以快速实现。</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#ff79c6>import</span> re
+</span></span><span style=display:flex><span><span style=color:#ff79c6>import</span> requests
+</span></span><span style=display:flex><span><span style=color:#ff79c6>from</span> datetime <span style=color:#ff79c6>import</span> datetime
+</span></span><span style=display:flex><span><span style=color:#ff79c6>from</span> bs4 <span style=color:#ff79c6>import</span> BeautifulSoup
+</span></span><span style=display:flex><span>headers <span style=color:#ff79c6>=</span> {
+</span></span><span style=display:flex><span><span style=color:#f1fa8c>&#39;User-Agent&#39;</span>: <span style=color:#f1fa8c>&#39;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#f1fa8c>&#39;/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safar&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#f1fa8c>&#39;i/537.36&#39;</span>,
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>res2 <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(<span style=color:#f1fa8c>&#39;http://tianqi.moji.com/&#39;</span>, headers<span style=color:#ff79c6>=</span>headers)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>soup <span style=color:#ff79c6>=</span> BeautifulSoup(res2<span style=color:#ff79c6>.</span>text, <span style=color:#f1fa8c>&#34;html.parser&#34;</span>)
+</span></span><span style=display:flex><span>temp <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+</span></span><span style=display:flex><span>weather <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>b<span style=color:#ff79c6>.</span>getText()
+</span></span><span style=display:flex><span>sd <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>span<span style=color:#ff79c6>.</span>getText()
+</span></span><span style=display:flex><span>sd_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, sd)<span style=color:#ff79c6>.</span>group()
+</span></span><span style=display:flex><span>sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(sd_num, sd_num_zh)
+</span></span><span style=display:flex><span>wind <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+</span></span><span style=display:flex><span>aqi <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_alert clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+</span></span><span style=display:flex><span>aqi_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, aqi)<span style=color:#ff79c6>.</span>group()
+</span></span><span style=display:flex><span>aqi <span style=color:#ff79c6>=</span> aqi<span style=color:#ff79c6>.</span>replace(aqi_num, aqi_num_zh)
+</span></span><span style=display:flex><span>info <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_tips clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+</span></span><span style=display:flex><span>sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39; &#39;</span>, <span style=color:#f1fa8c>&#39;百分之&#39;</span>)<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39;%&#39;</span>, <span style=color:#f1fa8c>&#39;&#39;</span>)
+</span></span><span style=display:flex><span>aqi <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;aqi&#39;</span> <span style=color:#ff79c6>+</span> aqi
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>today <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y年%m月</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>日&#39;</span>)
+</span></span><span style=display:flex><span>text <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;早上好！今天是</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,天气</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,温度</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>摄氏度,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> \
+</span></span><span style=display:flex><span>(today, weather, temp, sd, wind, aqi, info)
+</span></span></code></pre></td></tr></table></div></div><h2 id=文字转语音>文字转语音</h2><p>使用百度的文字转换语音API，地址：<a class=link href=http://yuyin.baidu.com/#try target=_blank rel=noopener>百度语音-永久免费智能语音开放平台</a> 还可以选各种声音，调节语速。虽然它没有给出直接的api接口，但是我们利用Chrome浏览器的开发者模式可以找到api。 打开开发者模式，点击播放的按钮，在network里就可以找到刚刚发出的请求。</p><p><figure class=gallery-image style=flex-grow:296;flex-basis:712px><picture><source data-srcset="/2017/02/22/301.html/1630060151353975_hub1ac523432d6390378e314efc7a65a7a_87877_640x0_resize_q98_h2_catmullrom.webp 640w, /2017/02/22/301.html/1630060151353975_hub1ac523432d6390378e314efc7a65a7a_87877_1080x0_resize_q98_h2_catmullrom.webp 1080w" type=image/webp><img data-src=/2017/02/22/301.html/1630060151353975.jpg src=/2017/02/22/301.html/1630060151353975_hub1ac523432d6390378e314efc7a65a7a_87877_50x0_resize_q98_catmullrom.jpg width=1354 height=456 data-srcset="/2017/02/22/301.html/1630060151353975_hub1ac523432d6390378e314efc7a65a7a_87877_640x0_resize_q98_catmullrom.jpg 640w, /2017/02/22/301.html/1630060151353975_hub1ac523432d6390378e314efc7a65a7a_87877_1080x0_resize_q98_catmullrom.jpg 1080w" alt=用树莓派打造你的私人闹钟~ data-zoomable data-lazyload></picture></figure><noscript data-lazyload-noscript><img src=/2017/02/22/301.html/1630060151353975.jpg alt=用树莓派打造你的私人闹钟~></noscript></p><p>其中 <strong><a class=link href="http://tts.baidu.com/text2audio?idx=1&tex=1&cuid=baidu_speech_demo&cod=2&lan=zh&ctp=1&pdt=1&spd=5&per=4&vol=5&pit=5" target=_blank rel=noopener>http://tts.baidu.com/text2audio?idx=1&tex=1&cuid=baidu_speech_demo&cod=2&lan=zh&ctp=1&pdt=1&spd=5&per=4&vol=5&pit=5</a></strong> 就是我们要找的百度文字转语音API,其中per是参数是语音的类型，spd是语速，vol是音量，而tex则是需要转换的文字。通过以下代码就可以实现将特定的文字转换为语音，并以mp3格式保存到本地。</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#ff79c6>import</span> requests
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>headers <span style=color:#ff79c6>=</span> {
+</span></span><span style=display:flex><span><span style=color:#f1fa8c>&#39;User-Agent&#39;</span>: <span style=color:#f1fa8c>&#39;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#f1fa8c>&#39;/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safar&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#f1fa8c>&#39;i/537.36&#39;</span>,
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>url <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;http://tts.baidu.com/text2audio?idx=1&amp;tex=</span><span style=color:#f1fa8c>{0}</span><span style=color:#f1fa8c>&amp;cuid=baidu_speech_&#39;</span> \
+</span></span><span style=display:flex><span><span style=color:#f1fa8c>&#39;demo&amp;cod=2&amp;lan=zh&amp;ctp=1&amp;pdt=1&amp;spd=4&amp;per=4&amp;vol=5&amp;pit=5&#39;</span><span style=color:#ff79c6>.</span>format(text)
+</span></span><span style=display:flex><span>res <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(url, headers<span style=color:#ff79c6>=</span>headers)
+</span></span><span style=display:flex><span><span style=color:#ff79c6>with</span> <span style=color:#8be9fd;font-style:italic>open</span>(<span style=color:#f1fa8c>&#39;1.mp3&#39;</span>, <span style=color:#f1fa8c>&#39;wb&#39;</span>) <span style=color:#ff79c6>as</span> f:
+</span></span><span style=display:flex><span>f<span style=color:#ff79c6>.</span>write(res<span style=color:#ff79c6>.</span>content)
+</span></span></code></pre></td></tr></table></div></div><h2 id=实现定时播放语音>实现定时播放语音</h2><p>使用mplayer实现语音播放,通过以下命令安装mplayer:</p><p><code>sudo apt-get install mplayer</code><br>用法很简单输入以下命令即可播放音乐：</p><p><code>mplayer \xxx\xxx\xxx.mp3</code>(绝对地址)</p><p>本来是用crontab来实现定时播放的，但是后来发现了一个bug。程序运行的流程是实时下载语音MP3文件到本地，然后用os.system()直接调用mplayer播放语音。程序本地运行时正常，用crontab定时运行就找不到实时下载的语音文件。没有办法就自己写了一个每天定时播放的脚本。</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#ff79c6>import</span> time
+</span></span><span style=display:flex><span><span style=color:#ff79c6>from</span> datetime <span style=color:#ff79c6>import</span> datetime
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff79c6>def</span> <span style=color:#50fa7b>get_seconds</span>(h<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;07&#39;</span>, m<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;30&#39;</span>, s<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;00&#39;</span>):
+</span></span><span style=display:flex><span>    <span style=color:#f1fa8c>&#34;&#34;&#34;获取当前时间与程序启动时间间隔秒数&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#6272a4># 设置程序启动的时分秒</span>
+</span></span><span style=display:flex><span>    time_pre <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (h, m, s)
+</span></span><span style=display:flex><span>    <span style=color:#6272a4># 获取当前时间</span>
+</span></span><span style=display:flex><span>    time1 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()
+</span></span><span style=display:flex><span>    <span style=color:#6272a4># 获取程序今天启动的时间的字符串格式</span>
+</span></span><span style=display:flex><span>    time2 <span style=color:#ff79c6>=</span> time1<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>&#39;</span>) <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#39; &#39;</span> <span style=color:#ff79c6>+</span> time_pre
+</span></span><span style=display:flex><span>    <span style=color:#6272a4># 转换为datetime格式</span>
+</span></span><span style=display:flex><span>    time2 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>strptime(time2, <span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c> %H:%M:%S&#39;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#6272a4># 判断当前时间是否晚于程序今天启动时间，若晚于则程序启动时间增加一天</span>
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>if</span> time1 <span style=color:#ff79c6>&gt;</span> time2:
+</span></span><span style=display:flex><span>        time2 <span style=color:#ff79c6>=</span> time2 <span style=color:#ff79c6>+</span> timedelta(days<span style=color:#ff79c6>=</span><span style=color:#bd93f9>1</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>return</span> time<span style=color:#ff79c6>.</span>mktime(time2<span style=color:#ff79c6>.</span>timetuple()) <span style=color:#ff79c6>-</span> time<span style=color:#ff79c6>.</span>mktime(time1<span style=color:#ff79c6>.</span>timetuple())
+</span></span></code></pre></td></tr></table></div></div><p>该函数默认计算当前事件距上午七点半间隔秒数，需要修改天气播报事件就自己修改三个默认参数，h是小时，m是分钟，s是秒。</p><h2 id=完整脚本>完整脚本</h2><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">  1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">  2
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">  3
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">  4
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">  5
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">  6
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">  7
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">  8
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">  9
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 10
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 11
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 12
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 13
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 14
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 15
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 16
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 17
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 18
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 19
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 20
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 21
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 22
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 23
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 24
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 25
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 26
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 27
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 28
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 29
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 30
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 31
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 32
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 33
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 34
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 35
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 36
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 37
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 38
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 39
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 40
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 41
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 42
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 43
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 44
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 45
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 46
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 47
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 48
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 49
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 50
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 51
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 52
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 53
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 54
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 55
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 56
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 57
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 58
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 59
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 60
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 61
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 62
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 63
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 64
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 65
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 66
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 67
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 68
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 69
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 70
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 71
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 72
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 73
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 74
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 75
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 76
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 77
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 78
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 79
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 80
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 81
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 82
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 83
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 84
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 85
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 86
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 87
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 88
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 89
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 90
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 91
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 92
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 93
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 94
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 95
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 96
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 97
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 98
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 99
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">100
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">101
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">102
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">103
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">104
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">105
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">106
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">107
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">108
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">109
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">110
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">111
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">112
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">113
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">114
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">115
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">116
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">117
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">118
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">119
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">120
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">121
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">122
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">123
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">124
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">125
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">126
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">127
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">128
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">129
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">130
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">131
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">132
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">133
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">134
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">135
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#6272a4># -*- coding: utf-8 -*-</span>
+</span></span><span style=display:flex><span><span style=color:#6272a4># @Time     : 2017/1/15 15:16</span>
+</span></span><span style=display:flex><span><span style=color:#6272a4># @Author   : woodenrobot</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff79c6>import</span> os
+</span></span><span style=display:flex><span><span style=color:#ff79c6>import</span> re
+</span></span><span style=display:flex><span><span style=color:#ff79c6>import</span> time
+</span></span><span style=display:flex><span><span style=color:#ff79c6>import</span> requests
+</span></span><span style=display:flex><span><span style=color:#ff79c6>from</span> datetime <span style=color:#ff79c6>import</span> datetime, timedelta
+</span></span><span style=display:flex><span><span style=color:#ff79c6>from</span> bs4 <span style=color:#ff79c6>import</span> BeautifulSoup
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>headers <span style=color:#ff79c6>=</span> {
+</span></span><span style=display:flex><span>        <span style=color:#f1fa8c>&#39;User-Agent&#39;</span>: <span style=color:#f1fa8c>&#39;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#39;</span>
+</span></span><span style=display:flex><span>                        <span style=color:#f1fa8c>&#39;/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safar&#39;</span>
+</span></span><span style=display:flex><span>                        <span style=color:#f1fa8c>&#39;i/537.36&#39;</span>,
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff79c6>def</span> <span style=color:#50fa7b>numtozh</span>(num):
+</span></span><span style=display:flex><span>    num_dict <span style=color:#ff79c6>=</span> {<span style=color:#bd93f9>1</span>: <span style=color:#f1fa8c>&#39;一&#39;</span>, <span style=color:#bd93f9>2</span>: <span style=color:#f1fa8c>&#39;二&#39;</span>, <span style=color:#bd93f9>3</span>: <span style=color:#f1fa8c>&#39;三&#39;</span>, <span style=color:#bd93f9>4</span>: <span style=color:#f1fa8c>&#39;四&#39;</span>, <span style=color:#bd93f9>5</span>: <span style=color:#f1fa8c>&#39;五&#39;</span>, <span style=color:#bd93f9>6</span>: <span style=color:#f1fa8c>&#39;六&#39;</span>, <span style=color:#bd93f9>7</span>: <span style=color:#f1fa8c>&#39;七&#39;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#bd93f9>8</span>: <span style=color:#f1fa8c>&#39;八&#39;</span>, <span style=color:#bd93f9>9</span>: <span style=color:#f1fa8c>&#39;九&#39;</span>, <span style=color:#bd93f9>0</span>: <span style=color:#f1fa8c>&#39;零&#39;</span>}
+</span></span><span style=display:flex><span>    num <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>int</span>(num)
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>if</span> <span style=color:#bd93f9>100</span> <span style=color:#ff79c6>&lt;=</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>1000</span>:
+</span></span><span style=display:flex><span>        b_num <span style=color:#ff79c6>=</span> num <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>100</span>
+</span></span><span style=display:flex><span>        s_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>b_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>100</span>) <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>10</span>
+</span></span><span style=display:flex><span>        g_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>b_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>100</span>) <span style=color:#ff79c6>%</span> <span style=color:#bd93f9>10</span>
+</span></span><span style=display:flex><span>        <span style=color:#ff79c6>if</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span> <span style=color:#ff79c6>and</span> s_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
+</span></span><span style=display:flex><span>            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num])
+</span></span><span style=display:flex><span>        <span style=color:#ff79c6>elif</span> s_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
+</span></span><span style=display:flex><span>            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百</span><span style=color:#f1fa8c>%s%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num], num_dict<span style=color:#ff79c6>.</span>get(s_num, <span style=color:#f1fa8c>&#39;&#39;</span>), num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
+</span></span><span style=display:flex><span>        <span style=color:#ff79c6>elif</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
+</span></span><span style=display:flex><span>            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num], num_dict<span style=color:#ff79c6>.</span>get(s_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
+</span></span><span style=display:flex><span>        <span style=color:#ff79c6>else</span>:
+</span></span><span style=display:flex><span>            num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>百</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[b_num], num_dict<span style=color:#ff79c6>.</span>get(s_num, <span style=color:#f1fa8c>&#39;&#39;</span>), num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>elif</span> <span style=color:#bd93f9>10</span> <span style=color:#ff79c6>&lt;=</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>100</span>:
+</span></span><span style=display:flex><span>        s_num <span style=color:#ff79c6>=</span> num <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>10</span>
+</span></span><span style=display:flex><span>        g_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>s_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>10</span>) <span style=color:#ff79c6>%</span> <span style=color:#bd93f9>10</span>
+</span></span><span style=display:flex><span>        <span style=color:#ff79c6>if</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
+</span></span><span style=display:flex><span>            g_num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;&#39;</span>
+</span></span><span style=display:flex><span>        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[s_num], num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>elif</span> <span style=color:#bd93f9>0</span> <span style=color:#ff79c6>&lt;=</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>10</span>:
+</span></span><span style=display:flex><span>        g_num <span style=color:#ff79c6>=</span> num
+</span></span><span style=display:flex><span>        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[g_num])
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>elif</span> <span style=color:#ff79c6>-</span><span style=color:#bd93f9>10</span> <span style=color:#ff79c6>&lt;</span> num <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>0</span>:
+</span></span><span style=display:flex><span>        g_num <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>-</span>num
+</span></span><span style=display:flex><span>        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;零下</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[g_num])
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>elif</span> <span style=color:#ff79c6>-</span><span style=color:#bd93f9>100</span> <span style=color:#ff79c6>&lt;</span> num <span style=color:#ff79c6>&lt;=</span> <span style=color:#ff79c6>-</span><span style=color:#bd93f9>10</span>:
+</span></span><span style=display:flex><span>        num <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>-</span>num
+</span></span><span style=display:flex><span>        s_num <span style=color:#ff79c6>=</span> num <span style=color:#ff79c6>//</span> <span style=color:#bd93f9>10</span>
+</span></span><span style=display:flex><span>        g_num <span style=color:#ff79c6>=</span> (num<span style=color:#ff79c6>-</span>s_num<span style=color:#ff79c6>*</span><span style=color:#bd93f9>10</span>) <span style=color:#ff79c6>%</span> <span style=color:#bd93f9>10</span>
+</span></span><span style=display:flex><span>        <span style=color:#ff79c6>if</span> g_num <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
+</span></span><span style=display:flex><span>            g_num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;&#39;</span>
+</span></span><span style=display:flex><span>        num <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;零下</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>十</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (num_dict[s_num], num_dict<span style=color:#ff79c6>.</span>get(g_num, <span style=color:#f1fa8c>&#39;&#39;</span>))
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>return</span> num
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff79c6>def</span> <span style=color:#50fa7b>get_seconds</span>(h<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;07&#39;</span>, m<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;30&#39;</span>, s<span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#39;00&#39;</span>):
+</span></span><span style=display:flex><span>    <span style=color:#f1fa8c>&#34;&#34;&#34;获取当前时间与程序启动时间间隔秒数&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#6272a4># 设置程序启动的时分秒</span>
+</span></span><span style=display:flex><span>    time_pre <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>:</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> (h, m, s)
+</span></span><span style=display:flex><span>    <span style=color:#6272a4># 获取当前时间</span>
+</span></span><span style=display:flex><span>    time1 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()
+</span></span><span style=display:flex><span>    <span style=color:#6272a4># 获取程序今天启动的时间的字符串格式</span>
+</span></span><span style=display:flex><span>    time2 <span style=color:#ff79c6>=</span> time1<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>&#39;</span>) <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#39; &#39;</span> <span style=color:#ff79c6>+</span> time_pre
+</span></span><span style=display:flex><span>    <span style=color:#6272a4># 转换为datetime格式</span>
+</span></span><span style=display:flex><span>    time2 <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>strptime(time2, <span style=color:#f1fa8c>&#39;%Y-%m-</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c> %H:%M:%S&#39;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#6272a4># 判断当前时间是否晚于程序今天启动时间，若晚于则程序启动时间增加一天</span>
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>if</span> time1 <span style=color:#ff79c6>&gt;</span> time2:
+</span></span><span style=display:flex><span>        time2 <span style=color:#ff79c6>=</span> time2 <span style=color:#ff79c6>+</span> timedelta(days<span style=color:#ff79c6>=</span><span style=color:#bd93f9>1</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>return</span> time<span style=color:#ff79c6>.</span>mktime(time2<span style=color:#ff79c6>.</span>timetuple()) <span style=color:#ff79c6>-</span> time<span style=color:#ff79c6>.</span>mktime(time1<span style=color:#ff79c6>.</span>timetuple())
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff79c6>def</span> <span style=color:#50fa7b>get_weather</span>():
+</span></span><span style=display:flex><span>    <span style=color:#6272a4># 下载墨迹天气主页源码</span>
+</span></span><span style=display:flex><span>    res <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(<span style=color:#f1fa8c>&#39;http://tianqi.moji.com/&#39;</span>, headers<span style=color:#ff79c6>=</span>headers)
+</span></span><span style=display:flex><span>    <span style=color:#6272a4># 用BeautifulSoup获取所需信息</span>
+</span></span><span style=display:flex><span>    soup <span style=color:#ff79c6>=</span> BeautifulSoup(res<span style=color:#ff79c6>.</span>text, <span style=color:#f1fa8c>&#34;html.parser&#34;</span>)
+</span></span><span style=display:flex><span>    temp <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+</span></span><span style=display:flex><span>    temp <span style=color:#ff79c6>=</span> numtozh(<span style=color:#8be9fd;font-style:italic>int</span>(temp))
+</span></span><span style=display:flex><span>    weather <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_weather clearfix&#39;</span>})<span style=color:#ff79c6>.</span>b<span style=color:#ff79c6>.</span>getText()
+</span></span><span style=display:flex><span>    sd <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>span<span style=color:#ff79c6>.</span>getText()
+</span></span><span style=display:flex><span>    sd_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, sd)<span style=color:#ff79c6>.</span>group()
+</span></span><span style=display:flex><span>    sd_num_zh <span style=color:#ff79c6>=</span> numtozh(<span style=color:#8be9fd;font-style:italic>int</span>(sd_num))
+</span></span><span style=display:flex><span>    sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(sd_num, sd_num_zh)
+</span></span><span style=display:flex><span>    wind <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_about clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+</span></span><span style=display:flex><span>    aqi <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_alert clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+</span></span><span style=display:flex><span>    aqi_num <span style=color:#ff79c6>=</span> re<span style=color:#ff79c6>.</span>search(<span style=color:#f1fa8c>r</span><span style=color:#f1fa8c>&#39;\d+&#39;</span>, aqi)<span style=color:#ff79c6>.</span>group()
+</span></span><span style=display:flex><span>    aqi_num_zh <span style=color:#ff79c6>=</span> numtozh(<span style=color:#8be9fd;font-style:italic>int</span>(aqi_num))
+</span></span><span style=display:flex><span>    aqi <span style=color:#ff79c6>=</span> aqi<span style=color:#ff79c6>.</span>replace(aqi_num, aqi_num_zh)<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39; &#39;</span>, <span style=color:#f1fa8c>&#39;,空气质量&#39;</span>)
+</span></span><span style=display:flex><span>    info <span style=color:#ff79c6>=</span> soup<span style=color:#ff79c6>.</span>find(<span style=color:#f1fa8c>&#39;div&#39;</span>, attrs<span style=color:#ff79c6>=</span>{<span style=color:#f1fa8c>&#39;class&#39;</span>: <span style=color:#f1fa8c>&#39;wea_tips clearfix&#39;</span>})<span style=color:#ff79c6>.</span>em<span style=color:#ff79c6>.</span>getText()
+</span></span><span style=display:flex><span>    sd <span style=color:#ff79c6>=</span> sd<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39; &#39;</span>, <span style=color:#f1fa8c>&#39;百分之&#39;</span>)<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39;%&#39;</span>, <span style=color:#f1fa8c>&#39;&#39;</span>)
+</span></span><span style=display:flex><span>    aqi <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;aqi&#39;</span> <span style=color:#ff79c6>+</span> aqi
+</span></span><span style=display:flex><span>    info <span style=color:#ff79c6>=</span> info<span style=color:#ff79c6>.</span>replace(<span style=color:#f1fa8c>&#39;，&#39;</span>, <span style=color:#f1fa8c>&#39;,&#39;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#6272a4># 获取今天的日期</span>
+</span></span><span style=display:flex><span>    today <span style=color:#ff79c6>=</span> datetime<span style=color:#ff79c6>.</span>now()<span style=color:#ff79c6>.</span>date()<span style=color:#ff79c6>.</span>strftime(<span style=color:#f1fa8c>&#39;%Y年%m月</span><span style=color:#f1fa8c>%d</span><span style=color:#f1fa8c>日&#39;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#6272a4># 将获取的信息拼接成一句话</span>
+</span></span><span style=display:flex><span>    text <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;早上好！今天是</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,天气</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,温度</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>摄氏度,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>,</span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> \
+</span></span><span style=display:flex><span>            (today, weather, temp, sd, wind, aqi, info)
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>return</span> text
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff79c6>def</span> <span style=color:#50fa7b>text2voice</span>(text):
+</span></span><span style=display:flex><span>    url <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;http://tts.baidu.com/text2audio?idx=1&amp;tex=</span><span style=color:#f1fa8c>{0}</span><span style=color:#f1fa8c>&amp;cuid=baidu_speech_&#39;</span> \
+</span></span><span style=display:flex><span>            <span style=color:#f1fa8c>&#39;demo&amp;cod=2&amp;lan=zh&amp;ctp=1&amp;pdt=1&amp;spd=4&amp;per=4&amp;vol=5&amp;pit=5&#39;</span><span style=color:#ff79c6>.</span>format(text)
+</span></span><span style=display:flex><span>    <span style=color:#6272a4># 下载转换后的mp3格式语音</span>
+</span></span><span style=display:flex><span>    res <span style=color:#ff79c6>=</span> requests<span style=color:#ff79c6>.</span>get(url, headers<span style=color:#ff79c6>=</span>headers)
+</span></span><span style=display:flex><span>    <span style=color:#6272a4># 将MP3存入本地</span>
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>with</span> <span style=color:#8be9fd;font-style:italic>open</span>(<span style=color:#f1fa8c>&#39;1.mp3&#39;</span>, <span style=color:#f1fa8c>&#39;wb&#39;</span>) <span style=color:#ff79c6>as</span> f:
+</span></span><span style=display:flex><span>        f<span style=color:#ff79c6>.</span>write(res<span style=color:#ff79c6>.</span>content)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff79c6>def</span> <span style=color:#50fa7b>main</span>():
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>while</span> <span style=color:#ff79c6>True</span>:
+</span></span><span style=display:flex><span>        s <span style=color:#ff79c6>=</span> get_seconds()
+</span></span><span style=display:flex><span>        time<span style=color:#ff79c6>.</span>sleep(s)
+</span></span><span style=display:flex><span>        <span style=color:#6272a4># 获取需要转换语音的文字</span>
+</span></span><span style=display:flex><span>        text <span style=color:#ff79c6>=</span> get_weather()
+</span></span><span style=display:flex><span>        <span style=color:#8be9fd;font-style:italic>print</span>(text)
+</span></span><span style=display:flex><span>        <span style=color:#6272a4># 将文字转换为语音并存入程序所在文件夹</span>
+</span></span><span style=display:flex><span>        text2voice(text)
+</span></span><span style=display:flex><span>        <span style=color:#6272a4># 获取音乐文件绝对地址</span>
+</span></span><span style=display:flex><span>        mp3path2 <span style=color:#ff79c6>=</span> os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>join(os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>dirname(__file__), <span style=color:#f1fa8c>&#39;2.mp3&#39;</span>)
+</span></span><span style=display:flex><span>        <span style=color:#6272a4># 先播放一首音乐做闹钟</span>
+</span></span><span style=display:flex><span>        os<span style=color:#ff79c6>.</span>system(<span style=color:#f1fa8c>&#39;mplayer </span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> mp3path2)
+</span></span><span style=display:flex><span>        <span style=color:#6272a4># 播报语音天气</span>
+</span></span><span style=display:flex><span>        mp3path1 <span style=color:#ff79c6>=</span> os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>join(os<span style=color:#ff79c6>.</span>path<span style=color:#ff79c6>.</span>dirname(__file__), <span style=color:#f1fa8c>&#39;1.mp3&#39;</span>)
+</span></span><span style=display:flex><span>        os<span style=color:#ff79c6>.</span>system(<span style=color:#f1fa8c>&#39;mplayer </span><span style=color:#f1fa8c>%s</span><span style=color:#f1fa8c>&#39;</span> <span style=color:#ff79c6>%</span> mp3path1)
+</span></span><span style=display:flex><span>        os<span style=color:#ff79c6>.</span>remove(mp3path1)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff79c6>if</span> __name__ <span style=color:#ff79c6>==</span> <span style=color:#f1fa8c>&#39;__main__&#39;</span>:
+</span></span><span style=display:flex><span>    main()
+</span></span></code></pre></td></tr></table></div></div><p>最后就尽情的享受你的专属闹钟吧~ 文章转载自：<strong><a class=link href=http://woodenrobot.me/2017/01/21/%E5%88%A9%E7%94%A8%E7%88%AC%E8%99%AB%E5%92%8C%E6%A0%91%E8%8E%93%E6%B4%BE3%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%AF%AD%E9%9F%B3%E5%A4%A9%E6%B0%94%E9%97%B9%E9%92%9F/ target=_blank rel=noopener>woodenrobot</a></strong></p></section><div class="px-6 pb-5 pt-4 md:pb-10 md:pt-14 text-center md:px-10 text-xl text-gray-500"><a class="mr-4 w-5 h-5 inline-flex items-center" title="分享到 Twitter" href="https://twitter.com/share?&text=%e6%96%87%e7%ab%a0%e8%bd%ac%e8%bd%bd%e8%87%aa%ef%bc%9awoodenrobot.me%e5%be%88%e6%97%a9%e4%b9%8b%e5%89%8d%e5%b0%b1%e6%83%b3%e7%94%a8%e6%a0%91%e8%8e%93%e6%b4%be%e5%bd%93%e9%97%b9%e9%92%9f%e4%ba%86%ef%bc%8c%e5%b0%9d%e8%af%95%e8%bf%87%e8%ae%b8%e5%a4%9a%e6%96%b9%e6%b3%95%ef%bc%8c%e6%af%94%e5%a6%82%e7%94%a8%e8%b0%b7%e6%ad%8c%e6%97%a5%e5%8e%86%ef%bc%8cPHP%e8%84%9a%e6%9c%ac%e7%ad%89%ef%bc%8c%e4%bd%86%e6%9c%80%e5%90%8e%e5%b0%9d%e8%af%95%e4%b8%8b%e6%9d%a5%e6%95%88%e6%9e%9c%e9%83%bd%e4%b8%8d%e6%98%af%20%e2%80%a6&url=https://imiku.me/2017/02/22/301.html/" target=_blank rel="noopener noreferrer"><i class="eva hover:text-theme eva-twitter"></i></a>
 <a class="mr-4 w-5 h-5 inline-flex items-center" title="分享到 Facebook" href="https://www.facebook.com/sharer.php?u=https://imiku.me/2017/02/22/301.html/" target=_blank rel="noopener noreferrer"><i class="eva hover:text-theme eva-facebook"></i></a>
-<a class="mr-4 w-5 h-5 inline-flex items-center" title=分享到微博 href="https://service.weibo.com/share/share.php?url=https://imiku.me/2017/02/22/301.html/&title=%e7%94%a8%e6%a0%91%e8%8e%93%e6%b4%be%e6%89%93%e9%80%a0%e4%bd%a0%e7%9a%84%e7%a7%81%e4%ba%ba%e9%97%b9%e9%92%9f~&sudaref=imiku.me" target=_blank rel="noopener noreferrer"><svg class="w-5 h-5 inline-block fill-current hover:text-theme" viewBox="0 0 1193 1024" xmlns="http://www.w3.org/2000/svg" p-id="2681" width="200" height="200"><path d="M456.991736 557.336482c-107.598583.0-194.644628 74.956316-194.644629 166.838252s87.046045 166.838253 194.644629 166.838253c107.598583.0 194.644628-74.956316 194.644628-166.838253s-87.046045-166.838253-194.644628-166.838252zM391.707202 822.101535c-36.269185.0-66.493506-27.806375-66.493507-62.866588s29.015348-62.866588 66.493507-62.866588c36.269185.0 66.493506 27.806375 66.493506 62.866588S427.976387 822.101535 391.707202 822.101535zm93.090909-91.881936c-14.507674.0-26.597403-12.089728-26.597403-26.597403s12.089728-26.597403 26.597403-26.597403 26.597403 12.089728 26.597403 26.597403-12.089728 26.597403-26.597403 26.597403zM239.376623 281.690673C97.9268 394.125148-18.134593 600.859504 30.224321 661.308146c32.642267 41.105077 59.239669-19.343566 124.524203-89.46399 30.224321-32.642267 77.374262-54.403778 122.106258-90.672964 20.552538-16.92562 197.062574-35.060213 230.913813-35.060212 97.9268-99.135773 114.85242-207.943329 74.956316-258.720189-48.358914-59.239669-201.898465-16.92562-343.348288 94.299882z" p-id="2682"/><path d="M808.802834 560.9634C906.729634 461.827627 911.565525 377.199528 870.460449 326.422668c-47.149941-60.448642-211.570248-32.642267-351.811098 78.583235" p-id="2683"/><path d="M605.695396 353.020071c-14.507674 8.46281-25.38843 12.089728-29.015349 7.253837-1.208973-2.417946-1.208973-6.044864 1.208973-9.671783-16.92562-1.208973-33.85124-1.208973-50.776859-1.208973C235.749705 349.393152.0 500.514758.0 686.696576S235.749705 1024 527.112161 1024s527.112161-151.121606 527.11216-337.303424c0-170.465171-194.644628-309.497048-448.528925-333.676505zM481.171192 959.924439c-205.525383.0-372.363636-112.434474-372.363636-251.466352s166.838253-251.466352 372.363636-251.466351 372.363636 112.434475 372.363637 251.466351-166.838253 251.466352-372.363637 251.466352z" p-id="2684"/><path d="M1021.582054 423.140496c-3.626919.0-6.044864.0-9.671782-1.208973-18.134593-4.835891-29.015348-24.179457-22.970485-42.31405 2.417946-7.253837 3.626919-16.92562 3.626919-29.015348.0-65.284534-53.194805-119.688312-119.688312-119.688312-19.343566.0-33.85124-15.716647-33.851239-33.851239s15.716647-33.85124 33.851239-33.85124c103.971665.0 187.390791 84.628099 187.390791 187.390791.0 18.134593-2.417946 33.85124-6.044864 48.358914-4.835891 14.507674-18.134593 24.179457-32.642267 24.179457z" p-id="2685"/><path d="M1146.106257 473.917355c-2.417946.0-6.044864.0-8.46281-1.208972-20.552538-4.835891-32.642267-25.38843-27.806375-45.940969 6.044864-24.179457 8.46281-47.149941 8.46281-71.329397.0-153.539552-126.942149-280.481701-281.690673-280.481701-20.552538.0-37.478158-16.92562-37.478158-37.478158S816.056671.0 836.609209.0c197.062574.0 356.646989 159.584416 356.646989 356.646989.0 29.015348-3.626919 59.239669-10.880755 88.255018-3.626919 18.134593-19.343566 29.015348-36.269186 29.015348z" p-id="2686"/></svg>
-</a>
-<i class="mr-4 eva cursor-pointer hover:text-theme eva-copy" title=复制链接 data-clipboard-text=https://imiku.me/2017/02/22/301.html/></i>
-<div class="hidden sm:inline-block relative group cursor-pointer">
-<i class="eva show-qrcode hover:text-theme eva-smartphone"></i>
-<div class="qrcode-wrapper p-1 absolute group-hover:opacity-100 pointer-events-none transition duration-300 ease-[ease] opacity-0 w-32 h-32 left-2/4 -translate-x-1/2 bottom-10 border border-gray-300 rounded overflow-hidden bg-white">
-<img class="w-full h-full" src="https://www.lofter.com/genBitmaxImage?url=https://imiku.me/2017/02/22/301.html/" alt=二维码>
-</div>
-</div>
-</div>
-<div class="border-b dark:border-darkBorder"></div>
-<div class="flex justify-between md:text-2xl p-4 text-xl">
-<a href=/2017/02/18/285.html/ title=利用树莓派搭建24h下载机 class="cursor-pointer flex hover:text-theme items-center text-gray-500 transition duration-300 ease-[ease] invisible dark:text-darkTextPlaceholder dark:hover:text-darkText" style=visibility:visible>
-<span class="flex items-center text-5xl opacity-70 dark:bg-opacity-100">
-<i class="eva eva-chevron-left-outline"></i>
-</span>
-<span>上一篇</span>
-</a>
-<div class="hidden items-center text-xs xl:flex">
-除特殊声明外，本博客一律使用 「
-<a href=/creativecommons target=_blank rel="noopener noreferrer" class=text-theme>署名 - 非商业性使用 - 禁止演绎 4.0</a>
-」许可协议进行授权
-</div>
-<div class="flex items-center text-sm xl:hidden">
-<a href=/creativecommons target=_blank rel="noopener noreferrer" class=text-theme>
-<img src=/images/Cc-by-nc-nd.svg alt="署名-非商业性使用-禁止演绎 4.0 国际" title="署名-非商业性使用-禁止演绎 4.0 国际" class=w-24>
-</a>
-</div>
-<a href=/2017/02/22/311.html/ title=让树莓派定时说出温度和CPU使用情况 class="cursor-pointer flex hover:text-theme items-center text-gray-500 transition duration-300 ease-[ease] invisible dark:text-darkTextPlaceholder dark:hover:text-darkText" style=visibility:visible>
-<span>下一篇</span>
-<span class="flex items-center text-5xl opacity-70 dark:bg-opacity-100">
-<i class="eva eva-chevron-right-outline"></i>
-</span>
-</a>
-</div><div class="border-t py-6 px-6 md:px-8 dark:border-darkBorder"><div id=cusdis_thread data-host=https://cusdis.com data-app-id=08bf7804-1695-4cba-a508-f60e353736ad data-page-id=e53142273384a7e1f66fbd2bbd2dd2e0zh-cn data-page-url=/2017/02/22/301.html/ data-page-title=用树莓派打造你的私人闹钟~ class=text-center>评论系统加载中···</div></div></div>
-</div>
-</div>
-</main><footer>
-<div class="com-footer leading-none py-4 px-6 text-sm flex flex-col md:flex-row md:justify-between items-center border-t dark:border-darkBorder text-gray-600 dark:text-darkTextPlaceholder">
-<div class="text-center mb-2 md:mb-0 flex items-center">
-<span>Copyright © 2016 - 2077 | </span>
+<a class="mr-4 w-5 h-5 inline-flex items-center" title="分享到 微博" href="https://service.weibo.com/share/share.php?url=https://imiku.me/2017/02/22/301.html/&title=%e7%94%a8%e6%a0%91%e8%8e%93%e6%b4%be%e6%89%93%e9%80%a0%e4%bd%a0%e7%9a%84%e7%a7%81%e4%ba%ba%e9%97%b9%e9%92%9f~&sudaref=imiku.me" target=_blank rel="noopener noreferrer"><svg class="w-5 h-5 inline-block fill-current hover:text-theme" viewBox="0 0 1193 1024" xmlns="http://www.w3.org/2000/svg" p-id="2681" width="200" height="200"><path d="M456.991736 557.336482c-107.598583.0-194.644628 74.956316-194.644629 166.838252s87.046045 166.838253 194.644629 166.838253c107.598583.0 194.644628-74.956316 194.644628-166.838253s-87.046045-166.838253-194.644628-166.838252zM391.707202 822.101535c-36.269185.0-66.493506-27.806375-66.493507-62.866588s29.015348-62.866588 66.493507-62.866588c36.269185.0 66.493506 27.806375 66.493506 62.866588S427.976387 822.101535 391.707202 822.101535zm93.090909-91.881936c-14.507674.0-26.597403-12.089728-26.597403-26.597403s12.089728-26.597403 26.597403-26.597403 26.597403 12.089728 26.597403 26.597403-12.089728 26.597403-26.597403 26.597403zM239.376623 281.690673C97.9268 394.125148-18.134593 600.859504 30.224321 661.308146c32.642267 41.105077 59.239669-19.343566 124.524203-89.46399 30.224321-32.642267 77.374262-54.403778 122.106258-90.672964 20.552538-16.92562 197.062574-35.060213 230.913813-35.060212 97.9268-99.135773 114.85242-207.943329 74.956316-258.720189-48.358914-59.239669-201.898465-16.92562-343.348288 94.299882z" p-id="2682"/><path d="M808.802834 560.9634C906.729634 461.827627 911.565525 377.199528 870.460449 326.422668c-47.149941-60.448642-211.570248-32.642267-351.811098 78.583235" p-id="2683"/><path d="M605.695396 353.020071c-14.507674 8.46281-25.38843 12.089728-29.015349 7.253837-1.208973-2.417946-1.208973-6.044864 1.208973-9.671783-16.92562-1.208973-33.85124-1.208973-50.776859-1.208973C235.749705 349.393152.0 500.514758.0 686.696576S235.749705 1024 527.112161 1024s527.112161-151.121606 527.11216-337.303424c0-170.465171-194.644628-309.497048-448.528925-333.676505zM481.171192 959.924439c-205.525383.0-372.363636-112.434474-372.363636-251.466352s166.838253-251.466352 372.363636-251.466351 372.363636 112.434475 372.363637 251.466351-166.838253 251.466352-372.363637 251.466352z" p-id="2684"/><path d="M1021.582054 423.140496c-3.626919.0-6.044864.0-9.671782-1.208973-18.134593-4.835891-29.015348-24.179457-22.970485-42.31405 2.417946-7.253837 3.626919-16.92562 3.626919-29.015348.0-65.284534-53.194805-119.688312-119.688312-119.688312-19.343566.0-33.85124-15.716647-33.851239-33.851239s15.716647-33.85124 33.851239-33.85124c103.971665.0 187.390791 84.628099 187.390791 187.390791.0 18.134593-2.417946 33.85124-6.044864 48.358914-4.835891 14.507674-18.134593 24.179457-32.642267 24.179457z" p-id="2685"/><path d="M1146.106257 473.917355c-2.417946.0-6.044864.0-8.46281-1.208972-20.552538-4.835891-32.642267-25.38843-27.806375-45.940969 6.044864-24.179457 8.46281-47.149941 8.46281-71.329397.0-153.539552-126.942149-280.481701-281.690673-280.481701-20.552538.0-37.478158-16.92562-37.478158-37.478158S816.056671.0 836.609209.0c197.062574.0 356.646989 159.584416 356.646989 356.646989.0 29.015348-3.626919 59.239669-10.880755 88.255018-3.626919 18.134593-19.343566 29.015348-36.269186 29.015348z" p-id="2686"/></svg></a><i class="mr-4 eva cursor-pointer hover:text-theme eva-copy" title=复制链接 data-clipboard-text=https://imiku.me/2017/02/22/301.html/></i><div class="hidden sm:inline-block relative group cursor-pointer"><i title=二维码 class="eva show-qrcode hover:text-theme eva-smartphone"></i><div class="qrcode-wrapper absolute group-hover:opacity-100 pointer-events-none transition duration-300 ease-[ease] opacity-0 w-32 h-32 left-2/4 -translate-x-1/2 bottom-10 border border-gray-300 rounded overflow-hidden bg-white"><img class="w-full h-full" src="https://www.lofter.com/genBitmaxImage?url=https://imiku.me/2017/02/22/301.html/" alt=二维码></div></div></div><div class="border-b dark:border-darkBorder"></div><div class="flex justify-between md:text-2xl p-4 text-xl"><a href=/2017/02/18/285.html/ title=利用树莓派搭建24h下载机 class="cursor-pointer flex hover:text-theme items-center text-gray-500 transition duration-300 ease-[ease] invisible dark:text-darkTextPlaceholder dark:hover:text-darkText" style=visibility:visible><span class="flex items-center text-5xl opacity-70 dark:bg-opacity-100"><i class="eva eva-chevron-left-outline"></i></span>
+<span>上一篇</span></a><div class="hidden items-center text-xs xl:flex">除特殊声明外，本博客一律使用以下协议进行授权 「
+<a href=/license target=_blank rel="noopener noreferrer" class=text-theme>署名 - 非商业性使用 - 禁止演绎 4.0</a>
+」</div><div class="flex items-center text-sm xl:hidden"><a href=/license target=_blank rel="noopener noreferrer" class=text-theme><img src=/images/Cc-by-nc-nd.svg alt="署名 - 非商业性使用 - 禁止演绎 4.0" title="署名 - 非商业性使用 - 禁止演绎 4.0" class=w-24></a></div><a href=/2017/02/22/311.html/ title=让树莓派定时说出温度和CPU使用情况 class="cursor-pointer flex hover:text-theme items-center text-gray-500 transition duration-300 ease-[ease] invisible dark:text-darkTextPlaceholder dark:hover:text-darkText" style=visibility:visible><span>下一篇</span>
+<span class="flex items-center text-5xl opacity-70 dark:bg-opacity-100"><i class="eva eva-chevron-right-outline"></i></span></a></div><div class="border-t py-6 px-6 md:px-8 dark:border-darkBorder"><div id=cusdis_thread data-host=https://cusdis.com data-app-id=08bf7804-1695-4cba-a508-f60e353736ad data-page-id=e53142273384a7e1f66fbd2bbd2dd2e0zh-cn data-page-url=/2017/02/22/301.html/ data-page-title=用树莓派打造你的私人闹钟~ class=text-center>评论系统加载中···</div></div></div></div></div></main><footer><div class="com-footer leading-none py-4 px-6 text-sm flex flex-col md:flex-row md:justify-between items-center border-t dark:border-darkBorder text-gray-600 dark:text-darkTextPlaceholder"><div class="text-center mb-2 md:mb-0 flex items-center"><span>Copyright © 2016 - 2077 |</span>
 <a href=/index.xml target=_blank class="hover:text-theme ml-2">RSS</a>
-<a href=/sitemap.xml target=_blank class="hover:text-theme ml-2">Sitemap</a>
-<div id=google_translate_element class="ml-2 rounded border dark:border-darkBorder overflow-hidden"></div>
-</div>
-<div id=run-time>
-<span>本博客已低调存活：</span>
+<a href=/sitemap.xml target=_blank class="hover:text-theme ml-2">Sitemap</a><div id=google_translate_element class="ml-2 rounded border dark:border-darkBorder overflow-hidden"></div></div><div id=run-time><span>运行时间：</span>
 <b id=run-time-d>0</b>
-<span> 天 </span>
+<span>天</span>
 <b id=run-time-h>0</b>
-<span> 小时 </span>
+<span>小时</span>
 <b id=run-time-m>0</b>
-<span> 分 </span>
+<span>分钟</span>
 <b id=run-time-s>0</b>
-<span> 秒</span>
-</div>
-</div><script>window.__theme={cdn:'https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest',pjax:!0,isServer:!1,$version:"bcc33370a0ffd7486a7264ff4bd6107d6430c5bc",hugoEncrypt:{wrongPasswordText:'密码错误',userStorage:window.sessionStorage}}</script>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98634098-1','auto'),ga('send','pageview'))</script>
-<script async src=https://www.google-analytics.com/analytics.js></script>
-<script defer src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/app_bcc33370a0ffd7486a7264ff4bd6107d6430c5bc.js></script><script defer src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/pjax_bcc33370a0ffd7486a7264ff4bd6107d6430c5bc.js></script><script>'serviceWorker'in navigator&&window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')})</script><script async src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/translate-google_.js></script>
-<script type=text/javascript>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'zh-CN',includedLanguages:'af,ga,sq,it,ar,ja,az,kn,eu,ko,bn,la,be,lv,bg,lt,ca,mk,zh-CN,ms,zh-TW,mt,hr,no,cs,fa,da,pl,nl,pt,en,ro,eo,ru,et,sr,tl,sk,fi,sl,fr,es,gl,sw,ka,sv,de,ta,el,te,gu,th,ht,tr,iw,uk,hi,ur,hu,vi,is,cy,id,yi',autoDisplay:!1},'google_translate_element')}</script><script>window.CUSDIS_LOCALE={powered_by:'评论由 Cusdis 提供',post_comment:'发送',loading:'加载中',email:'邮箱地址 (可选)',nickname:'昵称',reply_placeholder:'回复内容...',reply_btn:'回复',sending:'发送中...',mod_badge:'管理员',content_is_required:'内容不能为空',nickname_is_required:'昵称不能为空',comment_has_been_sent:'评论已发送，管理员审核通过后会展示'}</script>
-<script async src=https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/cusdis_bcc33370a0ffd7486a7264ff4bd6107d6430c5bc.js></script></footer></div>
-</div>
-<div onclick=window.backTop() title=返回顶部 class="back-top translate-y-3 opacity-0 sm:scale-100 scale-90 transition duration-300 ease-[ease] z-10 cursor-pointer fixed right-6 bottom-9 bg-white dark:bg-darkBgAccent rounded-full">
-<div class=relative>
-<div class="w-full h-full absolute left-0 top-0 text-xl flex justify-center items-center">
-<i class="eva eva-arrow-upward-outline"></i>
-</div><svg id="svg" width="54" height="54" viewBox="0 0 54 54" preserveAspectRatio="xMinYMin meet"><circle transform="rotate(-90, 27 , 27)" style="stroke-dasharray:157,157;stroke-dashoffset:157" cx="27" cy="27" r="25" fill="none" stroke-width="4" stroke-linecap="round" stroke="var(--theme)"/></svg>
-</div>
-</div>
-<div class="dark-mode-switch z-40 fixed right-6 md:top-8 top-12 w-12 h-12 cursor-pointer bg-white dark:bg-darkBgAccent border dark:border-darkBorder rounded-full flex justify-center items-center text-xl">
-<i class="eva eva-moon"></i>
-</div>
-</body>
-</html>
+<span>秒</span></div></div><script type=text/javascript>window.__theme={cdn:'',pjax:!0,isServer:!1,$version:"9e02ff00253e717699371551e16045b40fdb6ad1",hugoEncrypt:{wrongPasswordText:"密码错误",userStorage:window.sessionStorage},i18n:{copySuccess:"复制成功",copyFailed:"复制失败，请手动复制",copyCode:"复制代码",searchLoadFailure:"初始化搜索引擎失败",searchInput:"请输入内容",searchResults:(e,t)=>`关键字 <span class="text-theme">${t}</span> 中共找到 <span class="text-theme">${e}</span> 条结果`}}</script><script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-98634098-1","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script>
+<script type=text/javascript src=/js/main.08d4bb1c42c7cdf144ddc4ec62f95b0d8b89c415bfe89c22640465ae222a482c.js defer integrity="sha256-CNS7HELHzfFE3cTsYvlbDYuJxBW/6JwiZARlriIqSCw="></script><script type=text/javascript src=/js/pjax.81becdcc17bf770acd9a2b7dd20094d8f3cf46572f2885e132be9ec59c03d6ac.js defer integrity="sha256-gb7NzBe/dwrNmit90gCU2PPPRlcvKIXhMr6exZwD1qw="></script><script>"serviceWorker"in navigator&&window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js")})</script><script type=text/javascript src=/js/translate-google.62d8577460d8cbba050e5fdd4705f0630b240c421d78e39443db0eee9e0591fc.js defer integrity="sha256-YthXdGDYy7oFDl/dRwXwYwskDEIdeOOUQ9sO7p4Fkfw="></script><script type=text/javascript>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:"zh-cn",includedLanguages:"af,ga,sq,it,ar,ja,az,kn,eu,ko,bn,la,be,lv,bg,lt,ca,mk,zh-CN,ms,zh-TW,mt,hr,no,cs,fa,da,pl,nl,pt,en,ro,eo,ru,et,sr,tl,sk,fi,sl,fr,es,gl,sw,ka,sv,de,ta,el,te,gu,th,ht,tr,iw,uk,hi,ur,hu,vi,is,cy,id,yi",autoDisplay:!1},"google_translate_element")}</script><script>window.CUSDIS_LOCALE={powered_by:"评论由 Cusdis 提供",post_comment:"发送",loading:"加载中",email:"邮箱地址 (可选)",nickname:"昵称",reply_placeholder:"回复内容...",reply_btn:"回复",sending:"发送中...",mod_badge:"管理员",content_is_required:"内容不能为空",nickname_is_required:"昵称不能为空",comment_has_been_sent:"评论已发送，管理员审核通过后会展示"}</script>
+<script type=text/javascript src=/js/cusdis.eb2741dcc2c76fb911843f85a0643205ab5e00d1a5b652f2cc503a8a0e6e77ea.js defer integrity="sha256-6ydB3MLHb7kRhD+FoGQyBateANGltlLyzFA6ig5ud+o="></script></footer></div></div><div onclick=window.backTop() title=返回顶部 class="back-top translate-y-3 opacity-0 sm:scale-100 scale-90 transition duration-300 ease-[ease] z-10 cursor-pointer fixed right-6 bottom-9 bg-white dark:bg-darkBgAccent rounded-full"><div class=relative><div class="w-full h-full absolute left-0 top-0 text-xl flex justify-center items-center"><i class="eva eva-arrow-upward-outline"></i></div><svg id="svg" width="54" height="54" viewBox="0 0 54 54" preserveAspectRatio="xMinYMin meet"><circle transform="rotate(-90, 27 , 27)" style="stroke-dasharray:157,157;stroke-dashoffset:157" cx="27" cy="27" r="25" fill="none" stroke-width="4" stroke-linecap="round" stroke="var(--theme)"/></svg></div></div><div class="dark-mode-switch z-40 fixed right-6 md:top-8 top-12 w-12 h-12 cursor-pointer bg-white dark:bg-darkBgAccent border dark:border-darkBorder rounded-full flex justify-center items-center text-xl"><i class="eva eva-moon"></i></div></body></html>
