@@ -1,4 +1,36 @@
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>Ice-Hazymoon's Blog</title><atom:link href="%7balternate%20%7bRSS%20application/rss+xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/en-us/index.xml%20https://imiku.me/en-us/index.xml%7d" rel="self" type="application/rss+xml"/><link>https://imiku.me/en-us/</link><managingEditor>Ice-Hazymoon</managingEditor><description>向着现充的生活拼命咸鱼中</description><lastBuildDate>Fri, 15 Apr 2022 02:49:13 +0200</lastBuildDate><language>zh-cn</language><generator>Hugo -- gohugo.io</generator><item><title>Typography</title><link>https://imiku.me/en-us/2022/04/15/typography-en.html/</link><pubDate>Fri, 15 Apr 2022 02:49:13 +0200</pubDate><guid>https://imiku.me/en-us/2022/04/15/typography-en.html/</guid><description>&lt;p>Until now, trying to style an article, document, or blog post with Tailwind has been a tedious task that required a keen eye for typography and a lot of complex custom CSS.&lt;/p>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>Ice-Hazymoon's Blog</title><atom:link href="%7balternate%20%7bRSS%20application/rss+xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/en-us/index.xml%20https://imiku.me/en-us/index.xml%7d" rel="self" type="application/rss+xml"/><link>https://imiku.me/en-us/</link><managingEditor>Ice-Hazymoon</managingEditor><description>向着现充的生活拼命咸鱼中</description><lastBuildDate>Fri, 15 Apr 2022 02:49:13 +0200</lastBuildDate><language>zh-cn</language><generator>Hugo -- gohugo.io</generator><item><title>Flower Gallery</title><link>https://imiku.me/en-us/2022/04/15/flower-gallery.html/</link><pubDate>Fri, 15 Apr 2022 02:49:13 +0200</pubDate><guid>https://imiku.me/en-us/2022/04/15/flower-gallery.html/</guid><description>&lt;h2 id="spring">Spring.&lt;/h2>
+&lt;p>&lt;em>Today is the day when bold kites fly,&lt;/em>&lt;/p>
+&lt;p>&lt;em>When cumulus clouds roar across the sky.&lt;/em>&lt;/p>
+&lt;p>&lt;em>When robins return,when children cheer,&lt;/em>&lt;/p>
+&lt;p>&lt;em>When light rain beckons spring to appear.&lt;/em>&lt;/p>
+&lt;p>&lt;em>Today is the day when daffodils bloom,&lt;/em>&lt;/p>
+&lt;p>&lt;em>Which children pick to fill the room,&lt;/em>&lt;/p>
+&lt;p>&lt;em>Today is the day when grasses green,&lt;/em>&lt;/p>
+&lt;p>&lt;em>When leaves burst forth for spring to be seen.&lt;/em>&lt;/p>
+&lt;p>&lt;em>—— Robert McCracken .&lt;/em>&lt;/p>
+&lt;h2 id="flower">Flower&lt;/h2>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![](4.jpg) ![](2.jpg)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>![](6.jpg) ![](7.jpg) ![](8.jpg) ![](9.jpg)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>
+&lt;img src="https://imiku.me/en-us/2022/04/15/flower-gallery.html/4.jpg"width="996"height="1500"srcset="https://imiku.me/en-us/2022/04/15/flower-gallery.html/4_hu34aa8227897d0ad4d735dad52c8de43c_68003_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/en-us/2022/04/15/flower-gallery.html/4_hu34aa8227897d0ad4d735dad52c8de43c_68003_1080x0_resize_q95_catmullrom.jpg 1080w"/>
+&lt;img src="https://imiku.me/en-us/2022/04/15/flower-gallery.html/2.jpg"width="1200"height="800"srcset="https://imiku.me/en-us/2022/04/15/flower-gallery.html/2_hu584058098a9b77435d377097cf241a1a_202741_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/en-us/2022/04/15/flower-gallery.html/2_hu584058098a9b77435d377097cf241a1a_202741_1080x0_resize_q95_catmullrom.jpg 1080w"/>
+&lt;/p>
+&lt;p>
+&lt;img src="https://imiku.me/en-us/2022/04/15/flower-gallery.html/6.jpg"width="1200"height="1800"srcset="https://imiku.me/en-us/2022/04/15/flower-gallery.html/6_hu0b3772ef97be9473c84faf4f8bc41c24_94221_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/en-us/2022/04/15/flower-gallery.html/6_hu0b3772ef97be9473c84faf4f8bc41c24_94221_1080x0_resize_q95_catmullrom.jpg 1080w"/>
+&lt;img src="https://imiku.me/en-us/2022/04/15/flower-gallery.html/7.jpg"width="1200"height="1022"srcset="https://imiku.me/en-us/2022/04/15/flower-gallery.html/7_hu2c3220d89c0d7665dccd4ad786654b94_27054_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/en-us/2022/04/15/flower-gallery.html/7_hu2c3220d89c0d7665dccd4ad786654b94_27054_1080x0_resize_q95_catmullrom.jpg 1080w"/>
+&lt;img src="https://imiku.me/en-us/2022/04/15/flower-gallery.html/8.jpg"width="1200"height="1800"srcset="https://imiku.me/en-us/2022/04/15/flower-gallery.html/8_hu1c428075e3e7ab19a5b9971e6af50364_204055_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/en-us/2022/04/15/flower-gallery.html/8_hu1c428075e3e7ab19a5b9971e6af50364_204055_1080x0_resize_q95_catmullrom.jpg 1080w"/>
+&lt;img src="https://imiku.me/en-us/2022/04/15/flower-gallery.html/9.jpg"width="1200"height="1800"srcset="https://imiku.me/en-us/2022/04/15/flower-gallery.html/9_hud197a2fb04bed1fbdf90bf91c9e02091_59645_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/en-us/2022/04/15/flower-gallery.html/9_hud197a2fb04bed1fbdf90bf91c9e02091_59645_1080x0_resize_q95_catmullrom.jpg 1080w"/>
+&lt;/p></description></item><item><title>Typography</title><link>https://imiku.me/en-us/2022/04/15/typography-en.html/</link><pubDate>Fri, 15 Apr 2022 02:49:13 +0200</pubDate><guid>https://imiku.me/en-us/2022/04/15/typography-en.html/</guid><description>&lt;p>Until now, trying to style an article, document, or blog post with Tailwind has been a tedious task that required a keen eye for typography and a lot of complex custom CSS.&lt;/p>
 &lt;p>By default, Tailwind removes all of the default browser styling from paragraphs, headings, lists and more. This ends up being really useful for building application UIs because you spend less time undoing user-agent styles, but when you &lt;em>really are&lt;/em> just trying to style some content that came from a rich-text editor in a CMS or a markdown file, it can be surprising and unintuitive.&lt;/p>
 &lt;p>We get lots of complaints about it actually, with people regularly asking us things like:&lt;/p>
 &lt;blockquote>
@@ -7,31 +39,31 @@
 &lt;p>We hear you, but we&amp;rsquo;re not convinced that simply disabling our base styles is what you really want. You don&amp;rsquo;t want to have to remove annoying margins every time you use a &lt;code>p&lt;/code> element in a piece of your dashboard UI. And I doubt you really want your blog posts to use the user-agent styles either — you want them to look &lt;em>awesome&lt;/em>, not awful.&lt;/p>
 &lt;p>The &lt;code>@tailwindcss/typography&lt;/code> plugin is our attempt to give you what you &lt;em>actually&lt;/em> want, without any of the downsides of doing something stupid like disabling our base styles.&lt;/p>
 &lt;p>It adds a new &lt;code>prose&lt;/code> class that you can slap on any block of vanilla HTML content and turn it into a beautiful, well-formatted document:&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">199
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">200
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">201
+&lt;/span>&lt;span style="background-color:#3d3f4a">&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">202
+&lt;/span>&lt;/span>&lt;span style="background-color:#3d3f4a">&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">203
+&lt;/span>&lt;/span>&lt;span style="background-color:#3d3f4a">&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">204
+&lt;/span>&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">205
+&lt;/span>&lt;span style="background-color:#3d3f4a">&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">206
+&lt;/span>&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">207
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">208
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">209
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">210
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">211
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">article&lt;/span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;prose&amp;#34;&lt;/span>&amp;gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">article&lt;/span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;prose&amp;#34;&lt;/span>&amp;gt;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#ff79c6">h1&lt;/span>&amp;gt;Garlic bread with cheese: What the science tells us&amp;lt;/&lt;span style="color:#ff79c6">h1&lt;/span>&amp;gt;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#ff79c6">p&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> For years parents have espoused the health benefits of eating garlic bread with cheese to their
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> children, with the food earning such an iconic status in our culture that kids will often dress
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> up as warm, cheesy loaf for Halloween.
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#3d3f4a">&lt;span> For years parents have espoused the health benefits of eating garlic bread with cheese to their
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#3d3f4a">&lt;span> children, with the food earning such an iconic status in our culture that kids will often dress
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#3d3f4a">&lt;span> up as warm, cheesy loaf for Halloween.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#ff79c6">p&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#ff79c6">p&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#3d3f4a">&lt;span> &amp;lt;&lt;span style="color:#ff79c6">p&lt;/span>&amp;gt;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> springing up around the country.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#ff79c6">p&lt;/span>&amp;gt;
@@ -218,104 +250,63 @@
 &lt;p>Phew, with any luck we have styled the headings above this text and they look pretty good.&lt;/p>
 &lt;p>Let&amp;rsquo;s add a closing paragraph here so things end with a decently sized block of text. I can&amp;rsquo;t explain why I want things to end that way but I have to assume it&amp;rsquo;s because I think things will look weird or unbalanced if there is a heading too close to the end of the document.&lt;/p>
 &lt;p>What I&amp;rsquo;ve written here is probably long enough, but adding this final sentence can&amp;rsquo;t hurt.&lt;/p>
-&lt;h2 id="mathjax">MathJax&lt;/h2>
+&lt;h2 id="math">Math&lt;/h2>
 &lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-TeX" data-lang="TeX">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f1fa8c">$&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> E&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">{&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\sqrt&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> {p^{&lt;/span>&lt;span style="color:#bd93f9">2&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">}c^{&lt;/span>&lt;span style="color:#bd93f9">2&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">}&lt;/span>&lt;span style="color:#ff79c6">+&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">m^{&lt;/span>&lt;span style="color:#bd93f9">2&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">}c^{&lt;/span>&lt;span style="color:#bd93f9">4&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">}}}&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\gamma&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> mc^{&lt;/span>&lt;span style="color:#bd93f9">2&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">} &lt;/span>&lt;span style="color:#f1fa8c">$&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>this is a inline katex $ E={\sqrt {p^{2}c^{2}+m^{2}c^{4}}}=\gamma mc^{2} $&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-TeX" data-lang="TeX">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f1fa8c">$$&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> E_{&lt;/span>&lt;span style="color:#bd93f9">0&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">}&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">mc^{&lt;/span>&lt;span style="color:#bd93f9">2&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">} &lt;/span>&lt;span style="color:#f1fa8c">$$&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>$$ E_{0}=mc^{2} $$&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-TeX" data-lang="TeX">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f1fa8c">$$&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-TeX" data-lang="TeX">&lt;span style="display:flex;">&lt;span>this is a inline katex: &lt;span style="color:#f1fa8c">$&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> E&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">{&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\sqrt&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> {p^{&lt;/span>&lt;span style="color:#bd93f9">2&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">}c^{&lt;/span>&lt;span style="color:#bd93f9">2&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">}&lt;/span>&lt;span style="color:#ff79c6">+&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">m^{&lt;/span>&lt;span style="color:#bd93f9">2&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">}c^{&lt;/span>&lt;span style="color:#bd93f9">4&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">}}}&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\gamma&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> mc^{&lt;/span>&lt;span style="color:#bd93f9">2&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">} &lt;/span>&lt;span style="color:#f1fa8c">$&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f1fa8c">$&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> E&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">{&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\sqrt&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> {p^{&lt;/span>&lt;span style="color:#bd93f9">2&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">}c^{&lt;/span>&lt;span style="color:#bd93f9">2&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">}&lt;/span>&lt;span style="color:#ff79c6">+&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">m^{&lt;/span>&lt;span style="color:#bd93f9">2&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">}c^{&lt;/span>&lt;span style="color:#bd93f9">4&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">}}}&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\gamma&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> mc^{&lt;/span>&lt;span style="color:#bd93f9">2&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">} &lt;/span>&lt;span style="color:#f1fa8c">$&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f1fa8c">$$&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> E_{&lt;/span>&lt;span style="color:#bd93f9">0&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">}&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">mc^{&lt;/span>&lt;span style="color:#bd93f9">2&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">} &lt;/span>&lt;span style="color:#f1fa8c">$$&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f1fa8c">$$&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">{&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\mathrm&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> d}K&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">{&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\mathbf&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> F}&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\cdot&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> {&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\mathrm&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> d}{&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\mathbf&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> x}&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">{&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\frac&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> {{&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\mathrm&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> d}{&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\mathbf&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> p}}{{&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\mathrm&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> d}t}}&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\cdot&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> {&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\mathrm&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> d}{&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\mathbf&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> x}&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">{&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\frac&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> {{&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\mathrm&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> d}{&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\mathbf&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> x}}{{&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\mathrm&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> d}t}}&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\cdot&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> {&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\mathrm&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> d}{&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">\mathbf&lt;/span>&lt;span style="color:#8be9fd;font-style:italic"> p}
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">&lt;/span>&lt;span style="color:#f1fa8c">$$&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>$$
-{\mathrm d}K={\mathbf F}\cdot {\mathrm d}{\mathbf x}={\frac {{\mathrm d}{\mathbf p}}{{\mathrm d}t}}\cdot {\mathrm d}{\mathbf x}={\frac {{\mathrm d}{\mathbf x}}{{\mathrm d}t}}\cdot {\mathrm d}{\mathbf p}
-$$&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-TeX" data-lang="TeX">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">\\&lt;/span>&lt;span style="color:#50fa7b">[3 &amp;lt; 4\\]&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>\[3 &amp;lt; 4\]&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-TeX" data-lang="TeX">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">\begin&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">{&lt;/span>align&lt;span style="color:#8be9fd;font-style:italic">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">\\&lt;/span>&lt;span style="color:#50fa7b">[3 &amp;lt; 4\\]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">\begin&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">{&lt;/span>align&lt;span style="color:#8be9fd;font-style:italic">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p(v&lt;span style="color:#8be9fd;font-style:italic">_&lt;/span>i=1|&lt;span style="color:#ff79c6">\mathbf&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">{&lt;/span>h&lt;span style="color:#8be9fd;font-style:italic">}&lt;/span>) &lt;span style="color:#8be9fd;font-style:italic">&amp;amp;&lt;/span> = &lt;span style="color:#ff79c6">\sigma\left&lt;/span>(&lt;span style="color:#ff79c6">\sum&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">_&lt;/span>j w&lt;span style="color:#8be9fd;font-style:italic">_{&lt;/span>ij&lt;span style="color:#8be9fd;font-style:italic">}&lt;/span>h&lt;span style="color:#8be9fd;font-style:italic">_&lt;/span>j + b&lt;span style="color:#8be9fd;font-style:italic">_&lt;/span>i&lt;span style="color:#ff79c6">\right&lt;/span>) &lt;span style="color:#ff79c6">\\&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p(h&lt;span style="color:#8be9fd;font-style:italic">_&lt;/span>j=1|&lt;span style="color:#ff79c6">\mathbf&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">{&lt;/span>v&lt;span style="color:#8be9fd;font-style:italic">}&lt;/span>) &lt;span style="color:#8be9fd;font-style:italic">&amp;amp;&lt;/span> = &lt;span style="color:#ff79c6">\sigma\left&lt;/span>(&lt;span style="color:#ff79c6">\sum&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">_&lt;/span>i w&lt;span style="color:#8be9fd;font-style:italic">_{&lt;/span>ij&lt;span style="color:#8be9fd;font-style:italic">}&lt;/span>v&lt;span style="color:#8be9fd;font-style:italic">_&lt;/span>i + c&lt;span style="color:#8be9fd;font-style:italic">_&lt;/span>j&lt;span style="color:#ff79c6">\right&lt;/span>)
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">\end&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">{&lt;/span>align&lt;span style="color:#8be9fd;font-style:italic">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>\begin{align}
+&lt;/div>&lt;p>this is a inline katex: $ E={\sqrt {p^{2}c^{2}+m^{2}c^{4}}}=\gamma mc^{2} $&lt;/p>
+&lt;p>$$ E_{0}=mc^{2} $$&lt;/p>
+&lt;p>$$
+{\mathrm d}K={\mathbf F}\cdot {\mathrm d}{\mathbf x}={\frac {{\mathrm d}{\mathbf p}}{{\mathrm d}t}}\cdot {\mathrm d}{\mathbf x}={\frac {{\mathrm d}{\mathbf x}}{{\mathrm d}t}}\cdot {\mathrm d}{\mathbf p}
+$$&lt;/p>
+&lt;p>\[3 &amp;lt; 4\]&lt;/p>
+&lt;p>\begin{align}
 p(v_i=1|\mathbf{h}) &amp;amp; = \sigma\left(\sum_j w_{ij}h_j + b_i\right) \
 p(h_j=1|\mathbf{v}) &amp;amp; = \sigma\left(\sum_i w_{ij}v_i + c_j\right)
-\end{align}&lt;/p></description></item><item><title>Annabel Lee</title><link>https://imiku.me/en-us/2022/02/18/annabel-lee.html/</link><pubDate>Fri, 18 Feb 2022 21:36:35 +0800</pubDate><guid>https://imiku.me/en-us/2022/02/18/annabel-lee.html/</guid><description>&lt;blockquote>
-&lt;p>Edgar Allan Poe (1809-1849）&lt;/p>
+\end{align}&lt;/p></description></item><item><title>Article Encryption Test</title><link>https://imiku.me/en-us/2022/04/09/article-encryption-test.html/</link><pubDate>Sat, 09 Apr 2022 02:49:13 +0200</pubDate><guid>https://imiku.me/en-us/2022/04/09/article-encryption-test.html/</guid><description>&lt;h2 id="hugo-encrypt">Hugo Encrypt&lt;/h2>
+&lt;blockquote>
+&lt;p>password: &lt;strong>2022&lt;/strong>&lt;/p>
 &lt;/blockquote>
-&lt;p>It was many and many a year ago,&lt;/p>
-&lt;p>In a kingdom by the sea,&lt;/p>
-&lt;p>That a maiden there lived whom you may know&lt;/p>
-&lt;p>By the name of ANNABEL LEE;&lt;/p>
-&lt;p>And this maiden she lived with no other thought&lt;/p>
-&lt;p>Than to love and be loved by me.&lt;/p>
-&lt;p>She was a child and I was a child,&lt;/p>
-&lt;p>In this kingdom by the sea;&lt;/p>
-&lt;p>But we loved with a love that was more than love&lt;/p>
-&lt;p>I and my Annabel Lee;&lt;/p>
-&lt;p>With a love that the winged seraphs of heaven coveted her and me.&lt;/p>
-&lt;p>And this was the reason that, long ago,&lt;/p>
-&lt;p>In this kingdom by the sea，&lt;/p>
-&lt;p>A wind blew out of a cloud by night chilling my Annabel Lee;&lt;/p>
-&lt;p>So that her highborn kingsman came&lt;/p>
-&lt;p>And bore her away from me,&lt;/p>
-&lt;p>To shut her up in a sepulchre&lt;/p>
-&lt;p>In this kingdom by the sea.&lt;/p>
-&lt;p>The angels, not half so happy in the heaven,&lt;/p>
-&lt;p>Went evnying her and me&lt;/p>
-&lt;p>Yes! That was the reason(as all men know, in this kingdom by the sea)&lt;/p>
-&lt;p>That the wind came out of the cloud,&lt;/p>
-&lt;p>Chilling and killing my Annabel Lee.&lt;/p>
-&lt;p>But our love it was stronger by far than the love&lt;/p>
-&lt;p>Of those who were older than we&lt;/p>
-&lt;p>Of many far wiser than we&lt;/p>
-&lt;p>And neither the angels in heaven above，&lt;/p>
-&lt;p>Nor the demons down under the sea，&lt;/p>
-&lt;p>Can ever dissever my soul from the soul&lt;/p>
-&lt;p>Of the beautiful Annabel Lee.&lt;/p>
-&lt;p>For the moon never beams without bringing me dreams&lt;/p>
-&lt;p>Of the beautiful Annalbel Lee;&lt;/p>
-&lt;p>And the stars never rise but I see the bright eyes&lt;/p>
-&lt;p>Of the beautiful Annabel Lee;&lt;/p>
-&lt;p>And so, all the night-tide, I lie down by the side&lt;/p>
-&lt;p>Of my darling, my darling, my life and my bride,&lt;/p>
-&lt;p>In the sepulchre there by the sea,&lt;/p>
-&lt;p>In her tomb by the side of the sea.&lt;/p></description></item></channel></rss>
+&lt;p>The following content is protected.&lt;/p>
+&lt;hr>
+&lt;h2 id="multi-block-encryption">Multi-block encryption&lt;/h2>
+&lt;blockquote>
+&lt;p>Default password: &lt;strong>123456&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;p>The following content is protected.&lt;/p>
+&lt;p>End&amp;hellip;&lt;/p></description></item><item><title/><link>https://imiku.me/en-us/2019/02/15/.html/</link><pubDate>Fri, 15 Feb 2019 07:01:32 +0000</pubDate><guid>https://imiku.me/en-us/2019/02/15/.html/</guid><description>&lt;p>Hugo theme luna has been released, welcome to use it!&lt;/p></description></item></channel></rss>
