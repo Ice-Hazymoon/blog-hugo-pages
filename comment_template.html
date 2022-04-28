@@ -60,7 +60,7 @@
                     <input :disabled="store.loading" v-model="anonymous" class="comment-anonymous" :id="`comment-anonymous-${data.ID}`" type="checkbox">
                 </div>
             </div>
-            <button :disabled="store.loading" @click="submit(data.ID)" id="comment-form-submit" class="text-base bg-theme text-white px-3 py-2 rounded cursor-pointer">提交</button>
+            <button :disabled="store.loading" @click="submit(data.ID)" id="comment-form-submit" class="text-base bg-theme text-white dark:text-darkText px-3 py-2 rounded cursor-pointer">提交</button>
         </div>
     </div>
 </template>
