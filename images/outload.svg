@@ -18,7 +18,7 @@
             <rect x="100" y="-10" width="10" height="120" fill="#ff80b0"></rect>
             <rect x="110" y="-10" width="10" height="120" fill="#ff80b0"></rect>
           </g>
-          <animateTransform attributeName="transform" type="translate" values="0 0;26 0" keyTimes="0;1" ng-attr-dur="{{config.speed}}s" repeatCount="indefinite" dur="1s"></animateTransform>
+          <animateTransform attributeName="transform" type="translate" values="0 0;26 0" keyTimes="0;1" repeatCount="indefinite" dur="1s"></animateTransform>
         </g>
       </pattern>
     </defs>
