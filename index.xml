@@ -1,14 +1,142 @@
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>Ice-Hazymoon 的博客</title><atom:link href="%7balternate%20%7bRSS%20application/rss+xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/index.xml%20https://imiku.me/index.xml%7d" rel="self" type="application/rss+xml"/><link>https://imiku.me/</link><managingEditor>Ice-Hazymoon</managingEditor><description>向着现充的生活拼命咸鱼中</description><lastBuildDate>Wed, 06 Apr 2022 20:28:36 +0200</lastBuildDate><language>zh-cn</language><generator>Hugo -- gohugo.io</generator><item><title>西班牙生活记录（持续更新）</title><link>https://imiku.me/2022/04/06/foto-de-espana.html/</link><pubDate>Wed, 06 Apr 2022 20:28:36 +0200</pubDate><guid>https://imiku.me/2022/04/06/foto-de-espana.html/</guid><description>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>Ice-Hazymoon 的博客</title><atom:link href="%7balternate%20%7bRSS%20application/rss+xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/index.xml%20https://imiku.me/index.xml%7d" rel="self" type="application/rss+xml"/><link>https://imiku.me/</link><managingEditor>Ice-Hazymoon</managingEditor><description>向着现充的生活拼命咸鱼中</description><lastBuildDate>Tue, 03 May 2022 23:30:37 +0200</lastBuildDate><language>zh-cn</language><generator>Hugo -- gohugo.io</generator><item><title>【Luna】一个简洁，快速，SEO友好的 HUGO 主题</title><link>https://imiku.me/2022/05/03/hugo-theme-luna.html/</link><pubDate>Tue, 03 May 2022 23:30:37 +0200</pubDate><guid>https://imiku.me/2022/05/03/hugo-theme-luna.html/</guid><description>&lt;p>&lt;/p>
+&lt;blockquote class="quote relative pl-10 text-gray-500 dark:text-gray-400">&lt;p>一个简洁，快速，SEO友好的 HUGO 主题&lt;/p>&lt;/blockquote>
+&lt;p>鸽了大半年，终于🕊上线了，这是一个废了不少头发才开发出来的主题，集性能、美观、SEO于一体的主题，并且支持&lt;strong>文章加密&lt;/strong>和 GitHub Actions 自动部署，你只需要安心写博客就行。&lt;/p>
+&lt;p>开发的过程中~参考~了不少主题和代码，求各位大佬来个🌟吧~&lt;/p>
+&lt;div class="github my-4 rounded border p-4 dark:border-darkBorder">
+&lt;div class="flex items-center text-xl">
+&lt;i class="eva eva-github mr-2">&lt;/i>
+&lt;a class="before:hidden" href="https://github.com/Ice-Hazymoon/hugo-theme-luna" target="_blank">Ice-Hazymoon/hugo-theme-luna&lt;/a>
+&lt;/div>
+&lt;div class="my-2 leading-6">A simple, performance-first, SEO-friendly Hugo theme / 一个轻量，快速，SEO 友好的 Hugo 主题&lt;/div>
+&lt;div class="flex items-center">
+&lt;div class="mr-4 inline-flex items-center">
+&lt;span class="mr-1 inline-block h-3 w-3 rounded-full" style="background-color:#f1e05a">&lt;/span>
+&lt;span>JavaScript&lt;/span>
+&lt;/div>
+&lt;div class="mr-4 inline-flex items-center">
+&lt;i class="eva eva-star mr-1 text-amber-400">&lt;/i>
+&lt;span>84&lt;/span>
+&lt;/div>
+&lt;div class="inline-flex items-center">
+&lt;i class="eva eva-shuffle-2 mr-1 text-blue-500">&lt;/i>
+&lt;span>6&lt;/span>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h2 class="group " id="特性"
+>特性&lt;a href="#%e7%89%b9%e6%80%a7"
+>&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
+>&lt;/h2>
+&lt;ul>
+&lt;li>使用 &lt;a
+class="link"
+href="https://tailwindcss.com/"target="_blank" rel="noopener">Tailwindcss&lt;/a
+>
+构建&lt;/li>
+&lt;li>大量短代码支持，&lt;a
+class="link"
+href="https://hugo-theme-luna.imiku.me/2022/05/02/shortcodes.html/"target="_blank" rel="noopener">点击查看&lt;/a
+>
+&lt;/li>
+&lt;li>按需引入 JS 模块&lt;/li>
+&lt;li>数学公式支持&lt;/li>
+&lt;li>PWA 支持，可以直接添加到桌面&lt;/li>
+&lt;li>PJAX（页面无刷新加载）&lt;/li>
+&lt;li>自定义主题颜色和字体&lt;/li>
+&lt;li>支持 &lt;a
+class="link"
+href="https://bionic-reading.com/"target="_blank" rel="noopener">Bionic Reading&lt;/a
+>
+，更快的阅读英文文章&lt;/li>
+&lt;li>夜间模式&lt;/li>
+&lt;li>本地搜索支持&lt;/li>
+&lt;li>文章目录（TOC）&lt;/li>
+&lt;li>图片渐进式加载和懒加载&lt;/li>
+&lt;li>文章加密功能&lt;/li>
+&lt;li>多语言支持，同时适配&lt;a
+class="link"
+href="https://imiku.me/2021/09/28/adding-google-translate-to-a-web-site.html/"target="_blank" rel="noopener">谷歌翻译&lt;/a
+>
+&lt;/li>
+&lt;li>&amp;lt;noscript&amp;gt; 支持，即使不启用 JS 也能正常使用大部分功能&lt;/li>
+&lt;li>支持画廊页面，也可以用于文章页面&lt;/li>
+&lt;li>自动生成 Twitter 页面&lt;/li>
+&lt;li>自动生成 GitHub 页面&lt;/li>
+&lt;li>&lt;a
+class="link"
+href="https://github.com/features/actions"target="_blank" rel="noopener">GitHub Actions&lt;/a
+>
+支持，自动部署你的博客到 GitHub Pages&lt;/li>
+&lt;li>等等&amp;hellip;..&lt;/li>
+&lt;/ul>
+&lt;h2 class="group " id="预览"
+>预览&lt;a href="#%e9%a2%84%e8%a7%88"
+>&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
+>&lt;/h2>
+&lt;p>Demo：&lt;a
+class="link"
+href="https://hugo-theme-luna.imiku.me/"target="_blank" rel="noopener">英文&lt;/a
+>
+或 &lt;a
+class="link"
+href="https://hugo-theme-luna.imiku.me/zh-cn"target="_blank" rel="noopener">中文&lt;/a
+>
+&lt;br>
+短代码：&lt;a
+class="link"
+href="https://hugo-theme-luna.imiku.me/2022/05/02/shortcodes.html/"target="_blank" rel="noopener">短代码及预览&lt;/a
+>
+&lt;br>
+README：&lt;a
+class="link"
+href="https://github.com/Ice-Hazymoon/hugo-theme-luna"target="_blank" rel="noopener">英文&lt;/a
+>
+或 &lt;a
+class="link"
+href="https://github.com/Ice-Hazymoon/hugo-theme-luna/blob/master/README.zh.md"target="_blank" rel="noopener">中文&lt;/a
+>
+&lt;/p>
+&lt;h2 class="group " id="文章加密"
+>文章加密&lt;a href="#%e6%96%87%e7%ab%a0%e5%8a%a0%e5%af%86"
+>&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
+>&lt;/h2>
+&lt;p>密码：&lt;code>luna&lt;/code>&lt;/p>
+&lt;p>此处包含密码保护内容&lt;/p>
+&lt;h2 class="group " id="性能"
+>性能&lt;a href="#%e6%80%a7%e8%83%bd"
+>&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
+>&lt;/h2>
+&lt;p>作为跑分党，除了手机和电脑，网站当然也要跑个分&lt;/p>
+&lt;div class="gallery-box">
+&lt;p>
+&lt;/p>
+&lt;/div>
+&lt;h2 class="group " id="action"
+>Action&lt;a href="#action"
+>&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
+>&lt;/h2>
+&lt;p>自动部署你的博客到 GitHub Pages 上，免去每次写完东西都要重新部署的烦恼&lt;/p>
+&lt;p>&lt;/p>
+&lt;h2 class="group " id="截图预览"
+>截图预览&lt;a href="#%e6%88%aa%e5%9b%be%e9%a2%84%e8%a7%88"
+>&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
+>&lt;/h2>
+&lt;div class="gallery-box">
+&lt;p>
+&lt;/p>
+&lt;p>
+&lt;/p>
+&lt;p>
+&lt;/p>
+&lt;p>
+&lt;/p>
+&lt;/div></description></item><item><title>西班牙生活记录（持续更新）</title><link>https://imiku.me/2022/04/06/foto-de-espana.html/</link><pubDate>Wed, 06 Apr 2022 20:28:36 +0200</pubDate><guid>https://imiku.me/2022/04/06/foto-de-espana.html/</guid><description>
 &lt;h2 class="group " id="300-欧全包的房间"
 >300 欧全包的房间&lt;a href="#300-%e6%ac%a7%e5%85%a8%e5%8c%85%e7%9a%84%e6%88%bf%e9%97%b4"
 >&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
 >&lt;/h2>
 &lt;div class="gallery-box">
 &lt;p>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353143.jpg"width="1080"height="1620"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353143_hu6d60061d89cfb6957c78ae6486c4dfbc_513204_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649270353143_hu6d60061d89cfb6957c78ae6486c4dfbc_513204_1080x0_resize_q95_catmullrom.jpg 1080w"alt="房间"/>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353145.jpg"width="1080"height="720"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353145_hu6d60061d89cfb6957c78ae6486c4dfbc_241014_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649270353145_hu6d60061d89cfb6957c78ae6486c4dfbc_241014_1080x0_resize_q95_catmullrom.jpg 1080w"alt="房间"/>
 &lt;/p>
 &lt;/div>
 &lt;h2 class="group " id="整点薯条"
@@ -17,62 +145,34 @@ src="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353145.jpg"width="10
 >&lt;/h2>
 &lt;div class="gallery-box">
 &lt;p>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353173.jpg"width="1080"height="720"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353173_hu67c8fde920e0766a89e16f88d3afe2b6_461781_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649270353173_hu67c8fde920e0766a89e16f88d3afe2b6_461781_1080x0_resize_q95_catmullrom.jpg 1080w"alt="整点薯条"/>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353171.jpg"width="1080"height="720"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353171_hu4e13edecd09897adfe9e2c04f720a434_457783_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649270353171_hu4e13edecd09897adfe9e2c04f720a434_457783_1080x0_resize_q95_catmullrom.jpg 1080w"alt="整点薯条"/>
 &lt;/p>
 &lt;/div>
-&lt;p>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353154.jpg"width="1080"height="720"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353154_hu8df313f4cdf45bb3a8af863b1e64f5c7_394236_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649270353154_hu8df313f4cdf45bb3a8af863b1e64f5c7_394236_1080x0_resize_q95_catmullrom.jpg 1080w"alt="想抓回家炖了"/>
-&lt;/p>
+&lt;p>&lt;/p>
 &lt;h2 class="group " id="家附近的公园"
 >家附近的公园&lt;a href="#%e5%ae%b6%e9%99%84%e8%bf%91%e7%9a%84%e5%85%ac%e5%9b%ad"
 >&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
 >&lt;/h2>
-&lt;p>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353148.jpg"width="1080"height="720"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353148_hu8f0bac15b88f9d4252dbf174f2bc056e_387692_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649270353148_hu8f0bac15b88f9d4252dbf174f2bc056e_387692_1080x0_resize_q95_catmullrom.jpg 1080w"alt="俯瞰马德里"/>
-&lt;/p>
+&lt;p>&lt;/p>
 &lt;div class="gallery-box">
 &lt;p>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353156.jpg"width="1080"height="720"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353156_hu8f0bac15b88f9d4252dbf174f2bc056e_291438_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649270353156_hu8f0bac15b88f9d4252dbf174f2bc056e_291438_1080x0_resize_q95_catmullrom.jpg 1080w"alt="花"/>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353141.jpg"width="1080"height="720"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353141_hu8f0bac15b88f9d4252dbf174f2bc056e_221126_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649270353141_hu8f0bac15b88f9d4252dbf174f2bc056e_221126_1080x0_resize_q95_catmullrom.jpg 1080w"alt="花"/>
 &lt;/p>
 &lt;/div>
-&lt;p>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353158.jpg"width="1080"height="720"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353158_hu8f0bac15b88f9d4252dbf174f2bc056e_368220_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649270353158_hu8f0bac15b88f9d4252dbf174f2bc056e_368220_1080x0_resize_q95_catmullrom.jpg 1080w"alt="山上的公园"/>
-&lt;/p>
+&lt;p>&lt;/p>
 &lt;div class="gallery-box">
 &lt;p>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353163.jpg"width="1080"height="720"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353163_hu8f0bac15b88f9d4252dbf174f2bc056e_168831_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649270353163_hu8f0bac15b88f9d4252dbf174f2bc056e_168831_1080x0_resize_q95_catmullrom.jpg 1080w"alt="电线杆"/>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353152.jpg"width="1080"height="720"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353152_hu8f0bac15b88f9d4252dbf174f2bc056e_136679_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649270353152_hu8f0bac15b88f9d4252dbf174f2bc056e_136679_1080x0_resize_q95_catmullrom.jpg 1080w"alt="电线杆"/>
 &lt;/p>
 &lt;/div>
 &lt;h2 class="group " id="西班牙广场"
 >西班牙广场&lt;a href="#%e8%a5%bf%e7%8f%ad%e7%89%99%e5%b9%bf%e5%9c%ba"
 >&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
 >&lt;/h2>
-&lt;p>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353169.jpg"width="1080"height="720"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649270353169_hue89f909dbe742ea71fcb6123cb1a4fdb_692419_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649270353169_hue89f909dbe742ea71fcb6123cb1a4fdb_692419_1080x0_resize_q95_catmullrom.jpg 1080w"alt="喂鸟的妹子"/>
-&lt;/p>
+&lt;p>&lt;/p>
 &lt;h2 class="group " id="貌似是环保人士"
 >貌似是环保人士&lt;a href="#%e8%b2%8c%e4%bc%bc%e6%98%af%e7%8e%af%e4%bf%9d%e4%ba%ba%e5%a3%ab"
 >&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
 >&lt;/h2>
 &lt;div class="gallery-box">
 &lt;p>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875084.jpg"width="1080"height="720"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875084_huc5c4ce0a8ae799190d9a4c8857ff361a_636515_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649269875084_huc5c4ce0a8ae799190d9a4c8857ff361a_636515_1080x0_resize_q95_catmullrom.jpg 1080w"alt="举牌小人"/>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875071.jpg"width="1080"height="1619"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875071_hu1df89caa8cfb719685eaf625b6cc570e_1068338_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649269875071_hu1df89caa8cfb719685eaf625b6cc570e_1068338_1080x0_resize_q95_catmullrom.jpg 1080w"alt="举牌小人"/>
 &lt;/p>
 &lt;/div>
 &lt;h2 class="group " id="意义不明的游行"
@@ -81,12 +181,6 @@ src="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875071.jpg"width="10
 >&lt;/h2>
 &lt;div class="gallery-box">
 &lt;p>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875090.jpg"width="1080"height="720"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875090_hu86e8e43e757f83d8fe86241cf8c76b47_511161_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649269875090_hu86e8e43e757f83d8fe86241cf8c76b47_511161_1080x0_resize_q95_catmullrom.jpg 1080w"alt="意义不明的游行"/>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875068.jpg"width="1080"height="1620"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875068_hu09ac2a00332abf22f7776a13b519227c_1016678_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649269875068_hu09ac2a00332abf22f7776a13b519227c_1016678_1080x0_resize_q95_catmullrom.jpg 1080w"alt="有点酷的国旗披风"/>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875078.jpg"width="1080"height="1620"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875078_hu9641514dc9939856d23dbc9b375f0e5d_947352_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649269875078_hu9641514dc9939856d23dbc9b375f0e5d_947352_1080x0_resize_q95_catmullrom.jpg 1080w"alt="没什么用的警察"/>
 &lt;/p>
 &lt;/div>
 &lt;h2 class="group " id="流浪汉和画画人"
@@ -95,10 +189,6 @@ src="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875078.jpg"width="10
 >&lt;/h2>
 &lt;div class="gallery-box">
 &lt;p>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875081.jpg"width="1080"height="720"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875081_hu3ca680a5a5ac4dfe427bd5092788b656_583541_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649269875081_hu3ca680a5a5ac4dfe427bd5092788b656_583541_1080x0_resize_q95_catmullrom.jpg 1080w"alt="街头画家"/>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875086.jpg"width="1080"height="720"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875086_hu86e8e43e757f83d8fe86241cf8c76b47_557204_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649269875086_hu86e8e43e757f83d8fe86241cf8c76b47_557204_1080x0_resize_q95_catmullrom.jpg 1080w"alt="养宠物的流浪汉"/>
 &lt;/p>
 &lt;/div>
 &lt;h2 class="group " id="丽池公园"
@@ -107,10 +197,6 @@ src="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875086.jpg"width="10
 >&lt;/h2>
 &lt;div class="gallery-box">
 &lt;p>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875057.jpg"width="1080"height="720"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875057_hu83e154bdb9a189d237d8115434c6d0e4_369950_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649269875057_hu83e154bdb9a189d237d8115434c6d0e4_369950_1080x0_resize_q95_catmullrom.jpg 1080w"alt="有点中二病的雕像"/>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875053.jpg"width="1080"height="580"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875053_hu2756f9bf8ad6845a4acd20ffa545c548_570314_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649269875053_hu2756f9bf8ad6845a4acd20ffa545c548_570314_1080x0_resize_q95_catmullrom.jpg 1080w"alt="意义不明的画"/>
 &lt;/p>
 &lt;/div>
 &lt;h2 class="group " id="车站附近的一些花"
@@ -119,22 +205,8 @@ src="https://imiku.me/2022/04/06/foto-de-espana.html/1649269875053.jpg"width="10
 >&lt;/h2>
 &lt;div class="gallery-box">
 &lt;p>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2713.jpg"width="768"height="1152"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2713_hu6356bd9cef5da7ec4bc808b982b8e8fa_104965_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2713_hu6356bd9cef5da7ec4bc808b982b8e8fa_104965_1080x0_resize_q95_catmullrom.jpg 1080w"/>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2726.jpg"width="768"height="1152"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2726_hu62a62c5e8d1f21ab58ca9728ab648784_114039_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2726_hu62a62c5e8d1f21ab58ca9728ab648784_114039_1080x0_resize_q95_catmullrom.jpg 1080w"/>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2728.jpg"width="768"height="1153"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2728_hu6356bd9cef5da7ec4bc808b982b8e8fa_129052_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2728_hu6356bd9cef5da7ec4bc808b982b8e8fa_129052_1080x0_resize_q95_catmullrom.jpg 1080w"/>
 &lt;/p>
 &lt;p>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2733.jpg"width="768"height="1152"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2733_hu6356bd9cef5da7ec4bc808b982b8e8fa_119854_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2733_hu6356bd9cef5da7ec4bc808b982b8e8fa_119854_1080x0_resize_q95_catmullrom.jpg 1080w"/>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2738.jpg"width="768"height="1152"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2738_hu6356bd9cef5da7ec4bc808b982b8e8fa_70750_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2738_hu6356bd9cef5da7ec4bc808b982b8e8fa_70750_1080x0_resize_q95_catmullrom.jpg 1080w"/>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2754.jpg"width="768"height="1153"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2754_hu6356bd9cef5da7ec4bc808b982b8e8fa_97672_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2754_hu6356bd9cef5da7ec4bc808b982b8e8fa_97672_1080x0_resize_q95_catmullrom.jpg 1080w"/>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2797.jpg"width="768"height="1152"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2797_hu6356bd9cef5da7ec4bc808b982b8e8fa_78794_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2797_hu6356bd9cef5da7ec4bc808b982b8e8fa_78794_1080x0_resize_q95_catmullrom.jpg 1080w"/>
 &lt;/p>
 &lt;/div>
 &lt;h2 class="group " id="其他"
@@ -143,10 +215,6 @@ src="https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2797.jpg"width="768"hei
 >&lt;/h2>
 &lt;div class="gallery-box">
 &lt;p>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/1649282437854.jpg"width="1080"height="1620"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/1649282437854_hud783eb6ea6eba3ccfe1548b1bfb957ce_1370098_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/1649282437854_hud783eb6ea6eba3ccfe1548b1bfb957ce_1370098_1080x0_resize_q95_catmullrom.jpg 1080w"alt="车站扶梯"/>
-&lt;img
-src="https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2765.jpg"width="1152"height="768"srcset="https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2765_hu6356bd9cef5da7ec4bc808b982b8e8fa_166262_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2765_hu6356bd9cef5da7ec4bc808b982b8e8fa_166262_1080x0_resize_q95_catmullrom.jpg 1080w"alt="公园"/>
 &lt;/p>
 &lt;/div></description></item><item><title>西班牙签证记录</title><link>https://imiku.me/2022/02/18/visa-for-spain.html/</link><pubDate>Fri, 18 Feb 2022 21:36:35 +0800</pubDate><guid>https://imiku.me/2022/02/18/visa-for-spain.html/</guid><description>&lt;p>前前后后弄了三四个月，本以为签证会挂，结果居然通过了，就在此记录一下心路历程吧，我是在&lt;strong>北京使馆&lt;/strong>签的，&lt;strong>一年硕士留学签&lt;/strong>，我全程都是自己交材料自己办理，包括取签证也没有找中介而是咸鱼找了个跑腿帮我取的，省了不少中介费，如果有相似情况的可以参考一下。使馆不同要的资料和要求都不同，请一定要多询问。&lt;/p>
 &lt;h2 class="group " id="签证准备"
@@ -155,10 +223,7 @@ src="https://imiku.me/2022/04/06/foto-de-espana.html/DSCF2765.jpg"width="1152"he
 >&lt;/h2>
 &lt;p>因为我是一年的学生签证，所以准备的资料比较多，具体可以向大使馆发送邮件到北京大使馆（cog.pekin.vis@maec.es）询问，可别小看这个邮箱，你在签证期间遇到的任何问题都可以发邮件进行询问，我办签证的时候没少骚扰他们。&lt;strong>注意只能西语和中文&lt;/strong>发送，如果你西语不好的话建议使用英文。&lt;/p>
 &lt;p>发送第一封邮件前请一定要备注你的&lt;strong>签证类型、签证时间、护照号、姓名&lt;/strong>&lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2022/02/18/visa-for-spain.html/screenshot.png"width="921"height="748"srcset="https://imiku.me/2022/02/18/visa-for-spain.html/screenshot_hu121970df123d9c3a5a7566aa78c7c7a3_219284_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2022/02/18/visa-for-spain.html/screenshot_hu121970df123d9c3a5a7566aa78c7c7a3_219284_1080x0_resize_catmullrom_3.png 1080w"alt="邮箱截图"/>
-&lt;/p>
+&lt;p>&lt;/p>
 &lt;h2 class="group " id="资料"
 >资料&lt;a href="#%e8%b5%84%e6%96%99"
 >&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
@@ -225,10 +290,7 @@ href="http://www.exteriores.gob.es/Consulados/PEKIN/es/InformacionParaExtranjero
 &lt;li>带上有盖章的申请表&lt;/li>
 &lt;/ul>
 &lt;p>我是咸鱼找的跑腿，花了100块钱，去取签证的当天窗口一个工作人员都没有，管事的保安也啥都不知道，让跑腿等了一个小时才下来一个人，如果签证过了会只给你一本护照，如果没过会把护照和一张纸给你，纸上会写拒签原因，但一般都不会写的很具体，需要你自己去领悟。你可以在30天内写好申诉信再提交上去，如果申诉通过会给你签发护照。所有收上去的资料都不会退还，包括签证费。&lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2022/02/18/visa-for-spain.html/visado.jpg"width="2134"height="1418"srcset="https://imiku.me/2022/02/18/visa-for-spain.html/visado_hu5265c0962d1107c4377fa6717becd1df_1922542_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2022/02/18/visa-for-spain.html/visado_hu5265c0962d1107c4377fa6717becd1df_1922542_1080x0_resize_q95_catmullrom.jpg 1080w"alt="签证图片"/>
-&lt;/p>
+&lt;p>&lt;/p>
 &lt;h2 class="group " id="其他"
 >其他&lt;a href="#%e5%85%b6%e4%bb%96"
 >&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
@@ -508,16 +570,8 @@ href="https://www.kaggle.com/econdata/climate-change"target="_blank" rel="noopen
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>
-&lt;img
-src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/time_series_CH4.png"width="800"height="525"srcset="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/time_series_CH4_hu089112eb5def8a67284c9c4662d2bc23_19116_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/time_series_CH4_hu089112eb5def8a67284c9c4662d2bc23_19116_1080x0_resize_catmullrom_3.png 1080w"alt="time_series_CH4"/>
-&lt;img
-src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/time_series_CO2.png"width="800"height="525"srcset="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/time_series_CO2_hu77f862d85164e7b1aec4350b3c388b09_19456_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/time_series_CO2_hu77f862d85164e7b1aec4350b3c388b09_19456_1080x0_resize_catmullrom_3.png 1080w"alt="time_series_CO2"/>
 &lt;/p>
 &lt;p>
-&lt;img
-src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/time_series_N2O.png"width="800"height="525"srcset="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/time_series_N2O_hu677954a11bba0e4f9e81d96fe9ea0283_18430_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/time_series_N2O_hu677954a11bba0e4f9e81d96fe9ea0283_18430_1080x0_resize_catmullrom_3.png 1080w"alt="time_series_N2O"/>
-&lt;img
-src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/time_series_Temp.png"width="800"height="525"srcset="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/time_series_Temp_hud87d154a50733849de04b1d2bc0b3bd2_18731_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/time_series_Temp_hud87d154a50733849de04b1d2bc0b3bd2_18731_1080x0_resize_catmullrom_3.png 1080w"alt="time_series_Temp"/>
 &lt;/p>
 &lt;p>创建所有变量之间的关系图&lt;/p>
 &lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -534,10 +588,7 @@ src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/time_serie
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#50fa7b">dev.off&lt;/span>()
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>
-&lt;img
-src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/correlation_all.png"width="800"height="525"srcset="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/correlation_all_hu6ebb71033f42ecfbbae3e35fa45db8df_34074_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/correlation_all_hu6ebb71033f42ecfbbae3e35fa45db8df_34074_1080x0_resize_catmullrom_3.png 1080w"alt="correlation_all"/>
-&lt;/p>
+&lt;/div>&lt;p>&lt;/p>
 &lt;p>创建每个变量之间的散点图&lt;/p>
 &lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -610,12 +661,6 @@ src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/correlatio
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>
-&lt;img
-src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_N2O.png"width="600"height="525"srcset="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_N2O_hu12f651cbf35ad75e342117fab478d896_17007_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_N2O_hu12f651cbf35ad75e342117fab478d896_17007_1080x0_resize_catmullrom_3.png 1080w"alt="scatter_Temp_N2O"/>
-&lt;img
-src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_CO2.png"width="600"height="525"srcset="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_CO2_hub6d39bc3efa9c2de07980905a2ce24eb_18628_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_CO2_hub6d39bc3efa9c2de07980905a2ce24eb_18628_1080x0_resize_catmullrom_3.png 1080w"alt="scatter_Temp_CO2"/>
-&lt;img
-src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_N2O.png"width="600"height="525"srcset="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_N2O_hu12f651cbf35ad75e342117fab478d896_17007_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/scatter_Temp_N2O_hu12f651cbf35ad75e342117fab478d896_17007_1080x0_resize_catmullrom_3.png 1080w"alt="scatter_Temp_N2O"/>
 &lt;/p>
 &lt;p>创建直方图&lt;/p>
 &lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -671,16 +716,8 @@ src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/scatter_Te
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>
-&lt;img
-src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/hist_CH4.png"width="800"height="525"srcset="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/hist_CH4_hu154aa4296d05094929ea2b33a649c361_12069_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/hist_CH4_hu154aa4296d05094929ea2b33a649c361_12069_1080x0_resize_catmullrom_3.png 1080w"alt="hist_CH4"/>
-&lt;img
-src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/hist_CO2.png"width="800"height="525"srcset="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/hist_CO2_hu242f993ae27f559bbe85ec50a200124f_13716_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/hist_CO2_hu242f993ae27f559bbe85ec50a200124f_13716_1080x0_resize_catmullrom_3.png 1080w"alt="hist_CO2"/>
 &lt;/p>
 &lt;p>
-&lt;img
-src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/hist_N2O.png"width="800"height="525"srcset="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/hist_N2O_hu464c9133aece86416cb98c2a994ccb79_12464_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/hist_N2O_hu464c9133aece86416cb98c2a994ccb79_12464_1080x0_resize_catmullrom_3.png 1080w"alt="hist_N2O"/>
-&lt;img
-src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/hist_N2O.png"width="800"height="525"srcset="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/hist_N2O_hu464c9133aece86416cb98c2a994ccb79_12464_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/hist_N2O_hu464c9133aece86416cb98c2a994ccb79_12464_1080x0_resize_catmullrom_3.png 1080w"alt="hist_N2O"/>
 &lt;/p>
 &lt;p>创建箱线图来检测异常值&lt;/p>
 &lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -736,16 +773,8 @@ src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/hist_N2O.p
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>
-&lt;img
-src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/boxplot_CH4.png"width="800"height="525"srcset="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/boxplot_CH4_hua592f4a0f42b0cd0e06b3fe0d2b984b4_9716_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/boxplot_CH4_hua592f4a0f42b0cd0e06b3fe0d2b984b4_9716_1080x0_resize_catmullrom_3.png 1080w"alt="boxplot_CH4"/>
-&lt;img
-src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/boxplot_CO2.png"width="800"height="525"srcset="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/boxplot_CO2_hua90a75f903523a9a2b06474d78c5f4c0_11087_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/boxplot_CO2_hua90a75f903523a9a2b06474d78c5f4c0_11087_1080x0_resize_catmullrom_3.png 1080w"alt="boxplot_CO2"/>
 &lt;/p>
 &lt;p>
-&lt;img
-src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/boxplot_N2O.png"width="800"height="525"srcset="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/boxplot_N2O_huf2f610792bc7fb3f5035681dcf7578a7_10005_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/boxplot_N2O_huf2f610792bc7fb3f5035681dcf7578a7_10005_1080x0_resize_catmullrom_3.png 1080w"alt="boxplot_N2O"/>
-&lt;img
-src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/boxplot_Temp.png"width="800"height="525"srcset="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/boxplot_Temp_hu25e55b4848c5ff57396115d9044f46bd_11142_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/boxplot_Temp_hu25e55b4848c5ff57396115d9044f46bd_11142_1080x0_resize_catmullrom_3.png 1080w"alt="boxplot_Temp"/>
 &lt;/p>
 &lt;p>查看相关系数&lt;/p>
 &lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -855,10 +884,7 @@ src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/boxplot_Te
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#50fa7b">dev.off&lt;/span>()
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>
-&lt;img
-src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/residual_analysis.png"width="1000"height="625"srcset="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/residual_analysis_hu5aac9bec39b0268be6d2aee9f2ae3ac4_48771_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/residual_analysis_hu5aac9bec39b0268be6d2aee9f2ae3ac4_48771_1080x0_resize_catmullrom_3.png 1080w"alt="residual_analysis"/>
-&lt;/p>
+&lt;/div>&lt;p>&lt;/p>
 &lt;p>逐步回归分析&lt;/p>
 &lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -1225,10 +1251,7 @@ src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/residual_a
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1985-03-01 -0.032 0.075003316 -1.583058e-01 0.3083124
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>
-&lt;img
-src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/prediction.png"width="1000"height="625"srcset="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/prediction_hua84a3faf81f28fe4f9a32d878a8d61e3_24092_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/prediction_hua84a3faf81f28fe4f9a32d878a8d61e3_24092_1080x0_resize_catmullrom_3.png 1080w"alt="prediction"/>
-&lt;/p>
+&lt;/div>&lt;p>&lt;/p>
 &lt;p>至此，一份简单的多重线性回归就做完了，可以看到我们预测的结果非常的垃圾，模型需要进一步优化，但是我不会，所以就这样凑合交了&lt;/p>
 &lt;p>至于结果，脚本部分当然是满分啦，其他介绍部分不是我完成的，所以我就不放上来了&lt;/p>
 &lt;blockquote>
@@ -1240,10 +1263,7 @@ src="https://imiku.me/2021/12/25/multiple-linear-regression-in-r.html/prediction
 &lt;p>Predicción (1/1)&lt;/p>
 &lt;p>Script(1.5/1.5)&lt;/p>
 &lt;/blockquote></description></item><item><title>圆通快递丢件后续处理过程（全额赔付）</title><link>https://imiku.me/2021/11/10/complaint-against-yto-express.html/</link><pubDate>Wed, 10 Nov 2021 11:15:02 +0800</pubDate><guid>https://imiku.me/2021/11/10/complaint-against-yto-express.html/</guid><description>&lt;p>淘宝买的几件衣服部分需要退货，去驿站寄快递以后快递迟迟未更新，直到客服联系我，问我快递是不是丢件了，让我问一下快递那边&lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/11/10/complaint-against-yto-express.html/01.jpg"width="767"height="886"srcset="https://imiku.me/2021/11/10/complaint-against-yto-express.html/01_hu1011a80efa74e683407046643c62e688_86108_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/11/10/complaint-against-yto-express.html/01_hu1011a80efa74e683407046643c62e688_86108_1080x0_resize_q95_catmullrom.jpg 1080w"/>
-&lt;/p>
+&lt;p>&lt;/p>
 &lt;p>然后就开始了漫长的等待过程&lt;/p>
 &lt;h2 class="group " id="联系圆通"
 >联系圆通&lt;a href="#%e8%81%94%e7%b3%bb%e5%9c%86%e9%80%9a"
@@ -1267,24 +1287,15 @@ class="link"
 href="https://sswz.spb.gov.cn/"target="_blank" rel="noopener">国家邮政局申诉网站&lt;/a
 >
 &lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/11/10/complaint-against-yto-express.html/02.jpg"width="1896"height="680"srcset="https://imiku.me/2021/11/10/complaint-against-yto-express.html/02_hu87d06fc21adfd577870958eac064a33b_174969_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/11/10/complaint-against-yto-express.html/02_hu87d06fc21adfd577870958eac064a33b_174969_1080x0_resize_q95_catmullrom.jpg 1080w"alt="国家邮政局申诉网站首页"/>
-&lt;/p>
+&lt;p>&lt;/p>
 &lt;p>点击右上角注册账号，然后登陆，点击申诉，会让你填一些相关的信息，提交后等待回复即可。&lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/11/10/complaint-against-yto-express.html/03.jpg"width="1488"height="808"srcset="https://imiku.me/2021/11/10/complaint-against-yto-express.html/03_hu0a5688ea23e3d41697186f50501cae16_108461_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/11/10/complaint-against-yto-express.html/03_hu0a5688ea23e3d41697186f50501cae16_108461_1080x0_resize_q95_catmullrom.jpg 1080w"alt="投诉页面"/>
-&lt;/p>
+&lt;p>&lt;/p>
 &lt;h2 class="group " id="收到赔偿款"
 >收到赔偿款&lt;a href="#%e6%94%b6%e5%88%b0%e8%b5%94%e5%81%bf%e6%ac%be"
 >&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
 >&lt;/h2>
 &lt;p>果然，提交投诉后不到半小时，收到了当地分公司的电话，加了我微信，询问了我一些订单的详情和价格，过了一会加上快递费全额退款给我了&lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/11/10/complaint-against-yto-express.html/04.jpg"width="686"height="600"srcset="https://imiku.me/2021/11/10/complaint-against-yto-express.html/04_hu4349e3b43ec78803ef981163b2f44a33_64601_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/11/10/complaint-against-yto-express.html/04_hu4349e3b43ec78803ef981163b2f44a33_64601_1080x0_resize_q95_catmullrom.jpg 1080w"alt="收到退款"/>
-&lt;/p>
+&lt;p>&lt;/p>
 &lt;h2 class="group " id="其他"
 >其他&lt;a href="#%e5%85%b6%e4%bb%96"
 >&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
@@ -1738,14 +1749,8 @@ href="https://sswz.spb.gov.cn/"target="_blank" rel="noopener">国家邮政局申
 >&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
 >&lt;/h2>
 &lt;p>现在你可以在本站页面底部找到翻译工具栏&lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/09/28/adding-google-translate-to-a-web-site.html/demo.jpg"width="533"height="67"srcset="https://imiku.me/2021/09/28/adding-google-translate-to-a-web-site.html/demo_huc03557d678227a32d12ed590bd90181b_6329_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/09/28/adding-google-translate-to-a-web-site.html/demo_huc03557d678227a32d12ed590bd90181b_6329_1080x0_resize_q95_catmullrom.jpg 1080w"alt="网页底部"/>
-&lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/09/28/adding-google-translate-to-a-web-site.html/translate.jpg"width="1112"height="760"srcset="https://imiku.me/2021/09/28/adding-google-translate-to-a-web-site.html/translate_hu10d174a4ed4c7b8ca5b9c8880d16e4a5_141133_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/09/28/adding-google-translate-to-a-web-site.html/translate_hu10d174a4ed4c7b8ca5b9c8880d16e4a5_141133_1080x0_resize_q95_catmullrom.jpg 1080w"alt="翻译演示"/>
-&lt;/p></description></item><item><title>创建一个自己的服务监控页面</title><link>https://imiku.me/2021/09/22/create-a-status-page.html/</link><pubDate>Wed, 22 Sep 2021 13:53:43 +0800</pubDate><guid>https://imiku.me/2021/09/22/create-a-status-page.html/</guid><description>&lt;p>用了很久的 &lt;a
+&lt;p>&lt;/p>
+&lt;p>&lt;/p></description></item><item><title>创建一个自己的服务监控页面</title><link>https://imiku.me/2021/09/22/create-a-status-page.html/</link><pubDate>Wed, 22 Sep 2021 13:53:43 +0800</pubDate><guid>https://imiku.me/2021/09/22/create-a-status-page.html/</guid><description>&lt;p>用了很久的 &lt;a
 class="link"
 href="https://uptimerobot.com/"target="_blank" rel="noopener">UptimeRobot&lt;/a
 >
@@ -1859,10 +1864,7 @@ class="link"
 href="https://status.imiku.me/"target="_blank" rel="noopener">https://status.imiku.me/&lt;/a
 >
 &lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/09/22/create-a-status-page.html/status.imiku.me_.jpg"width="1200"height="733"srcset="https://imiku.me/2021/09/22/create-a-status-page.html/status.imiku.me__hu53c811c0cb5e0cf4c7c46b313690ed44_97440_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/09/22/create-a-status-page.html/status.imiku.me__hu53c811c0cb5e0cf4c7c46b313690ed44_97440_1080x0_resize_q95_catmullrom.jpg 1080w"alt="status.imiku.me"/>
-&lt;/p>
+&lt;p>&lt;/p>
 &lt;h2 class="group " id="替代品"
 >替代品&lt;a href="#%e6%9b%bf%e4%bb%a3%e5%93%81"
 >&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
@@ -2443,10 +2445,7 @@ href="https://www.simicart.com/manifest-generator.html/"target="_blank" rel="noo
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>现在页面在离线状态下访问未缓存的页面时将会显示&lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/09/20/service-worker-practice.html/screenshot.jpg"width="1123"height="840"srcset="https://imiku.me/2021/09/20/service-worker-practice.html/screenshot_hu62130fd67e0bdb341b056f85b5e6410b_61876_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/09/20/service-worker-practice.html/screenshot_hu62130fd67e0bdb341b056f85b5e6410b_61876_1080x0_resize_q95_catmullrom.jpg 1080w"alt="offline.html"/>
-&lt;/p></description></item><item><title>博客迁移到了 Hugo</title><link>https://imiku.me/2021/08/31/wordpress-to-hugo.html/</link><pubDate>Tue, 31 Aug 2021 12:48:35 +0800</pubDate><guid>https://imiku.me/2021/08/31/wordpress-to-hugo.html/</guid><description>&lt;blockquote>
+&lt;p>&lt;/p></description></item><item><title>博客迁移到了 Hugo</title><link>https://imiku.me/2021/08/31/wordpress-to-hugo.html/</link><pubDate>Tue, 31 Aug 2021 12:48:35 +0800</pubDate><guid>https://imiku.me/2021/08/31/wordpress-to-hugo.html/</guid><description>&lt;blockquote>
 &lt;p>这次抛弃了wordpress，选用了 Hugo 来开发，时隔几年又上了全静态博客&lt;/p>
 &lt;/blockquote>
 &lt;p>本来想换成 Ghost 的，但是 Ghost 简直不把用户当人，主题开发的体验跟屎一样，都 2021 年了，连基本的搜索功能都没有，hbs 语法限制还多，还不能自己扩展 hbs 功能（更新后会重置），下线了原本有的插件系统。如果你想使用 Ghost，建议先看看这篇文章：&lt;a
@@ -2463,12 +2462,7 @@ href="https://imiku.me/2017/07/10/903.html/">从 Wordpress 更换为 Ghost&lt;/a
 >&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
 >&lt;/h2>
 &lt;div class="gallery-box">
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/gtmetrix.jpg"width="873"height="745"srcset="https://imiku.me/2021/08/31/wordpress-to-hugo.html/gtmetrix_hu1efb5f18b09c14912cebd1f1f8b4d153_43186_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/08/31/wordpress-to-hugo.html/gtmetrix_hu1efb5f18b09c14912cebd1f1f8b4d153_43186_1080x0_resize_q95_catmullrom.jpg 1080w"alt="GTmetrix"/>
-&lt;img
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/pagespeed_insights.jpg"width="1599"height="562"srcset="https://imiku.me/2021/08/31/wordpress-to-hugo.html/pagespeed_insights_hud5b15fe984a8277c542a425a2ba093e5_61522_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/08/31/wordpress-to-hugo.html/pagespeed_insights_hud5b15fe984a8277c542a425a2ba093e5_61522_1080x0_resize_q95_catmullrom.jpg 1080w"alt="PageSpeed Insights"/>
-&lt;/p>
+&lt;p> &lt;/p>
 &lt;/div>
 &lt;h2 class="group " id="博客系统对比"
 >博客系统对比&lt;a href="#%e5%8d%9a%e5%ae%a2%e7%b3%bb%e7%bb%9f%e5%af%b9%e6%af%94"
@@ -2548,10 +2542,7 @@ class="link"
 href="https://github.com/nextapps-de/flexsearch"target="_blank" rel="noopener">flexsearch&lt;/a
 >
 建立 key 来进行快速搜索&lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/search.gif"alt="搜索预览"/>
-&lt;/p>
+&lt;p>&lt;/p>
 &lt;h3 class="group " id="良好的-seo-优化"
 >良好的 SEO 优化&lt;a href="#%e8%89%af%e5%a5%bd%e7%9a%84-seo-%e4%bc%98%e5%8c%96"
 >&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
@@ -2711,22 +2702,8 @@ href="https://typlog.com/"target="_blank" rel="noopener">Typlog&lt;/a
 >
 &lt;/p>
 &lt;div class="gallery-box">
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/4.jpg"width="996"height="1500"srcset="https://imiku.me/2021/08/31/wordpress-to-hugo.html/4_hu34aa8227897d0ad4d735dad52c8de43c_68003_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/08/31/wordpress-to-hugo.html/4_hu34aa8227897d0ad4d735dad52c8de43c_68003_1080x0_resize_q95_catmullrom.jpg 1080w"/>
-&lt;img
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/2.jpg"width="1200"height="800"srcset="https://imiku.me/2021/08/31/wordpress-to-hugo.html/2_hu584058098a9b77435d377097cf241a1a_202741_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/08/31/wordpress-to-hugo.html/2_hu584058098a9b77435d377097cf241a1a_202741_1080x0_resize_q95_catmullrom.jpg 1080w"/>
-&lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/6.jpg"width="1200"height="1800"srcset="https://imiku.me/2021/08/31/wordpress-to-hugo.html/6_hu0b3772ef97be9473c84faf4f8bc41c24_94221_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/08/31/wordpress-to-hugo.html/6_hu0b3772ef97be9473c84faf4f8bc41c24_94221_1080x0_resize_q95_catmullrom.jpg 1080w"/>
-&lt;img
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/7.jpg"width="1200"height="1022"srcset="https://imiku.me/2021/08/31/wordpress-to-hugo.html/7_hu2c3220d89c0d7665dccd4ad786654b94_27054_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/08/31/wordpress-to-hugo.html/7_hu2c3220d89c0d7665dccd4ad786654b94_27054_1080x0_resize_q95_catmullrom.jpg 1080w"/>
-&lt;img
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/8.jpg"width="1200"height="1800"srcset="https://imiku.me/2021/08/31/wordpress-to-hugo.html/8_hu1c428075e3e7ab19a5b9971e6af50364_204055_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/08/31/wordpress-to-hugo.html/8_hu1c428075e3e7ab19a5b9971e6af50364_204055_1080x0_resize_q95_catmullrom.jpg 1080w"/>
-&lt;img
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/9.jpg"width="1200"height="1800"srcset="https://imiku.me/2021/08/31/wordpress-to-hugo.html/9_hud197a2fb04bed1fbdf90bf91c9e02091_59645_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/08/31/wordpress-to-hugo.html/9_hud197a2fb04bed1fbdf90bf91c9e02091_59645_1080x0_resize_q95_catmullrom.jpg 1080w"/>
-&lt;/p>
+&lt;p> &lt;/p>
+&lt;p> &lt;/p>
 &lt;/div>
 &lt;h3 class="group " id="标签和分类页面"
 >标签和分类页面&lt;a href="#%e6%a0%87%e7%ad%be%e5%92%8c%e5%88%86%e7%b1%bb%e9%a1%b5%e9%9d%a2"
@@ -2741,19 +2718,13 @@ class="link"
 href="https://imiku.me/categories/">分类页面&lt;/a
 >
 &lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831115715842.jpg"width="1328"height="901"srcset="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831115715842_hu2b9fbccf954a02459e4aaa307a27e730_117952_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831115715842_hu2b9fbccf954a02459e4aaa307a27e730_117952_1080x0_resize_q95_catmullrom.jpg 1080w"/>
-&lt;/p>
+&lt;p>&lt;/p>
 &lt;h3 class="group " id="说说类型文章"
 >说说类型文章&lt;a href="#%e8%af%b4%e8%af%b4%e7%b1%bb%e5%9e%8b%e6%96%87%e7%ab%a0"
 >&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
 >&lt;/h3>
 &lt;p>根据文章类型，判断应该显示什么样的卡片&lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831115424244.jpg"width="1317"height="835"srcset="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831115424244_hu637dc307e0b5f90f94b27f10589575a3_82558_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831115424244_hu637dc307e0b5f90f94b27f10589575a3_82558_1080x0_resize_q95_catmullrom.jpg 1080w"/>
-&lt;/p>
+&lt;p>&lt;/p>
 &lt;h3 class="group " id="友情链接页面"
 >友情链接页面&lt;a href="#%e5%8f%8b%e6%83%85%e9%93%be%e6%8e%a5%e9%a1%b5%e9%9d%a2"
 >&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
@@ -2763,10 +2734,7 @@ class="link"
 href="https://imiku.me/links/">友情链接页面&lt;/a
 >
 &lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831114934801.jpg"width="1322"height="1085"srcset="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831114934801_hu1fc839c1301e30e89102ef421a7a01e2_63674_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831114934801_hu1fc839c1301e30e89102ef421a7a01e2_63674_1080x0_resize_q95_catmullrom.jpg 1080w"/>
-&lt;/p>
+&lt;p>&lt;/p>
 &lt;h3 class="group " id="github-项目展示"
 >GitHub 项目展示&lt;a href="#github-%e9%a1%b9%e7%9b%ae%e5%b1%95%e7%a4%ba"
 >&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
@@ -2776,10 +2744,7 @@ class="link"
 href="https://imiku.me/github/">GitHub 项目页面&lt;/a
 >
 &lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831114753611.jpg"width="1323"height="927"srcset="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831114753611_hufc6a6903a8ffd05efc2c5cad833bf2fa_50035_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831114753611_hufc6a6903a8ffd05efc2c5cad833bf2fa_50035_1080x0_resize_q95_catmullrom.jpg 1080w"/>
-&lt;/p>
+&lt;p>&lt;/p>
 &lt;h3 class="group " id="归档页面"
 >归档页面&lt;a href="#%e5%bd%92%e6%a1%a3%e9%a1%b5%e9%9d%a2"
 >&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
@@ -2789,10 +2754,7 @@ class="link"
 href="https://imiku.me/archives/">时间轴归档页面&lt;/a
 >
 &lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831114825278.jpg"width="1317"height="901"srcset="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831114825278_hu56e6af0c46cbc9c29d29f36c10515e09_49141_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831114825278_hu56e6af0c46cbc9c29d29f36c10515e09_49141_1080x0_resize_q95_catmullrom.jpg 1080w"/>
-&lt;/p>
+&lt;p>&lt;/p>
 &lt;h3 class="group " id="twitter-动态页面"
 >Twitter 动态页面&lt;a href="#twitter-%e5%8a%a8%e6%80%81%e9%a1%b5%e9%9d%a2"
 >&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
@@ -2806,10 +2768,7 @@ class="link"
 href="https://www.jsdelivr.com/"target="_blank" rel="noopener">jsDelivr&lt;/a
 >
 CDN 防止大陆地区无法访问图片的问题&lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831111752680.jpg"width="1337"height="1233"srcset="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831111752680_hucdec8887ea724509d982a4b9537c9589_80371_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831111752680_hucdec8887ea724509d982a4b9537c9589_80371_1080x0_resize_q95_catmullrom.jpg 1080w"/>
-&lt;/p>
+&lt;p>&lt;/p>
 &lt;h3 class="group " id="github-actions-支持"
 >GitHub Actions 支持&lt;a href="#github-actions-%e6%94%af%e6%8c%81"
 >&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
@@ -2819,10 +2778,7 @@ class="link"
 href="https://www.jsdelivr.com/"target="_blank" rel="noopener">jsDelivr&lt;/a
 >
 CDN，加快站点访问速度&lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831111358209.jpg"width="897"height="627"srcset="https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831111358209_hua21922f96784eebf1155031eaf351588_18090_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/08/31/wordpress-to-hugo.html/image-20210831111358209_hua21922f96784eebf1155031eaf351588_18090_1080x0_resize_q95_catmullrom.jpg 1080w"/>
-&lt;/p>
+&lt;p>&lt;/p>
 &lt;p>其他特性：&lt;/p>
 &lt;ul>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 分类、标签页面&lt;/li>
@@ -2859,47 +2815,4 @@ class="link"
 href="https://store.steampowered.com/app/457140"target="_blank" rel="noopener">缺氧&lt;/a
 >
 ，本以为这次考试稳挂了，成绩发表的当天 9 点就起床查询，没想到居然过了，目标 90 的及格线，还超了几十分，也算是放下个包袱了，等学完西班牙语以后继续冲 N1，争取考个高点的分。&lt;/p>
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/08/23/n2-pass.html/jlpt.jpg"width="1084"height="890"srcset="https://imiku.me/2021/08/23/n2-pass.html/jlpt_hufbe0adb39d3d02aafb6308372909766f_56728_640x0_resize_q95_catmullrom.jpg 640w, https://imiku.me/2021/08/23/n2-pass.html/jlpt_hufbe0adb39d3d02aafb6308372909766f_56728_1080x0_resize_q95_catmullrom.jpg 1080w"alt="查询成绩"/>
-&lt;/p></description></item><item><title>JS 西班牙语语音合成在 MacOS 上没有声音的问题</title><link>https://imiku.me/2021/07/31/1459.html/</link><pubDate>Sat, 31 Jul 2021 13:27:27 +0000</pubDate><guid>https://imiku.me/2021/07/31/1459.html/</guid><description>&lt;p>在上篇文章中提到的 &lt;a
-class="link"
-href="https://imiku.me/2021/07/26/1445.html">写了个西班牙语学习工具&lt;/a
->
-中，最近在 Mac 上使用时发现语音合成一直没有声音，研究了半天才找到解决方法。&lt;/p>
-&lt;div class="gallery-box">
-&lt;p>
-&lt;img
-src="https://imiku.me/2021/07/31/1459.html/1630060151397813.png"width="800"height="697"srcset="https://imiku.me/2021/07/31/1459.html/1630060151397813_hubd31d6f73ab25e1cf0280a5e6d9d2584_58030_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/07/31/1459.html/1630060151397813_hubd31d6f73ab25e1cf0280a5e6d9d2584_58030_1080x0_resize_catmullrom_3.png 1080w"alt="在系统设置中打开【辅助功能】"/>
-&lt;img
-src="https://imiku.me/2021/07/31/1459.html/1630060151397631.png"width="800"height="617"srcset="https://imiku.me/2021/07/31/1459.html/1630060151397631_hu3dcef8126cf1a840a0279e998069a100_52511_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/07/31/1459.html/1630060151397631_hu3dcef8126cf1a840a0279e998069a100_52511_1080x0_resize_catmullrom_3.png 1080w"alt="左侧选择【朗读内容】，点击系统声音"/>
-&lt;img
-src="https://imiku.me/2021/07/31/1459.html/1630060151397117.png"width="800"height="617"srcset="https://imiku.me/2021/07/31/1459.html/1630060151397117_hub0e77b46526da327a2c2900adcbb46e1_43770_640x0_resize_catmullrom_3.png 640w, https://imiku.me/2021/07/31/1459.html/1630060151397117_hub0e77b46526da327a2c2900adcbb46e1_43770_1080x0_resize_catmullrom_3.png 1080w"alt="勾选需要的语言，然后确定"/>
-&lt;/p>
-&lt;/div>
-&lt;p>之后会自动下载所需的 TTS 语言包，下载完成后重启 Safari 浏览器&lt;/p>
-&lt;h2 class="group " id="tts-合成代码"
->TTS 合成代码&lt;a href="#tts-%e5%90%88%e6%88%90%e4%bb%a3%e7%a0%81"
->&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
->&lt;/h2>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">window&lt;/span>.speechSynthesis.cancel();
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">const&lt;/span> utterThis &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#ff79c6">new&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">window&lt;/span>.SpeechSynthesisUtterance();
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>utterThis.text &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;Hola!&amp;#39;&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>utterThis.lang &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;es-ES&amp;#39;&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>utterThis.volume &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">1&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>utterThis.voice &lt;span style="color:#ff79c6">=&lt;/span> speechSynthesis.getVoices().filter(e =&amp;gt; e.lang &lt;span style="color:#ff79c6">===&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;es-ES&amp;#39;&lt;/span>); &lt;span style="color:#6272a4">// 这句很重要，否则将会合成英文的发音
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">window&lt;/span>.speechSynthesis.speak(utterThis);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item></channel></rss>
+&lt;p>&lt;/p></description></item></channel></rss>
