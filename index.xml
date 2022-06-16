@@ -5,7 +5,7 @@
 &lt;div class="github my-4 rounded border p-4 dark:border-darkBorder">
 &lt;div class="flex items-center text-xl">
 &lt;i class="eva eva-github mr-2">&lt;/i>
-&lt;a class="before:hidden" href="https://github.com/Ice-Hazymoon/hugo-theme-luna" target="_blank">Ice-Hazymoon/hugo-theme-luna&lt;/a>
+&lt;a class="after:hidden" href="https://github.com/Ice-Hazymoon/hugo-theme-luna" target="_blank">Ice-Hazymoon/hugo-theme-luna&lt;/a>
 &lt;/div>
 &lt;div class="my-2 leading-6">A simple, performance-first, SEO-friendly Hugo theme / 一个轻量，快速，SEO 友好的 Hugo 主题&lt;/div>
 &lt;div class="flex items-center">
@@ -15,7 +15,7 @@
 &lt;/div>
 &lt;div class="mr-4 inline-flex items-center">
 &lt;i class="eva eva-star mr-1 text-amber-400">&lt;/i>
-&lt;span>89&lt;/span>
+&lt;span>94&lt;/span>
 &lt;/div>
 &lt;div class="inline-flex items-center">
 &lt;i class="eva eva-shuffle-2 mr-1 text-blue-500">&lt;/i>
