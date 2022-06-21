@@ -1,4 +1,68 @@
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>Ice-Hazymoon 的博客</title><atom:link href="%7balternate%20%7bRSS%20application/rss+xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/index.xml%20https://imiku.me/index.xml%7d" rel="self" type="application/rss+xml"/><link>https://imiku.me/</link><managingEditor>Ice-Hazymoon</managingEditor><description>向着现充的生活拼命咸鱼中</description><lastBuildDate>Tue, 03 May 2022 23:30:37 +0200</lastBuildDate><language>zh-cn</language><generator>Hugo -- gohugo.io</generator><item><title>【Luna】一个简洁，快速，SEO友好的 HUGO 主题</title><link>https://imiku.me/2022/05/03/hugo-theme-luna.html/</link><pubDate>Tue, 03 May 2022 23:30:37 +0200</pubDate><guid>https://imiku.me/2022/05/03/hugo-theme-luna.html/</guid><description>&lt;p>&lt;/p>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>Ice-Hazymoon 的博客</title><atom:link href="%7balternate%20%7bRSS%20application/rss+xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/index.xml%20https://imiku.me/index.xml%7d" rel="self" type="application/rss+xml"/><link>https://imiku.me/</link><managingEditor>Ice-Hazymoon</managingEditor><description>向着现充的生活拼命咸鱼中</description><lastBuildDate>Tue, 21 Jun 2022 18:04:05 +0200</lastBuildDate><language>zh-cn</language><generator>Hugo -- gohugo.io</generator><item><title>解决原神在海外下载慢的问题</title><link>https://imiku.me/2022/06/21/solve-the-slow-download-speed-of-the-genshin-in-foreign.html/</link><pubDate>Tue, 21 Jun 2022 18:04:05 +0200</pubDate><guid>https://imiku.me/2022/06/21/solve-the-slow-download-speed-of-the-genshin-in-foreign.html/</guid><description>&lt;p>在海外玩国服原神真折磨人，游戏下载速度几百K，要下载完本体需要好几天，特此研究出了这个解决办法。&lt;/p>
+&lt;h2 class="group " id="找到游戏包的下载地址"
+>找到游戏包的下载地址&lt;a href="#%e6%89%be%e5%88%b0%e6%b8%b8%e6%88%8f%e5%8c%85%e7%9a%84%e4%b8%8b%e8%bd%bd%e5%9c%b0%e5%9d%80"
+>&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
+>&lt;/h2>
+&lt;p>下载原神启动器以后点击&lt;strong>获取游戏&lt;/strong>按钮，然后关闭启动器。&lt;/p>
+&lt;p>打开启动器目录，找到 &lt;code>logs&lt;/code> 这个目录，里面会有一堆以 &lt;code>.log&lt;/code> 结尾的文件。&lt;/p>
+&lt;p>找到类似下面这样的字段。&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20220510122739_htkJy9BIys9tCMHu/YuanShen_2.7.0.zip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>复制链接到迅雷下载。&lt;span class="inline-block blur-sm filter transition ease-in-out hover:filter-none">别跟我提什么 ARIA2，IDM 之类的，在迅雷面前都是弟弟&lt;/span>&lt;/p>
+&lt;h2 class="group " id="安装-usbeam-hosts-editor"
+>安装 UsbEAm Hosts Editor&lt;a href="#%e5%ae%89%e8%a3%85-usbeam-hosts-editor"
+>&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
+>&lt;/h2>
+&lt;p>&lt;strong>UsbEAm Hosts Editor&lt;/strong> 是一个快捷方便的 hosts 修改工具。&lt;/p>
+&lt;a href="https://www.dogfight360.com/blog/475/" target="_blank" class="after:hidden m-1 align-bottom cursor-pointer no-icon rounded inline-flex items-center hover:bg-opacity-80 transition bg-blue-400 text-base px-4 py-2">
+&lt;i class="mr-1 text-white ">&lt;/i>
+&lt;span class=" text-white">点击下载&lt;/span>
+&lt;/a>
+&lt;p>点击左下角的 &lt;strong>+号&lt;/strong> 按钮，依次找到 &lt;strong>In Game - 游戏内相关&lt;/strong> → &lt;strong>原神(国服/外服)加快下载及更新速度&lt;/strong>&lt;/p>
+&lt;p>解析完毕后，点击 &lt;strong>检测延迟&lt;/strong> 按钮，选择一个延迟最低的，最好是国内的地址，点击 &lt;strong>应用选中&lt;/strong>，然后重启迅雷，看看速度有没有变快，以此往复，找到最快的那个 Hosts。&lt;/p>
+&lt;p>我在的地区比较偏僻&lt;span class="inline-block blur-sm filter transition ease-in-out hover:filter-none">西班牙&lt;/span>，所以最快也就达到了 3mb/s 左右的速度，但相对于之前200K的速度，已经提升了非常多。&lt;/p>
+&lt;p>&lt;/p>
+&lt;h2 class="group " id="修复启动器"
+>修复启动器&lt;a href="#%e4%bf%ae%e5%a4%8d%e5%90%af%e5%8a%a8%e5%99%a8"
+>&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
+>&lt;/h2>
+&lt;p>下载好后解压到你的游戏目录，打开启动器，点击右上角的&lt;strong>齿轮&lt;/strong>按钮，点击查找游戏，选择你刚刚解压的游戏目录。&lt;/p>
+&lt;p>打开游戏目录下的 &lt;code>config.ini&lt;/code> 文件，添加一行 &lt;code>game_version&lt;/code> 字段，内容为游戏版本号，这样启动器才能正确识别游戏，否则还是会提示&lt;strong>获取游戏&lt;/strong>，版本号在刚刚下载的文件名中可以看到。&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="background-color:#3d3f4a">&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">[General]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#50fa7b">channel&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#50fa7b">cps&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">mihoyo&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#50fa7b">sub_channel&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#3d3f4a">&lt;span>&lt;span style="color:#50fa7b">game_version&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">2.7.0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>重启原神启动器，现在可以痛痛快快的玩游戏辣！&lt;/p>
+&lt;h2 class="group " id="第三方启动器-snap-genshin"
+>第三方启动器 Snap Genshin&lt;a href="#%e7%ac%ac%e4%b8%89%e6%96%b9%e5%90%af%e5%8a%a8%e5%99%a8-snap-genshin"
+>&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
+>&lt;/h2>
+&lt;p>&lt;/p>
+&lt;blockquote>
+&lt;p>这是一个第三方的原神启动器，集成了玩家信息，祈愿记录，旅行札记，实时便笺，多功能WIKI，胡桃数据库等等实用的功能。&lt;/p>
+&lt;/blockquote>
+&lt;a href="https://www.snapgenshin.com/home/" target="_blank" class="after:hidden m-1 align-bottom cursor-pointer no-icon rounded inline-flex items-center hover:bg-opacity-80 transition bg-blue-400 text-base px-4 py-2">
+&lt;i class="mr-1 text-white ">&lt;/i>
+&lt;span class=" text-white">点击下载&lt;/span>
+&lt;/a></description></item><item><title>【Luna】一个简洁，快速，SEO友好的 HUGO 主题</title><link>https://imiku.me/2022/05/03/hugo-theme-luna.html/</link><pubDate>Tue, 03 May 2022 23:30:37 +0200</pubDate><guid>https://imiku.me/2022/05/03/hugo-theme-luna.html/</guid><description>&lt;p>&lt;/p>
 &lt;blockquote class="quote relative pl-10 text-gray-500 dark:text-gray-400">&lt;p>一个简洁，快速，SEO友好的 HUGO 主题&lt;/p>&lt;/blockquote>
 &lt;p>鸽了大半年，终于🕊上线了，这是一个废了不少头发才开发出来的主题，集性能、美观、SEO于一体的主题，并且支持&lt;strong>文章加密&lt;/strong>和 GitHub Actions 自动部署，你只需要安心写博客就行。&lt;/p>
 &lt;p>开发的过程中~参考~了不少主题和代码，求各位大佬来个🌟吧~&lt;/p>
@@ -15,7 +79,7 @@
 &lt;/div>
 &lt;div class="mr-4 inline-flex items-center">
 &lt;i class="eva eva-star mr-1 text-amber-400">&lt;/i>
-&lt;span>94&lt;/span>
+&lt;span>93&lt;/span>
 &lt;/div>
 &lt;div class="inline-flex items-center">
 &lt;i class="eva eva-shuffle-2 mr-1 text-blue-500">&lt;/i>
@@ -2810,9 +2874,4 @@ href="https://imiku.me/sitemap.xml">Sitemap&lt;/a
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 评论系统&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 文章编辑器&lt;/li>
 &lt;/ul>
-&lt;p>因为目前主题处于开发阶段，还有一些BUG等待被发现和解决，待稳定后将会开源至 GitHub&lt;/p></description></item><item><title>N2 合格！！</title><link>https://imiku.me/2021/08/23/n2-pass.html/</link><pubDate>Mon, 23 Aug 2021 17:30:26 +0800</pubDate><guid>https://imiku.me/2021/08/23/n2-pass.html/</guid><description>&lt;p>断断续续从五十音开始学了 5-6 个月，N3 测试的时候考了 174，N2 的时候就没好好学，每天专注于打&lt;a
-class="link"
-href="https://store.steampowered.com/app/457140"target="_blank" rel="noopener">缺氧&lt;/a
->
-，本以为这次考试稳挂了，成绩发表的当天 9 点就起床查询，没想到居然过了，目标 90 的及格线，还超了几十分，也算是放下个包袱了，等学完西班牙语以后继续冲 N1，争取考个高点的分。&lt;/p>
-&lt;p>&lt;/p></description></item></channel></rss>
+&lt;p>因为目前主题处于开发阶段，还有一些BUG等待被发现和解决，待稳定后将会开源至 GitHub&lt;/p></description></item></channel></rss>
